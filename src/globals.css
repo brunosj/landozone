@@ -36,7 +36,7 @@ h2 {
 }
 
 h3 {
-	@apply text-lg font-semibold md:text-2xl;
+	@apply text-base leading-normal font-semibold md:text-2xl md:leading-tight;
 }
 
 h4 {

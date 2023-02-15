@@ -15,7 +15,8 @@
 					{project.description}
 				</p>
 				<a href={project.url} target="_blank" rel="noreferrer">
-					<p class="inline text-base font-mono  duration-300 hover:bg-sec ease-in-out">
+					<p
+						class="inline text-base font-mono  duration-300 hover:bg-sec-500 bg-sec-300 ease-in-out">
 						{project.url.slice(8, -1)}
 					</p>
 				</a>

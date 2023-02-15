@@ -18,9 +18,9 @@
 		</h1>
 		<h2 in:fly={{ delay: 300, y: 100, duration: 600 }}>imaginative web development</h2>
 
-		<h3 class="pt-12 font-light leading-tight" in:fade={{ delay: 500, duration: 600 }}>
+		<h3 class="pt-12 font-light" in:fade={{ delay: 500, duration: 600 }}>
 			hi! my name is <span class="font-bold">bruno sj</span> and I am a freelance full stack developer
-			based in Berlin. I enjoy working on creative projects where I can bring my expertise to work towards
+			based in Berlin. I enjoy working on creative projects where I can bring my expertise to develop
 			meaningful and innovative websites and applications.
 		</h3>
 	</section>

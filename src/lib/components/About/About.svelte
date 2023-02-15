@@ -8,14 +8,34 @@
 <section class="layout">
 	<Heading title="about me" />
 	<p>
-		Combining technical aptitude with a deep understanding of climate policy to create innovative
-		web solutions that make a difference. <br /><br />
-		Dedicated to leveraging technology to address environmental and social issues and drive meaningful
-		change My previous experience as a researcher and communications officer in the climate policy field
-		have provided me with a thorough understanding of many of the most pressing issues our world is facing.
-		I am now looking forward to pair this knowledge with my programming skills to work on useful applications.
+		I'm a freelance developer passionate about transposing ideas and visions onto their little space
+		on the web. Coming from a political science background, my experience in the climate policy
+		field has equipped me with an understanding of (some of the) ways we can support the lengthy
+		road towards a more sustainable and inclusive world. I would love to pair this knowledge with my
+		programming skills to leverage technology to address environmental and social issues.
 	</p>
-	<div class="mt-6 flex gap-12">
+	<p class="pt-3">
+		In terms of technologies, my tools of choice are <a
+			href="https://www.typescriptlang.org/"
+			target="_blank"
+			rel="noreferrer"
+			class="bg-sec-300 text-md font-mono duration-300 hover:bg-sec-500">JavaScript/Typescript</a>
+		and frameworks such as
+		<a
+			href="https://kit.svelte.dev/"
+			target="_blank"
+			rel="noreferrer"
+			class="bg-sec-300 text-md font-mono duration-300 hover:bg-sec-500">SvelteKit</a>
+		and
+		<a
+			href="https://nextjs.org/"
+			target="_blank"
+			rel="noreferrer"
+			class="bg-sec-300 text-md font-mono duration-300 hover:bg-sec-500">Next.js</a
+		>. I am also particularly interested about dynamic/interactive data visualization, building up
+		on my previous data science experience using traditional statistical software.
+	</p>
+	<div class="mt-10 flex gap-12">
 		<Social name="Github" url="https://github.com/brunosj">
 			<Github />
 		</Social>

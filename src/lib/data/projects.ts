@@ -1,11 +1,11 @@
 export const projects = [
-	{
-		name: 'EconCrime Lab',
-		year: 2023,
-		url: 'https://econcrimelab.vercel.app/',
-		description: 'research hub based in Montreal',
-		technologies: 'Next.js (React) + Strapi CMS'
-	},
+	// {
+	// 	name: 'EconCrime Lab',
+	// 	year: 2023,
+	// 	url: 'https://econcrimelab.vercel.app/',
+	// 	description: 'research hub based in Montreal',
+	// 	technologies: 'Next.js (React) + Strapi CMS'
+	// },
 	{
 		name: 'Rigo Woodworks',
 		year: 2022,

@@ -12,8 +12,8 @@
 </script>
 
 <MouseTracker />
-<main class="bg-gradient-to-t from-ter to-sec  min-h-screen py-12 md:py-0">
-	<div class=" antialiased py-6 md:py-40 max-w-4xl flex flex-col md:flex-row lg:mx-auto gap-24">
+<main class="bg-gradient-to-t from-ter to-sec-500  min-h-screen py-12 md:py-0">
+	<div class=" antialiased py-6 md:py-40 max-w-5xl flex flex-col md:flex-row lg:mx-auto">
 		{#if animate}
 			<div in:fly={{ x: -500, duration: 800 }} class="z-10 hidden lg:block">
 				<SideNav />
