@@ -5,6 +5,7 @@
 	import { onMount } from 'svelte';
 	import { fade, fly } from 'svelte/transition';
 	import Logo from '$lib/assets/svg/logo.svelte';
+	import Seo from '$components/SEO/SEO.svelte';
 	let animate = false;
 
 	onMount(() => {
@@ -13,6 +14,7 @@
 </script>
 
 {#if animate}
+	<Seo title="" description="" />
 	<section class="layout">
 		<div class="block md:hidden h-8 w-8 mb-3">
 			<Logo />
