@@ -1,38 +1,67 @@
-# create-svelte
+![landozone](static/lz_logo_seo.jpg)
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## Description
 
-## Creating a project
+This repo contains the website of my personal portfolio, [landozone.net](https://landozone.net).
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Technologies
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+The site is a minimalist [Sveltekit](https://kit.svelte.dev/) project deployed on [Vercel](https://vercel.com/).
 
-# create a new project in my-app
-npm create svelte@latest my-app
+## Installation
+
+1. Use the git CLI to close the repo
+
+```
+gh repo clone brunosj/landozone
 ```
 
-## Developing
+2. Install dependencies
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Navigate into the site's directory and start the development server
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+# or
+yarn dev
 ```
 
-## Building
+Open [http://localhost:5173](http://localhost:5173) with your browser to see the result.
 
-To create a production version of your app:
+## Structure
 
-```bash
-npm run build
+```
+.
+├── node_modules
+└── src
+    ├── lib
+    ├── routes
+    ├── app.d.ts
+    ├── app.html
+    ├── globals.css
+├── static
+├── .eslintignore
+├── .eslintrc.cjs
+├── .gitignore
+├── .npmrc
+├── .prettierignore
+├── .prettierrrc
+├── package-lock.json
+├── package.json
+├── postcss.config.cjs
+├── README.md
+├── svelte.config.js
+├── tailwind.config.cjs
+├── tsconfig.json
+└── vite.config.ts
 ```
 
-You can preview the production build with `npm run preview`.
+## Further development
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+This repository is maintained by [brunosj](https://github.com/brunosj).
