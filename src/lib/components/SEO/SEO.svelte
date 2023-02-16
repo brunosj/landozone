@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { website } from '$data/config';
 
-	const { siteLanguage, siteTitle, siteDescription, siteImage, siteUrl, twitter } = website;
+	const { siteLanguage, siteTitle, siteDescription, siteImage, twitter } = website;
 
 	export let description = siteDescription;
 	export let title = siteTitle;
@@ -19,7 +19,6 @@
 	<meta property="og:type" content="website" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={title} />
-	<meta name="twitter:url" content={siteUrl} />
 	<meta name="twitter:description" content={description || siteDescription} />
 	<meta name="twitter:image" content={siteImage} />
 	<meta name="twitter:creator" content={twitter} />
