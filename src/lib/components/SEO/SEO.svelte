@@ -14,7 +14,6 @@
 	<meta name="description" content={description || siteDescription} />
 	<meta name="image" content={siteImage} />
 	<meta property="og:title" content={title} />
-	<meta property="og:url" content={siteUrl} />
 	<meta property="og:description" content={description || siteDescription} />
 	<meta property="og:image" content={siteImage} />
 	<meta property="og:type" content="website" />
