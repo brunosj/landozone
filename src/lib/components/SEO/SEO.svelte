@@ -3,10 +3,10 @@
 
 	const { siteLanguage, siteTitle, siteDescription, siteImage, siteUrl, twitter } = website;
 
-	export let description: string;
-	export let title: string;
+	export let description = siteDescription;
+	export let title = siteTitle;
 
-	const pageTitle = `${title} ${siteTitle} `;
+	const pageTitle = `${title || siteTitle}`;
 </script>
 
 <svelte:head>

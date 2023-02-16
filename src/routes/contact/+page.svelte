@@ -3,6 +3,6 @@
 	import Seo from '$components/SEO/SEO.svelte';
 </script>
 
-<Seo title="contact | " description="" />
+<Seo title="contact" description="" />
 
 <Contact />
