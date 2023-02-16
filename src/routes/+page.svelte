@@ -14,7 +14,7 @@
 </script>
 
 {#if animate}
-	<Seo title="" />
+	<Seo title="landozone" />
 	<section class="layout">
 		<div class="block md:hidden h-8 w-8 mb-3">
 			<Logo />

@@ -5,7 +5,7 @@
 
 <section class="layout">
 	<Heading title="recent projects" />
-	<ul class="flex flex-wrap">
+	<ul class="flex flex-wrap justify-between">
 		{#each projects as project}
 			<li class="lg:w-1/2 pb-6">
 				<h3 class="text-pri-500 font-bold mb-1 ">
