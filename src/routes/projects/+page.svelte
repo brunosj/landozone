@@ -3,5 +3,5 @@
 	import Seo from '$components/SEO/SEO.svelte';
 </script>
 
-<Seo title=" | projects" description="" />
+<Seo title="projects | " description="" />
 <Projects />

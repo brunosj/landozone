@@ -1,17 +1,31 @@
 <script lang="ts">
 	import { website } from '$data/config';
 
-	const { siteLanguage, siteTitle } = website;
+	const { siteLanguage, siteTitle, siteDescription, siteImage, siteUrl, twitter } = website;
 
 	export let description: string;
 	export let title: string;
 
-	const pageTitle = `${siteTitle} ${title}`;
+	const pageTitle = `${title} ${siteTitle} `;
 </script>
 
 <svelte:head>
 	<title>{pageTitle}</title>
-	<meta name="description" content={description} />
+	<meta name="description" content={description || siteDescription} />
+	<link rel="icon" href="/static/favicon.png" />
+	<meta name="description" content={description || siteDescription} />
+	<meta name="image" content={siteImage} />
+	<meta property="og:title" content={pageTitle} />
+	<meta property="og:url" content={siteUrl} />
+	<meta property="og:description" content={description || siteDescription} />
+	<meta property="og:image" content={siteImage} />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={pageTitle} />
+	<meta name="twitter:url" content={siteUrl} />
+	<meta name="twitter:description" content={description || siteDescription} />
+	<meta name="twitter:image" content={siteImage} />
+	<meta name="twitter:creator" content={twitter} />
 	<meta
 		name="robots"
 		content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
