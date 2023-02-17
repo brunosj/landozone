@@ -8,14 +8,8 @@
 <section class="layout">
 	<Heading title="about me" />
 	<p>
-		I'm a freelance developer passionate about transposing ideas and visions onto their little space
-		on the web. Coming from a political science background, my experience in the climate policy
-		field has equipped me with an understanding of (some of the) ways we can support the lengthy
-		road towards a more sustainable and inclusive world. I would love to pair this knowledge with my
-		programming skills to leverage technology to address environmental and social issues.
-	</p>
-	<p class="pt-3">
-		In terms of technologies, my tools of choice are <a
+		I'm a developer who enjoys bringing ideas to life on the web. In terms of technologies, my tools
+		of choice are <a
 			href="https://www.typescriptlang.org/"
 			target="_blank"
 			rel="noreferrer"
@@ -32,8 +26,19 @@
 			target="_blank"
 			rel="noreferrer"
 			class="bg-sec-300 text-md font-mono duration-300 hover:bg-sec-500">Next.js</a
-		>. I am also particularly interested about dynamic/interactive data visualization, building up
-		on my previous data science experience using traditional statistical software.
+		>. I'm particularly interested in dynamic and interactive data visualization, which builds on my
+		<a
+			href="https://github.com/brunosj/dna-copyright/"
+			target="_blank"
+			rel="noreferrer"
+			class="bg-sec-300 text-md font-mono duration-300 hover:bg-sec-500">previous experience</a> with
+		statistical software.
+	</p>
+	<p class="pt-3">
+		My background is in political science and civil society organizations. My experience in the
+		climate policy field has given me (some) insights into ways to support a more sustainable and
+		inclusive world, and I'm excited to combine this knowledge with my programming skills to tackle
+		environmental and social issues.
 	</p>
 	<div class="mt-10 flex gap-12">
 		<Social name="Github" url="https://github.com/brunosj">
