@@ -33,14 +33,16 @@
 	</section>
 {/if}
 
-<div class="lg:hidden">
-	<About />
-</div>
+{#if animate}
+	<div class="lg:hidden" in:fade={{ delay: 500, duration: 600 }}>
+		<About />
+	</div>
 
-<div class="lg:hidden">
-	<Projects />
-</div>
+	<div class="lg:hidden" in:fade={{ delay: 500, duration: 600 }}>
+		<Projects />
+	</div>
 
-<div class="lg:hidden">
-	<Contact />
-</div>
+	<div class="lg:hidden" in:fade={{ delay: 500, duration: 600 }}>
+		<Contact />
+	</div>
+{/if}
