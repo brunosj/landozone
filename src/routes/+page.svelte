@@ -17,32 +17,68 @@
 
 {#if animate}
 	<section class="layout">
-		<div class="block md:hidden h-8 w-8 mb-3">
+		<div class="logoWrapper">
 			<Logo />
 		</div>
-		<h1 class="font-bold text-pri-500 leading-none" in:fly={{ y: 100, duration: 600 }}>
-			landozone
-		</h1>
+		<h1 in:fly={{ y: 100, duration: 600 }}>landozone</h1>
 		<h2 in:fly={{ delay: 300, y: 100, duration: 600 }}>imaginative web development</h2>
 
-		<h3 class="pt-6 md:pt-12 font-light" in:fade={{ delay: 500, duration: 600 }}>
-			hi! my name is <span class="font-bold">bruno sj</span> and I am a freelance full stack developer
-			based in Berlin. I enjoy working on creative projects where I can bring my expertise to develop
-			meaningful and innovative websites and applications.
-		</h3>
+		<p in:fade={{ delay: 500, duration: 600 }}>
+			hi! my name is <span class="name">bruno sj</span> and I am a freelance full stack developer based
+			in Berlin. I enjoy working on creative projects where I can bring my expertise to develop meaningful
+			and innovative websites and applications.
+		</p>
 	</section>
 {/if}
 
 {#if animate}
-	<div class="lg:hidden" in:fade={{ delay: 500, duration: 600 }}>
+	<div class="mobileSection" in:fade={{ delay: 500, duration: 600 }}>
 		<About />
 	</div>
 
-	<div class="lg:hidden" in:fade={{ delay: 500, duration: 600 }}>
+	<div class="mobileSection" in:fade={{ delay: 500, duration: 600 }}>
 		<Projects />
 	</div>
 
-	<div class="lg:hidden" in:fade={{ delay: 500, duration: 600 }}>
+	<div class="mobileSection" in:fade={{ delay: 500, duration: 600 }}>
 		<Contact />
 	</div>
 {/if}
+
+<style>
+	h1 {
+		font-weight: 700;
+		color: #00ffcd;
+		line-height: 1;
+	}
+
+	p {
+		padding-top: 3rem /* 48px */;
+	}
+
+	.name {
+		font-weight: 700;
+	}
+
+	.mobileSection {
+		display: block;
+	}
+
+	.logoWrapper {
+		display: block;
+		height: 2rem;
+		width: 2rem;
+		margin-bottom: 0.75rem;
+	}
+
+	@media (min-width: 768px) {
+		.logoWrapper {
+			display: none;
+		}
+	}
+	@media (min-width: 1024px) {
+		.mobileSection {
+			display: none;
+		}
+	}
+</style>

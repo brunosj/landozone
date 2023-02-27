@@ -42,13 +42,36 @@
 </script>
 
 <svg
-	class="absolute w-full h-full left-0 right-0"
 	on:mousedown={() => {
 		size.set(30);
 	}}
 	on:mouseup={() => {
 		size.set(10);
 	}}>
-	<circle class=" fill-pri-500" cx={$coords.x} cy={$coords.y} r={$size} />
-	<rect class="absolute top-0 left-0 w-full h-full  bg-transparent fill-transparent" />
+	<circle cx={$coords.x} cy={$coords.y} r={$size} />
+	<rect />
 </svg>
+
+<style>
+	svg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		right: 0;
+	}
+
+	circle {
+		fill: #00ffcd;
+	}
+
+	rect {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: transparent;
+		fill: transparent;
+	}
+</style>

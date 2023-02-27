@@ -10,15 +10,27 @@
 
 {#if animate}
 	<section class="layout">
-		<h1 class="font-bold text-pri-500 leading-none" in:fly={{ y: 100, duration: 600 }}>
-			landozone
-		</h1>
+		<h1 in:fly={{ y: 100, duration: 600 }}>landozone</h1>
 		<h2 in:fly={{ delay: 300, y: 100, duration: 600 }}>imaginative web development</h2>
 
-		<h3 class="pt-12 font-light leading-tight" in:fade={{ delay: 500, duration: 600 }}>
-			hi! my name is <span class="font-bold">bruno sj</span> and I am a freelance full stack developer
-			based in Berlin. I enjoy working on creative projects where I can bring my expertise to work towards
-			meaningful and innovative websites and applications.
+		<h3 in:fade={{ delay: 500, duration: 600 }}>
+			hi! my name is <span>bruno sj</span> and I am a freelance full stack developer based in Berlin.
+			I enjoy working on creative projects where I can bring my expertise to work towards meaningful
+			and innovative websites and applications.
 		</h3>
 	</section>
 {/if}
+
+<style>
+	h1 {
+		font-weight: 700;
+		color: #00ffcd;
+		line-height: 1;
+	}
+
+	h3 {
+		padding-top: 3rem /* 48px */;
+		font-weight: 300;
+		line-height: 1.25;
+	}
+</style>

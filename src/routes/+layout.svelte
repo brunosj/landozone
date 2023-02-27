@@ -1,4 +1,5 @@
 <script>
+	import '../reset.css';
 	import '../globals.css';
 	import { fade, fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
@@ -13,18 +14,68 @@
 </script>
 
 <MouseTracker />
-<main class="bg-gradient-to-t from-ter to-sec-500  min-h-screen py-6 md:py-0">
-	<div class=" antialiased py-6 md:py-40 max-w-5xl flex flex-col md:flex-row lg:mx-auto">
+<main>
+	<div class="grid">
 		{#if animate}
-			<div in:fly={{ x: -500, duration: 800 }} class="z-10 hidden lg:block">
-				<div class="w-10 h-10 mb-6">
+			<div in:fly={{ x: -500, duration: 800 }} class="sideBar">
+				<div class="logoSideBar">
 					<Logo />
 				</div>
 				<SideNav />
 			</div>
 		{/if}
-		<div class="w-full order-first md:order-last z-10">
+		<div class="content">
 			<slot />
 		</div>
 	</div>
 </main>
+
+<style>
+	main {
+		background-image: linear-gradient(#9795f0, #fbc8d4);
+		min-height: 100vh;
+		padding: 1.5rem 0rem;
+	}
+	.grid {
+		padding: 1.5rem 0rem;
+		display: flex;
+	}
+	.sideBar {
+		z-index: 10;
+		display: none;
+	}
+	.logoSideBar {
+		width: 2.5rem;
+		height: 2.5rem;
+		margin-bottom: 1.5rem;
+	}
+	.content {
+		width: 100%;
+		order: -9999;
+		z-index: 10;
+		grid-column: span 7 / span 7;
+	}
+
+	@media (min-width: 768px) {
+		main {
+			padding: 0rem;
+		}
+		.grid {
+			display: grid;
+			grid-template-columns: repeat(8, minmax(0, 1fr));
+			padding: 10rem 0rem;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 64rem;
+		}
+		.content {
+			order: 9999;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.sideBar {
+			display: block;
+		}
+	}
+</style>

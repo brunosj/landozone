@@ -4,13 +4,24 @@
 </script>
 
 <aside>
-	<nav class="">
-		<ul class="space-y-2">
+	<nav>
+		<ul>
 			{#each menu as item}
-				<h4>
+				<li>
 					<NavLink href={item.slug} title={item.name} />
-				</h4>
+				</li>
 			{/each}
 		</ul>
 	</nav>
 </aside>
+
+<style>
+	li {
+		display: flex;
+		margin-bottom: 0.5rem;
+	}
+
+	li:last-child {
+		margin-bottom: 0;
+	}
+</style>
