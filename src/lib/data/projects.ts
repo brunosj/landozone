@@ -1,10 +1,24 @@
 export const projects = [
 	{
+		name: 'THF Radio',
+		year: 2023,
+		url: 'https://thfradio.de/',
+		description: 'community radio based in Berlin',
+		technologies: 'Next.js (React) + Strapi CMS'
+	},
+	{
 		name: 'EconCrime Lab',
 		year: 2023,
 		url: 'https://econcrimelab.com/',
 		description: 'research hub based in Montreal',
 		technologies: 'Next.js (React) + Strapi CMS'
+	},
+	{
+		name: 'ENTLEBUCH',
+		year: 2023,
+		url: 'https://die-beste.art/',
+		description: 'premium chocolate brand',
+		technologies: 'SveleKit + Strapi CMS'
 	},
 	{
 		name: 'Rigo Woodworks',
