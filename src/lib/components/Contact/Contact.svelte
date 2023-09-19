@@ -2,10 +2,17 @@
 	import Heading from '$components/Nav/Heading.svelte';
 	import LinkedIn from '$lib/assets/svg/linkedIn.svelte';
 	import Social from '$components/Socials/Social.svelte';
+	import { onMount } from 'svelte';
+	import { fade, fly } from 'svelte/transition';
+	let animate = false;
+
+	onMount(() => {
+		animate = true;
+	});
 </script>
 
-<section>
-	<div class="layout">
+{#if animate}
+	<section class="layout" in:fly={{ y: 100, duration: 600 }}>
 		<Heading title="contact" />
 		<p>Curious about collaborating on projects?</p>
 		<p class="paragraph">Get in touch at:</p>
@@ -18,13 +25,13 @@
 				<span>net</span>
 			</span>
 		</p>
-		<div class="socials">
+		<div class="socials" in:fade={{ delay: 300, duration: 600 }}>
 			<Social name="LinkedIn" url="https://www.linkedin.com/in/brunosj/">
 				<LinkedIn />
 			</Social>
 		</div>
-	</div>
-</section>
+	</section>
+{/if}
 
 <style>
 	.paragraph {

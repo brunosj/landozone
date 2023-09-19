@@ -1,28 +1,37 @@
 <script lang="ts">
 	import { projects } from '$data/projects';
 	import Heading from '$components/Nav/Heading.svelte';
+	import { onMount } from 'svelte';
+	import { fade, fly } from 'svelte/transition';
+	let animate = false;
+
+	onMount(() => {
+		animate = true;
+	});
 </script>
 
-<section class="layout">
-	<Heading title="recent projects" />
-	<ul>
-		{#each projects as project}
-			<li>
-				<h3>
-					{project.name}
-				</h3>
-				<p>
-					{project.description}
-				</p>
-				<a href={project.url} target="_blank" rel="noreferrer">
-					<p class="link">
-						{project.url.slice(8, -1)}
+{#if animate}
+	<section class="layout" in:fly={{ y: 100, duration: 600 }}>
+		<Heading title="recent projects" />
+		<ul>
+			{#each projects as project}
+				<li>
+					<h3>
+						{project.name}
+					</h3>
+					<p>
+						{project.description}
 					</p>
-				</a>
-			</li>
-		{/each}
-	</ul>
-</section>
+					<a href={project.url} target="_blank" rel="noreferrer">
+						<p class="link">
+							{project.url.slice(8, -1)}
+						</p>
+					</a>
+				</li>
+			{/each}
+		</ul>
+	</section>
+{/if}
 
 <style>
 	ul {
