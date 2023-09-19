@@ -1,5 +1,7 @@
 <script lang="ts">
 	import Heading from '$components/Nav/Heading.svelte';
+	import LinkedIn from '$lib/assets/svg/linkedIn.svelte';
+	import Social from '$components/Socials/Social.svelte';
 </script>
 
 <section>
@@ -16,6 +18,11 @@
 				<span>net</span>
 			</span>
 		</p>
+		<div class="socials">
+			<Social name="LinkedIn" url="https://www.linkedin.com/in/brunosj/">
+				<LinkedIn />
+			</Social>
+		</div>
 	</div>
 </section>
 

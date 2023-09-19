@@ -48,12 +48,12 @@
 
 	a {
 		font-family: IBMPlexMono;
-		background-color: #c1bff6;
+		background-color: #9795f0;
 		transition: all 300ms ease-in-out;
 	}
 
 	a:hover {
-		background-color: #9795f0;
+		background-color: #adabdd;
 	}
 
 	.link {

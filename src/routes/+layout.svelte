@@ -32,7 +32,7 @@
 
 <style>
 	main {
-		background-image: linear-gradient(#9795f0, #fbc8d4);
+		background-image: linear-gradient(#2e2e2e, #2e2e2e);
 		min-height: 100vh;
 		padding: 1.5rem 0rem;
 	}

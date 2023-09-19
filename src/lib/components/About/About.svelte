@@ -38,21 +38,15 @@
 <style>
 	a {
 		font-family: IBMPlexMono;
-		background-color: #c1bff6;
+		background-color: #9795f0;
 		transition: all 300ms;
 	}
 
 	a:hover {
-		background-color: #9795f0;
+		background-color: #adabdd;
 	}
 
 	.paragraph {
 		padding-top: 0.75rem;
-	}
-
-	.socials {
-		margin-top: 2.5rem;
-		display: flex;
-		gap: 3rem;
 	}
 </style>

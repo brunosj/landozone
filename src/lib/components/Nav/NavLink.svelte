@@ -41,7 +41,7 @@
 		top: 0;
 		height: 100%;
 		width: 100%;
-		background-color: #c1bff6;
+		background-color: #adabdd;
 		z-index: -1;
 		transform: rotateX(90deg);
 		transition: all 300ms;
@@ -53,6 +53,6 @@
 	}
 
 	/* a:hover {
-		color: #c1bff6;
+		color: #adabdd;
 	} */
 </style>
