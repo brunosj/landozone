@@ -2,6 +2,7 @@
 	import { spring } from 'svelte/motion';
 	import { afterUpdate } from 'svelte';
 	import { onMount } from 'svelte';
+	import throttle from 'lodash.throttle';
 
 	let coords = spring(
 		{ x: 50, y: 50 },
@@ -16,8 +17,8 @@
 	let mouseY = 0;
 
 	function handleMouseMove(event: MouseEvent) {
-		mouseX = event.clientX;
-		mouseY = event.clientY;
+		mouseX = event.pageX;
+		mouseY = event.pageY;
 	}
 
 	onMount(() => {
@@ -28,16 +29,18 @@
 	$: coords.set({ x: mouseX, y: mouseY });
 
 	$: {
-		afterUpdate(() => {
-			let elements = document.elementsFromPoint(mouseX, mouseY);
-			let links = elements.filter((el) => el.tagName === 'A');
+		afterUpdate(
+			throttle(() => {
+				let elements = document.elementsFromPoint(mouseX, mouseY);
+				let links = elements.filter((el) => el.tagName === 'A');
 
-			if (links.length) {
-				document.body.style.cursor = 'pointer';
-			} else {
-				document.body.style.cursor = 'default';
-			}
-		});
+				if (links.length) {
+					document.body.style.cursor = 'pointer';
+				} else {
+					document.body.style.cursor = 'default';
+				}
+			}, 100)
+		);
 	}
 </script>
 
