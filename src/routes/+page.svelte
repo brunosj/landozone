@@ -24,9 +24,9 @@
 		<h2 in:fly={{ delay: 300, y: 100, duration: 600 }}>imaginative web development</h2>
 
 		<p in:fade={{ delay: 500, duration: 600 }}>
-			hi! my name is <span class="name">bruno sj</span> and I am a freelance full stack developer based
-			in Berlin. I enjoy working on creative projects where I can bring my expertise to develop meaningful
-			and innovative websites and applications.
+			hi! my name is <span class="name">bruno sj</span> and I am a freelance web developer based in Berlin.
+			I enjoy working on creative projects where I can bring my expertise to develop meaningful and innovative
+			websites and applications.
 		</p>
 	</section>
 {/if}
