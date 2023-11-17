@@ -2,6 +2,7 @@
 	import '@fontsource-variable/sora';
 	import '@fontsource-variable/rubik';
 	import '@fontsource/ibm-plex-mono';
+	import '@fontsource-variable/fredoka';
 
 	import '../../../reset.css';
 	import '../../../globals.css';

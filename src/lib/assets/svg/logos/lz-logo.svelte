@@ -19,7 +19,7 @@
 			}
 
 			.cls-3 {
-				font-family: Fredoka-Regular, Fredoka;
+				font-family: 'Fredoka Variable', sans-serif;
 				font-size: 142.15px;
 				font-variation-settings:
 					'wght' 400,

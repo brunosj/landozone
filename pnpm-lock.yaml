@@ -4,6 +4,9 @@ dependencies:
   '@fontsource-variable/archivo':
     specifier: ^5.0.16
     version: 5.0.16
+  '@fontsource-variable/fredoka':
+    specifier: ^5.0.8
+    version: 5.0.8
   '@fontsource-variable/inter':
     specifier: ^5.0.15
     version: 5.0.15
@@ -336,6 +339,10 @@ packages:
 
   /@fontsource-variable/archivo@5.0.16:
     resolution: {integrity: sha512-VHo9pAKfpUHM0VcrbgAh77U6CaDT+4yqGXg3NHjK/psMABZsev3zAe/krrcssJmXPs/XvEFj4AGp0TdJ6RbjMA==}
+    dev: false
+
+  /@fontsource-variable/fredoka@5.0.8:
+    resolution: {integrity: sha512-yx2p4yrMX/ZLNeInrrSiQHRn2r4n1FqnxLDjtANK5aouh4WnGhtTqY18I7wIcP/bdXWUh5OJk76hrBQ7GJZyow==}
     dev: false
 
   /@fontsource-variable/inter@5.0.15:
