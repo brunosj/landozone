@@ -30,12 +30,12 @@
 		border-width: 1px;
 		transition: background-color 300ms ease-in-out;
 		border-radius: 0.375rem;
-		border-color: #9795f0;
+		border-color: #8786df;
 		background-color: transparent;
 	}
 
 	.socials:hover {
-		background-color: #9795f0;
+		background-color: #8786df;
 	}
 
 	.socialLogo {

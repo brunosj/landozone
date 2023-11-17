@@ -18,7 +18,7 @@ export const projects = [
 		year: 2023,
 		url: 'https://die-beste.art/',
 		description: 'premium chocolate brand',
-		technologies: 'SveleKit + Strapi CMS'
+		technologies: 'SvelteKit + Strapi CMS'
 	},
 	{
 		name: 'Rigo Woodworks',

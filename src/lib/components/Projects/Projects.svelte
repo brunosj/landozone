@@ -45,7 +45,7 @@
 	}
 
 	h3 {
-		color: #00ffcd;
+		color: #00cfa1;
 		font-weight: 700;
 		margin-bottom: 0.25rem;
 	}
@@ -57,7 +57,7 @@
 
 	a {
 		font-family: IBMPlexMono;
-		background-color: #9795f0;
+		background-color: #8786df;
 		transition: all 300ms ease-in-out;
 	}
 

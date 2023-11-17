@@ -65,7 +65,7 @@
 	}
 
 	circle {
-		fill: #00ffcd;
+		fill: #00cfa1;
 	}
 
 	rect {

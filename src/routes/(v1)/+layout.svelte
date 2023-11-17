@@ -1,6 +1,6 @@
 <script>
-	import '../reset.css';
-	import '../globals.css';
+	import '../../reset.css';
+	import '../../globals.css';
 	import { fade, fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import SideNav from '$components/Nav/SideNav.svelte';

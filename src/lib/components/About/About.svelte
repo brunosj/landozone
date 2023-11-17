@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Heading from '$components/Nav/Heading.svelte';
 	import LinkedIn from '$lib/assets/svg/linkedIn.svelte';
-	import Social from '$components/Socials/Social.svelte';
 	import Github from '$lib/assets/svg/github.svelte';
+	import Social from '$components/Socials/Social.svelte';
 	import { onMount } from 'svelte';
 	import { fade, fly } from 'svelte/transition';
 	let animate = false;
@@ -62,7 +62,7 @@
 <style>
 	a {
 		font-family: IBMPlexMono;
-		background-color: #9795f0;
+		background-color: #8786df;
 		transition: all 300ms;
 	}
 

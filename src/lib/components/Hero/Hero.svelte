@@ -24,7 +24,7 @@
 <style>
 	h1 {
 		font-weight: 700;
-		color: #00ffcd;
+		color: #00cfa1;
 		line-height: 1;
 	}
 

@@ -19,9 +19,9 @@
 		<p>
 			<span class="contactMail">
 				<span>contact </span>
-				<span class="contactMailGreen ">[at]</span>
+				<span class="contactMailGreen">[at]</span>
 				<span>landozone</span>
-				<span class="contactMailGreen ">[dot]</span>
+				<span class="contactMailGreen">[dot]</span>
 				<span>net</span>
 			</span>
 		</p>
@@ -44,6 +44,6 @@
 	}
 
 	.contactMailGreen {
-		color: #00ffcd;
+		color: #00cfa1;
 	}
 </style>

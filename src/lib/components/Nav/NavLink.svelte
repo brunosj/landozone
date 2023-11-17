@@ -17,7 +17,7 @@
 
 <style>
 	a.active {
-		background-color: #9795f0;
+		background-color: #8786df;
 		transition: all 300ms;
 		font-weight: 700;
 		/* padding: 0.2rem 0.5rem; */
