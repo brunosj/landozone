@@ -7,7 +7,7 @@
 	import { FullpageActivity, FullpageExternalController } from './stores';
 
 	export let scrollDuration = 750;
-	export let pageRoundingThresholdMultiplier = 15;
+	export let pageRoundingThresholdMultiplier = 8;
 	export let disableDragNavigation = false;
 	export let disableArrowsNavigation = false;
 
