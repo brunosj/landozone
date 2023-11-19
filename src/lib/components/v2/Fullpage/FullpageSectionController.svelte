@@ -10,36 +10,45 @@
 	export let disableArrowsNavigation;
 	export let pageRoundingThresholdMultiplier;
 	export let easing;
+
 	export let externalController;
 	externalController.goto = (sectionId) => {
 		activeSlideStore.toPage(sectionId);
 		setScroll();
 	};
+
 	let section;
+
 	const sectionScroll = tweened(0, {
 		duration: scrollDuration,
 		easing
 	});
+
 	let recentScroll = 0;
 	let dragPosition;
 	let dragStartScroll;
 	let dragging;
+
 	const slideRight = () => {
 		activeSlideStore.nextPage();
 		setScroll();
 	};
+
 	const slideLeft = () => {
 		activeSlideStore.previousPage();
 		setScroll();
 	};
+
 	export const toSlide = (event) => {
 		const slideId = event.detail;
 		activeSlideStore.toPage(slideId);
 		setScroll();
 	};
+
 	const setScroll = () => {
 		sectionScroll.set($activeSlideStore * section.clientWidth);
 	};
+
 	const updateSlideScroll = (scroll) => {
 		if (section) {
 			requestAnimationFrame(() => {
@@ -47,6 +56,7 @@
 			});
 		}
 	};
+
 	// handling arrow event
 	const handleKey = (event) => {
 		if (!isActive) return;
@@ -64,6 +74,7 @@
 			}
 		}
 	};
+
 	const handleWheel = (event) => {
 		const now = Date.now();
 		const deltaX = event.deltaX;
@@ -72,9 +83,11 @@
 			recentScroll = now;
 		}
 	};
+
 	const handleWheelEnd = (wheelDelta) => {
 		const hasScrolledLeft = wheelDelta < 0;
-		hasScrolledLeft ? slideLeft() : slideRight();
+		hasS;
+		crolledLeft ? slideLeft() : slideRight();
 	};
 	const handleDragStart = (event) => {
 		if (disableDragNavigation) return;
@@ -82,6 +95,7 @@
 		dragStartScroll = section.scrollLeft;
 		dragging = true;
 	};
+
 	const handleDragging = (event) => {
 		if (dragging) {
 			sectionScroll.set(dragStartScroll - (event.clientX - dragPosition), {
@@ -89,6 +103,7 @@
 			});
 		}
 	};
+
 	const handleDragEnd = () => {
 		dragging = false;
 		const hasScrolledLeft = dragStartScroll > section.scrollLeft;
@@ -103,6 +118,7 @@
 			setScroll();
 		}
 	};
+
 	$: updateSlideScroll($sectionScroll);
 </script>
 

@@ -1,30 +1,34 @@
 <script lang="ts">
-	export let sectionTitle: string;
+	import { activePage } from '$lib/stores/activeSection';
 	import LogoFull from '$lib/assets/svg/logos/lz-logo.svelte';
-	import LogoGreen from '$lib/assets/svg/logo-green.svelte';
-	import LogoPurple from '$lib/assets/svg/logo-purple.svelte';
+
 	import Logo from '$lib/assets/svg/logo.svelte';
+	import { fade, fly } from 'svelte/transition';
 </script>
 
 <header>
 	<nav class="container">
 		<div class="logo">
-			{#if sectionTitle === 'Landing'}
-				<LogoFull />
-			{:else if sectionTitle === 'About'}
-				<div style="width:2rem;">
+			{#if $activePage === 0}
+				<div in:fly={{ delay: 700 }} out:fly={{ delay: 300 }}>
+					<LogoFull />
+				</div>
+			{:else if $activePage === 1}
+				<div style="width:2rem;" in:fly={{ delay: 700 }} out:fly={{ delay: 300 }}>
 					<Logo color2="#00cfa1" />
 				</div>
-			{:else if sectionTitle === 'Work'}
-				<div style="width:2rem;">
+			{:else if $activePage === 2}
+				<div style="width:2rem;" in:fly={{ delay: 700 }} out:fly={{ delay: 300 }}>
 					<Logo />
 				</div>
-			{:else if sectionTitle === 'Contact'}
-				<div style="width:2rem;">
+			{:else if $activePage === 3}
+				<div style="width:2rem;" in:fly={{ delay: 700 }} out:fly={{ delay: 300 }}>
 					<Logo color1="#8786df" />
 				</div>
 			{:else}
-				<LogoFull />
+				<div in:fly={{ delay: 700 }} out:fly={{ delay: 300 }}>
+					<LogoFull />
+				</div>
 			{/if}
 		</div>
 	</nav>
@@ -32,7 +36,7 @@
 
 <style>
 	header {
-		position: absolute;
+		position: fixed;
 		top: 0;
 		z-index: 50;
 		width: 100%;

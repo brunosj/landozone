@@ -1,5 +1,4 @@
 <script>
-	import Header from '$components/v2/Header/Header.svelte';
 	import { fade, fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import Chart from '$lib/assets/svg/chart.svelte';
@@ -10,23 +9,16 @@
 	import IconR from '$lib/assets/svg/icons/SimpleIconsR.svelte';
 	import IconReact from '$lib/assets/svg/icons/SimpleIconsReact.svelte';
 	import IconSvelte from '$lib/assets/svg/icons/SimpleIconsSvelte.svelte';
-	import Social from '$components/v2/Socials/Social.svelte';
-
-	let animate = false;
-
-	onMount(() => {
-		animate = true;
-	});
+	import { activePage } from '$lib/stores/activeSection';
 </script>
 
-{#if animate}
-	<Header sectionTitle="About" />
-	<section id="about">
-		<div class="container">
+<section id="about">
+	<div class="container">
+		{#if $activePage === 1}
 			<div class="content">
-				<div class="description">
-					<h1 in:fly={{ delay: 300, y: 100, duration: 600 }}>what I do</h1>
-					<p in:fade={{ delay: 500, duration: 600 }}>
+				<div class="description" transition:fly={{ x: -500, duration: 1500 }}>
+					<h1>what I do</h1>
+					<p>
 						My expertise lies in front-end development (with some back-end here and there) and data
 						visualization. I enhance workflows and build applications using the latest web
 						technologies, being well-versed in <a
@@ -41,7 +33,7 @@
 						environment and the
 						<a href="https://d3js.org/" target="_blank" rel="noreferrer">D3.js</a> library.
 					</p>
-					<p in:fade={{ delay: 500, duration: 600 }}>
+					<p>
 						These tools enable me to create elegant and performant websites and produce compelling
 						data stories.
 					</p>
@@ -55,17 +47,17 @@
 					</div>
 				</div>
 				<div class="figures">
-					<div class="website" in:fly={{ x: 200, delay: 500, duration: 1000 }}>
+					<div class="website" transition:fly={{ x: 500, duration: 1750 }}>
 						<Website />
 					</div>
-					<div class="chart" in:fly={{ x: 200, delay: 500, duration: 1000 }}>
+					<div class="chart" transition:fly={{ x: 500, duration: 1750 }}>
 						<Chart />
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-{/if}
+		{/if}
+	</div>
+</section>
 
 <style>
 	section {
@@ -162,7 +154,7 @@
 		box-sizing: border-box;
 	}
 
-	@media screen and (max-width: 768px) {
+	@media (max-width: 768px) and (max-height: 667px) {
 		.description {
 			width: 100%;
 		}
@@ -180,6 +172,40 @@
 			right: 0;
 			top: 0rem;
 			width: 30%;
+			padding: 1rem;
+		}
+
+		.icons {
+			display: none;
+		}
+
+		.chart::before {
+			transform: translate(0.5rem, -0.5rem);
+		}
+
+		.website::before {
+			transform: translate(0.5rem, -0.5rem);
+		}
+	}
+
+	@media (max-width: 768px) and (max-height: 926px) {
+		.description {
+			width: 100%;
+		}
+
+		.website {
+			position: absolute;
+			left: 0;
+			bottom: 10%;
+			width: 40%;
+			padding: 1rem;
+		}
+
+		.chart {
+			position: absolute;
+			right: 0;
+			top: 0rem;
+			width: 40%;
 			padding: 1rem;
 		}
 

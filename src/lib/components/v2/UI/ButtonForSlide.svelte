@@ -4,18 +4,27 @@
 	export let color = '#8786df';
 	export let keepTextLight = false;
 
+	import { createEventDispatcher } from 'svelte';
+
+	export let index = 1;
+	const dispatch = createEventDispatcher();
+	const goto = () => {
+		dispatch('goto', index);
+		console.log(index);
+	};
+
 	let textHoverColor = keepTextLight ? '#fff' : '#202129';
 </script>
 
-<a href={to} target="_blank" style="--border-color: {color}; --text-hover-color: {textHoverColor}">
+<button style="--border-color: {color}; --text-hover-color: {textHoverColor}" on:click={goto}>
 	<span class="content">
 		{text}
 		<slot />
 	</span>
-</a>
+</button>
 
 <style>
-	a {
+	button {
 		position: relative;
 		width: 100%;
 		height: 1.7rem;
@@ -29,7 +38,7 @@
 		transition: all 0.2s ease-in-out;
 	}
 
-	a:after {
+	button:after {
 		transition: all 0.2s ease-in-out;
 		content: '';
 		position: absolute;
@@ -49,12 +58,12 @@
 		);
 	}
 
-	a:hover:after {
+	button:hover:after {
 		height: 100%;
 		border-radius: 0.1rem 0.1rem 0.1rem 0.1rem;
 	}
 
-	a:hover {
+	button:hover {
 		color: var(--text-hover-color);
 		border: none;
 		transition: all 0.2s ease-in-out;

@@ -10,6 +10,23 @@
 	import ProjectTemplate from '$components/v2/Projects/ProjectTemplate.svelte';
 	import type { Project } from '$lib/types/types';
 
+	// import { getContext, onMount, setContext, onDestroy } from 'svelte';
+
+	// import { FullpageActivity, FullpageExternalController } from '$lib/components/v2/Fullpage/stores';
+
+	// let context;
+	// let activeSectionStore;
+	// let activeSection;
+
+	// $: context = getContext('section');
+	// $: {
+	// 	if (context) {
+	// 		activeSectionStore = context.activeSectionStore;
+	// 	}
+	// }
+
+	// $: console.log($activeSectionStore);
+
 	let projectPairs: Project[][] = [];
 
 	for (let i = 0; i < projects.length; i += 2) {
@@ -24,6 +41,7 @@
 	<FullpageSection title="About">
 		<About />
 	</FullpageSection>
+
 	<FullpageSection title="Project">
 		<FullpageSlide>
 			<Work />

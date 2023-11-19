@@ -1,31 +1,21 @@
 <script>
-	import Header from '$components/v2/Header/Header.svelte';
+	import { activePage } from '$lib/stores/activeSection';
 	import { fade, fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
-	import LogoMultiple from '$lib/assets/svg/logo-multiple.svelte';
-	import BSJ1 from '$lib/assets/images/bsj_1.jpg';
-	import BSJ2 from '$lib/assets/images/bsj_2.jpg';
 	import BSJ3 from '$lib/assets/images/bsj_3.jpg';
 	import IconGithub from '$lib/assets/svg/icons/SimpleIconsGithub.svelte';
 	import IconLinkedIn from '$lib/assets/svg/icons/SimpleIconsLinkedin.svelte';
 	import IconMail from '$lib/assets/svg/icons/MaterialSymbolsLightMailRounded.svelte';
 	import IconTelegram from '$lib/assets/svg/icons/SimpleIconsTelegram.svelte';
 	import Button from '$components/v2/UI/Button.svelte';
-
-	let animate = false;
-
-	onMount(() => {
-		animate = true;
-	});
 </script>
 
-{#if animate}
-	<Header sectionTitle="Contact" />
-	<section>
-		<div class="container">
-			<div class="content">
+<section>
+	<div class="container">
+		<div class="content">
+			{#if $activePage === 3}
 				<div class="grid">
-					<div class="description">
+					<div class="description" transition:fly={{ x: -500, duration: 1500 }}>
 						<h1 in:fly={{ delay: 300, y: 100, duration: 600 }}>get in touch!</h1>
 
 						<p in:fade={{ delay: 500, duration: 600 }}>
@@ -36,7 +26,7 @@
 							<a id="mail" href="mailto:contact@landozone.net">contact@landozone.net</a>
 						</p>
 					</div>
-					<div class="info grid">
+					<div class="info grid" transition:fly={{ x: 500, duration: 1750 }}>
 						<div class="grid-item">
 							<div class="picture">
 								<img src={BSJ3} alt="BSJ" />
@@ -78,10 +68,10 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			{/if}
 		</div>
-	</section>
-{/if}
+	</div>
+</section>
 
 <style>
 	section {
@@ -103,7 +93,7 @@
 	img {
 		width: 5.5rem;
 		border-radius: 100%;
-		margin-bottom: 2rem;
+		margin-bottom: 1.5rem;
 	}
 
 	#mail {
@@ -209,9 +199,13 @@
 			gap: 2rem;
 		}
 
+		.picture p {
+			font-size: 0.8rem;
+		}
+
 		.info {
-			width: 85%;
-			padding: 2rem;
+			width: 80%;
+			padding: 1.5rem 2rem;
 		}
 
 		.info::before {
@@ -225,6 +219,10 @@
 			column-gap: 1rem;
 		}
 
+		img {
+			margin-bottom: 0;
+		}
+
 		.mobile {
 			display: flex;
 		}
@@ -234,7 +232,7 @@
 		}
 
 		#mail {
-			font-size: 1.2rem;
+			font-size: 1.1rem;
 		}
 	}
 </style>

@@ -5,8 +5,10 @@
 	import { writable } from 'svelte/store';
 	import { quartOut, cubicInOut } from 'svelte/easing';
 	import { FullpageActivity, FullpageExternalController } from './stores';
+	import { activePage } from '$lib/stores/activeSection';
+	import { onMount, onDestroy } from 'svelte';
 
-	export let scrollDuration = 750;
+	export let scrollDuration = 1000;
 	export let pageRoundingThresholdMultiplier = 8;
 	export let disableDragNavigation = false;
 	export let disableArrowsNavigation = false;
@@ -42,6 +44,21 @@ is for determination sectionId for FullpageSection
 		}
 	};
 	setContext('section', sectionContext);
+
+	// added code to pass active section to activePage store
+
+	let storeValue;
+
+	const unsubscribe = activeSectionStore.subscribe((value) => {
+		storeValue = value;
+		activePage.set(storeValue);
+	});
+
+	onMount(() => {});
+
+	onDestroy(() => {
+		unsubscribe();
+	});
 </script>
 
 <div {...$$restProps}>

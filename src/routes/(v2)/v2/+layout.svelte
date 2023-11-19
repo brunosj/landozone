@@ -7,9 +7,9 @@
 	import '../../../reset.css';
 	import '../../../globals.css';
 
+	import { get } from 'svelte/store';
 	import Header from '$components/v2/Header/Header.svelte';
-	import MouseTracker from '$components/v2/MouseTracker/MouseTracker.svelte';
 </script>
 
-<!-- <MouseTracker /> -->
+<Header />
 <slot />
