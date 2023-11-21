@@ -136,7 +136,6 @@
 		letter-spacing: 0.7px;
 		font-family: 'IBM Plex Mono', sans-serif;
 		font-weight: 600;
-		gap: 0.2rem;
 		color: var(--color-secondary);
 		animation: 1.5s wiggle ease infinite;
 	}
@@ -158,6 +157,10 @@
 	@media screen and (max-width: 768px) {
 		.hero {
 			width: 100%;
+		}
+
+		.helper {
+			font-size: 0.6rem;
 		}
 	}
 </style>

@@ -161,6 +161,10 @@
 	}
 
 	@media (max-width: 768px) and (max-height: 667px) {
+		a {
+			font-size: 10rem;
+		}
+
 		.description {
 			width: 100%;
 			margin-top: 4rem;
@@ -176,6 +180,10 @@
 			left: 0;
 			width: 30%;
 			padding: 1rem;
+		}
+
+		.icons {
+			display: none;
 		}
 
 		.chart {
@@ -198,6 +206,29 @@
 	@media (max-width: 768px) and (max-height: 926px) {
 		.description {
 			width: 100%;
+		}
+
+		.description > * + * {
+			margin-top: 1rem;
+		}
+		.website {
+			position: absolute;
+			bottom: 10%;
+			left: 0;
+			width: 30%;
+			padding: 1rem;
+		}
+
+		.icons {
+			display: none;
+		}
+
+		.chart {
+			position: absolute;
+			bottom: 10%;
+			right: 0;
+			width: 30%;
+			padding: 1rem;
 		}
 
 		.chart::before {
