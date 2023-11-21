@@ -10,7 +10,7 @@
 
 	export let scrollDuration = 1000;
 	export let pageRoundingThresholdMultiplier = 8;
-	export let disableDragNavigation = true;
+	export let disableDragNavigation = false;
 	export let disableArrowsNavigation = false;
 
 	export let easing = cubicInOut;
