@@ -35,11 +35,6 @@
 	</FullpageSection>
 </Fullpage>
 
-<!-- <Landing />
-<About />
-<Work />
-<Contact /> -->
-
 <style global>
 	:global(body) {
 		height: 100vh;
@@ -53,20 +48,12 @@
 		position: relative;
 	}
 
-	/* :global(*) {
-		border: solid white 1px;
-	} */
-
 	:global(.content) {
 		width: 100%;
 		height: 90%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-	}
-
-	.mobile {
-		display: hidden;
 	}
 
 	@media screen and (max-width: 768px) {

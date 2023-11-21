@@ -26,11 +26,11 @@
 		border-bottom: transparent;
 		color: var(--color-white);
 		z-index: 20;
-		transition: all 0.2s ease-in-out;
+		transition: all 0.3s ease-in-out;
 	}
 
 	a:after {
-		transition: all 0.2s ease-in-out;
+		transition: all 0.3s ease-in-out;
 		content: '';
 		position: absolute;
 		bottom: 0;
@@ -57,7 +57,7 @@
 	a:hover {
 		color: var(--text-hover-color);
 		border: none;
-		transition: all 0.2s ease-in-out;
+		transition: all 0.3s ease-in-out;
 	}
 
 	.content {

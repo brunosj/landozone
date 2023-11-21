@@ -39,9 +39,11 @@
 
 {#if animate}
 	<li style="--border-color: {color}">
-		<a href={url} target="_blank" class="project">
+		<div class="project">
 			{#if ImageComponent}
-				<img src={ImageComponent} alt={name} />
+				<a href={url} target="_blank">
+					<img src={ImageComponent} alt={name} />
+				</a>
 			{/if}
 			<div class="info">
 				<h4>
@@ -62,7 +64,7 @@
 					</div>
 				</div>
 			</div>
-		</a>
+		</div>
 	</li>
 {/if}
 
@@ -71,9 +73,7 @@
 		position: relative;
 		list-style: none;
 		width: 45%;
-		/* background-color: var(--color-gray); */
-		/* padding: 1rem; */
-		border-radius: 6px;
+		border-radius: 12px;
 		z-index: 100;
 		z-index: auto;
 	}
@@ -85,22 +85,6 @@
 		font-size: 0.9rem;
 		color: var(--color-lightgray);
 	}
-
-	/* li::before {
-		content: '';
-		display: block;
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		z-index: -1;
-		left: 0;
-		top: 0;
-		border-radius: 6px;
-		border: 2px solid var(--border-color);
-		opacity: 0.5;
-		transform: translate(0.7rem, -0.7rem);
-		box-sizing: border-box;
-	} */
 
 	.project {
 		display: flex;
@@ -137,7 +121,7 @@
 		width: 100%;
 	}
 
-	img {
+	a {
 		border-radius: 4px;
 		width: 50%;
 	}
@@ -147,13 +131,17 @@
 			display: none;
 		}
 
-		img {
+		a {
 			border-radius: 4px;
 			width: 100%;
 		}
 
 		li {
 			width: 45%;
+		}
+
+		.project {
+			padding: 0.3rem 0.7rem;
 		}
 	}
 

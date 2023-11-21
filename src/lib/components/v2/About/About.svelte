@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { fade, fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import Chart from '$lib/assets/svg/chart.svelte';
@@ -17,11 +17,11 @@
 		{#if $activePage === 1}
 			<div class="content">
 				<div class="description">
-					<h2 transition:fly={{ y: 50, duration: 750, delay: 500 }}>about</h2>
+					<!-- <h2 transition:fly={{ y: 50, duration: 750, delay: 500 }}>about</h2> -->
 					<p transition:fly={{ y: 50, duration: 750, delay: 750 }}>
-						My expertise lies in front-end development (with some back-end here and there) and data
-						visualization. I enhance workflows and build applications using the latest web
-						technologies, being well-versed in
+						My expertise lies in <span>front-end development</span> (with some back-end here and
+						there) and <span>data visualization</span>. I enhance workflows and build applications
+						using the latest web technologies, being well-versed in
 						<a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"
 							>JavaScript/TypeScript</a>
 						tools including frameworks like
@@ -66,6 +66,10 @@
 		color: var(--color-black);
 	}
 
+	span {
+		font-weight: 600;
+	}
+
 	a {
 		position: relative;
 		/* font-family: 'IBM Plex Mono', sans-serif; */
@@ -106,6 +110,7 @@
 
 	.description {
 		width: 40%;
+		margin-bottom: 0;
 	}
 
 	.icons {
@@ -116,24 +121,26 @@
 
 	.website {
 		position: absolute;
-		right: 20rem;
 		bottom: 8rem;
+		right: 20rem;
 		width: 20%;
+		height: auto;
 		background-color: var(--color-gray);
 		padding: 2rem;
-		border-radius: 8px;
+		border-radius: 12px;
 		z-index: auto;
 	}
 
 	.chart {
 		position: absolute;
-		right: 0;
-		top: 12rem;
+		bottom: 26rem;
+		right: 0rem;
 		width: 20%;
+		height: auto;
 		background-color: var(--color-gray);
 		padding: 2rem;
+		border-radius: 12px;
 		z-index: auto;
-		border-radius: 8px;
 	}
 
 	.chart::before,
@@ -147,7 +154,7 @@
 		top: 0;
 		opacity: 0.5;
 		/* z-index: -1; */
-		border-radius: 8px;
+		border-radius: 12px;
 		border: 2px solid var(--color-primary);
 		transform: translate(1rem, -1rem);
 		box-sizing: border-box;
@@ -156,26 +163,27 @@
 	@media (max-width: 768px) and (max-height: 667px) {
 		.description {
 			width: 100%;
+			margin-top: 4rem;
+			margin-bottom: auto;
 		}
 
+		.description > * + * {
+			margin-top: 1rem;
+		}
 		.website {
 			position: absolute;
-			left: 0;
 			bottom: 10%;
+			left: 0;
 			width: 30%;
 			padding: 1rem;
 		}
 
 		.chart {
 			position: absolute;
+			bottom: 10%;
 			right: 0;
-			top: 0rem;
 			width: 30%;
 			padding: 1rem;
-		}
-
-		.icons {
-			display: none;
 		}
 
 		.chart::before {
@@ -190,22 +198,6 @@
 	@media (max-width: 768px) and (max-height: 926px) {
 		.description {
 			width: 100%;
-		}
-
-		.website {
-			position: absolute;
-			left: 0;
-			bottom: 10%;
-			width: 20%;
-			padding: 1rem;
-		}
-
-		.chart {
-			position: absolute;
-			right: 0;
-			top: 0rem;
-			width: 20%;
-			padding: 1rem;
 		}
 
 		.chart::before {

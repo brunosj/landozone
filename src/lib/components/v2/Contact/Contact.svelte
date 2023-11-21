@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { activePage } from '$lib/stores/activeSection';
 	import { fade, fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
@@ -10,13 +10,13 @@
 	import Button from '$components/v2/UI/Button.svelte';
 </script>
 
-<section>
+<section id="contact">
 	<div class="container">
 		<div class="content">
 			{#if $activePage === 3}
 				<div class="grid">
 					<div class="description">
-						<h2 transition:fly={{ y: 50, duration: 750, delay: 500 }}>get in touch!</h2>
+						<h3 transition:fly={{ y: 50, duration: 750, delay: 500 }}>get in touch!</h3>
 
 						<p transition:fly={{ y: 50, duration: 750, delay: 750 }}>
 							Have an exciting project you would like to collaborate on? <br /> Send me a message and
@@ -31,7 +31,7 @@
 							<div class="picture">
 								<img src={BSJ3} alt="BSJ" />
 								<div>
-									<h3>Bruno SJ</h3>
+									<h4>Bruno SJ</h4>
 									<p>Web Developer/Designer</p>
 								</div>
 							</div>
@@ -81,12 +81,13 @@
 		color: var(--color-black);
 	}
 
-	h2 {
+	h3 {
 		color: var(--color-black);
 	}
 
-	h3 {
+	h4 {
 		color: var(--color-secondary);
+		font-weight: 500;
 		margin-bottom: 0.2rem;
 	}
 
@@ -201,6 +202,10 @@
 
 		.picture p {
 			font-size: 0.8rem;
+		}
+
+		.description > * + * {
+			margin-top: 1rem;
 		}
 
 		.info {

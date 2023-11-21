@@ -1,8 +1,10 @@
-<script>
+<script lang="ts">
 	import { fade, fly } from 'svelte/transition';
 	import LogoMultiple from '$lib/assets/svg/logo-multiple.svelte';
 	import { activePage } from '$lib/stores/activeSection';
 	import { onMount } from 'svelte';
+	import IconArrowDown from '$lib/assets/svg/icons/MaterialSymbolsLightKeyboardDoubleArrowDownRounded.svelte';
+	import { FullpageExternalController } from '../Fullpage/stores';
 
 	let animate = false;
 	onMount(() => {
@@ -26,11 +28,12 @@
 					</p>
 				</div>
 			{/if}
+			<div class="helper">
+				Scroll down
+				<IconArrowDown width="1.5rem" />
+			</div>
 		</div>
 	</div>
-	<!-- <div class="logoAnimation">
-			<LogoMultiple />
-		</div> -->
 </section>
 
 <style>
@@ -83,7 +86,9 @@
 		/* font-size: 1.5rem; */
 		position: relative;
 		z-index: 20;
-		/* color: var(--color-secondary); */
+		font-weight: 600;
+		color: var(--color-secondary);
+		transition: all 0.2s ease-in-out;
 	}
 
 	#link:after {
@@ -92,10 +97,10 @@
 		position: absolute;
 		bottom: 10%;
 		z-index: -1;
-		height: 30%;
+		height: 0%;
 		width: 104%;
 		left: -1%;
-		opacity: 0.7;
+		opacity: 0.5;
 		border-radius: 2px;
 		background: linear-gradient(
 			65deg,
@@ -107,6 +112,47 @@
 
 	#link:hover:after {
 		height: 80%;
+		opacity: 0.8;
+	}
+
+	#link:hover {
+		color: var(--color-white);
+	}
+
+	.helper {
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 10%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 0.8rem;
+		text-transform: uppercase;
+		letter-spacing: 0.7px;
+		font-family: 'IBM Plex Mono', sans-serif;
+		font-weight: 600;
+		gap: 0.2rem;
+		color: var(--color-secondary);
+		animation: 1.5s wiggle ease infinite;
+	}
+
+	@keyframes wiggle {
+		0% {
+			transform: translateY(0px);
+		}
+
+		50% {
+			transform: translateY(4px);
+		}
+
+		100% {
+			transform: translateY(0px);
+		}
 	}
 
 	@media screen and (max-width: 768px) {

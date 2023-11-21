@@ -10,24 +10,54 @@
 	<nav class="container">
 		<div class="logo">
 			{#if $activePage === 0}
-				<div in:fly={{ delay: 700 }} out:fly={{ delay: 300 }}>
+				<div class="logo-full" in:fly={{ delay: 700 }} out:fly={{ delay: 300 }}>
 					<LogoFull />
 				</div>
 			{:else if $activePage === 1}
-				<div style="width:2rem;" in:fly={{ delay: 700 }} out:fly={{ delay: 300 }}>
-					<Logo color2="#00cfa1" />
+				<div class="logo-shape" in:fly={{ delay: 700 }} out:fly={{ delay: 300 }}>
+					<Logo color1="#00cfa1" color2="#202129" />
 				</div>
 			{:else if $activePage === 2}
-				<div style="width:2rem;" in:fly={{ delay: 700 }} out:fly={{ delay: 300 }}>
+				<div class="logo-shape" in:fly={{ delay: 700 }} out:fly={{ delay: 300 }}>
 					<Logo />
 				</div>
 			{:else if $activePage === 3}
-				<div style="width:2rem;" in:fly={{ delay: 700 }} out:fly={{ delay: 300 }}>
-					<Logo color1="#8786df" />
+				<div class="logo-shape" in:fly={{ delay: 700 }} out:fly={{ delay: 300 }}>
+					<Logo color1="#8786df" color2="#202129" />
 				</div>
 			{:else}
 				<div in:fly={{ delay: 700 }} out:fly={{ delay: 300 }}>
 					<LogoFull />
+				</div>
+			{/if}
+		</div>
+		<div class="active-page">
+			{#if $activePage === 0}
+				<div style="width:100%" in:fly={{ delay: 700 }} out:fly={{ delay: 300 }}></div>
+			{:else if $activePage === 1}
+				<div
+					style="width:100%; color:var(--color-black)"
+					in:fly={{ delay: 700 }}
+					out:fly={{ delay: 300 }}>
+					<span>about</span>
+				</div>
+			{:else if $activePage === 2}
+				<div
+					style="width:100%; color:var(--color-secondary)"
+					in:fly={{ delay: 700 }}
+					out:fly={{ delay: 300 }}>
+					<span>selected works</span>
+				</div>
+			{:else if $activePage === 3}
+				<div
+					style="width:100%; color:var(--color-black)"
+					in:fly={{ delay: 700 }}
+					out:fly={{ delay: 300 }}>
+					<span>contact</span>
+				</div>
+			{:else}
+				<div in:fly={{ delay: 700 }} out:fly={{ delay: 300 }}>
+					<span>about</span>
 				</div>
 			{/if}
 		</div>
@@ -38,6 +68,7 @@
 	header {
 		position: fixed;
 		top: 0;
+		/* height: 3rem; */
 		z-index: 50;
 		width: 100%;
 		/* padding: 1rem 0rem; */
@@ -51,7 +82,37 @@
 		align-items: center;
 	}
 
-	.logo {
-		width: 10rem;
+	.active-page {
+		text-align: right;
+	}
+
+	.logo-full {
+		width: 11rem;
+	}
+
+	.logo-shape {
+		width: 2rem;
+	}
+
+	span {
+		position: relative;
+		line-height: 1;
+		font-size: 1.7rem;
+		font-weight: 700;
+		font-family: 'Sora Variable', sans-serif;
+	}
+
+	@media (max-width: 768px) {
+		span {
+			font-size: 1.3rem;
+		}
+
+		.logo-full {
+			width: 8rem;
+		}
+
+		.logo-shape {
+			width: 1.5rem;
+		}
 	}
 </style>
