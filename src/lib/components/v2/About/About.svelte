@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { fade, fly } from 'svelte/transition';
-	import { onMount } from 'svelte';
 	import Chart from '$lib/assets/svg/chart.svelte';
 	import Website from '$lib/assets/svg/website.svelte';
 	import IconD3 from '$lib/assets/svg/icons/SimpleIconsD3dotjs.svelte';
@@ -18,7 +17,7 @@
 			<div class="content">
 				<div class="description">
 					<!-- <h2 transition:fly={{ y: 50, duration: 750, delay: 500 }}>about</h2> -->
-					<p transition:fly={{ y: 50, duration: 750, delay: 750 }}>
+					<p transition:fly={{ y: 50, duration: 750, delay: 500 }}>
 						My expertise lies in <span>front-end development</span> (with some back-end here and
 						there) and <span>data visualization</span>. I enhance workflows and build applications
 						using the latest web technologies, being well-versed in
@@ -97,11 +96,7 @@
 	}
 
 	a:hover:after {
-		height: 80%; /* Expand the underline on hover */
-	}
-
-	h2 {
-		color: var(--color-black);
+		height: 80%;
 	}
 
 	.description > * + * {
@@ -162,7 +157,7 @@
 
 	@media (max-width: 768px) and (max-height: 667px) {
 		a {
-			font-size: 10rem;
+			font-size: 1rem;
 		}
 
 		.description {

@@ -57,11 +57,11 @@
 							<IconInternet width="1.3rem" />
 						</Button>
 					</div>
-					<div class="link">
+					<!-- <div class="link">
 						<Button to={`/work/${slug}`} text="Learn more" {color} {keepTextLight}>
 							<IconArrow width="1.3rem" />
 						</Button>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>

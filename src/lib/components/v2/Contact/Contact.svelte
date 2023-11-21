@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { activePage } from '$lib/stores/activeSection';
 	import { fade, fly } from 'svelte/transition';
-	import { onMount } from 'svelte';
 	import BSJ3 from '$lib/assets/images/bsj_3.jpg';
 	import IconGithub from '$lib/assets/svg/icons/SimpleIconsGithub.svelte';
 	import IconLinkedIn from '$lib/assets/svg/icons/SimpleIconsLinkedin.svelte';
@@ -16,17 +15,19 @@
 			{#if $activePage === 3}
 				<div class="grid">
 					<div class="description">
-						<h3 transition:fly={{ y: 50, duration: 750, delay: 500 }}>get in touch!</h3>
+						<!-- <h3 transition:fly={{ y: 50, duration: 750, delay: 500 }}>get in touch!</h3> -->
 
-						<p transition:fly={{ y: 50, duration: 750, delay: 750 }}>
-							Have an exciting project you would like to collaborate on? <br /> Send me a message and
-							I would be happy to further discuss your ideas with you.
+						<p transition:fly={{ y: 50, duration: 750, delay: 500 }}>
+							Have an exciting project you would like to collaborate on?
+						</p>
+						<p transition:fly={{ y: 50, duration: 750, delay: 500 }}>
+							Send me a message and I would be happy to further discuss your ideas with you.
 						</p>
 						<p transition:fly={{ y: 50, duration: 750, delay: 750 }}>
 							<a id="mail" href="mailto:contact@landozone.net">contact@landozone.net</a>
 						</p>
 					</div>
-					<div class="info grid" transition:fly={{ y: 50, duration: 750, delay: 750 }}>
+					<div class="info grid" transition:fly={{ y: 50, duration: 750, delay: 500 }}>
 						<div class="grid-item">
 							<div class="picture">
 								<img src={BSJ3} alt="BSJ" />
@@ -78,10 +79,6 @@
 		background-color: var(--color-primary);
 		width: 100%;
 		height: 100%;
-		color: var(--color-black);
-	}
-
-	h3 {
 		color: var(--color-black);
 	}
 
@@ -177,13 +174,13 @@
 	}
 
 	.description > * + * {
-		margin-top: 1.5rem;
+		margin-top: 1rem;
 	}
 
 	.grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: 3rem;
+		gap: 6rem;
 	}
 
 	.grid-item {
@@ -202,10 +199,6 @@
 
 		.picture p {
 			font-size: 0.8rem;
-		}
-
-		.description > * + * {
-			margin-top: 1rem;
 		}
 
 		.info {

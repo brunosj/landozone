@@ -1,10 +1,8 @@
 <script lang="ts">
 	import { fade, fly } from 'svelte/transition';
-	import LogoMultiple from '$lib/assets/svg/logo-multiple.svelte';
 	import { activePage } from '$lib/stores/activeSection';
 	import { onMount } from 'svelte';
 	import IconArrowDown from '$lib/assets/svg/icons/MaterialSymbolsLightKeyboardDoubleArrowDownRounded.svelte';
-	import { FullpageExternalController } from '../Fullpage/stores';
 
 	let animate = false;
 	onMount(() => {
@@ -18,7 +16,6 @@
 			{#if $activePage === 0}
 				<div class="hero" transition:fly={{ y: -50, duration: 750 }}>
 					<h1 class:fade-in={animate}>imaginative web development</h1>
-
 					<p class:fade-in={animate}>
 						Hello! I'm <a href="https://www.linkedin.com/in/brunosj/" target="_blank" id="link"
 							>Bruno</a
@@ -27,11 +24,13 @@
 						on the web.
 					</p>
 				</div>
+				<div class="helper" transition:fly={{ y: -50, duration: 750 }}>
+					<span class:fade-in={animate}>Scroll down</span>
+					<span class:fade-in={animate}>
+						<IconArrowDown width="1.5rem" />
+					</span>
+				</div>
 			{/if}
-			<div class="helper">
-				Scroll down
-				<IconArrowDown width="1.5rem" />
-			</div>
 		</div>
 	</div>
 </section>
@@ -70,6 +69,11 @@
 
 	.name {
 		color: var(--color-secondary);
+	}
+
+	span {
+		opacity: 0;
+		transition: 750ms ease all;
 	}
 
 	.logoAnimation {

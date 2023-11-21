@@ -20,7 +20,7 @@
 							Here are a few of my recent works
 						</p>
 					</div> -->
-					<div class="projects" transition:fly={{ y: 50, duration: 750, delay: 750 }}>
+					<div class="projects" transition:fly={{ y: 50, duration: 750, delay: 500 }}>
 						<!-- <div class="logo" style="width:50%">
 							<Logo />
 						</div> -->

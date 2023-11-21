@@ -1,11 +1,14 @@
 <script lang="ts">
-	export let items: Project[];
+	import { projects } from '$lib/data/projectsV2';
+
 	import type { Project } from '$lib/types/types';
 	import { fade, fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import Header from '$components/v2/Header/Header.svelte';
 	import Button from '$components/v2/UI/Button.svelte';
 	import ProjectListing from '$components/v2/Projects/ProjectListing.svelte';
+
+	let items: Project[] = projects;
 
 	let animate = false;
 

@@ -35,27 +35,7 @@
 	</FullpageSection>
 </Fullpage>
 
-<style global>
-	:global(body) {
-		height: 100vh;
-		margin: 0;
-	}
-
-	:global(.container) {
-		max-width: 85%;
-		height: 100%;
-		margin: 3rem auto;
-		position: relative;
-	}
-
-	:global(.content) {
-		width: 100%;
-		height: 90%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-
+<style>
 	@media screen and (max-width: 768px) {
 		.mobile {
 			position: relative;

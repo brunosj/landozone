@@ -4,6 +4,8 @@
 
 	import Logo from '$lib/assets/svg/logo.svelte';
 	import { fade, fly } from 'svelte/transition';
+
+	$: console.log($activePage);
 </script>
 
 <header>
@@ -26,8 +28,8 @@
 					<Logo color1="#8786df" color2="#202129" />
 				</div>
 			{:else}
-				<div in:fly={{ delay: 700 }} out:fly={{ delay: 300 }}>
-					<LogoFull />
+				<div class="logo-shape" in:fly={{ delay: 700 }} out:fly={{ delay: 300 }}>
+					<Logo />
 				</div>
 			{/if}
 		</div>

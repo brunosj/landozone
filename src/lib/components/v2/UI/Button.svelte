@@ -5,9 +5,14 @@
 	export let keepTextLight = false;
 
 	let textHoverColor = keepTextLight ? '#fff' : '#202129';
+
+	const isExternal = to.slice(0, 4) === 'http';
 </script>
 
-<a href={to} target="_blank" style="--border-color: {color}; --text-hover-color: {textHoverColor}">
+<a
+	href={to}
+	target={isExternal ? '_blank' : ''}
+	style="--border-color: {color}; --text-hover-color: {textHoverColor}">
 	<span class="content">
 		{text}
 		<slot />
