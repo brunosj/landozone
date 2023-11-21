@@ -50,6 +50,7 @@
 	@media only screen and (max-width: 600px) {
 		li {
 			margin: 0.5rem;
+			display: none;
 		}
 	}
 </style>

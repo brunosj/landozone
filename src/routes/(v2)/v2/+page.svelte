@@ -1,7 +1,9 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import Fullpage from '$components/v2/Fullpage/Fullpage.svelte';
 	import FullpageSection from '$components/v2/Fullpage/FullpageSection.svelte';
 	import FullpageSlide from '$components/v2/Fullpage/FullpageSlide.svelte';
+	import type { FullpageActivityStore } from '$components/v2/Fullpage/types.d.ts';
 	import Landing from '$components/v2/Landing/Landing.svelte';
 	import About from '$components/v2/About/About.svelte';
 	import Work from '$components/v2/Projects/Projects.svelte';
@@ -9,23 +11,6 @@
 	import { projects } from '$lib/data/projectsV2';
 	import ProjectTemplate from '$components/v2/Projects/ProjectTemplate.svelte';
 	import type { Project } from '$lib/types/types';
-
-	// import { getContext, onMount, setContext, onDestroy } from 'svelte';
-
-	// import { FullpageActivity, FullpageExternalController } from '$lib/components/v2/Fullpage/stores';
-
-	// let context;
-	// let activeSectionStore;
-	// let activeSection;
-
-	// $: context = getContext('section');
-	// $: {
-	// 	if (context) {
-	// 		activeSectionStore = context.activeSectionStore;
-	// 	}
-	// }
-
-	// $: console.log($activeSectionStore);
 
 	let projectPairs: Project[][] = [];
 
@@ -43,19 +28,17 @@
 	</FullpageSection>
 
 	<FullpageSection title="Project">
-		<FullpageSlide>
-			<Work />
-		</FullpageSlide>
-		{#each projectPairs as items}
-			<FullpageSlide>
-				<ProjectTemplate {items} />
-			</FullpageSlide>
-		{/each}
+		<Work />
 	</FullpageSection>
 	<FullpageSection title="Contact">
 		<Contact />
 	</FullpageSection>
 </Fullpage>
+
+<!-- <Landing />
+<About />
+<Work />
+<Contact /> -->
 
 <style global>
 	:global(body) {
@@ -80,5 +63,16 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+	}
+
+	.mobile {
+		display: hidden;
+	}
+
+	@media screen and (max-width: 768px) {
+		.mobile {
+			position: relative;
+			height: 100%;
+		}
 	}
 </style>

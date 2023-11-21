@@ -15,18 +15,18 @@
 		<div class="content">
 			{#if $activePage === 3}
 				<div class="grid">
-					<div class="description" transition:fly={{ x: -500, duration: 1500 }}>
-						<h1 in:fly={{ delay: 300, y: 100, duration: 600 }}>get in touch!</h1>
+					<div class="description">
+						<h2 transition:fly={{ y: 50, duration: 750, delay: 500 }}>get in touch!</h2>
 
-						<p in:fade={{ delay: 500, duration: 600 }}>
+						<p transition:fly={{ y: 50, duration: 750, delay: 750 }}>
 							Have an exciting project you would like to collaborate on? <br /> Send me a message and
 							I would be happy to further discuss your ideas with you.
 						</p>
-						<p>
+						<p transition:fly={{ y: 50, duration: 750, delay: 750 }}>
 							<a id="mail" href="mailto:contact@landozone.net">contact@landozone.net</a>
 						</p>
 					</div>
-					<div class="info grid" transition:fly={{ x: 500, duration: 1750 }}>
+					<div class="info grid" transition:fly={{ y: 50, duration: 750, delay: 750 }}>
 						<div class="grid-item">
 							<div class="picture">
 								<img src={BSJ3} alt="BSJ" />
@@ -81,7 +81,7 @@
 		color: var(--color-black);
 	}
 
-	h1 {
+	h2 {
 		color: var(--color-black);
 	}
 
@@ -97,7 +97,7 @@
 	}
 
 	#mail {
-		font-size: 1.5rem;
+		font-size: 1.3rem;
 		position: relative;
 		z-index: 20;
 	}
@@ -112,7 +112,7 @@
 		width: 104%;
 		left: -1%;
 		opacity: 0.5;
-		border-radius: 0.3rem;
+		border-radius: 2px;
 		background: linear-gradient(
 			65deg,
 			var(--color-secondary) 0%,
@@ -149,7 +149,7 @@
 		background-color: var(--color-black);
 		color: var(--color-white);
 		padding: 4rem;
-		border-radius: 1.5rem;
+		border-radius: 12px;
 		width: 75%;
 		position: relative;
 		z-index: auto;
@@ -164,7 +164,7 @@
 		left: 0;
 		top: 0;
 		/* z-index: -1; */
-		border-radius: 1.5rem;
+		border-radius: 12px;
 		border: 2px solid var(--color-secondary);
 		transform: translate(1rem, -1rem);
 		box-sizing: border-box;

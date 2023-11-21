@@ -5,6 +5,7 @@ export interface Project {
 	color: string;
 	keepTextLight: boolean;
 	repo: string;
+	slug: string;
 	type: string;
 	image: string;
 	description: string;

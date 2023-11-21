@@ -66,9 +66,6 @@ devDependencies:
   svelte-check:
     specifier: ^3.6.0
     version: 3.6.0(svelte@4.2.3)
-  svelte-fullpage:
-    specifier: ^1.1.0
-    version: 1.1.0(svelte@4.2.3)
   svelte-preprocess:
     specifier: ^5.1.0
     version: 5.1.0(svelte@4.2.3)(typescript@5.2.2)
@@ -1697,14 +1694,6 @@ packages:
       - sass
       - stylus
       - sugarss
-    dev: true
-
-  /svelte-fullpage@1.1.0(svelte@4.2.3):
-    resolution: {integrity: sha512-b7JaQydeq8BSThNFRcvoo7HnwJdGXjAYysX0Hufr5r/pBU2FZlyTqXgw9QhQ046rz3PFzyyd6nAu1e4tkEmk5A==}
-    peerDependencies:
-      svelte: ^3.0.0 || ^4.0.0
-    dependencies:
-      svelte: 4.2.3
     dev: true
 
   /svelte-hmr@0.15.3(svelte@4.2.3):

@@ -11,7 +11,9 @@
 
 :root {
 	--color-black: #202129;
+	--color-blackRGB: 32, 33, 41;
 	--color-white: #fff;
+	--color-lightgray: #b2b2b2;
 	--color-gray: #282930;
 	--color-primary: #00cfa1;
 	--color-secondary: #8786df;
@@ -39,8 +41,10 @@ h1 {
 }
 
 h2 {
+	font-family: 'Sora Variable', sans-serif;
 	font-size: 3rem;
 	line-height: 3rem;
+	/* margin-bottom: 2rem; */
 }
 
 h3 {

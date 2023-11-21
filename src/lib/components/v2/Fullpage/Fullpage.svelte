@@ -10,7 +10,7 @@
 
 	export let scrollDuration = 1000;
 	export let pageRoundingThresholdMultiplier = 8;
-	export let disableDragNavigation = false;
+	export let disableDragNavigation = true;
 	export let disableArrowsNavigation = false;
 
 	export let easing = cubicInOut;
@@ -80,7 +80,7 @@ is for determination sectionId for FullpageSection
 	div {
 		height: 100%;
 		width: 100%;
-		max-height: 100%;
+		/* max-height: 100%; */
 		position: relative;
 	}
 </style>

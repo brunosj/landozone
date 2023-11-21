@@ -14,16 +14,17 @@
 		<div class="content">
 			{#if $activePage === 2}
 				<div class="grid">
-					<div class="description" transition:fade={{ duration: 2000 }}>
-						<h1>projects</h1>
-
-						<p>Check out some of my recent projects</p>
+					<div class="description">
+						<h2 transition:fly={{ y: 50, duration: 750, delay: 500 }}>selected works</h2>
+						<!-- <p transition:fly={{ y: 50, duration: 750, delay: 750 }}>
+							Here are a few of my recent works
+						</p> -->
 					</div>
-					<div class="projects">
-						<div class="logo" style="width:50%">
+					<div class="projects" transition:fly={{ y: 50, duration: 750, delay: 1000 }}>
+						<!-- <div class="logo" style="width:50%">
 							<Logo />
-						</div>
-						{#each projects as item}
+						</div> -->
+						{#each projects.slice(0, 6) as item}
 							<ProjectCard {item} />
 						{/each}
 						<!-- <div class="link">
@@ -36,10 +37,10 @@
 			{/if}
 		</div>
 	</div>
-	<div class="helper">
-		Use dots to browse projects
+	<!-- <div class="helper">
+		Learn more about each project
 		<IconArrowDown width="1.5rem" />
-	</div>
+	</div> -->
 </section>
 
 <style>
@@ -51,30 +52,37 @@
 		position: relative;
 	}
 
-	h1 {
+	h2 {
 		color: #00cfa1;
+		line-height: 2rem;
 	}
 
-	.description > * + * {
-		margin-top: 1.5rem;
-	}
 	.grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 6rem;
+		display: flex;
+		position: relative;
+		flex-direction: column;
+		height: 90%;
 	}
 
 	.description {
-		margin: auto 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		gap: 1.5rem;
 	}
 
 	.projects {
 		position: relative;
 		display: flex;
 		flex-wrap: wrap;
+		flex-direction: row;
 		gap: 3rem;
 		z-index: 1;
-		justify-content: space-between;
+		justify-content: center;
+		margin: auto;
+		margin: 1rem 0rem;
 	}
 
 	.logo {
@@ -103,7 +111,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		font-size: 0.6rem;
+		font-size: 0.7rem;
 		text-transform: uppercase;
 		letter-spacing: 0.7px;
 		font-family: 'IBM Plex Mono', sans-serif;
@@ -113,11 +121,6 @@
 	}
 
 	@media (max-width: 768px) {
-		.grid {
-			grid-template-columns: 1fr;
-			gap: 3rem;
-		}
-
 		.projects {
 			gap: 2rem;
 		}

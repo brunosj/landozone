@@ -40,6 +40,9 @@
 		top: 0;
 		z-index: 50;
 		width: 100%;
+		/* padding: 1rem 0rem; */
+		/* background-color: rgba(var(--color-blackRGB), 0.9);
+		backdrop-filter: blur(5px); */
 	}
 
 	nav {

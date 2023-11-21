@@ -94,7 +94,7 @@
 	section {
 		color: white;
 		background-color: var(--color-gray);
-		border-radius: 1rem;
+		border-radius: 12px;
 		position: relative;
 		height: 100%;
 		padding: 2rem 3rem;
@@ -109,7 +109,7 @@
 	}
 
 	img {
-		border-radius: 1rem;
+		border-radius: 12px;
 		width: 100%;
 	}
 
@@ -180,8 +180,12 @@
 			height: 90%;
 		}
 
+		h4 {
+			font-size: 1.5rem;
+		}
+
 		p {
-			font-size: 0.9rem;
+			font-size: 0.8rem;
 		}
 
 		#type {

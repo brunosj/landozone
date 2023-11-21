@@ -16,15 +16,14 @@
 	<div class="container">
 		{#if $activePage === 1}
 			<div class="content">
-				<div class="description" transition:fly={{ x: -500, duration: 1500 }}>
-					<h1>what I do</h1>
-					<p>
+				<div class="description">
+					<h2 transition:fly={{ y: 50, duration: 750, delay: 500 }}>about</h2>
+					<p transition:fly={{ y: 50, duration: 750, delay: 750 }}>
 						My expertise lies in front-end development (with some back-end here and there) and data
 						visualization. I enhance workflows and build applications using the latest web
-						technologies, being well-versed in <a
-							href="https://www.typescriptlang.org/"
-							target="_blank"
-							rel="noreferrer">JavaScript/TypeScript</a>
+						technologies, being well-versed in
+						<a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"
+							>JavaScript/TypeScript</a>
 						tools including frameworks like
 						<a href="https://kit.svelte.dev/" target="_blank" rel="noreferrer">SvelteKit</a>
 						and
@@ -33,11 +32,11 @@
 						environment and the
 						<a href="https://d3js.org/" target="_blank" rel="noreferrer">D3.js</a> library.
 					</p>
-					<p>
+					<p transition:fly={{ y: 50, duration: 750, delay: 750 }}>
 						These tools enable me to create elegant and performant websites and produce compelling
 						data stories.
 					</p>
-					<div class="icons">
+					<div class="icons" transition:fly={{ y: 50, duration: 750, delay: 750 }}>
 						<IconJS width="1.5rem" />
 						<IconTS width="1.5rem" />
 						<IconSvelte width="1.5rem" />
@@ -47,10 +46,10 @@
 					</div>
 				</div>
 				<div class="figures">
-					<div class="website" transition:fly={{ x: 500, duration: 1750 }}>
+					<div class="website" transition:fly={{ y: 50, duration: 750, delay: 1000 }}>
 						<Website />
 					</div>
-					<div class="chart" transition:fly={{ x: 500, duration: 1750 }}>
+					<div class="chart" transition:fly={{ y: 50, duration: 750, delay: 1000 }}>
 						<Chart />
 					</div>
 				</div>
@@ -84,7 +83,7 @@
 		width: 104%;
 		left: -1%;
 		opacity: 0.5;
-		border-radius: 0.3rem;
+		border-radius: 2px;
 		background: linear-gradient(
 			65deg,
 			var(--color-primary) 0%,
@@ -97,7 +96,7 @@
 		height: 80%; /* Expand the underline on hover */
 	}
 
-	h1 {
+	h2 {
 		color: var(--color-black);
 	}
 
@@ -122,7 +121,7 @@
 		width: 20%;
 		background-color: var(--color-gray);
 		padding: 2rem;
-		border-radius: 1.5rem;
+		border-radius: 8px;
 		z-index: auto;
 	}
 
@@ -134,7 +133,7 @@
 		background-color: var(--color-gray);
 		padding: 2rem;
 		z-index: auto;
-		border-radius: 1.5rem;
+		border-radius: 8px;
 	}
 
 	.chart::before,
@@ -148,7 +147,7 @@
 		top: 0;
 		opacity: 0.5;
 		/* z-index: -1; */
-		border-radius: 1.5rem;
+		border-radius: 8px;
 		border: 2px solid var(--color-primary);
 		transform: translate(1rem, -1rem);
 		box-sizing: border-box;
@@ -197,7 +196,7 @@
 			position: absolute;
 			left: 0;
 			bottom: 10%;
-			width: 40%;
+			width: 20%;
 			padding: 1rem;
 		}
 
@@ -205,7 +204,7 @@
 			position: absolute;
 			right: 0;
 			top: 0rem;
-			width: 40%;
+			width: 20%;
 			padding: 1rem;
 		}
 

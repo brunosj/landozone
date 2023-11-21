@@ -18,9 +18,9 @@
 	a {
 		position: relative;
 		width: 100%;
-		height: 1.7rem;
-		padding: 0.4rem 0.6rem;
-		border-radius: 0.1rem;
+		height: 1.5rem;
+		padding: 0.4rem 0.4rem;
+		border-radius: 2px;
 		background-color: transparent;
 		border: solid 0.5px var(--color-white);
 		border-bottom: transparent;
@@ -40,7 +40,7 @@
 		left: 0%;
 		right: 0;
 		opacity: 1;
-		border-radius: 0rem 0rem 0.1rem 0.1rem;
+		border-radius: 0px 0px 2px 2px;
 		background: linear-gradient(
 			65deg,
 			var(--border-color) 0%,
@@ -51,7 +51,7 @@
 
 	a:hover:after {
 		height: 100%;
-		border-radius: 0.1rem 0.1rem 0.1rem 0.1rem;
+		border-radius: 2px;
 	}
 
 	a:hover {
@@ -65,7 +65,7 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
-		font-size: 0.7rem;
+		font-size: 0.6rem;
 		text-transform: uppercase;
 		letter-spacing: 0.7px;
 		font-family: 'IBM Plex Mono', sans-serif;

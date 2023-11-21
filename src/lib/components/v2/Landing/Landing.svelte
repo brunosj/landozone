@@ -14,13 +14,15 @@
 	<div class="container">
 		<div class="content">
 			{#if $activePage === 0}
-				<div class="hero" transition:fly={{ y: -500, duration: 2000 }}>
+				<div class="hero" transition:fly={{ y: -50, duration: 750 }}>
 					<h1 class:fade-in={animate}>imaginative web development</h1>
 
 					<p class:fade-in={animate}>
-						Hello! I'm <span class="name">Bruno</span>, a freelance web developer based in Berlin -
-						with roots in political science and climate policy. I am passionate about crafting
-						innovative applications and experiences on the web.
+						Hello! I'm <a href="https://www.linkedin.com/in/brunosj/" target="_blank" id="link"
+							>Bruno</a
+						>, a freelance web developer based in Berlin - with roots in political science and
+						climate policy. I am passionate about crafting innovative applications and experiences
+						on the web.
 					</p>
 				</div>
 			{/if}
@@ -41,13 +43,14 @@
 
 	p {
 		opacity: 0;
-		transition: 2s ease all;
+		transition: 750ms ease all;
+		transition-delay: 200ms;
 	}
 
 	h1 {
 		color: var(--color-primary);
 		opacity: 0;
-		transition: 2s ease all;
+		transition: 750ms ease all;
 	}
 
 	.hero > * + * {
@@ -74,6 +77,36 @@
 		overflow: hidden;
 		opacity: 10%;
 		margin-right: 10rem;
+	}
+
+	#link {
+		/* font-size: 1.5rem; */
+		position: relative;
+		z-index: 20;
+		/* color: var(--color-secondary); */
+	}
+
+	#link:after {
+		transition: all 0.2s ease-in-out;
+		content: '';
+		position: absolute;
+		bottom: 10%;
+		z-index: -1;
+		height: 30%;
+		width: 104%;
+		left: -1%;
+		opacity: 0.7;
+		border-radius: 2px;
+		background: linear-gradient(
+			65deg,
+			var(--color-secondary) 0%,
+			var(--color-secondary) 100%,
+			rgba(255, 209, 0, 0) 100%
+		);
+	}
+
+	#link:hover:after {
+		height: 80%;
 	}
 
 	@media screen and (max-width: 768px) {
