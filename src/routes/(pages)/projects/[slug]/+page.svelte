@@ -51,7 +51,7 @@
 				<div class="title">
 					<p id="type">{type}</p>
 					<h2>{name}</h2>
-					<p>
+					<p class="description">
 						{description}
 					</p>
 				</div>
@@ -99,7 +99,7 @@
 						</Button>
 					</div>
 					<div class="link">
-						<Button to={url} text="View code" {color} {keepTextLight}>
+						<Button to={repo} text="View code" {color} {keepTextLight}>
 							<IconGithub width="1.3rem" />
 						</Button>
 					</div>
@@ -114,7 +114,7 @@
 		background-color: var(--color-black);
 		width: 100%;
 		height: 100%;
-		margin-top: 3rem;
+		/* margin-top: 3rem; */
 		color: white;
 		position: relative;
 	}
@@ -127,7 +127,8 @@
 	ul {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 0.5rem;
+		row-gap: 0.7rem;
+		column-gap: 0.7rem;
 		margin: 0.5rem 0;
 	}
 
@@ -150,7 +151,10 @@
 	}
 
 	.grid {
-		display: block;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		margin-bottom: 3rem;
 	}
 
 	.header > * + * {
@@ -159,6 +163,11 @@
 
 	.title > * + * {
 		margin-top: 0.5rem;
+	}
+
+	.description {
+		font-size: 0.9rem;
+		line-height: 1.1rem;
 	}
 
 	.features {
@@ -190,24 +199,36 @@
 	}
 
 	.details > * + * {
-		margin-top: 2rem;
+		margin-top: 0.5rem;
 	}
 
 	@media (min-width: 50em) {
+		ul {
+			row-gap: 0.5rem;
+			column-gap: 0.7rem;
+		}
+
 		.grid {
 			display: grid;
 			grid-template-columns: 2fr 1fr;
 			gap: 3rem;
+			margin-bottom: 3rem;
 		}
 
 		.header {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
+			gap: 3rem;
 			padding: 2rem;
 		}
 
 		.title {
 			margin: auto 0;
+		}
+
+		.description {
+			font-size: 1.1rem;
+			line-height: 1.8rem;
 		}
 
 		.category {
@@ -216,11 +237,15 @@
 			letter-spacing: 0.7px;
 			font-family: 'IBM Plex Mono', sans-serif;
 			font-size: 1rem;
-			font-weight: 600;
+			/* font-weight: 600; */
 		}
 
 		.features {
 			display: block;
+		}
+
+		.details > * + * {
+			margin-top: 2rem;
 		}
 	}
 </style>

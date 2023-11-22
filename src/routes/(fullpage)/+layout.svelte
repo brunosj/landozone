@@ -22,7 +22,7 @@
 	:global(.fullpage-container) {
 		max-width: 85%;
 		height: 100%;
-		margin: 3rem auto;
+		margin: 2rem auto;
 		position: relative;
 	}
 
@@ -32,5 +32,15 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+	}
+
+	@media (min-width: 50em) {
+		.logo-shape {
+			width: 2rem;
+		}
+
+		:global(.fullpage-container) {
+			margin: 3rem auto;
+		}
 	}
 </style>

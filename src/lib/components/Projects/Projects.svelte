@@ -8,6 +8,8 @@
 	import Button from '$components/UI/Button.svelte';
 	import IconArrow from '$lib/assets/svg/icons/HeroiconsArrowLongRight.svelte';
 	import IconArrowDown from '$lib/assets/svg/icons/MaterialSymbolsLightArrowCircleDownRounded.svelte';
+
+	const featuredProjects = projects.filter((project) => project.featured === true);
 </script>
 
 <section id="projects">
@@ -22,7 +24,7 @@
 						</p>
 					</div> -->
 					<div class="projects" transition:fly={{ y: 50, duration: 750, delay: 500 }}>
-						{#each projects.slice(0, 4) as item}
+						{#each featuredProjects as item}
 							<ProjectCard {item} />
 							<ProjectCardMobile {item} />
 						{/each}
@@ -57,7 +59,7 @@
 		display: flex;
 		position: relative;
 		flex-direction: column;
-		justify-content: center;
+		/* justify-content: center; */
 		height: 90%;
 	}
 
@@ -79,7 +81,6 @@
 		gap: 1.5rem;
 		z-index: 1;
 		margin: auto;
-		margin: 1rem 0rem;
 	}
 
 	.link {
@@ -108,7 +109,7 @@
 		bottom: 10%;
 		z-index: -1;
 		height: 30%;
-		width: 104%;
+		width: 102%;
 		left: -1%;
 		opacity: 0.5;
 		border-radius: 2px;

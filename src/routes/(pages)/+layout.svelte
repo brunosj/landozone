@@ -31,7 +31,7 @@
 	:global(.page-container) {
 		max-width: 85%;
 		height: 100%;
-		margin: 3rem auto;
+		margin: 2rem auto;
 		position: relative;
 	}
 
@@ -62,6 +62,10 @@
 	@media (min-width: 50em) {
 		.logo-shape {
 			width: 2rem;
+		}
+
+		:global(.page-container) {
+			margin: 3rem auto;
 		}
 	}
 </style>

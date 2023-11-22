@@ -107,7 +107,7 @@
 	span {
 		position: relative;
 		line-height: 1;
-		font-size: 1.3rem;
+		font-size: 1rem;
 		font-weight: 700;
 		font-family: 'Sora Variable', sans-serif;
 	}

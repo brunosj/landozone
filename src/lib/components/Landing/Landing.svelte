@@ -82,16 +82,6 @@
 		width: 100%;
 	}
 
-	.logoAnimation {
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 45dvh;
-		overflow: hidden;
-		opacity: 10%;
-		margin-right: 10rem;
-	}
-
 	#link {
 		/* font-size: 1.5rem; */
 		position: relative;
@@ -108,7 +98,7 @@
 		bottom: 10%;
 		z-index: -1;
 		height: 0%;
-		width: 104%;
+		width: 102%;
 		left: -1%;
 		opacity: 0.5;
 		border-radius: 2px;

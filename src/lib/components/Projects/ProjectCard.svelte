@@ -115,13 +115,15 @@
 		}
 
 		a {
-			border-radius: 4px;
 			width: 50%;
+		}
+
+		img {
+			border-radius: 4px;
 		}
 
 		h4 {
 			font-size: 1.5rem;
-			margin-bottom: 0.5rem;
 		}
 
 		p {
@@ -175,6 +177,11 @@
 		.link {
 			display: flex;
 			width: 100%;
+		}
+
+		.description {
+			line-height: 1.2rem;
+			margin-top: 0.5rem;
 		}
 
 		.description {

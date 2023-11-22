@@ -26,7 +26,7 @@
 					Here are projects I've recently worked on
 				</p>
 			</div>
-			<div class="projects" transition:fly={{ y: 50, duration: 1000, delay: 750 }}>
+			<div class="projects" transition:fly={{ y: 50, duration: 750, delay: 750 }}>
 				{#each items as item}
 					<ProjectCardMobile {item} />
 					<ProjectCard {item} showDetails={true} />
@@ -52,11 +52,11 @@
 	}
 
 	.description {
-		margin-bottom: 3rem;
+		margin-bottom: 2rem;
 	}
 
 	.description > * + * {
-		margin-top: 1rem;
+		margin-top: 0.5rem;
 	}
 
 	.projects {
@@ -71,6 +71,14 @@
 	@media (min-width: 50em) {
 		.projects {
 			gap: 4rem;
+		}
+
+		.description {
+			margin-bottom: 3rem;
+		}
+
+		.description > * + * {
+			margin-top: 1rem;
 		}
 	}
 </style>

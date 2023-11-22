@@ -94,8 +94,11 @@
 	}
 
 	a {
-		border-radius: 4px;
 		width: 100%;
+	}
+
+	img {
+		border-radius: 4px;
 	}
 
 	/* 

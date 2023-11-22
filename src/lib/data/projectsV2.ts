@@ -20,7 +20,24 @@ export const projects = [
 			'Node.js',
 			'MySQL'
 		],
-		features: ['Multilingual', 'Live Streaming', 'Automated Calendar', 'Automated Show Uploads']
+		features: ['Multilingual', 'Live Streaming', 'Automated Calendar', 'Automated Show Uploads'],
+		featured: true
+	},
+	{
+		name: 'EU Copyright Directive',
+		year: 2023,
+		url: 'https://www.dropbox.com/s/burxy23afjsd2h4/STJACQUES-BRUNO_MT-poster_bg_web.pdf?dl=0',
+		repo: 'https://github.com/brunosj/dna-copyright',
+		slug: 'dna-copyright',
+		image: 'dna-bg.jpg',
+		color: '#BEDBB6',
+		colorRGB: [190, 219, 182],
+		keepTextLight: false,
+		type: 'Data Visualization',
+		description: 'Discourse network analysis of 2019 EU Copyright Directive debate',
+		technologies: ['R', 'igraph', 'DNA', 'Java'],
+		features: ['Network Analysis'],
+		featured: true
 	},
 	{
 		name: 'EconCrime Lab',
@@ -28,7 +45,7 @@ export const projects = [
 		url: 'https://econcrimelab.com/',
 		repo: 'https://github.com/brunosj/econcrimelab',
 		slug: 'econcrime-lab',
-		image: '../assets/images/eclab-bg.jpg',
+		image: 'eclab-bg.jpg',
 		color: '#669AAB',
 		colorRGB: [102, 154, 171],
 		keepTextLight: false,
@@ -43,7 +60,8 @@ export const projects = [
 			'Node.js',
 			'MySQL'
 		],
-		features: ['Multilingual']
+		features: ['Multilingual'],
+		featured: true
 	},
 	{
 		name: 'Rigo Woodworks',
@@ -58,7 +76,8 @@ export const projects = [
 		type: 'Website',
 		description: 'Wooden furniture online store',
 		technologies: ['React', 'Gatsby JS', 'Tailwind CSS', 'Contentful CMS'],
-		features: ['Integration with Shopify']
+		features: ['Integration with Shopify'],
+		featured: false
 	},
 	{
 		name: 'TMG Think Tank',
@@ -73,7 +92,8 @@ export const projects = [
 		type: 'Website',
 		description: 'Sustainability think tank based in Berlin',
 		technologies: ['SvelteKit', 'Tailwind CSS', 'Contentful CMS', 'Cloudinary'],
-		features: ['Automated content generation']
+		features: ['Automated content generation'],
+		featured: true
 	},
 
 	{
@@ -89,7 +109,8 @@ export const projects = [
 		type: 'Web App',
 		description: 'Price calculator for carsharing services in Berlin',
 		technologies: ['Svelte'],
-		features: ['Multilingual', 'Live Streaming', 'Automated Calendar', 'Automated Show Uploads']
+		features: ['Multilingual', 'Live Streaming', 'Automated Calendar', 'Automated Show Uploads'],
+		featured: false
 	},
 	{
 		name: 'Pinewax Records',
@@ -104,6 +125,7 @@ export const projects = [
 		type: 'Website',
 		description: 'Record label online store',
 		technologies: ['React', 'Gatsby JS', 'Tailwind CSS', 'Contentful CMS'],
-		features: ['Integration with Shopify']
+		features: ['Integration with Shopify'],
+		featured: false
 	}
 ];

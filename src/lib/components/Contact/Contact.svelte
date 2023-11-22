@@ -118,7 +118,7 @@
 		bottom: 10%;
 		z-index: -1;
 		height: 30%;
-		width: 104%;
+		width: 102%;
 		left: -1%;
 		opacity: 0.5;
 		border-radius: 2px;
@@ -170,10 +170,6 @@
 		transform: translate(0.5rem, -0.5rem);
 		box-sizing: border-box;
 		pointer-events: none;
-	}
-
-	.info p {
-		font-size: 1rem;
 	}
 
 	.description > * + * {

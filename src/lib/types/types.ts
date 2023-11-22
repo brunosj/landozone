@@ -12,4 +12,5 @@ export interface Project {
 	description: string;
 	technologies: string[];
 	features: string[];
+	featured: boolean;
 }

@@ -4,6 +4,7 @@ import BCPCImage from '$lib/assets/images/bcpc-bg.png';
 import PWXImage from '$lib/assets/images/pwx-bg.jpg';
 import RigoImage from '$lib/assets/images/rigo-bg.jpg';
 import TMGImage from '$lib/assets/images/tmg-bg.jpg';
+import DNAImage from '$lib/assets/images/dna-bg.jpg';
 
 import LZLogo from '$lib/assets/svg/logos/lz-logo.svelte';
 import THFLogo from '$lib/assets/svg/logos/thf-logo.svelte';
@@ -23,7 +24,8 @@ export function getImageComponent(name: string): ImageComponent {
 		'Berlin Carsharing Price Calculator': BCPCImage,
 		'TMG Think Tank': TMGImage,
 		'Rigo Woodworks': RigoImage,
-		'Pinewax Records': PWXImage
+		'Pinewax Records': PWXImage,
+		'EU Copyright Directive': DNAImage
 	};
 
 	return imageMap[name] || '';

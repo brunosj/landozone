@@ -83,7 +83,7 @@
 		bottom: 10%;
 		z-index: -1;
 		height: 30%;
-		width: 104%;
+		width: 102%;
 		left: -1%;
 		opacity: 0.5;
 		border-radius: 2px;
