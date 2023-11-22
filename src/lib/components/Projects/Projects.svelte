@@ -56,8 +56,9 @@
 		display: flex;
 		position: relative;
 		flex-direction: column;
-		/* justify-content: center; */
+		justify-content: center;
 		height: 90%;
+		margin-top: 1rem;
 	}
 
 	.description {

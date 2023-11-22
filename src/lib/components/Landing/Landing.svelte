@@ -126,7 +126,7 @@
 		position: absolute;
 		left: 0;
 		right: 0;
-		bottom: 15%;
+		bottom: 10%;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
@@ -178,7 +178,6 @@
 
 		.helper {
 			font-size: 0.8rem;
-			bottom: 10%;
 		}
 	}
 </style>

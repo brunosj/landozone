@@ -28,7 +28,7 @@
 
 	:global(.content) {
 		width: 100%;
-		height: 90%;
+		height: 95%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -37,6 +37,10 @@
 	@media (min-width: 50em) {
 		.logo-shape {
 			width: 2rem;
+		}
+
+		:global(.content) {
+			height: 90%;
 		}
 
 		:global(.fullpage-container) {
