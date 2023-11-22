@@ -2,7 +2,12 @@
 	export let width: string = '24';
 </script>
 
-<svg xmlns="http://www.w3.org/2000/svg" {width} viewBox="0 0 24 24" {...$$props}
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	{width}
+	style="rotate:-45deg;"
+	viewBox="0 0 24 24"
+	{...$$props}
 	><path
 		fill="none"
 		stroke="currentColor"

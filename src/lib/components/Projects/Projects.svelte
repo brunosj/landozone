@@ -4,10 +4,7 @@
 	import { projects } from '$lib/data/projectsV2';
 	import ProjectCard from '$components/Projects/ProjectCard.svelte';
 	import ProjectCardMobile from '$components/Projects/ProjectCardMobile.svelte';
-	import Logo from '$lib/assets/svg/logo.svelte';
-	import Button from '$components/UI/Button.svelte';
-	import IconArrow from '$lib/assets/svg/icons/HeroiconsArrowLongRight.svelte';
-	import IconArrowDown from '$lib/assets/svg/icons/MaterialSymbolsLightArrowCircleDownRounded.svelte';
+	import IconArrow from '$lib/assets/svg/icons/MaterialSymbolsArrowOutwardRounded.svelte';
 
 	const featuredProjects = projects.filter((project) => project.featured === true);
 </script>
@@ -90,8 +87,13 @@
 		margin-top: 1.5rem;
 	}
 
+	.link .icon {
+		transform: translateY(0.1rem);
+	}
+
 	.link:hover .icon {
-		transform: translateX(0.2rem);
+		transform: translateY(-0.1rem);
+		transform: translateX(0.1rem);
 		transition: all 0.2s ease-in-out;
 		color: var(--color-secondary);
 	}

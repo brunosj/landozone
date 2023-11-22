@@ -9,7 +9,7 @@
 	import IconGithub from '$lib/assets/svg/icons/SimpleIconsGithub.svelte';
 	import Tag from '$components/UI/Tag.svelte';
 	import IconInternet from '$lib/assets/svg/icons/IconoirInternet.svelte';
-	import IconArrow from '$lib/assets/svg/icons/MaterialSymbolsLightArrowCircleDownRounded.svelte';
+	import IconArrow from '$lib/assets/svg/icons/MaterialSymbolsArrowOutwardRounded.svelte';
 
 	import { getLogoComponent, getImageComponent } from '$lib/utils/getProjectVisuals';
 
