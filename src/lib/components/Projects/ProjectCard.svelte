@@ -40,8 +40,12 @@
 </script>
 
 {#if animate}
-	<li style="--border-color: {color}; width:{`${showDetails ? '100%' : '47%'}`}">
-		<div class="project">
+	<li style="--border-color: {color}; width:{`${showDetails ? '100%' : '48%'}`}">
+		<div
+			class="project"
+			style="width:{`${showDetails ? '80%' : '100%'}`}; padding:{`${
+				showDetails ? '2rem' : '1rem'
+			}`}">
 			{#if ImageComponent}
 				<a href={url} target="_blank">
 					<img src={ImageComponent} alt={name} />
@@ -112,6 +116,8 @@
 			list-style: none;
 			width: 40%;
 			border-radius: 12px;
+			display: flex;
+			justify-content: center;
 		}
 
 		a {
@@ -142,10 +148,9 @@
 			align-items: center;
 			background-color: var(--color-gray);
 			border-radius: 12px;
-			padding: 1rem;
 			gap: 2rem;
-			height: 100%;
-			width: 100%;
+			/* height: 100%; */
+			width: 80%;
 		}
 
 		.info {

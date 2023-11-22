@@ -11,6 +11,12 @@ export const projects = [
 		keepTextLight: true,
 		type: 'Website',
 		description: 'Platform for Berlin-based community radio',
+		longDescription: `
+		
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+		
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+		`,
 		technologies: [
 			'React',
 			'Next.js',
@@ -95,23 +101,6 @@ export const projects = [
 		features: ['Automated content generation'],
 		featured: true
 	},
-
-	{
-		name: 'Berlin Carsharing Price Calculator',
-		year: 2023,
-		url: 'https://carsharing.landozone.net/',
-		repo: 'https://github.com/brunosj/berlin-carsharing',
-		slug: 'berlin-carsharing',
-		image: 'bcpc-bg.png',
-		color: '#AE3A29',
-		colorRGB: [174, 58, 41],
-		keepTextLight: true,
-		type: 'Web App',
-		description: 'Price calculator for carsharing services in Berlin',
-		technologies: ['Svelte'],
-		features: ['Multilingual', 'Live Streaming', 'Automated Calendar', 'Automated Show Uploads'],
-		featured: false
-	},
 	{
 		name: 'Pinewax Records',
 		year: 2021,
@@ -126,6 +115,22 @@ export const projects = [
 		description: 'Record label online store',
 		technologies: ['React', 'Gatsby JS', 'Tailwind CSS', 'Contentful CMS'],
 		features: ['Integration with Shopify'],
+		featured: false
+	},
+	{
+		name: 'Berlin Carsharing Price Calculator',
+		year: 2023,
+		url: 'https://carsharing.landozone.net/',
+		repo: 'https://github.com/brunosj/berlin-carsharing',
+		slug: 'berlin-carsharing',
+		image: 'bcpc-bg.png',
+		color: '#AE3A29',
+		colorRGB: [174, 58, 41],
+		keepTextLight: true,
+		type: 'Web App',
+		description: 'Price calculator for carsharing services in Berlin',
+		technologies: ['Svelte'],
+		features: ['Multilingual', 'Live Streaming', 'Automated Calendar', 'Automated Show Uploads'],
 		featured: false
 	}
 ];

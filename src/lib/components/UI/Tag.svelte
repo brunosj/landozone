@@ -20,7 +20,7 @@
 		width: 100%;
 		height: 1.5rem;
 		padding: 0.2rem 0.4rem;
-		border-radius: 10px;
+		border-radius: 8px;
 		border: solid 1px var(--color);
 		font-size: 0.8rem;
 		color: var(--color);

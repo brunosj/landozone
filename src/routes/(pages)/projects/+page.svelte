@@ -23,7 +23,7 @@
 			<div class="description">
 				<h2 transition:fly={{ y: 50, duration: 750, delay: 500 }}>projects</h2>
 				<p transition:fly={{ y: 50, duration: 750, delay: 750 }}>
-					Here are projects I've recently worked on
+					Explore my recent works and the technologies I used to build them
 				</p>
 			</div>
 			<div class="projects" transition:fly={{ y: 50, duration: 750, delay: 750 }}>
@@ -41,7 +41,7 @@
 	section {
 		background-color: var(--color-black);
 		width: 100%;
-		height: 100%;
+		/* height: 100%; */
 		margin-top: 3rem;
 		color: white;
 		position: relative;
@@ -52,7 +52,7 @@
 	}
 
 	.description {
-		margin-bottom: 2rem;
+		margin-bottom: 3rem;
 	}
 
 	.description > * + * {
@@ -64,17 +64,16 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 2rem;
-		z-index: 1;
-		margin: auto;
+		width: 100%;
 	}
 
 	@media (min-width: 50em) {
 		.projects {
-			gap: 4rem;
+			gap: 2rem;
 		}
 
 		.description {
-			margin-bottom: 3rem;
+			margin-bottom: 4rem;
 		}
 
 		.description > * + * {

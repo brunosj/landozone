@@ -20,6 +20,7 @@
 		url,
 		color,
 		colorRGB,
+		longDescription,
 		keepTextLight,
 		repo,
 		type,
@@ -86,6 +87,9 @@
 		</section>
 
 		<div class="page-container">
+			<!-- <div class="html">
+				{@html longDescription}
+			</div> -->
 			<div class="grid">
 				<div class="images">
 					{#if ImageComponent}
@@ -148,6 +152,11 @@
 		flex-direction: column;
 		justify-content: center;
 		padding: 1.5rem 0;
+	}
+
+	.html {
+		width: 60%;
+		margin: 3rem auto;
 	}
 
 	.grid {

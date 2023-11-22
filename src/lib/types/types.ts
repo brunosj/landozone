@@ -10,6 +10,7 @@ export interface Project {
 	type: string;
 	image: string;
 	description: string;
+	longDescription?: string;
 	technologies: string[];
 	features: string[];
 	featured: boolean;

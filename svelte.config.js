@@ -14,6 +14,15 @@ const config = {
 			$lib: 'src/lib',
 			$data: 'src/lib/data',
 			$assets: 'src/lib/assets'
+		},
+		csp: {
+			directives: {
+				'script-src': ['self']
+			},
+			reportOnly: {
+				'script-src': ['self'],
+				'report-to': ['self']
+			}
 		}
 	}
 };

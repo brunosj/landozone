@@ -74,7 +74,7 @@
 		text-transform: uppercase;
 		letter-spacing: 0.6px;
 		font-family: 'IBM Plex Mono', sans-serif;
-		font-weight: 600;
+		font-weight: 500;
 	}
 
 	@media (min-width: 50em) {
