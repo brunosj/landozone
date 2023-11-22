@@ -1,7 +1,6 @@
 <script>
 	import FullpageSectionController from './FullpageSectionController.svelte';
 	import Indicator from './Indicator/Slide.svelte';
-	import ButtonForSlide from '../UI/ButtonForSlide.svelte';
 	import { getContext, onMount, setContext } from 'svelte';
 	import { FullpageActivity, FullpageExternalController } from './stores';
 	import { writable } from 'svelte/store';

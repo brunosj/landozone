@@ -3,6 +3,7 @@
 	import { fade, fly } from 'svelte/transition';
 	import { projects } from '$lib/data/projectsV2';
 	import ProjectCard from '$components/v2/Projects/ProjectCard.svelte';
+	import ProjectCardMobile from '$components/v2/Projects/ProjectCardMobile.svelte';
 	import Logo from '$lib/assets/svg/logo.svelte';
 	import Button from '$components/v2/UI/Button.svelte';
 	import IconArrow from '$lib/assets/svg/icons/HeroiconsArrowLongRight.svelte';
@@ -10,7 +11,7 @@
 </script>
 
 <section id="projects">
-	<div class="container">
+	<div class="fullpage-container">
 		<div class="content">
 			{#if $activePage === 2}
 				<div class="grid">
@@ -21,26 +22,21 @@
 						</p>
 					</div> -->
 					<div class="projects" transition:fly={{ y: 50, duration: 750, delay: 500 }}>
-						<!-- <div class="logo" style="width:50%">
-							<Logo />
-						</div> -->
-						{#each projects.slice(0, 6) as item}
+						{#each projects.slice(0, 4) as item}
 							<ProjectCard {item} />
+							<ProjectCardMobile {item} />
 						{/each}
-						<!-- <div class="link">
-							<Button to={'/projects'} text="View projects">
-								<IconArrow width="1.3rem" />
-							</Button>
-						</div> -->
 					</div>
+					<a class="link" href="/projects" transition:fly={{ y: 50, duration: 750, delay: 750 }}>
+						<span id="underline"> see all projects </span>
+						<span class="icon">
+							<IconArrow width="1.3rem" />
+						</span>
+					</a>
 				</div>
 			{/if}
 		</div>
 	</div>
-	<!-- <div class="helper">
-		Learn more about each project
-		<IconArrowDown width="1.5rem" />
-	</div> -->
 </section>
 
 <style>
@@ -79,31 +75,66 @@
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: row;
-		gap: 3rem;
-		z-index: 1;
 		justify-content: center;
+		gap: 2rem;
+		z-index: 1;
 		margin: auto;
 		margin: 1rem 0rem;
 	}
 
-	.logo {
-		position: absolute;
-		top: 50%;
-		right: 0%;
-		transform: translateY(-50%) translateX(-50%);
-		z-index: -1;
-		opacity: 0.1;
-	}
-
 	.link {
 		display: flex;
-		width: 45%;
 		margin-left: auto;
+		gap: 0.2rem;
+		margin-top: 1.5rem;
 	}
 
-	@media (max-width: 768px) {
+	.link:hover .icon {
+		transform: translateX(0.2rem);
+		transition: all 0.2s ease-in-out;
+		color: var(--color-secondary);
+	}
+
+	#underline {
+		font-size: 0.9rem;
+		position: relative;
+		z-index: 20;
+	}
+
+	#underline:after {
+		transition: all 0.2s ease-in-out;
+		content: '';
+		position: absolute;
+		bottom: 10%;
+		z-index: -1;
+		height: 30%;
+		width: 104%;
+		left: -1%;
+		opacity: 0.5;
+		border-radius: 2px;
+		background: linear-gradient(
+			65deg,
+			var(--color-secondary) 0%,
+			var(--color-secondary) 100%,
+			rgba(255, 209, 0, 0) 100%
+		);
+	}
+
+	#underline:hover:after {
+		height: 80%;
+	}
+
+	@media (min-width: 50em) {
 		.projects {
-			gap: 2rem;
+			gap: 3rem;
+		}
+
+		.link {
+			margin-top: 3rem;
+		}
+
+		#underline {
+			font-size: 1.1rem;
 		}
 	}
 </style>

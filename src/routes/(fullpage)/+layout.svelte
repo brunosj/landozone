@@ -4,8 +4,8 @@
 	import '@fontsource/ibm-plex-mono';
 	import '@fontsource-variable/fredoka';
 
-	import '../reset.css';
-	import '../globals.css';
+	import '../../reset.css';
+	import '../../globals.css';
 
 	import Header from '$components/v2/Header/Header.svelte';
 </script>
@@ -19,7 +19,7 @@
 		margin: 0;
 	}
 
-	:global(.container) {
+	:global(.fullpage-container) {
 		max-width: 85%;
 		height: 100%;
 		margin: 3rem auto;

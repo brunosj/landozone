@@ -10,7 +10,7 @@
 </script>
 
 <section id="contact">
-	<div class="container">
+	<div class="fullpage-container">
 		<div class="content">
 			{#if $activePage === 3}
 				<div class="grid">
@@ -24,7 +24,7 @@
 							Send me a message and I would be happy to further discuss your ideas with you.
 						</p>
 						<p transition:fly={{ y: 50, duration: 750, delay: 750 }}>
-							<a id="mail" href="mailto:contact@landozone.net">contact@landozone.net</a>
+							<a id="underline" href="mailto:contact@landozone.net">contact@landozone.net</a>
 						</p>
 					</div>
 					<div class="info grid" transition:fly={{ y: 50, duration: 750, delay: 500 }}>
@@ -32,8 +32,8 @@
 							<div class="picture">
 								<img src={BSJ3} alt="BSJ" />
 								<div>
-									<h4>Bruno SJ</h4>
-									<p>Web Developer/Designer</p>
+									<h3>Bruno SJ</h3>
+									<span>Web Developer/Designer</span>
 								</div>
 							</div>
 						</div>
@@ -82,25 +82,36 @@
 		color: var(--color-black);
 	}
 
-	h4 {
+	h3 {
 		color: var(--color-secondary);
 		font-weight: 500;
 		margin-bottom: 0.2rem;
 	}
 
 	img {
-		width: 5.5rem;
+		width: 4rem;
+		margin-bottom: 0rem;
 		border-radius: 100%;
-		margin-bottom: 1.5rem;
 	}
 
-	#mail {
-		font-size: 1.3rem;
+	.picture {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		column-gap: 1rem;
+	}
+
+	.picture span {
+		font-size: 0.7rem;
+	}
+
+	#underline {
+		font-size: 1.1rem;
 		position: relative;
 		z-index: 20;
 	}
 
-	#mail:after {
+	#underline:after {
 		transition: all 0.2s ease-in-out;
 		content: '';
 		position: absolute;
@@ -119,7 +130,7 @@
 		);
 	}
 
-	#mail:hover:after {
+	#underline:hover:after {
 		height: 80%;
 	}
 
@@ -127,14 +138,6 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 1.5rem;
-	}
-
-	.mobile {
-		display: none;
-	}
-
-	.desktop {
-		display: flex;
 	}
 
 	.icon:hover {
@@ -145,10 +148,10 @@
 
 	.info {
 		background-color: var(--color-black);
+		width: 80%;
+		padding: 1.5rem 2rem;
 		color: var(--color-white);
-		padding: 4rem;
 		border-radius: 12px;
-		width: 75%;
 		position: relative;
 		z-index: auto;
 	}
@@ -164,7 +167,7 @@
 		/* z-index: -1; */
 		border-radius: 12px;
 		border: 2px solid var(--color-secondary);
-		transform: translate(1rem, -1rem);
+		transform: translate(0.5rem, -0.5rem);
 		box-sizing: border-box;
 		pointer-events: none;
 	}
@@ -179,8 +182,8 @@
 
 	.grid {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 6rem;
+		grid-template-columns: 1fr;
+		gap: 2rem;
 	}
 
 	.grid-item {
@@ -191,46 +194,57 @@
 		margin: auto 0;
 	}
 
-	@media (max-width: 768px) {
+	.mobile {
+		display: flex;
+	}
+
+	.desktop {
+		display: none;
+	}
+
+	@media (min-width: 50em) {
+		img {
+			width: 5.5rem;
+			border-radius: 100%;
+			margin-bottom: 1.5rem;
+		}
+
+		#underline {
+			font-size: 1.3rem;
+		}
+
 		.grid {
-			grid-template-columns: 1fr;
-			gap: 2rem;
-		}
-
-		.picture p {
-			font-size: 0.8rem;
-		}
-
-		.info {
-			width: 80%;
-			padding: 1.5rem 2rem;
-		}
-
-		.info::before {
-			transform: translate(0.5rem, -0.5rem);
+			grid-template-columns: 1fr 1fr;
+			gap: 3rem;
 		}
 
 		.picture {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			column-gap: 1rem;
+			flex-direction: column;
+			align-items: flex-start;
 		}
 
-		img {
-			margin-bottom: 0;
+		.picture span {
+			font-size: 1rem;
+		}
+
+		.info {
+			padding: 4rem;
+			width: 75%;
+		}
+
+		.info::before {
+			transform: translate(1rem, -1rem);
+		}
+
+		.icons {
+			width: 80%;
+		}
+		.desktop {
+			display: flex;
 		}
 
 		.mobile {
-			display: flex;
-		}
-
-		.desktop {
 			display: none;
-		}
-
-		#mail {
-			font-size: 1.1rem;
 		}
 	}
 </style>

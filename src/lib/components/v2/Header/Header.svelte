@@ -1,15 +1,12 @@
 <script lang="ts">
 	import { activePage } from '$lib/stores/activeSection';
 	import LogoFull from '$lib/assets/svg/logos/lz-logo.svelte';
-
 	import Logo from '$lib/assets/svg/logo.svelte';
 	import { fade, fly } from 'svelte/transition';
-
-	$: console.log($activePage);
 </script>
 
 <header>
-	<nav class="container">
+	<nav class="fullpage-container">
 		<div class="logo">
 			{#if $activePage === 0}
 				<div class="logo-full" in:fly={{ delay: 700 }} out:fly={{ delay: 300 }}>
@@ -48,7 +45,7 @@
 					style="width:100%; color:var(--color-secondary)"
 					in:fly={{ delay: 700 }}
 					out:fly={{ delay: 300 }}>
-					<span>selected works</span>
+					<span>featured projects</span>
 				</div>
 			{:else if $activePage === 3}
 				<div
@@ -89,32 +86,32 @@
 	}
 
 	.logo-full {
-		width: 11rem;
+		width: 8rem;
 	}
 
 	.logo-shape {
-		width: 2rem;
+		width: 1.5rem;
 	}
 
 	span {
 		position: relative;
 		line-height: 1;
-		font-size: 1.7rem;
+		font-size: 1.3rem;
 		font-weight: 700;
 		font-family: 'Sora Variable', sans-serif;
 	}
 
-	@media (max-width: 768px) {
+	@media (min-width: 50em) {
 		span {
-			font-size: 1.3rem;
+			font-size: 1.7rem;
 		}
 
 		.logo-full {
-			width: 8rem;
+			width: 11rem;
 		}
 
 		.logo-shape {
-			width: 1.5rem;
+			width: 2rem;
 		}
 	}
 </style>

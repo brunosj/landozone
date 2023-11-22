@@ -26,7 +26,7 @@
 		height: 1.5rem;
 		padding: 0.4rem 0.4rem;
 		border-radius: 2px;
-		background-color: transparent;
+		background-color: var(--color-black);
 		border: solid 0.5px var(--color-white);
 		border-bottom: transparent;
 		color: var(--color-white);
@@ -72,14 +72,14 @@
 		justify-content: space-between;
 		font-size: 0.6rem;
 		text-transform: uppercase;
-		letter-spacing: 0.7px;
+		letter-spacing: 0.6px;
 		font-family: 'IBM Plex Mono', sans-serif;
 		font-weight: 600;
 	}
 
-	@media (max-width: 768px) {
+	@media (min-width: 50em) {
 		.content {
-			font-size: 0.6rem;
+			font-size: 0.7rem;
 		}
 	}
 </style>

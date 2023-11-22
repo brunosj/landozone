@@ -11,7 +11,7 @@
 </script>
 
 <section id="landing">
-	<div class="container">
+	<div class="fullpage-container">
 		<div class="content">
 			{#if $activePage === 0}
 				<div class="hero" transition:fly={{ y: -50, duration: 750 }}>
@@ -25,10 +25,20 @@
 					</p>
 				</div>
 				<div class="helper" transition:fly={{ y: -50, duration: 750 }}>
-					<span class:fade-in={animate}>Scroll down</span>
-					<span class:fade-in={animate}>
-						<IconArrowDown width="1.5rem" />
-					</span>
+					<div>
+						<span class:fade-in={animate} class="scroll">Scroll down</span>
+
+						<span class:fade-in={animate} class="arrow">
+							<span class:fade-in={animate} class="inner">
+								<span class:fade-in={animate}>
+									<IconArrowDown width="1.5rem" />
+								</span>
+								<!-- <span class:fade-in={animate} class="animated">
+									<IconArrowDown width="1.5rem" />
+								</span> -->
+							</span>
+						</span>
+					</div>
 				</div>
 			{/if}
 		</div>
@@ -43,14 +53,19 @@
 		color: white;
 	}
 
+	h1 {
+		color: var(--color-primary);
+		opacity: 0;
+		transition: 750ms ease all;
+	}
+
 	p {
 		opacity: 0;
 		transition: 750ms ease all;
 		transition-delay: 200ms;
 	}
 
-	h1 {
-		color: var(--color-primary);
+	span {
 		opacity: 0;
 		transition: 750ms ease all;
 	}
@@ -64,16 +79,7 @@
 	}
 
 	.hero {
-		width: 50%;
-	}
-
-	.name {
-		color: var(--color-secondary);
-	}
-
-	span {
-		opacity: 0;
-		transition: 750ms ease all;
+		width: 100%;
 	}
 
 	.logoAnimation {
@@ -132,39 +138,55 @@
 		right: 0;
 		bottom: 10%;
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		font-size: 0.8rem;
+		font-size: 0.6rem;
 		text-transform: uppercase;
 		letter-spacing: 0.7px;
 		font-family: 'IBM Plex Mono', sans-serif;
 		font-weight: 600;
 		color: var(--color-secondary);
-		animation: 1.5s wiggle ease infinite;
+	}
+
+	.arrow {
+		display: inline-flex;
+		/* align-items: center; */
+		position: relative;
+		/* overflow: hidden; */
+	}
+
+	.inner {
+		display: flex;
+		animation: wiggle 1s ease infinite;
+	}
+
+	.animated {
+		position: absolute;
+		top: 100%;
 	}
 
 	@keyframes wiggle {
 		0% {
-			transform: translateY(0px);
+			transform: translateY(25%);
 		}
 
 		50% {
-			transform: translateY(4px);
+			transform: translateY(45%);
 		}
 
 		100% {
-			transform: translateY(0px);
+			transform: translateY(25%);
 		}
 	}
 
-	@media screen and (max-width: 768px) {
+	@media screen and (min-width: 50em) {
 		.hero {
-			width: 100%;
+			width: 50%;
 		}
 
 		.helper {
-			font-size: 0.6rem;
+			font-size: 0.8rem;
 		}
 	}
 </style>

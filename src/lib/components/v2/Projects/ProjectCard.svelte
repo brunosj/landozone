@@ -1,11 +1,13 @@
 <script lang="ts">
 	export let item: Project;
+	export let showDetails = false;
 
 	import type { Project } from '$lib/types/types';
 	import { fade, fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import Button from '$components/v2/UI/Button.svelte';
 	import IconGithub from '$lib/assets/svg/icons/SimpleIconsGithub.svelte';
+	import Tag from '$components/v2/UI/Tag.svelte';
 	import IconInternet from '$lib/assets/svg/icons/IconoirInternet.svelte';
 	import IconArrow from '$lib/assets/svg/icons/MaterialSymbolsLightArrowCircleDownRounded.svelte';
 
@@ -38,7 +40,7 @@
 </script>
 
 {#if animate}
-	<li style="--border-color: {color}">
+	<li style="--border-color: {color}; width:{`${showDetails ? '100%' : '47%'}`}">
 		<div class="project">
 			{#if ImageComponent}
 				<a href={url} target="_blank">
@@ -46,22 +48,57 @@
 				</a>
 			{/if}
 			<div class="info">
-				<h4>
-					{name}
-				</h4>
-				<p class="description">{description}</p>
-
-				<div class="links">
+				<div class="title">
+					<h4>
+						{name}
+					</h4>
+					<p class="description">{description}</p>
+				</div>
+				{#if showDetails}
+					<div class="details">
+						<div>
+							<p class="category">Features</p>
+							<ul class="feature">
+								{#each features as item}
+									<span>
+										{item}
+									</span>
+									{#if item !== features[features.length - 1]}
+										<span>
+											{' - '}
+										</span>
+									{/if}
+								{/each}
+							</ul>
+						</div>
+						<div>
+							<p class="category">Technologies</p>
+							<ul class="feature">
+								{#each technologies as item}
+									<span>
+										{item}
+									</span>
+									{#if item !== technologies[technologies.length - 1]}
+										<span>
+											{' - '}
+										</span>
+									{/if}
+								{/each}
+							</ul>
+						</div>
+					</div>
+				{/if}
+				<div class="links" style="width:{`${showDetails ? '60%' : '100%'}`}">
 					<div class="link">
 						<Button to={url} text="Visit site" {color} {keepTextLight}>
 							<IconInternet width="1.3rem" />
 						</Button>
 					</div>
-					<!-- <div class="link">
-						<Button to={`/work/${slug}`} text="Learn more" {color} {keepTextLight}>
+					<div class="link">
+						<Button to={`/projects/${slug}`} text="Learn more" {color} {keepTextLight}>
 							<IconArrow width="1.3rem" />
 						</Button>
-					</div> -->
+					</div>
 				</div>
 			</div>
 		</div>
@@ -69,84 +106,88 @@
 {/if}
 
 <style>
-	li {
-		position: relative;
-		list-style: none;
-		width: 45%;
-		border-radius: 12px;
-		z-index: 100;
-		z-index: auto;
-	}
-
-	h4 {
-		font-size: 1.2rem;
-	}
-	p {
-		font-size: 0.9rem;
-		color: var(--color-lightgray);
-	}
-
-	.project {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		/* justify-content: space-between; */
-		padding: 0.7rem 1.2rem;
-		background-color: var(--color-gray);
-		border-radius: 12px;
-		gap: 2rem;
-		height: 100%;
-		/* border: 2px yellow solid; */
-	}
-
-	.info {
-		width: 100%;
-	}
-
-	.info > * {
-		margin-top: 0.5rem;
-	}
-
-	.links {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		margin-top: 0.7rem;
-		gap: 2rem;
-	}
-
-	.link {
-		display: flex;
-		width: 100%;
-	}
-
-	a {
-		border-radius: 4px;
-		width: 50%;
-	}
-
-	@media (max-width: 768px) {
-		.info {
-			display: none;
+	@media (min-width: 50em) {
+		li {
+			position: relative;
+			list-style: none;
+			width: 40%;
+			border-radius: 12px;
+			z-index: 100;
+			z-index: auto;
 		}
 
 		a {
 			border-radius: 4px;
-			width: 100%;
+			width: 50%;
 		}
 
-		li {
-			width: 40%;
+		h4 {
+			font-size: 1.5rem;
+			margin-bottom: 0.5rem;
+		}
+
+		p {
+			font-size: 0.9rem;
+			color: var(--color-lightgray);
+		}
+
+		ul span {
+			font-size: 0.9rem;
+			color: var(--color-lightgray);
 		}
 
 		.project {
-			padding: 0.3rem 0.7rem;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			background-color: var(--color-gray);
+			border-radius: 12px;
+			padding: 1rem;
+			gap: 2rem;
+			height: 100%;
+			width: 100%;
+			/* border: 2px solid yellow; */
+		}
+
+		.info {
+			display: block;
+			width: 100%;
+		}
+
+		.category {
+			color: var(--color-white);
+		}
+
+		.details {
+			margin: 1rem 0;
+		}
+
+		.details > * + * {
+			margin-top: 1rem;
+		}
+
+		.links {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			margin-top: 1.5rem;
+			gap: 4rem;
+		}
+
+		.link {
+			display: flex;
+			width: 100%;
+		}
+
+		.description {
+			display: flex;
 		}
 	}
 
-	@media (max-width: 1200px) {
-		.description {
+	@media (max-width: 50em) {
+		li,
+		img {
 			display: none;
 		}
 	}

@@ -12,9 +12,9 @@
 </script>
 
 <section id="about">
-	<div class="container">
+	<div class="fullpage-container">
 		{#if $activePage === 1}
-			<div class="content">
+			<div class="content grid">
 				<div class="description">
 					<!-- <h2 transition:fly={{ y: 50, duration: 750, delay: 500 }}>about</h2> -->
 					<p transition:fly={{ y: 50, duration: 750, delay: 500 }}>
@@ -72,7 +72,7 @@
 	a {
 		position: relative;
 		/* font-family: 'IBM Plex Mono', sans-serif; */
-		font-size: 1.2rem;
+		font-size: 1rem;
 		z-index: 20;
 	}
 
@@ -99,41 +99,52 @@
 		height: 80%;
 	}
 
-	.description > * + * {
-		margin-top: 1.5rem;
+	.grid {
+		display: flex;
+		height: 100%;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 3rem;
 	}
 
 	.description {
-		width: 40%;
-		margin-bottom: 0;
+		width: 100%;
+		/* margin-top: 4rem; */
 	}
 
+	.description > * + * {
+		margin-top: 1rem;
+	}
 	.icons {
+		display: none;
+	}
+
+	.figures {
 		display: flex;
-		flex-wrap: wrap;
-		gap: 1.5rem;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		gap: 2rem;
 	}
 
 	.website {
-		position: absolute;
-		bottom: 8rem;
-		right: 20rem;
-		width: 20%;
+		position: relative;
+		width: 30%;
+		padding: 1rem;
 		height: auto;
 		background-color: var(--color-gray);
-		padding: 2rem;
 		border-radius: 12px;
 		z-index: auto;
 	}
 
 	.chart {
-		position: absolute;
-		bottom: 26rem;
-		right: 0rem;
-		width: 20%;
+		position: relative;
+		width: 30%;
+		padding: 1rem;
 		height: auto;
 		background-color: var(--color-gray);
-		padding: 2rem;
 		border-radius: 12px;
 		z-index: auto;
 	}
@@ -151,87 +162,46 @@
 		/* z-index: -1; */
 		border-radius: 12px;
 		border: 2px solid var(--color-primary);
-		transform: translate(1rem, -1rem);
+		transform: translate(0.5rem, -0.5rem);
 		box-sizing: border-box;
 	}
 
-	@media (max-width: 768px) and (max-height: 667px) {
+	@media (min-width: 50em) {
 		a {
-			font-size: 1rem;
+			font-size: 1.2rem;
 		}
 
-		.description {
-			width: 100%;
-			margin-top: 4rem;
-			margin-bottom: auto;
-		}
-
-		.description > * + * {
-			margin-top: 1rem;
-		}
-		.website {
-			position: absolute;
-			bottom: 10%;
-			left: 0;
-			width: 30%;
-			padding: 1rem;
-		}
-
-		.icons {
-			display: none;
-		}
-
-		.chart {
-			position: absolute;
-			bottom: 10%;
-			right: 0;
-			width: 30%;
-			padding: 1rem;
-		}
-
-		.chart::before {
-			transform: translate(0.5rem, -0.5rem);
-		}
-
-		.website::before {
-			transform: translate(0.5rem, -0.5rem);
-		}
-	}
-
-	@media (max-width: 768px) and (max-height: 926px) {
-		.description {
-			width: 100%;
+		.grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 6rem;
 		}
 
 		.description > * + * {
-			margin-top: 1rem;
-		}
-		.website {
-			position: absolute;
-			bottom: 10%;
-			left: 0;
-			width: 30%;
-			padding: 1rem;
+			margin-top: 1.5rem;
 		}
 
 		.icons {
-			display: none;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1.5rem;
+		}
+
+		.website {
+			width: 30%;
+			padding: 2rem;
+			margin-top: 12rem;
 		}
 
 		.chart {
-			position: absolute;
-			bottom: 10%;
-			right: 0;
 			width: 30%;
-			padding: 1rem;
+			padding: 2rem;
+			margin-bottom: 12rem;
 		}
 
-		.chart::before {
-			transform: translate(0.5rem, -0.5rem);
-		}
-
+		.chart::before,
 		.website::before {
-			transform: translate(0.5rem, -0.5rem);
+			transform: translate(1rem, -1rem);
 		}
 	}
 </style>

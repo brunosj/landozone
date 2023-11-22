@@ -3,6 +3,7 @@ export interface Project {
 	year: number;
 	url: string;
 	color: string;
+	colorRGB: number[];
 	keepTextLight: boolean;
 	repo: string;
 	slug: string;
