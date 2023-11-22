@@ -6,6 +6,7 @@
 	import { onMount } from 'svelte';
 	import ProjectCard from '$components/v2/Projects/ProjectCard.svelte';
 	import ProjectCardMobile from '$components/v2/Projects/ProjectCardMobile.svelte';
+	import Seo from '$components/v2/SEO/SEO.svelte';
 
 	let items: Project[] = projects;
 
@@ -16,6 +17,7 @@
 	});
 </script>
 
+<Seo title="landozone | projects" />
 {#if animate}
 	<section>
 		<div class="page-container">

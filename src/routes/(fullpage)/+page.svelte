@@ -7,6 +7,7 @@
 	import Contact from '$components/v2/Contact/Contact.svelte';
 	import { projects } from '$lib/data/projectsV2';
 	import type { Project } from '$lib/types/types';
+	import Seo from '$components/v2/SEO/SEO.svelte';
 
 	let projectPairs: Project[][] = [];
 
@@ -15,6 +16,7 @@
 	}
 </script>
 
+<Seo title="landozone" />
 <Fullpage>
 	<FullpageSection title="Landing">
 		<Landing />

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { website } from '$data/config';
-	import '../../../globals.css';
 	const { siteLanguage, siteTitle, siteDescription, siteImage, twitter } = website;
 
 	export let description = siteDescription;

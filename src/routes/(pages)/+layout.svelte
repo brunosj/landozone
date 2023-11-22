@@ -9,8 +9,6 @@
 
 	import Logo from '$lib/assets/svg/logo.svelte';
 	import { fade, fly } from 'svelte/transition';
-
-	import Header from '$components/v2/Header/Header.svelte';
 </script>
 
 <header>

@@ -10,6 +10,7 @@
 	import IconInternet from '$lib/assets/svg/icons/IconoirInternet.svelte';
 	import Tag from '$components/v2/UI/Tag.svelte';
 	import { getLogoComponent, getImageComponent } from '$lib/utils/getProjectVisuals';
+	import Seo from '$components/v2/SEO/SEO.svelte';
 
 	let item: Project = data.item;
 
@@ -40,6 +41,8 @@
 
 	let textColor = keepTextLight ? '#fff' : '#202129';
 </script>
+
+<Seo title={`landozone | ${name}`} />
 
 {#if animate}
 	<article>
