@@ -6,7 +6,7 @@
 	import IconLinkedIn from '$lib/assets/svg/icons/SimpleIconsLinkedin.svelte';
 	import IconMail from '$lib/assets/svg/icons/MaterialSymbolsLightMailRounded.svelte';
 	import IconTelegram from '$lib/assets/svg/icons/SimpleIconsTelegram.svelte';
-	import Button from '$components/v2/UI/Button.svelte';
+	import Button from '$components/UI/Button.svelte';
 </script>
 
 <section id="contact">

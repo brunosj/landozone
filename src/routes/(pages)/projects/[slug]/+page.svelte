@@ -4,13 +4,13 @@
 	import type { Project } from '$lib/types/types';
 	import { fade, fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
-	import Button from '$components/v2/UI/Button.svelte';
+	import Button from '$components/UI/Button.svelte';
 	import IconArrow from '$lib/assets/svg/icons/HeroiconsArrowLongRight.svelte';
 	import IconGithub from '$lib/assets/svg/icons/SimpleIconsGithub.svelte';
 	import IconInternet from '$lib/assets/svg/icons/IconoirInternet.svelte';
-	import Tag from '$components/v2/UI/Tag.svelte';
+	import Tag from '$components/UI/Tag.svelte';
 	import { getLogoComponent, getImageComponent } from '$lib/utils/getProjectVisuals';
-	import Seo from '$components/v2/SEO/SEO.svelte';
+	import Seo from '$components/SEO/SEO.svelte';
 
 	let item: Project = data.item;
 
@@ -42,7 +42,7 @@
 	let textColor = keepTextLight ? '#fff' : '#202129';
 </script>
 
-<Seo title={`landozone | ${name}`} />
+<Seo title={`landozone | ${name}`} {description} />
 
 {#if animate}
 	<article>

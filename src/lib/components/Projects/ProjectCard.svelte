@@ -5,9 +5,9 @@
 	import type { Project } from '$lib/types/types';
 	import { fade, fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
-	import Button from '$components/v2/UI/Button.svelte';
+	import Button from '$components/UI/Button.svelte';
 	import IconGithub from '$lib/assets/svg/icons/SimpleIconsGithub.svelte';
-	import Tag from '$components/v2/UI/Tag.svelte';
+	import Tag from '$components/UI/Tag.svelte';
 	import IconInternet from '$lib/assets/svg/icons/IconoirInternet.svelte';
 	import IconArrow from '$lib/assets/svg/icons/MaterialSymbolsLightArrowCircleDownRounded.svelte';
 
@@ -112,8 +112,6 @@
 			list-style: none;
 			width: 40%;
 			border-radius: 12px;
-			z-index: 100;
-			z-index: auto;
 		}
 
 		a {
@@ -146,7 +144,6 @@
 			gap: 2rem;
 			height: 100%;
 			width: 100%;
-			/* border: 2px solid yellow; */
 		}
 
 		.info {

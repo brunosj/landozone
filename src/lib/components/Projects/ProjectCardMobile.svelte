@@ -4,9 +4,9 @@
 	import type { Project } from '$lib/types/types';
 	import { fade, fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
-	import Button from '$components/v2/UI/Button.svelte';
+	import Button from '$components/UI/Button.svelte';
 	import IconGithub from '$lib/assets/svg/icons/SimpleIconsGithub.svelte';
-	import Tag from '$components/v2/UI/Tag.svelte';
+	import Tag from '$components/UI/Tag.svelte';
 	import IconInternet from '$lib/assets/svg/icons/IconoirInternet.svelte';
 	import IconArrow from '$lib/assets/svg/icons/MaterialSymbolsLightArrowCircleDownRounded.svelte';
 

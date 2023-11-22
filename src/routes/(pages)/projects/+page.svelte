@@ -1,12 +1,11 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { projects } from '$lib/data/projectsV2';
-
 	import type { Project } from '$lib/types/types';
 	import { fade, fly } from 'svelte/transition';
-	import { onMount } from 'svelte';
-	import ProjectCard from '$components/v2/Projects/ProjectCard.svelte';
-	import ProjectCardMobile from '$components/v2/Projects/ProjectCardMobile.svelte';
-	import Seo from '$components/v2/SEO/SEO.svelte';
+	import ProjectCard from '$components/Projects/ProjectCard.svelte';
+	import ProjectCardMobile from '$components/Projects/ProjectCardMobile.svelte';
+	import Seo from '$components/SEO/SEO.svelte';
 
 	let items: Project[] = projects;
 

@@ -3,24 +3,35 @@
 	import LogoFull from '$lib/assets/svg/logos/lz-logo.svelte';
 	import Logo from '$lib/assets/svg/logo.svelte';
 	import { fade, fly } from 'svelte/transition';
+	import { onMount, onDestroy } from 'svelte';
+
+	$: page = $activePage;
+
+	onMount(() => {
+		$activePage = 0;
+	});
+
+	onDestroy(() => {
+		$activePage = 0;
+	});
 </script>
 
 <header>
 	<nav class="fullpage-container">
 		<div class="logo">
-			{#if $activePage === 0}
+			{#if page === 0}
 				<div class="logo-full" in:fly={{ delay: 700 }} out:fly={{ delay: 300 }}>
 					<LogoFull />
 				</div>
-			{:else if $activePage === 1}
+			{:else if page === 1}
 				<div class="logo-shape" in:fly={{ delay: 700 }} out:fly={{ delay: 300 }}>
 					<Logo color1="#00cfa1" color2="#202129" />
 				</div>
-			{:else if $activePage === 2}
+			{:else if page === 2}
 				<div class="logo-shape" in:fly={{ delay: 700 }} out:fly={{ delay: 300 }}>
 					<Logo />
 				</div>
-			{:else if $activePage === 3}
+			{:else if page === 3}
 				<div class="logo-shape" in:fly={{ delay: 700 }} out:fly={{ delay: 300 }}>
 					<Logo color1="#8786df" color2="#202129" />
 				</div>
@@ -31,23 +42,23 @@
 			{/if}
 		</div>
 		<div class="active-page">
-			{#if $activePage === 0}
+			{#if page === 0}
 				<div style="width:100%" in:fly={{ delay: 700 }} out:fly={{ delay: 300 }}></div>
-			{:else if $activePage === 1}
+			{:else if page === 1}
 				<div
 					style="width:100%; color:var(--color-black)"
 					in:fly={{ delay: 700 }}
 					out:fly={{ delay: 300 }}>
 					<span>about</span>
 				</div>
-			{:else if $activePage === 2}
+			{:else if page === 2}
 				<div
 					style="width:100%; color:var(--color-secondary)"
 					in:fly={{ delay: 700 }}
 					out:fly={{ delay: 300 }}>
 					<span>featured projects</span>
 				</div>
-			{:else if $activePage === 3}
+			{:else if page === 3}
 				<div
 					style="width:100%; color:var(--color-black)"
 					in:fly={{ delay: 700 }}

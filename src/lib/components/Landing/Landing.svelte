@@ -25,20 +25,20 @@
 					</p>
 				</div>
 				<div class="helper" transition:fly={{ y: -50, duration: 750 }}>
-					<div>
-						<span class:fade-in={animate} class="scroll">Scroll down</span>
-
-						<span class:fade-in={animate} class="arrow">
+					<span class:fade-in={animate} class="scroll">Scroll down</span>
+					<span class:fade-in={animate} class="inner">
+						<IconArrowDown width="1.5rem" />
+					</span>
+					<!-- <span class:fade-in={animate} class="arrow">
 							<span class:fade-in={animate} class="inner">
 								<span class:fade-in={animate}>
 									<IconArrowDown width="1.5rem" />
 								</span>
-								<!-- <span class:fade-in={animate} class="animated">
+								<span class:fade-in={animate} class="animated">
 									<IconArrowDown width="1.5rem" />
-								</span> -->
+								</span>
 							</span>
-						</span>
-					</div>
+						</span> -->
 				</div>
 			{/if}
 		</div>
@@ -136,7 +136,7 @@
 		position: absolute;
 		left: 0;
 		right: 0;
-		bottom: 10%;
+		bottom: 15%;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
@@ -147,6 +147,7 @@
 		font-family: 'IBM Plex Mono', sans-serif;
 		font-weight: 600;
 		color: var(--color-secondary);
+		gap: 0.5rem;
 	}
 
 	.arrow {
@@ -158,7 +159,7 @@
 
 	.inner {
 		display: flex;
-		animation: wiggle 1s ease infinite;
+		animation: wiggle 1.5s ease infinite;
 	}
 
 	.animated {
@@ -168,15 +169,15 @@
 
 	@keyframes wiggle {
 		0% {
-			transform: translateY(25%);
+			transform: translateY(-10%);
 		}
 
 		50% {
-			transform: translateY(45%);
+			transform: translateY(25%);
 		}
 
 		100% {
-			transform: translateY(25%);
+			transform: translateY(-10%);
 		}
 	}
 
@@ -187,6 +188,7 @@
 
 		.helper {
 			font-size: 0.8rem;
+			bottom: 10%;
 		}
 	}
 </style>

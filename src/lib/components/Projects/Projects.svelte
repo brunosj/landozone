@@ -2,10 +2,10 @@
 	import { activePage } from '$lib/stores/activeSection';
 	import { fade, fly } from 'svelte/transition';
 	import { projects } from '$lib/data/projectsV2';
-	import ProjectCard from '$components/v2/Projects/ProjectCard.svelte';
-	import ProjectCardMobile from '$components/v2/Projects/ProjectCardMobile.svelte';
+	import ProjectCard from '$components/Projects/ProjectCard.svelte';
+	import ProjectCardMobile from '$components/Projects/ProjectCardMobile.svelte';
 	import Logo from '$lib/assets/svg/logo.svelte';
-	import Button from '$components/v2/UI/Button.svelte';
+	import Button from '$components/UI/Button.svelte';
 	import IconArrow from '$lib/assets/svg/icons/HeroiconsArrowLongRight.svelte';
 	import IconArrowDown from '$lib/assets/svg/icons/MaterialSymbolsLightArrowCircleDownRounded.svelte';
 </script>
@@ -76,7 +76,7 @@
 		flex-wrap: wrap;
 		flex-direction: row;
 		justify-content: center;
-		gap: 2rem;
+		gap: 1.5rem;
 		z-index: 1;
 		margin: auto;
 		margin: 1rem 0rem;

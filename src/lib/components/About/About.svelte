@@ -105,12 +105,11 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		gap: 3rem;
+		gap: 1.5rem;
 	}
 
 	.description {
 		width: 100%;
-		/* margin-top: 4rem; */
 	}
 
 	.description > * + * {
@@ -123,8 +122,7 @@
 	.figures {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
+		justify-content: center;
 		width: 100%;
 		gap: 2rem;
 	}
@@ -132,7 +130,7 @@
 	.website {
 		position: relative;
 		width: 30%;
-		padding: 1rem;
+		padding: 0.5rem;
 		height: auto;
 		background-color: var(--color-gray);
 		border-radius: 12px;
@@ -142,7 +140,7 @@
 	.chart {
 		position: relative;
 		width: 30%;
-		padding: 1rem;
+		padding: 0.5rem;
 		height: auto;
 		background-color: var(--color-gray);
 		border-radius: 12px;
