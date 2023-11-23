@@ -57,11 +57,11 @@
 
 	.svg-bg {
 		position: fixed;
-		top: -25%;
+		top: -2%;
 		left: 0;
 		bottom: 0;
 		right: 0;
-		width: 160%;
+		width: 100%;
 		opacity: 0.4;
 	}
 
