@@ -9,7 +9,6 @@
 <svelte:head>
 	<title>{title}</title>
 	<meta name="description" content={description || siteDescription} />
-	<link rel="icon" href="/favicon.png" />
 	<meta name="description" content={description || siteDescription} />
 	<meta name="image" content={siteImage} />
 	<meta property="og:title" content={title} />
