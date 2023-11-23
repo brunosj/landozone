@@ -12,12 +12,12 @@
 </script>
 
 <section id="landing">
-	<div class="svg-bg">
-		<Waveform />
-	</div>
-	<div class="fullpage-container">
-		<div class="content">
-			{#if $activePage === 0}
+	{#if $activePage === 0}
+		<div class="svg-bg" class:fade-in-svg={animate} transition:fade={{ duration: 750, delay: 500 }}>
+			<Waveform />
+		</div>
+		<div class="fullpage-container">
+			<div class="content">
 				<div class="hero" transition:fly={{ y: -50, duration: 750 }}>
 					<h1 class:fade-in={animate}>imaginative web development</h1>
 					<p class:fade-in={animate}>
@@ -44,9 +44,9 @@
 							</span>
 						</span> -->
 				</div>
-			{/if}
+			</div>
 		</div>
-	</div>
+	{/if}
 </section>
 
 <style>
@@ -82,7 +82,8 @@
 		bottom: 0;
 		right: 0;
 		width: 160%;
-		opacity: 0.5;
+		opacity: 0;
+		transition: 750ms ease all;
 	}
 
 	.hero > * + * {
@@ -91,6 +92,10 @@
 
 	.fade-in {
 		opacity: 1;
+	}
+
+	.fade-in-svg {
+		opacity: 0.5;
 	}
 
 	.hero {

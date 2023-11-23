@@ -11,12 +11,12 @@
 </script>
 
 <section id="contact">
-	<div class="svg-bg">
-		<Waveform />
-	</div>
-	<div class="fullpage-container">
-		<div class="content">
-			{#if $activePage === 3}
+	{#if $activePage === 3}
+		<div class="svg-bg" transition:fade={{ duration: 750, delay: 500 }}>
+			<Waveform />
+		</div>
+		<div class="fullpage-container">
+			<div class="content">
 				<div class="grid">
 					<div class="description">
 						<!-- <h3 transition:fly={{ y: 50, duration: 750, delay: 500 }}>get in touch!</h3> -->
@@ -73,9 +73,9 @@
 						</div>
 					</div>
 				</div>
-			{/if}
+			</div>
 		</div>
-	</div>
+	{/if}
 </section>
 
 <style>

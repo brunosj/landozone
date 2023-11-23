@@ -11,12 +11,12 @@
 </script>
 
 <section id="projects">
-	<div class="svg-element">
-		<OscillatePurple />
-	</div>
-	<div class="fullpage-container">
-		<div class="content">
-			{#if $activePage === 2}
+	{#if $activePage === 2}
+		<div class="svg-element" transition:fade={{ duration: 750, delay: 500 }}>
+			<OscillatePurple />
+		</div>
+		<div class="fullpage-container">
+			<div class="content">
 				<div class="grid">
 					<!-- <div class="description">
 						<h2 transition:fly={{ y: 50, duration: 750, delay: 500 }}>selected works</h2>
@@ -37,9 +37,9 @@
 						</span>
 					</a>
 				</div>
-			{/if}
+			</div>
 		</div>
-	</div>
+	{/if}
 </section>
 
 <style>

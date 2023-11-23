@@ -13,12 +13,12 @@
 </script>
 
 <section id="about">
-	<div class="svg-bg" />
-	<div class="svg-element">
-		<OscillateBlack />
-	</div>
-	<div class="fullpage-container">
-		{#if $activePage === 1}
+	{#if $activePage === 1}
+		<div class="svg-bg" />
+		<div class="svg-element" transition:fade={{ duration: 750, delay: 500 }}>
+			<OscillateBlack />
+		</div>
+		<div class="fullpage-container">
 			<div class="content grid">
 				<div class="description">
 					<!-- <h2 transition:fly={{ y: 50, duration: 750, delay: 500 }}>about</h2> -->
@@ -58,8 +58,8 @@
 					</div>
 				</div>
 			</div>
-		{/if}
-	</div>
+		</div>
+	{/if}
 </section>
 
 <style>
