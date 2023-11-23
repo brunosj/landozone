@@ -9,9 +9,14 @@
 	import IconReact from '$lib/assets/svg/icons/SimpleIconsReact.svelte';
 	import IconSvelte from '$lib/assets/svg/icons/SimpleIconsSvelte.svelte';
 	import { activePage } from '$lib/stores/activeSection';
+	import OscillateBlack from '$lib/assets/svg/oscillate-black.svelte';
 </script>
 
 <section id="about">
+	<div class="svg-bg" />
+	<div class="svg-element">
+		<OscillateBlack />
+	</div>
 	<div class="fullpage-container">
 		{#if $activePage === 1}
 			<div class="content grid">
@@ -63,6 +68,7 @@
 		width: 100%;
 		height: 100%;
 		color: var(--color-black);
+		position: relative;
 	}
 
 	span {
@@ -97,6 +103,45 @@
 
 	a:hover:after {
 		height: 80%;
+	}
+
+	.svg-element {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+		opacity: 0.1;
+	}
+
+	.svg-bg {
+		background: radial-gradient(ellipse at right, #9390e2 10%, #8786df 90%);
+		height: 100%;
+		width: 100%;
+		position: absolute;
+	}
+
+	.svg-bg:before,
+	.svg-bg:after {
+		content: '';
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		background: radial-gradient(ellipse at right, #9390e2 25%, #8786df 100%),
+			radial-gradient(ellipse at right, #9390e2 0%, #8786df 75%);
+		filter: blur(22px);
+	}
+
+	.svg-bg:before {
+		transform: rotate(293deg);
+	}
+
+	.svg-bg:after {
+		transform: rotate(251deg);
 	}
 
 	.grid {
@@ -167,6 +212,11 @@
 	@media (min-width: 50em) {
 		a {
 			font-size: 1.2rem;
+		}
+
+		.svg-bg {
+			width: 100%;
+			top: 0%;
 		}
 
 		.grid {

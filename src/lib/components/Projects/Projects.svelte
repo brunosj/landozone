@@ -5,11 +5,15 @@
 	import ProjectCard from '$components/Projects/ProjectCard.svelte';
 	import ProjectCardMobile from '$components/Projects/ProjectCardMobile.svelte';
 	import IconArrow from '$lib/assets/svg/icons/MaterialSymbolsArrowOutwardRounded.svelte';
+	import OscillatePurple from '$lib/assets/svg/oscillate-purple.svelte';
 
 	const featuredProjects = projects.filter((project) => project.featured === true);
 </script>
 
 <section id="projects">
+	<div class="svg-element">
+		<OscillatePurple />
+	</div>
 	<div class="fullpage-container">
 		<div class="content">
 			{#if $activePage === 2}
@@ -50,6 +54,45 @@
 	h2 {
 		color: #00cfa1;
 		line-height: 2rem;
+	}
+
+	.svg-element {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+		opacity: 0.1;
+	}
+
+	.svg-bg {
+		background: radial-gradient(ellipse at left, #1e1f27 10%, #14151d 90%);
+		height: 100%;
+		width: 100%;
+		position: absolute;
+	}
+
+	.svg-bg:before,
+	.svg-bg:after {
+		content: '';
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		background: radial-gradient(ellipse at left, #1e1f27 25%, #14151d 100%),
+			radial-gradient(ellipse at left, #1e1f27 0%, #14151d 75%);
+		filter: blur(22px);
+	}
+
+	.svg-bg:before {
+		transform: rotate(293deg);
+	}
+
+	.svg-bg:after {
+		transform: rotate(251deg);
 	}
 
 	.grid {

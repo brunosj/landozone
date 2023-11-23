@@ -33,7 +33,7 @@
 				</div>
 			{:else if page === 3}
 				<div class="logo-shape" in:fly={{ delay: 700 }} out:fly={{ delay: 300 }}>
-					<Logo color1="#8786df" color2="#202129" />
+					<Logo />
 				</div>
 			{:else}
 				<div class="logo-shape" in:fly={{ delay: 700 }} out:fly={{ delay: 300 }}>
@@ -60,7 +60,7 @@
 				</div>
 			{:else if page === 3}
 				<div
-					style="width:100%; color:var(--color-black)"
+					style="width:100%; color:var(--color-secondary)"
 					in:fly={{ delay: 700 }}
 					out:fly={{ delay: 300 }}>
 					<span>contact</span>

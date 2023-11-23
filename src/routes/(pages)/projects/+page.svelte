@@ -6,6 +6,7 @@
 	import ProjectCard from '$components/Projects/ProjectCard.svelte';
 	import ProjectCardMobile from '$components/Projects/ProjectCardMobile.svelte';
 	import Seo from '$components/SEO/SEO.svelte';
+	import Waveform from '$lib/assets/svg/waveform.svelte';
 
 	let items: Project[] = projects;
 
@@ -19,6 +20,9 @@
 <Seo title="landozone | projects" />
 {#if animate}
 	<section>
+		<div class="svg-bg">
+			<Waveform />
+		</div>
 		<div class="page-container">
 			<div class="description">
 				<h2 transition:fly={{ y: 50, duration: 750, delay: 500 }}>projects</h2>
@@ -51,6 +55,16 @@
 		color: var(--color-secondary);
 	}
 
+	.svg-bg {
+		position: fixed;
+		top: -25%;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 160%;
+		opacity: 0.2;
+	}
+
 	.description {
 		margin-bottom: 3rem;
 	}
@@ -68,6 +82,11 @@
 	}
 
 	@media (min-width: 50em) {
+		.svg-bg {
+			width: 100%;
+			top: -30%;
+		}
+
 		.projects {
 			gap: 2rem;
 		}

@@ -7,9 +7,13 @@
 	import IconMail from '$lib/assets/svg/icons/MaterialSymbolsLightMailRounded.svelte';
 	import IconTelegram from '$lib/assets/svg/icons/SimpleIconsTelegram.svelte';
 	import Button from '$components/UI/Button.svelte';
+	import Waveform from '$lib/assets/svg/waveform.svelte';
 </script>
 
 <section id="contact">
+	<div class="svg-bg">
+		<Waveform />
+	</div>
 	<div class="fullpage-container">
 		<div class="content">
 			{#if $activePage === 3}
@@ -76,10 +80,11 @@
 
 <style>
 	section {
-		background-color: var(--color-primary);
+		/* background-color: var(--color-black); */
 		width: 100%;
 		height: 100%;
-		color: var(--color-black);
+		color: var(--color-white);
+		position: relative;
 	}
 
 	h3 {
@@ -92,6 +97,16 @@
 		width: 4rem;
 		margin-bottom: 0rem;
 		border-radius: 100%;
+	}
+
+	.svg-bg {
+		position: absolute;
+		top: 0%;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 160%;
+		opacity: 0.2;
 	}
 
 	.picture {
@@ -147,7 +162,7 @@
 	}
 
 	.info {
-		background-color: var(--color-black);
+		background-color: var(--color-gray);
 		width: 80%;
 		padding: 1.5rem 2rem;
 		color: var(--color-white);
@@ -207,6 +222,11 @@
 
 		#underline {
 			font-size: 1.3rem;
+		}
+
+		.svg-bg {
+			width: 100%;
+			top: -37%;
 		}
 
 		.grid {

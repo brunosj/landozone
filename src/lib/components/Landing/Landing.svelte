@@ -3,9 +3,7 @@
 	import { activePage } from '$lib/stores/activeSection';
 	import { onMount } from 'svelte';
 	import IconArrowDown from '$lib/assets/svg/icons/MaterialSymbolsLightKeyboardDoubleArrowDownRounded.svelte';
-	import HeroBackground from '$lib/assets/svg/heroBackground.svelte';
-	import SpaceBackground from '$lib/assets/svg/spaceBackground.svelte';
-	import SpaceBg from '$lib/assets/svg/space-bg.svelte';
+	import Waveform from '$lib/assets/svg/waveform.svelte';
 
 	let animate = false;
 	onMount(() => {
@@ -14,8 +12,8 @@
 </script>
 
 <section id="landing">
-	<div class="hero-bg">
-		<SpaceBg />
+	<div class="svg-bg">
+		<Waveform />
 	</div>
 	<div class="fullpage-container">
 		<div class="content">
@@ -77,16 +75,14 @@
 		transition: 750ms ease all;
 	}
 
-	.hero-bg {
+	.svg-bg {
 		position: absolute;
-		top: 50%;
+		top: 0%;
 		left: 0;
 		bottom: 0;
 		right: 0;
-		width: 100%;
-		height: 100%;
-		opacity: 0.6;
-		mask-image: linear-gradient(transparent, white, transparent);
+		width: 160%;
+		opacity: 0.5;
 	}
 
 	.hero > * + * {
@@ -195,13 +191,9 @@
 			width: 50%;
 		}
 
-		.hero-bg {
-			top: 0rem;
-			left: 0rem;
-			bottom: 0rem;
-			right: 0;
+		.svg-bg {
 			width: 100%;
-			height: 100%;
+			top: -37%;
 		}
 
 		.helper {
