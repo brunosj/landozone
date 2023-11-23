@@ -3,6 +3,9 @@
 	import { activePage } from '$lib/stores/activeSection';
 	import { onMount } from 'svelte';
 	import IconArrowDown from '$lib/assets/svg/icons/MaterialSymbolsLightKeyboardDoubleArrowDownRounded.svelte';
+	import HeroBackground from '$lib/assets/svg/heroBackground.svelte';
+	import SpaceBackground from '$lib/assets/svg/spaceBackground.svelte';
+	import SpaceBg from '$lib/assets/svg/space-bg.svelte';
 
 	let animate = false;
 	onMount(() => {
@@ -11,6 +14,9 @@
 </script>
 
 <section id="landing">
+	<div class="hero-bg">
+		<SpaceBg />
+	</div>
 	<div class="fullpage-container">
 		<div class="content">
 			{#if $activePage === 0}
@@ -51,6 +57,7 @@
 		width: 100%;
 		height: 100%;
 		color: white;
+		position: relative;
 	}
 
 	h1 {
@@ -68,6 +75,18 @@
 	span {
 		opacity: 0;
 		transition: 750ms ease all;
+	}
+
+	.hero-bg {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0.6;
+		mask-image: linear-gradient(transparent, white, transparent);
 	}
 
 	.hero > * + * {
@@ -174,6 +193,15 @@
 	@media screen and (min-width: 50em) {
 		.hero {
 			width: 50%;
+		}
+
+		.hero-bg {
+			top: 0rem;
+			left: 0rem;
+			bottom: 0rem;
+			right: 0;
+			width: 100%;
+			height: 100%;
 		}
 
 		.helper {

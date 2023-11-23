@@ -85,7 +85,7 @@
 		display: flex;
 		margin-left: auto;
 		gap: 0.2rem;
-		margin-top: 1.5rem;
+		margin-top: 1rem;
 	}
 
 	.link .icon {
