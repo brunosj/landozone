@@ -155,12 +155,6 @@
 		gap: 1.5rem;
 	}
 
-	.icon:hover {
-		cursor: pointer;
-		color: var(--color-secondary);
-		transition: all 0.3s ease-in-out;
-	}
-
 	.info {
 		background-color: var(--color-gray);
 		width: 80%;

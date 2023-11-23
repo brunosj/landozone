@@ -33,16 +33,6 @@
 					<span class:fade-in={animate} class="inner">
 						<IconArrowDown width="1.5rem" />
 					</span>
-					<!-- <span class:fade-in={animate} class="arrow">
-							<span class:fade-in={animate} class="inner">
-								<span class:fade-in={animate}>
-									<IconArrowDown width="1.5rem" />
-								</span>
-								<span class:fade-in={animate} class="animated">
-									<IconArrowDown width="1.5rem" />
-								</span>
-							</span>
-						</span> -->
 				</div>
 			</div>
 		</div>
@@ -160,21 +150,9 @@
 		gap: 0.5rem;
 	}
 
-	.arrow {
-		display: inline-flex;
-		/* align-items: center; */
-		position: relative;
-		/* overflow: hidden; */
-	}
-
 	.inner {
 		display: flex;
 		animation: wiggle 1.5s ease infinite;
-	}
-
-	.animated {
-		position: absolute;
-		top: 100%;
 	}
 
 	@keyframes wiggle {

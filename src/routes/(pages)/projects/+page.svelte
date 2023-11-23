@@ -20,7 +20,7 @@
 <Seo title="landozone | projects" />
 {#if animate}
 	<section>
-		<div class="svg-bg">
+		<div class="svg-bg" transition:fade={{ duration: 750, delay: 500 }}>
 			<Waveform />
 		</div>
 		<div class="page-container">

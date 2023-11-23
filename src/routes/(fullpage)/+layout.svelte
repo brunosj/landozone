@@ -35,10 +35,6 @@
 	}
 
 	@media (min-width: 50em) {
-		.logo-shape {
-			width: 2rem;
-		}
-
 		:global(.content) {
 			height: 90%;
 		}

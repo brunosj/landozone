@@ -214,6 +214,10 @@
 			font-size: 1.2rem;
 		}
 
+		.svg-element {
+			opacity: 0.15;
+		}
+
 		.svg-bg {
 			width: 100%;
 			top: 0%;

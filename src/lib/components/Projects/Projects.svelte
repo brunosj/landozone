@@ -51,11 +51,6 @@
 		position: relative;
 	}
 
-	h2 {
-		color: #00cfa1;
-		line-height: 2rem;
-	}
-
 	.svg-element {
 		position: absolute;
 		top: 0;
@@ -66,35 +61,6 @@
 		opacity: 0.15;
 	}
 
-	.svg-bg {
-		background: radial-gradient(ellipse at left, #1e1f27 10%, #14151d 90%);
-		height: 100%;
-		width: 100%;
-		position: absolute;
-	}
-
-	.svg-bg:before,
-	.svg-bg:after {
-		content: '';
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		background: radial-gradient(ellipse at left, #1e1f27 25%, #14151d 100%),
-			radial-gradient(ellipse at left, #1e1f27 0%, #14151d 75%);
-		filter: blur(22px);
-	}
-
-	.svg-bg:before {
-		transform: rotate(293deg);
-	}
-
-	.svg-bg:after {
-		transform: rotate(251deg);
-	}
-
 	.grid {
 		display: flex;
 		position: relative;
@@ -102,15 +68,6 @@
 		justify-content: center;
 		height: 90%;
 		margin-top: 1rem;
-	}
-
-	.description {
-		display: flex;
-		flex-direction: column;
-		/* align-items: center; */
-		justify-content: center;
-		height: 100%;
-		gap: 1.5rem;
 	}
 
 	.projects {

@@ -52,19 +52,6 @@
 						</h4>
 						<p class="description">{description}</p>
 					</div>
-
-					<!-- <div class="links">
-					<div class="link">
-						<Button to={url} text="Visit site" {color} {keepTextLight}>
-							<IconInternet width="1.3rem" />
-						</Button>
-					</div>
-					<div class="link">
-						<Button to={`/projects/${slug}`} text="Learn more" {color} {keepTextLight}>
-							<IconArrow width="1.3rem" />
-						</Button>
-					</div>
-				</div> -->
 				</div>
 			</div>
 		</a>
@@ -101,11 +88,6 @@
 		border-radius: 4px;
 	}
 
-	/* 
-	img {
-		width: 30%;
-	} */
-
 	.project {
 		display: grid;
 		grid-template-columns: 1fr 2fr;
@@ -116,20 +98,6 @@
 		padding: 0.5rem;
 		gap: 1rem;
 		height: 100%;
-	}
-
-	.links {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		margin-top: 1.5rem;
-		gap: 4rem;
-	}
-
-	.link {
-		display: flex;
-		width: 100%;
 	}
 
 	@media (min-width: 50em) {
