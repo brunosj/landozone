@@ -11,10 +11,10 @@
 </script>
 
 <section id="contact">
+	<div class="svg-bg">
+		<Waveform />
+	</div>
 	{#if $activePage === 3}
-		<div class="svg-bg" transition:fade={{ duration: 750, delay: 500 }}>
-			<Waveform />
-		</div>
 		<div class="fullpage-container">
 			<div class="content">
 				<div class="grid">
@@ -215,7 +215,7 @@
 		}
 
 		#underline {
-			font-size: 1.3rem;
+			font-size: 1.2rem;
 		}
 
 		.svg-bg {

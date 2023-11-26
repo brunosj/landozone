@@ -14,10 +14,10 @@
 
 <section id="about">
 	{#if $activePage === 1}
-		<div class="svg-bg" />
-		<div class="svg-element" transition:fade={{ duration: 750, delay: 500 }}>
+		<!-- <div class="svg-bg" /> -->
+		<!-- <div class="svg-element" transition:fade={{ duration: 750, delay: 500 }}>
 			<OscillateBlack />
-		</div>
+		</div> -->
 		<div class="fullpage-container">
 			<div class="content grid">
 				<div class="description">

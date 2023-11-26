@@ -12,10 +12,10 @@
 </script>
 
 <section id="landing">
+	<div class="svg-bg">
+		<Waveform />
+	</div>
 	{#if $activePage === 0}
-		<div class="svg-bg" class:fade-in-svg={animate} transition:fade={{ duration: 750, delay: 500 }}>
-			<Waveform />
-		</div>
 		<div class="fullpage-container">
 			<div class="content">
 				<div class="hero" transition:fly={{ y: -50, duration: 750 }}>
@@ -72,7 +72,7 @@
 		bottom: 0;
 		right: 0;
 		width: 100%;
-		opacity: 0;
+		opacity: 0.5;
 		transition: 750ms ease all;
 	}
 
@@ -82,10 +82,6 @@
 
 	.fade-in {
 		opacity: 1;
-	}
-
-	.fade-in-svg {
-		opacity: 0.5;
 	}
 
 	.hero {

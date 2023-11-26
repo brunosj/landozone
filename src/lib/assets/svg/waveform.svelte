@@ -4,6 +4,7 @@
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	viewBox="0 0 800 800"
 	opacity="0.74"
+	shape-rendering="optimizeSpeed"
 	><defs
 		><linearGradient
 			gradientTransform="rotate(270)"

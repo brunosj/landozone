@@ -6,7 +6,7 @@
 	import ProjectCard from '$components/Projects/ProjectCard.svelte';
 	import ProjectCardMobile from '$components/Projects/ProjectCardMobile.svelte';
 	import Seo from '$components/SEO/SEO.svelte';
-	import Waveform from '$lib/assets/svg/waveform.svelte';
+	import Waveform from '$lib/assets/svg/waveform.svg';
 
 	let items: Project[] = projects;
 

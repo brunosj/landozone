@@ -12,9 +12,9 @@
 
 <section id="projects">
 	{#if $activePage === 2}
-		<div class="svg-element" transition:fade={{ duration: 750, delay: 500 }}>
+		<!-- <div class="svg-element" transition:fade={{ duration: 750, delay: 500 }}>
 			<OscillatePurple />
-		</div>
+		</div> -->
 		<div class="fullpage-container">
 			<div class="content">
 				<div class="grid">
