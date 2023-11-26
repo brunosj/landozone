@@ -1,6 +1,5 @@
 <script lang="ts">
 	export let item: Project;
-
 	import type { Project } from '$lib/types/types';
 	import { fade, fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
@@ -14,7 +13,7 @@
 
 	let {
 		name,
-		year,
+		date,
 		url,
 		color,
 		keepTextLight,

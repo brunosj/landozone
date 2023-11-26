@@ -15,7 +15,7 @@
 
 	let {
 		name,
-		year,
+		date,
 		url,
 		color,
 		keepTextLight,
@@ -60,21 +60,23 @@
 				</div>
 				{#if showDetails}
 					<div class="details">
-						<div>
-							<p class="category">Features</p>
-							<ul class="feature">
-								{#each features as item}
-									<span>
-										{item}
-									</span>
-									{#if item !== features[features.length - 1]}
+						{#if features.length >= 1}
+							<div>
+								<p class="category">Features</p>
+								<ul class="feature">
+									{#each features as item}
 										<span>
-											{' - '}
+											{item}
 										</span>
-									{/if}
-								{/each}
-							</ul>
-						</div>
+										{#if item !== features[features.length - 1]}
+											<span>
+												{' - '}
+											</span>
+										{/if}
+									{/each}
+								</ul>
+							</div>
+						{/if}
 						<div>
 							<p class="category">Technologies</p>
 							<ul class="feature">

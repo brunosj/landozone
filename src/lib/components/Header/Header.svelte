@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { activePage } from '$lib/stores/activeSection';
 	import LogoFull from '$lib/assets/svg/logos/lz-logo.svelte';
-	import Logo from '$lib/assets/svg/logo.svelte';
+	import Logo from '$lib/assets/svg/logos/logo.svelte';
 	import { fade, fly } from 'svelte/transition';
 	import { onMount, onDestroy } from 'svelte';
 

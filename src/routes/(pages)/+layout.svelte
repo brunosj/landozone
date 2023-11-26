@@ -7,7 +7,7 @@
 	import '../../reset.css';
 	import '../../globals.css';
 
-	import Logo from '$lib/assets/svg/logo.svelte';
+	import Logo from '$lib/assets/svg/logos/logo.svelte';
 	import { fade, fly } from 'svelte/transition';
 </script>
 

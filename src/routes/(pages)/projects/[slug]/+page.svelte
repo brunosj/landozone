@@ -16,7 +16,7 @@
 
 	let {
 		name,
-		year,
+		date,
 		url,
 		color,
 		colorRGB,

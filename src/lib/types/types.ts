@@ -1,6 +1,6 @@
 export interface Project {
 	name: string;
-	year: number;
+	date: string;
 	url: string;
 	color: string;
 	colorRGB: number[];

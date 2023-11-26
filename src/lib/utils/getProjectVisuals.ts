@@ -5,6 +5,8 @@ import PWXImage from '$lib/assets/images/pwx-bg.jpg';
 import RigoImage from '$lib/assets/images/rigo-bg.jpg';
 import TMGImage from '$lib/assets/images/tmg-bg.jpg';
 import DNAImage from '$lib/assets/images/dna-bg.jpg';
+import DeremetzImage from '$lib/assets/images/deremetz-bg.jpg';
+import ZebiImage from '$lib/assets/images/zebi-bg.jpg';
 
 import LZLogo from '$lib/assets/svg/logos/lz-logo.svelte';
 import THFLogo from '$lib/assets/svg/logos/thf-logo.svelte';
@@ -25,7 +27,9 @@ export function getImageComponent(name: string): ImageComponent {
 		'TMG Think Tank': TMGImage,
 		'Rigo Woodworks': RigoImage,
 		'Pinewax Records': PWXImage,
-		'EU Copyright Directive': DNAImage
+		'EU Copyright Directive': DNAImage,
+		'Studio Deremetz': DeremetzImage,
+		'Sebastian Díaz de León': ZebiImage
 	};
 
 	return imageMap[name] || '';

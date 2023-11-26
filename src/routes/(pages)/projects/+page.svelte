@@ -10,6 +10,12 @@
 
 	let items: Project[] = projects;
 
+	let projectsByDate: Project[] = items.sort((a, b) => {
+		const dateA = new Date(a.date);
+		const dateB = new Date(b.date);
+		return dateB.getTime() - dateA.getTime();
+	});
+
 	let animate = false;
 
 	onMount(() => {
@@ -31,7 +37,7 @@
 				</p>
 			</div>
 			<div class="projects" transition:fly={{ y: 50, duration: 750, delay: 750 }}>
-				{#each items as item}
+				{#each projectsByDate as item}
 					<ProjectCardMobile {item} />
 					<ProjectCard {item} showDetails={true} />
 				{/each}

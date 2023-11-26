@@ -1,7 +1,7 @@
 export const projects = [
 	{
 		name: 'THF Radio',
-		year: 2023,
+		date: '2023-08-10',
 		url: 'https://thfradio.de/',
 		repo: 'https://github.com/brunosj/thfradio-nextjs',
 		slug: 'thf-radio',
@@ -31,7 +31,7 @@ export const projects = [
 	},
 	{
 		name: 'EU Copyright Directive',
-		year: 2023,
+		date: '2019-05-01',
 		url: 'https://www.dropbox.com/s/burxy23afjsd2h4/STJACQUES-BRUNO_MT-poster_bg_web.pdf?dl=0',
 		repo: 'https://github.com/brunosj/dna-copyright',
 		slug: 'dna-copyright',
@@ -47,7 +47,7 @@ export const projects = [
 	},
 	{
 		name: 'EconCrime Lab',
-		year: 2023,
+		date: '2023-05-01',
 		url: 'https://econcrimelab.com/',
 		repo: 'https://github.com/brunosj/econcrimelab',
 		slug: 'econcrime-lab',
@@ -71,7 +71,7 @@ export const projects = [
 	},
 	{
 		name: 'Rigo Woodworks',
-		year: 2022,
+		date: '2022-09-01',
 		url: 'https://rigowoodworks.com/',
 		repo: 'https://github.com/brunosj/rigo-woodworks',
 		slug: 'rigo-woodworks',
@@ -81,13 +81,13 @@ export const projects = [
 		keepTextLight: false,
 		type: 'Website',
 		description: 'Wooden furniture online store',
-		technologies: ['React', 'Gatsby JS', 'Tailwind CSS', 'Contentful CMS'],
+		technologies: ['React', 'Gatsby', 'Tailwind CSS', 'Contentful CMS'],
 		features: ['Integration with Shopify'],
 		featured: false
 	},
 	{
 		name: 'TMG Think Tank',
-		year: 2023,
+		date: '2023-11-01',
 		url: 'https://tmg-thinktank.com/',
 		repo: 'https://github.com/brunosj/tmgsvelte',
 		slug: 'tmg-thinktank',
@@ -103,7 +103,7 @@ export const projects = [
 	},
 	{
 		name: 'Pinewax Records',
-		year: 2021,
+		date: '2021-10-01',
 		url: 'https://pinewaxrecords.com/',
 		repo: 'https://github.com/brunosj/pinewax',
 		slug: 'pinewax-records',
@@ -113,13 +113,45 @@ export const projects = [
 		keepTextLight: true,
 		type: 'Website',
 		description: 'Record label online store',
-		technologies: ['React', 'Gatsby JS', 'Tailwind CSS', 'Contentful CMS'],
+		technologies: ['React', 'Gatsby', 'Tailwind CSS', 'Contentful CMS'],
 		features: ['Integration with Shopify'],
 		featured: false
 	},
 	{
+		name: 'Sebastian Díaz de León',
+		date: '2022-06-01',
+		url: 'https://sdiazdeleon.eu/',
+		repo: 'https://github.com/brunosj/sdiazdeleon.eu',
+		slug: 'sebastian-diaz-de-leon',
+		image: 'zebi-bg.jpg',
+		color: '#3037F4',
+		colorRGB: [48, 55, 244],
+		keepTextLight: true,
+		type: 'Website',
+		description: 'Architecture photography portfolio ',
+		technologies: ['React', 'Gatsby', 'Tailwind CSS', 'Contentful CMS'],
+		features: [],
+		featured: false
+	},
+	{
+		name: 'Studio Deremetz',
+		date: '2023-09-01',
+		url: 'https://deremetz.de/',
+		repo: 'https://github.com/brunosj/deremetz',
+		slug: 'studio-deremetz',
+		image: 'deremetz-bg.jpg',
+		color: '#663CF5',
+		colorRGB: [102, 60, 245],
+		keepTextLight: true,
+		type: 'Website',
+		description: 'Architect and interior designer portfolio',
+		technologies: ['React', 'Next.js', 'Tailwind CSS', 'Strapi CMS', 'Node.js', 'MySQL'],
+		features: ['Multilingual (EN, DE, FR)'],
+		featured: false
+	},
+	{
 		name: 'Berlin Carsharing Price Calculator',
-		year: 2023,
+		date: '2023-11-01',
 		url: 'https://carsharing.landozone.net/',
 		repo: 'https://github.com/brunosj/berlin-carsharing',
 		slug: 'berlin-carsharing',
@@ -130,7 +162,7 @@ export const projects = [
 		type: 'Web App',
 		description: 'Price calculator for carsharing services in Berlin',
 		technologies: ['Svelte'],
-		features: ['Multilingual', 'Live Streaming', 'Automated Calendar', 'Automated Show Uploads'],
+		features: ['Price calculation based on user input'],
 		featured: false
 	}
 ];
