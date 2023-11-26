@@ -105,7 +105,7 @@
 		height: 80%;
 	}
 
-	.svg-element {
+	/* .svg-element {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -142,7 +142,7 @@
 
 	.svg-bg:after {
 		transform: rotate(251deg);
-	}
+	} */
 
 	.grid {
 		display: flex;
@@ -214,14 +214,14 @@
 			font-size: 1.2rem;
 		}
 
-		.svg-element {
+		/* .svg-element {
 			opacity: 0.15;
 		}
 
 		.svg-bg {
 			width: 100%;
 			top: 0%;
-		}
+		} */
 
 		.grid {
 			display: grid;

@@ -31,7 +31,7 @@
 							<a id="underline" href="mailto:contact@landozone.net">contact@landozone.net</a>
 						</p>
 					</div>
-					<div class="info grid" transition:fly={{ y: 50, duration: 750, delay: 500 }}>
+					<div class="info info-grid" transition:fly={{ y: 50, duration: 750, delay: 500 }}>
 						<div class="grid-item">
 							<div class="picture">
 								<img src={BSJ3} alt="BSJ" />
@@ -117,7 +117,7 @@
 	}
 
 	.picture span {
-		font-size: 0.7rem;
+		font-size: 0.9rem;
 	}
 
 	#underline {
@@ -188,11 +188,18 @@
 	.grid {
 		display: grid;
 		grid-template-columns: 1fr;
-		gap: 2rem;
+		gap: 3rem;
+	}
+
+	.info-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
 	}
 
 	.grid-item {
 		margin: auto;
+		position: relative;
 	}
 
 	.description {
@@ -208,6 +215,9 @@
 	}
 
 	@media (min-width: 50em) {
+		h3 {
+			margin-bottom: 0.5rem;
+		}
 		img {
 			width: 5.5rem;
 			border-radius: 100%;
@@ -224,6 +234,11 @@
 		}
 
 		.grid {
+			grid-template-columns: 1fr 1fr;
+			gap: 3rem;
+		}
+
+		.info-grid {
 			grid-template-columns: 1fr 1fr;
 			gap: 3rem;
 		}

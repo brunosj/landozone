@@ -40,7 +40,7 @@
 </script>
 
 {#if animate}
-	<li style="--border-color: {color}; width:{`${showDetails ? '100%' : '48%'}`}">
+	<li style="--border-color: {color}; width:{`${showDetails ? '100%' : '46%'}`}">
 		<div
 			class="project"
 			style="width:{`${showDetails ? '80%' : '100%'}`}; padding:{`${
