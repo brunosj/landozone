@@ -6,7 +6,7 @@
 	import ProjectCard from '$components/Projects/ProjectCard.svelte';
 	import ProjectCardMobile from '$components/Projects/ProjectCardMobile.svelte';
 	import Seo from '$components/SEO/SEO.svelte';
-	import Waveform from '$lib/assets/svg/waveform.svg';
+	import Waveform from '$lib/assets/svg/waveform.svelte';
 
 	let items: Project[] = projects;
 
@@ -18,11 +18,11 @@
 </script>
 
 <Seo title="landozone | projects" />
-{#if animate}
-	<section>
-		<div class="svg-bg" transition:fade={{ duration: 750, delay: 500 }}>
-			<Waveform />
-		</div>
+<section>
+	<div class="svg-bg">
+		<Waveform />
+	</div>
+	{#if animate}
 		<div class="page-container">
 			<div class="description">
 				<h2 transition:fly={{ y: 50, duration: 750, delay: 500 }}>projects</h2>
@@ -38,8 +38,8 @@
 				<div></div>
 			</div>
 		</div>
-	</section>
-{/if}
+	{/if}
+</section>
 
 <style>
 	section {
