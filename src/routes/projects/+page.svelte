@@ -30,18 +30,18 @@
 	</div>
 	{#if animate}
 		<div class="page-container">
-			<div class="description">
-				<h2 transition:fly={{ y: 50, duration: 750, delay: 500 }}>projects</h2>
-				<p transition:fly={{ y: 50, duration: 750, delay: 750 }}>
-					Explore my recent works and the technologies I used to build them
-				</p>
-			</div>
-			<div class="projects" transition:fly={{ y: 50, duration: 750, delay: 750 }}>
-				{#each projectsByDate as item}
-					<ProjectCardMobile {item} />
-					<ProjectCard {item} showDetails={true} />
-				{/each}
-				<div></div>
+			<div class="content">
+				<div class="description">
+					<h2>projects</h2>
+					<p>Explore my recent works and the technologies I used to build them</p>
+				</div>
+				<div class="projects">
+					{#each projectsByDate as item}
+						<ProjectCardMobile {item} />
+						<ProjectCard {item} showDetails={true} />
+					{/each}
+					<div></div>
+				</div>
 			</div>
 		</div>
 	{/if}
@@ -51,8 +51,6 @@
 	section {
 		background-color: var(--color-black);
 		width: 100%;
-		/* height: 100%; */
-		margin-top: 3rem;
 		color: white;
 		position: relative;
 	}
