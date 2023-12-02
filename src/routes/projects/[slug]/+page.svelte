@@ -114,13 +114,16 @@
 {/if}
 
 <style>
-	section {
-		background-color: var(--color-black);
+	article {
 		width: 100%;
 		height: 100%;
-		/* margin-top: 3rem; */
+		background-color: var(--color-black);
 		color: white;
 		position: relative;
+	}
+
+	section {
+		margin-bottom: 3rem;
 	}
 
 	img {
@@ -152,11 +155,6 @@
 		flex-direction: column;
 		justify-content: center;
 		padding: 1.5rem 0;
-	}
-
-	.html {
-		width: 60%;
-		margin: 3rem auto;
 	}
 
 	.grid {

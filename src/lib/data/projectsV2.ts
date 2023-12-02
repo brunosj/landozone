@@ -115,7 +115,7 @@ export const projects = [
 		description: 'Record label online store',
 		technologies: ['React', 'Gatsby', 'Tailwind CSS', 'Contentful CMS'],
 		features: ['Integration with Shopify'],
-		featured: false
+		featured: true
 	},
 	{
 		name: 'Sebastian Díaz de León',
@@ -163,6 +163,6 @@ export const projects = [
 		description: 'Price calculator for carsharing services in Berlin',
 		technologies: ['Svelte'],
 		features: ['Price calculation based on user input'],
-		featured: false
+		featured: true
 	}
 ];

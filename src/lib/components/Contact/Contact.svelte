@@ -8,74 +8,73 @@
 	import IconTelegram from '$lib/assets/svg/icons/SimpleIconsTelegram.svelte';
 	import Button from '$components/UI/Button.svelte';
 	import Waveform from '$lib/assets/svg/waveform.svelte';
+	import { background, font } from '$lib/stores/store';
 </script>
 
-<section id="contact">
-	<div class="svg-bg">
+<section
+	id="contact"
+	style:background-color={$background}
+	style:color={$font}
+	class="fullpage-section">
+	<!-- <div class="svg-bg">
 		<Waveform />
-	</div>
-	{#if $activePage === 3}
-		<div class="fullpage-container">
-			<div class="content">
-				<div class="grid">
-					<div class="description">
-						<!-- <h3 transition:fly={{ y: 50, duration: 750, delay: 500 }}>get in touch!</h3> -->
+	</div> -->
+	<div class="page-container">
+		<div class="content">
+			<div class="grid">
+				<div class="description">
+					<!-- <h3 >get in touch!</h3> -->
 
-						<p transition:fly={{ y: 50, duration: 750, delay: 500 }}>
-							Have an exciting project you would like to collaborate on?
-						</p>
-						<p transition:fly={{ y: 50, duration: 750, delay: 500 }}>
-							Send me a message and I would be happy to further discuss your ideas with you.
-						</p>
-						<p transition:fly={{ y: 50, duration: 750, delay: 750 }}>
-							<a id="underline" href="mailto:contact@landozone.net">contact@landozone.net</a>
-						</p>
-					</div>
-					<div class="info info-grid" transition:fly={{ y: 50, duration: 750, delay: 500 }}>
-						<div class="grid-item">
-							<div class="picture">
-								<img src={BSJ3} alt="BSJ" />
-								<div>
-									<h3>Bruno SJ</h3>
-									<span>Web Developer/Designer</span>
-								</div>
+					<p>Have an exciting project you would like to collaborate on?</p>
+					<p>Send me a message and I would be happy to further discuss your ideas with you.</p>
+					<p>
+						<a id="underline" href="mailto:contact@landozone.net">contact@landozone.net</a>
+					</p>
+				</div>
+				<div class="info info-grid">
+					<div class="grid-item">
+						<div class="picture">
+							<img src={BSJ3} alt="BSJ" />
+							<div>
+								<h3>Bruno SJ</h3>
+								<span>Web Developer/Designer</span>
 							</div>
 						</div>
-						<div class="icons grid-item desktop">
-							<Button to="mailto:contact@landozone.net" text="Email">
-								<IconMail width="1.3rem" />
-							</Button>
+					</div>
+					<div class="icons grid-item desktop">
+						<Button to="mailto:contact@landozone.net" text="Email">
+							<IconMail width="1.3rem" />
+						</Button>
 
-							<Button to="https://t.me/bruno_sj" text="Telegram">
-								<IconTelegram width="1.3rem" />
-							</Button>
-							<Button to="https://www.linkedin.com/in/brunosj/" text="LinkedIn">
-								<IconLinkedIn width="1.3rem" />
-							</Button>
+						<Button to="https://t.me/bruno_sj" text="Telegram">
+							<IconTelegram width="1.3rem" />
+						</Button>
+						<Button to="https://www.linkedin.com/in/brunosj/" text="LinkedIn">
+							<IconLinkedIn width="1.3rem" />
+						</Button>
 
-							<Button to="https://github.com/brunosj" text="GitHub">
-								<IconGithub width="1.3rem" />
-							</Button>
-						</div>
-						<div class="icons grid-item mobile">
-							<a href="mailto:contact@landozone.net" target="_blank">
-								<IconMail width="1.3rem" />
-							</a>
-							<a href="https://t.me/bruno_sj" target="_blank">
-								<IconTelegram width="1.3rem" />
-							</a>
-							<a href="https://www.linkedin.com/in/brunosj/" target="_blank">
-								<IconLinkedIn width="1.3rem" />
-							</a>
-							<a href="https://github.com/brunosj" target="_blank">
-								<IconGithub width="1.3rem" />
-							</a>
-						</div>
+						<Button to="https://github.com/brunosj" text="GitHub">
+							<IconGithub width="1.3rem" />
+						</Button>
+					</div>
+					<div class="icons grid-item mobile">
+						<a href="mailto:contact@landozone.net" target="_blank">
+							<IconMail width="1.3rem" />
+						</a>
+						<a href="https://t.me/bruno_sj" target="_blank">
+							<IconTelegram width="1.3rem" />
+						</a>
+						<a href="https://www.linkedin.com/in/brunosj/" target="_blank">
+							<IconLinkedIn width="1.3rem" />
+						</a>
+						<a href="https://github.com/brunosj" target="_blank">
+							<IconGithub width="1.3rem" />
+						</a>
 					</div>
 				</div>
 			</div>
 		</div>
-	{/if}
+	</div>
 </section>
 
 <style>
@@ -85,6 +84,7 @@
 		height: 100%;
 		color: var(--color-white);
 		position: relative;
+		transition: all 1s cubic-bezier(0.07, 0.95, 0, 1);
 	}
 
 	h3 {

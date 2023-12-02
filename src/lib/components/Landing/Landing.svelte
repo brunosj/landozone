@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { fade, fly } from 'svelte/transition';
-	import { activePage } from '$lib/stores/activeSection';
 	import { onMount } from 'svelte';
 	import IconArrowDown from '$lib/assets/svg/icons/MaterialSymbolsLightKeyboardDoubleArrowDownRounded.svelte';
 	import Waveform from '$lib/assets/svg/waveform.svelte';
+	import { background, font } from '$lib/stores/store';
 
 	let animate = false;
 	onMount(() => {
@@ -11,63 +11,62 @@
 	});
 </script>
 
-<section id="landing">
+<section
+	id="landing"
+	class="fullpage-section"
+	style:background-color={`var(--color-black)`}
+	style:color={`var(--color-white)`}>
 	<div class="svg-bg">
 		<Waveform />
 	</div>
-	{#if $activePage === 0}
-		<div class="fullpage-container">
-			<div class="content">
-				<div class="hero" transition:fly={{ y: -50, duration: 750 }}>
-					<h1 class:fade-in={animate}>imaginative web development</h1>
-					<p class:fade-in={animate}>
-						Hello! I'm <a href="https://www.linkedin.com/in/brunosj/" target="_blank" id="link"
-							>Bruno</a
-						>, a freelance web developer based in Berlin - with roots in political science and
-						climate policy. I am passionate about crafting innovative applications and experiences
-						on the web.
-					</p>
-				</div>
-				<div class="helper" transition:fly={{ y: -50, duration: 750 }}>
-					<span class:fade-in={animate} class="scroll">Scroll down</span>
-					<span class:fade-in={animate} class="inner">
-						<IconArrowDown width="1.5rem" />
-					</span>
-				</div>
+	<div class="page-container">
+		<div class="content">
+			<div class="hero">
+				<h1>imaginative web development</h1>
+				<p>
+					hi! my name is bruno sj and <span id="landozone">landozone</span> is my independent development
+					and design practice. I am passionate about crafting innovative applications and experiences
+					on the web.
+				</p>
 			</div>
+			<!-- <div class="helper">
+				<span class:fade-in={animate} class="scroll">Scroll down</span>
+				<span class:fade-in={animate} class="inner">
+					<IconArrowDown width="1.5rem" />
+				</span>
+			</div> -->
 		</div>
-	{/if}
+	</div>
 </section>
 
 <style>
 	section {
-		background-color: var(--color-black);
 		width: 100%;
-		height: 100%;
 		color: white;
 		position: relative;
+		transition: background-color 1s ease;
 	}
 
 	h1 {
 		color: var(--color-primary);
-		opacity: 0;
-		transition: 750ms ease all;
+		opacity: 1;
+		/* transition: 750ms ease all; */
 	}
 
 	p {
-		opacity: 0;
+		opacity: 1;
 		transition: 750ms ease all;
-		transition-delay: 200ms;
+		/* transition-delay: 200ms; */
 	}
 
 	span {
-		opacity: 0;
-		transition: 750ms ease all;
+		opacity: 1;
+		/* transition: 750ms ease all; */
 	}
 
 	.svg-bg {
 		position: absolute;
-		top: 25%;
+		top: -25%;
 		left: 0;
 		bottom: 0;
 		right: 0;
@@ -86,6 +85,12 @@
 
 	.hero {
 		width: 100%;
+	}
+
+	#landozone {
+		font-family: 'IBM Plex Mono', sans-serif;
+		font-weight: 600;
+		color: var(--color-secondary);
 	}
 
 	#link {
@@ -166,6 +171,9 @@
 	}
 
 	@media screen and (min-width: 50em) {
+		section {
+			margin-top: -3rem;
+		}
 		.hero {
 			width: 50%;
 		}

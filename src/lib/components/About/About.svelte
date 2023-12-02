@@ -8,67 +8,73 @@
 	import IconR from '$lib/assets/svg/icons/SimpleIconsR.svelte';
 	import IconReact from '$lib/assets/svg/icons/SimpleIconsReact.svelte';
 	import IconSvelte from '$lib/assets/svg/icons/SimpleIconsSvelte.svelte';
-	import { activePage } from '$lib/stores/activeSection';
-	import OscillateBlack from '$lib/assets/svg/oscillate-black.svelte';
+	import { background, font } from '$lib/stores/store';
 </script>
 
-<section id="about">
-	{#if $activePage === 1}
-		<!-- <div class="svg-bg" /> -->
-		<!-- <div class="svg-element" transition:fade={{ duration: 750, delay: 500 }}>
-			<OscillateBlack />
-		</div> -->
-		<div class="fullpage-container">
-			<div class="content grid">
-				<div class="description">
-					<!-- <h2 transition:fly={{ y: 50, duration: 750, delay: 500 }}>about</h2> -->
-					<p transition:fly={{ y: 50, duration: 750, delay: 500 }}>
-						My expertise lies in <span>front-end development</span> (with some back-end here and
-						there) and <span>data visualization</span>. I enhance workflows and build applications
-						using the latest web technologies, being well-versed in
-						<a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"
-							>JavaScript/TypeScript</a>
-						tools including frameworks like
-						<a href="https://kit.svelte.dev/" target="_blank" rel="noreferrer">SvelteKit</a>
-						and
-						<a href="https://nextjs.org/" target="_blank" rel="noreferrer">Next.js</a>, the
-						<a href="https://nodejs.org/en" target="_blank" rel="noreferrer">node.js</a>
-						environment and the
-						<a href="https://d3js.org/" target="_blank" rel="noreferrer">D3.js</a> library.
-					</p>
-					<p transition:fly={{ y: 50, duration: 750, delay: 750 }}>
-						These tools enable me to create elegant and performant websites and produce compelling
-						data stories.
-					</p>
-					<div class="icons" transition:fly={{ y: 50, duration: 750, delay: 750 }}>
-						<IconJS width="1.5rem" />
-						<IconTS width="1.5rem" />
-						<IconSvelte width="1.5rem" />
-						<IconReact width="1.5rem" />
-						<IconD3 width="1.5rem" />
-						<IconR width="1.5rem" />
-					</div>
+<section
+	id="about"
+	style:background-color={$background}
+	style:color={$font}
+	class="fullpage-section">
+	<div class="page-container">
+		<div class="content grid">
+			<div class="description">
+				<h2>about</h2>
+				<p>
+					My expertise lies in <span>front-end development</span> (with some back-end here and
+					there) and <span>data visualization</span>. I am based in Berlin and have roots in
+					political science and climate policy.
+				</p>
+				<p>
+					I enhance workflows and build applications using the latest web technologies, being
+					well-versed in
+					<a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"
+						>JavaScript/TypeScript</a>
+					tools including frameworks like
+					<a href="https://kit.svelte.dev/" target="_blank" rel="noreferrer">SvelteKit</a>
+					and
+					<a href="https://nextjs.org/" target="_blank" rel="noreferrer">Next.js</a>, the
+					<a href="https://nodejs.org/en" target="_blank" rel="noreferrer">node.js</a>
+					environment and the
+					<a href="https://d3js.org/" target="_blank" rel="noreferrer">D3.js</a> library.
+				</p>
+				<p>
+					These tools enable me to create elegant and performant websites and produce compelling
+					data stories.
+				</p>
+				<div class="icons">
+					<IconJS width="1.5rem" />
+					<IconTS width="1.5rem" />
+					<IconSvelte width="1.5rem" />
+					<IconReact width="1.5rem" />
+					<IconD3 width="1.5rem" />
+					<IconR width="1.5rem" />
 				</div>
-				<div class="figures">
-					<div class="website" transition:fly={{ y: 50, duration: 750, delay: 1000 }}>
-						<Website />
-					</div>
-					<div class="chart" transition:fly={{ y: 50, duration: 750, delay: 1000 }}>
-						<Chart />
-					</div>
+			</div>
+			<!-- <div>
+				services: Branding / Visual Identity Art Direction Web Design & Development E-commerce
+				Consulting & Development Animation / Motion Graphics Design Consulting
+			</div> -->
+			<div class="figures">
+				<div class="website">
+					<Website />
+				</div>
+				<div class="chart">
+					<Chart />
 				</div>
 			</div>
 		</div>
-	{/if}
+	</div>
 </section>
 
 <style>
 	section {
-		background-color: var(--color-secondary);
+		/* background-color: var(--color-secondary); */
 		width: 100%;
 		height: 100%;
 		color: var(--color-black);
 		position: relative;
+		transition: all 1s cubic-bezier(0.07, 0.95, 0, 1);
 	}
 
 	span {
@@ -105,45 +111,6 @@
 		height: 80%;
 	}
 
-	/* .svg-element {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 0;
-		opacity: 0.15;
-	}
-
-	.svg-bg {
-		background: radial-gradient(ellipse at right, #9390e2 10%, #8786df 90%);
-		height: 100%;
-		width: 100%;
-		position: absolute;
-	}
-
-	.svg-bg:before,
-	.svg-bg:after {
-		content: '';
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		background: radial-gradient(ellipse at right, #9390e2 25%, #8786df 100%),
-			radial-gradient(ellipse at right, #9390e2 0%, #8786df 75%);
-		filter: blur(22px);
-	}
-
-	.svg-bg:before {
-		transform: rotate(293deg);
-	}
-
-	.svg-bg:after {
-		transform: rotate(251deg);
-	} */
-
 	.grid {
 		display: flex;
 		height: 100%;
@@ -160,6 +127,7 @@
 	.description > * + * {
 		margin-top: 1rem;
 	}
+
 	.icons {
 		display: none;
 	}

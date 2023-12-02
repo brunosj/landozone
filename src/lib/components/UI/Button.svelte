@@ -13,7 +13,7 @@
 	href={to}
 	target={isExternal ? '_blank' : ''}
 	style="--border-color: {color}; --text-hover-color: {textHoverColor}">
-	<span class="content">
+	<span class="button-content">
 		{text}
 		<slot />
 	</span>
@@ -65,7 +65,7 @@
 		transition: all 0.3s ease-in-out;
 	}
 
-	.content {
+	.button-content {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -78,7 +78,7 @@
 	}
 
 	@media (min-width: 50em) {
-		.content {
+		.button-content {
 			font-size: 0.7rem;
 		}
 	}
