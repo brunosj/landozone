@@ -9,7 +9,31 @@
 	import ProjectCardMobile from '$components/Projects/ProjectCardMobile.svelte';
 	import Seo from '$components/SEO/SEO.svelte';
 	import Waveform from '$lib/assets/svg/waveform.svelte';
+	import SEO from '$lib/components/SEO/index.svelte';
 
+	// SEO
+	let title = 'Projects';
+	let metadescription = 'Explore my recent works and the technologies I used to build them';
+	const breadcrumbs = [
+		{
+			name: 'Home',
+			slug: ''
+		},
+		{
+			name: 'Projects',
+			slug: 'projects'
+		}
+	];
+	const seoProps = {
+		breadcrumbs,
+		title,
+		metadescription,
+		slug: 'contact',
+		datePublished: '2023-12-05T14:19:33.000+0100',
+		lastUpdated: '2021-12-05T14:19:33.000+0100'
+	};
+
+	// Logic
 	let items: Project[] = projects;
 
 	let projectsByDate: Project[] = items.sort((a, b) => {
@@ -22,7 +46,7 @@
 	let intersecting = false;
 </script>
 
-<Seo title="landozone | projects" />
+<SEO {...seoProps} />
 <section>
 	<div class="svg-bg">
 		<Waveform />

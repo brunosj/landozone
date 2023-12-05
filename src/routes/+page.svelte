@@ -5,16 +5,28 @@
 	import Contact from '$components/Contact/Contact.svelte';
 	import { projects } from '$lib/data/projectsV2';
 	import type { Project } from '$lib/types/types';
-	import Seo from '$components/SEO/SEO.svelte';
+	import SEO from '$lib/components/SEO/index.svelte';
 
-	let projectPairs: Project[][] = [];
-
-	for (let i = 0; i < projects.length; i += 2) {
-		projectPairs.push(projects.slice(i, i + 2));
-	}
+	// SEO
+	let title = 'landozone';
+	let metadescription = 'landozone - crafting innovative applications and experiences on the web';
+	const breadcrumbs = [
+		{
+			name: 'Home',
+			slug: ''
+		}
+	];
+	const seoProps = {
+		breadcrumbs,
+		title,
+		metadescription,
+		slug: '',
+		datePublished: '2023-12-05T14:19:33.000+0100',
+		lastUpdated: '2021-12-05T14:19:33.000+0100'
+	};
 </script>
 
-<Seo title="landozone" description="imaginative web development, based in Berlin" />
+<SEO {...seoProps} />
 
 <Landing />
 <About />
