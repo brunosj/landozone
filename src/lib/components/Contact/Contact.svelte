@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { activePage } from '$lib/stores/activeSection';
 	import { fade, fly } from 'svelte/transition';
+	import { cubicInOut } from 'svelte/easing';
+	import IntersectionObserver from 'svelte-intersection-observer';
 	import BSJ3 from '$lib/assets/images/bsj_3.jpg';
 	import IconGithub from '$lib/assets/svg/icons/SimpleIconsGithub.svelte';
 	import IconLinkedIn from '$lib/assets/svg/icons/SimpleIconsLinkedin.svelte';
@@ -9,6 +10,9 @@
 	import Button from '$components/UI/Button.svelte';
 	import Waveform from '$lib/assets/svg/waveform.svelte';
 	import { background, font } from '$lib/stores/store';
+
+	let element;
+	let intersecting = false;
 </script>
 
 <section
@@ -19,61 +23,71 @@
 	<!-- <div class="svg-bg">
 		<Waveform />
 	</div> -->
-	<div class="page-container">
-		<div class="content">
-			<div class="grid">
-				<div class="description">
-					<!-- <h3 >get in touch!</h3> -->
+	<div class="page-container" bind:this={element}>
+		<IntersectionObserver {element} bind:intersecting once threshold={0.3}>
+			{#if intersecting}
+				<div class="content">
+					<div class="grid">
+						<div class="description">
+							<!-- <h3 >get in touch!</h3> -->
 
-					<p>Have an exciting project you would like to collaborate on?</p>
-					<p>Send me a message and I would be happy to further discuss your ideas with you.</p>
-					<p>
-						<a id="underline" href="mailto:contact@landozone.net">contact@landozone.net</a>
-					</p>
-				</div>
-				<div class="info info-grid">
-					<div class="grid-item">
-						<div class="picture">
-							<img src={BSJ3} alt="BSJ" />
-							<div>
-								<h3>Bruno SJ</h3>
-								<span>Web Developer/Designer</span>
+							<p transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>
+								Have an exciting project you would like to collaborate on?
+							</p>
+							<p transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>
+								Send me a message and I would be happy to further discuss your ideas with you.
+							</p>
+							<p transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
+								<a id="underline" href="mailto:contact@landozone.net">contact@landozone.net</a>
+							</p>
+						</div>
+						<div
+							class="info info-grid"
+							transition:fly={{ x: 100, duration: 500, delay: 500, easing: cubicInOut }}>
+							<div class="grid-item">
+								<div class="picture">
+									<img src={BSJ3} alt="BSJ" />
+									<div>
+										<h3>Bruno SJ</h3>
+										<span>Web Developer/Designer</span>
+									</div>
+								</div>
+							</div>
+							<div class="icons grid-item desktop">
+								<Button to="mailto:contact@landozone.net" text="Email">
+									<IconMail width="1.3rem" />
+								</Button>
+
+								<Button to="https://t.me/bruno_sj" text="Telegram">
+									<IconTelegram width="1.3rem" />
+								</Button>
+								<Button to="https://www.linkedin.com/in/brunosj/" text="LinkedIn">
+									<IconLinkedIn width="1.3rem" />
+								</Button>
+
+								<Button to="https://github.com/brunosj" text="GitHub">
+									<IconGithub width="1.3rem" />
+								</Button>
+							</div>
+							<div class="icons grid-item mobile">
+								<a href="mailto:contact@landozone.net" target="_blank">
+									<IconMail width="1.3rem" />
+								</a>
+								<a href="https://t.me/bruno_sj" target="_blank">
+									<IconTelegram width="1.3rem" />
+								</a>
+								<a href="https://www.linkedin.com/in/brunosj/" target="_blank">
+									<IconLinkedIn width="1.3rem" />
+								</a>
+								<a href="https://github.com/brunosj" target="_blank">
+									<IconGithub width="1.3rem" />
+								</a>
 							</div>
 						</div>
 					</div>
-					<div class="icons grid-item desktop">
-						<Button to="mailto:contact@landozone.net" text="Email">
-							<IconMail width="1.3rem" />
-						</Button>
-
-						<Button to="https://t.me/bruno_sj" text="Telegram">
-							<IconTelegram width="1.3rem" />
-						</Button>
-						<Button to="https://www.linkedin.com/in/brunosj/" text="LinkedIn">
-							<IconLinkedIn width="1.3rem" />
-						</Button>
-
-						<Button to="https://github.com/brunosj" text="GitHub">
-							<IconGithub width="1.3rem" />
-						</Button>
-					</div>
-					<div class="icons grid-item mobile">
-						<a href="mailto:contact@landozone.net" target="_blank">
-							<IconMail width="1.3rem" />
-						</a>
-						<a href="https://t.me/bruno_sj" target="_blank">
-							<IconTelegram width="1.3rem" />
-						</a>
-						<a href="https://www.linkedin.com/in/brunosj/" target="_blank">
-							<IconLinkedIn width="1.3rem" />
-						</a>
-						<a href="https://github.com/brunosj" target="_blank">
-							<IconGithub width="1.3rem" />
-						</a>
-					</div>
 				</div>
-			</div>
-		</div>
+			{/if}
+		</IntersectionObserver>
 	</div>
 </section>
 

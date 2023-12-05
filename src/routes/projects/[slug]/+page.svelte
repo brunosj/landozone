@@ -3,6 +3,8 @@
 
 	import type { Project } from '$lib/types/types';
 	import { fade, fly } from 'svelte/transition';
+	import { cubicInOut } from 'svelte/easing';
+	import IntersectionObserver from 'svelte-intersection-observer';
 	import { onMount } from 'svelte';
 	import Button from '$components/UI/Button.svelte';
 	import IconArrow from '$lib/assets/svg/icons/HeroiconsArrowLongRight.svelte';
@@ -35,83 +37,87 @@
 	let ImageComponent: string;
 
 	onMount(() => {
-		animate = true;
 		LogoComponent = getLogoComponent(name);
 		ImageComponent = getImageComponent(name);
 	});
 
 	let textColor = keepTextLight ? '#fff' : '#202129';
+
+	let element;
+	let intersecting = false;
 </script>
 
 <Seo title={`landozone | ${name}`} {description} />
 
-{#if animate}
-	<article>
-		<section style={`background-color:${color};`}>
-			<div class="header" style={`color:${textColor}`}>
-				<div class="title">
-					<p id="type">{type}</p>
-					<h2>{name}</h2>
-					<p class="description">
-						{description}
-					</p>
-				</div>
-				<div class="details">
-					<div class="features">
-						<p class="category">Features</p>
-						<ul class="feature">
-							{#each features as item}
-								<span>
-									{item}
-								</span>
-								{#if item !== features[features.length - 1]}
+<article>
+	<section style={`background-color:${color};`} bind:this={element}>
+		<IntersectionObserver {element} bind:intersecting once threshold={0.3}>
+			{#if intersecting}
+				<div class="header" style={`color:${textColor}`}>
+					<div class="title" transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>
+						<p id="type">{type}</p>
+						<h2>{name}</h2>
+						<p class="description">
+							{description}
+						</p>
+					</div>
+					<div class="details" transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
+						<div class="features">
+							<p class="category">Features</p>
+							<ul class="feature">
+								{#each features as item}
 									<span>
-										{' - '}
+										{item}
 									</span>
-								{/if}
-							{/each}
-						</ul>
-					</div>
-					<div class="technologies">
-						<p class="category">Technologies</p>
-						<ul class="technology">
-							{#each technologies as item}
-								<Tag {keepTextLight}>
-									{item}
-								</Tag>
-							{/each}
-						</ul>
+									{#if item !== features[features.length - 1]}
+										<span>
+											{' - '}
+										</span>
+									{/if}
+								{/each}
+							</ul>
+						</div>
+						<div class="technologies">
+							<p class="category">Technologies</p>
+							<ul class="technology">
+								{#each technologies as item}
+									<Tag {keepTextLight}>
+										{item}
+									</Tag>
+								{/each}
+							</ul>
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			{/if}
+		</IntersectionObserver>
+	</section>
 
-		<div class="page-container">
-			<!-- <div class="html">
+	<div class="page-container">
+		<!-- <div class="html">
 				{@html longDescription}
 			</div> -->
-			<div class="grid">
-				<div class="images">
-					{#if ImageComponent}
-						<img src={ImageComponent} alt={name} />
-					{/if}
+		<div class="grid">
+			<div class="images">
+				{#if ImageComponent}
+					<img src={ImageComponent} alt={name} />
+				{/if}
+			</div>
+			<div class="links">
+				<div class="link">
+					<Button to={url} text="Visit site" {color} {keepTextLight}>
+						<IconInternet width="1.3rem" />
+					</Button>
 				</div>
-				<div class="links">
-					<div class="link">
-						<Button to={url} text="Visit site" {color} {keepTextLight}>
-							<IconInternet width="1.3rem" />
-						</Button>
-					</div>
-					<div class="link">
-						<Button to={repo} text="View code" {color} {keepTextLight}>
-							<IconGithub width="1.3rem" />
-						</Button>
-					</div>
+				<div class="link">
+					<Button to={repo} text="View code" {color} {keepTextLight}>
+						<IconGithub width="1.3rem" />
+					</Button>
 				</div>
 			</div>
 		</div>
-	</article>
-{/if}
+	</div>
+</article>
 
 <style>
 	article {

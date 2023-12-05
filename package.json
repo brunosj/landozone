@@ -5,6 +5,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
+		"postbuild": "npx svelte-sitemap --out-dir .vercel/output/static --domain https:/www.landozone.net",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -15,6 +16,7 @@
 		"@sveltejs/adapter-auto": "^2.1.1",
 		"@sveltejs/kit": "^1.27.6",
 		"@types/lodash.throttle": "^4.1.9",
+		"@types/object-hash": "^3.0.6",
 		"@typescript-eslint/eslint-plugin": "^6.11.0",
 		"@typescript-eslint/parser": "^6.11.0",
 		"eslint": "^8.53.0",
@@ -24,7 +26,9 @@
 		"prettier-plugin-svelte": "^3.1.0",
 		"svelte": "^4.2.3",
 		"svelte-check": "^3.6.0",
+		"svelte-intersection-observer": "^0.10.1",
 		"svelte-preprocess": "^5.1.0",
+		"svelte-sitemap": "^2.6.0",
 		"tslib": "^2.6.2",
 		"typescript": "^5.2.2",
 		"vite": "^4.5.0"
@@ -39,6 +43,7 @@
 		"@fontsource-variable/source-sans-3": "^5.0.18",
 		"@fontsource-variable/work-sans": "^5.0.16",
 		"@fontsource/ibm-plex-mono": "^5.0.8",
-		"lodash.throttle": "^4.1.1"
+		"lodash.throttle": "^4.1.1",
+		"object-hash": "^3.0.0"
 	}
 }
