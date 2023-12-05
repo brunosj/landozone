@@ -8,7 +8,7 @@
 	import SEO from '$lib/components/SEO/index.svelte';
 
 	// SEO
-	let title = 'landozone';
+	let title = '';
 	let metadescription = 'landozone - crafting innovative applications and experiences on the web';
 	const breadcrumbs = [
 		{
@@ -27,7 +27,6 @@
 </script>
 
 <SEO {...seoProps} />
-
 <Landing />
 <About />
 <Work />
