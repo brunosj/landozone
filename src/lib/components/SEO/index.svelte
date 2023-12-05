@@ -46,7 +46,7 @@
 	};
 
 	const url = `${siteUrl}/${slug}`;
-	const pageTitle = `${siteTitle} ${title}`;
+	const pageTitle = `${siteTitle} | ${title}`;
 	const openGraphProps = {
 		image: ogImage,
 		squareImage: ogSquareImage,

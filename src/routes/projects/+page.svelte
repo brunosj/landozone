@@ -12,7 +12,7 @@
 	import SEO from '$lib/components/SEO/index.svelte';
 
 	// SEO
-	let title = 'Projects';
+	let title = 'projects';
 	let metadescription = 'Explore my recent works and the technologies I used to build them';
 	const breadcrumbs = [
 		{

@@ -10,7 +10,7 @@ export const website = {
 	author: `bruno sj`,
 	ogLanguage: 'en_US',
 	siteLanguage: 'en-US',
-	siteTitle: `landozone - imaginative web development`,
+	siteTitle: `landozone`,
 	siteShortTitle: 'landozone',
 	siteDescription: `landozone - crafting innovative applications and experiences on the web`,
 	siteImage: `https://www.landozone.net/lz_logo_seo.jpg`,
