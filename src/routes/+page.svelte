@@ -14,7 +14,7 @@
 	}
 </script>
 
-<Seo title="landozone" />
+<Seo title="landozone" description="imaginative web development, based in Berlin" />
 
 <Landing />
 <About />

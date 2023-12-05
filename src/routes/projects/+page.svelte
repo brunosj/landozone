@@ -3,6 +3,8 @@
 	import { projects } from '$lib/data/projectsV2';
 	import type { Project } from '$lib/types/types';
 	import { fade, fly } from 'svelte/transition';
+	import { cubicInOut } from 'svelte/easing';
+	import IntersectionObserver from 'svelte-intersection-observer';
 	import ProjectCard from '$components/Projects/ProjectCard.svelte';
 	import ProjectCardMobile from '$components/Projects/ProjectCardMobile.svelte';
 	import Seo from '$components/SEO/SEO.svelte';
@@ -16,11 +18,8 @@
 		return dateB.getTime() - dateA.getTime();
 	});
 
-	let animate = false;
-
-	onMount(() => {
-		animate = true;
-	});
+	let element;
+	let intersecting = false;
 </script>
 
 <Seo title="landozone | projects" />
@@ -28,23 +27,29 @@
 	<div class="svg-bg">
 		<Waveform />
 	</div>
-	{#if animate}
-		<div class="page-container">
-			<div class="content">
-				<div class="description">
-					<h2>projects</h2>
-					<p>Explore my recent works and the technologies I used to build them</p>
+	<div class="page-container" bind:this={element}>
+		<IntersectionObserver {element} bind:intersecting once threshold={0.3}>
+			{#if intersecting}
+				<div class="content">
+					<div class="description">
+						<h2 transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>projects</h2>
+						<p transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
+							Explore my recent works and the technologies I used to build them
+						</p>
+					</div>
+					<div
+						class="projects"
+						transition:fly={{ y: 75, duration: 500, delay: 500, easing: cubicInOut }}>
+						{#each projectsByDate as item}
+							<ProjectCardMobile {item} />
+							<ProjectCard {item} showDetails={true} />
+						{/each}
+						<div></div>
+					</div>
 				</div>
-				<div class="projects">
-					{#each projectsByDate as item}
-						<ProjectCardMobile {item} />
-						<ProjectCard {item} showDetails={true} />
-					{/each}
-					<div></div>
-				</div>
-			</div>
-		</div>
-	{/if}
+			{/if}
+		</IntersectionObserver>
+	</div>
 </section>
 
 <style>

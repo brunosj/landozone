@@ -1,14 +1,13 @@
 <script lang="ts">
 	import { fade, fly } from 'svelte/transition';
-	import { onMount } from 'svelte';
 	import IconArrowDown from '$lib/assets/svg/icons/MaterialSymbolsLightKeyboardDoubleArrowDownRounded.svelte';
 	import Waveform from '$lib/assets/svg/waveform.svelte';
 	import { background, font } from '$lib/stores/store';
+	import IntersectionObserver from 'svelte-intersection-observer';
+	import { cubicInOut } from 'svelte/easing';
 
-	let animate = false;
-	onMount(() => {
-		animate = true;
-	});
+	let element;
+	let intersecting = false;
 </script>
 
 <section
@@ -19,23 +18,29 @@
 	<div class="svg-bg">
 		<Waveform />
 	</div>
-	<div class="page-container">
-		<div class="content">
-			<div class="hero">
-				<h1>imaginative web development</h1>
-				<p>
-					hi! my name is bruno sj and <span id="landozone">landozone</span> is my independent development
-					and design practice. I am passionate about crafting innovative applications and experiences
-					on the web.
-				</p>
+	<div class="page-container" bind:this={element}>
+		<IntersectionObserver {element} bind:intersecting once threshold={0.3}>
+			<div class="content">
+				{#if intersecting}
+					<div class="hero">
+						<h1 transition:fade={{ duration: 750, delay: 0, easing: cubicInOut }}>
+							imaginative web development
+						</h1>
+						<p transition:fade={{ duration: 750, delay: 250, easing: cubicInOut }}>
+							hi! my name is bruno sj and <span id="landozone">landozone</span> is my independent development
+							and design practice. I am passionate about crafting innovative applications and experiences
+							on the web.
+						</p>
+					</div>
+				{/if}
+				<!-- <div class="helper">
+					<span class:fade-in={animate} class="scroll">Scroll down</span>
+					<span class:fade-in={animate} class="inner">
+						<IconArrowDown width="1.5rem" />
+					</span>
+				</div> -->
 			</div>
-			<!-- <div class="helper">
-				<span class:fade-in={animate} class="scroll">Scroll down</span>
-				<span class:fade-in={animate} class="inner">
-					<IconArrowDown width="1.5rem" />
-				</span>
-			</div> -->
-		</div>
+		</IntersectionObserver>
 	</div>
 </section>
 
