@@ -83,7 +83,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		margin: 3rem auto;
+		margin: 2rem auto;
 	}
 
 	@media (min-width: 50em) {
@@ -96,6 +96,16 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
+		}
+	}
+
+	@media (min-width: 100em) {
+		:global(.fullpage-section) {
+			min-height: 85vh;
+		}
+
+		:global(.content) {
+			margin: 3rem auto;
 		}
 	}
 </style>

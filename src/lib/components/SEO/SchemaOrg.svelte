@@ -140,8 +140,8 @@
 			'@type': 'ImageObject',
 			'@id': `${siteUrl}/#personlogo`,
 			inLanguage: siteLanguage,
-			url: `${siteUrl}/assets/rodneylab-logo.png`,
-			contentUrl: `${siteUrl}/assets/rodneylab-logo.png`,
+			url: `${siteUrl}/lz_logo_seo.jpg`,
+			contentUrl: `${siteUrl}/lz_logo_seo.jpg`,
 			width: 512,
 			height: 512,
 			caption: entity

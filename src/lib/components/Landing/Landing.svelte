@@ -185,11 +185,17 @@
 
 		.svg-bg {
 			width: 100%;
-			top: -37%;
+			top: -40%;
 		}
 
 		.helper {
 			font-size: 0.8rem;
+		}
+	}
+
+	@media (min-width: 100em) {
+		.svg-bg {
+			top: -50%;
 		}
 	}
 </style>
