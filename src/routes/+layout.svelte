@@ -9,6 +9,7 @@
 	import { onMount } from 'svelte';
 	import { background, font } from '$lib/stores/store';
 	import Header from '$components/Header/Header.svelte';
+	import MouseTracker from '$components/MouseTracker/MouseTracker.svelte';
 
 	if (browser) {
 		const handleScroll = () => {
@@ -54,10 +55,19 @@
 	}
 </script>
 
+<!-- <MouseTracker /> -->
 <Header />
-<slot />
+<main class="content">
+	<slot />
+</main>
 
 <style>
+	.content {
+		width: 100%;
+		order: -9999;
+		z-index: 10;
+	}
+
 	:global(body) {
 		min-height: 100vh;
 	}

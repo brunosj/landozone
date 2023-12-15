@@ -10,6 +10,10 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+* {
+	overflow: visible;
+}
+
 html,
 body {
 	font-family: 'Rubik Variable', sans-serif;
@@ -50,7 +54,58 @@ p {
 	font-weight: 300;
 }
 
+.markdown :is(a) {
+	text-decoration: underline;
+}
+
+.markdown :is(a:hover) {
+	color: var(--color-secondary);
+	transition: all 0.3s ease-in-out;
+}
+
+.markdown :is(h1) {
+	font-size: 2rem;
+	line-height: 2rem;
+	margin-bottom: 2rem;
+}
+
+.markdown :is(h2) {
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+	margin: 1.5rem 0;
+}
+
+.markdown :is(h3) {
+	font-size: 1.25rem;
+	line-height: 1.25rem;
+	font-weight: 700;
+	margin-top: 2rem;
+	margin-bottom: 1.5rem;
+}
+
+.markdown :is(h4) {
+	font-size: 0.9rem;
+	line-height: 1.5rem;
+	font-weight: 500;
+	margin-top: 1.5rem;
+	margin-bottom: 0.5rem;
+	font-family: 'IBM Plex Mono', sans-serif;
+	text-transform: uppercase;
+	/* letter-spacing: 1px; */
+}
+
+.markdown :is(p) {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	font-weight: 300;
+	margin-bottom: 1rem;
+}
+
 @media (min-width: 50em) {
+	.markdown {
+		width: 65%;
+		margin: auto;
+	}
 	h1 {
 		font-size: 4rem;
 		line-height: 4rem;
@@ -63,7 +118,7 @@ p {
 	}
 
 	h3 {
-		font-size: 2.5rem;
+		font-size: 2rem;
 		line-height: 2.5rem;
 	}
 
@@ -78,5 +133,39 @@ p {
 		font-size: 1.2rem;
 		line-height: 1.8rem;
 		font-weight: 400;
+	}
+
+	.markdown :is(p) {
+		font-weight: 300;
+		font-size: 1.2rem;
+		line-height: 1.8rem;
+		font-weight: 400;
+	}
+
+	.markdown :is(h1) {
+		font-size: 4rem;
+		line-height: 4rem;
+		margin-bottom: 2rem;
+	}
+
+	.markdown :is(h2) {
+		font-size: 3rem;
+		line-height: 3rem;
+	}
+
+	.markdown :is(h3) {
+		font-size: 2.5rem;
+		line-height: 2.5rem;
+	}
+
+	.markdown :is(h4) {
+		font-size: 1rem;
+		line-height: 2rem;
+		font-weight: 400;
+		margin-bottom: 0.5rem;
+	}
+
+	.markdown :is(img) {
+		margin: 1rem 0;
 	}
 }

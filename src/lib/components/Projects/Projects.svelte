@@ -6,7 +6,6 @@
 	import ProjectCard from '$components/Projects/ProjectCard.svelte';
 	import ProjectCardMobile from '$components/Projects/ProjectCardMobile.svelte';
 	import IconArrow from '$lib/assets/svg/icons/MaterialSymbolsArrowOutwardRounded.svelte';
-	import { background, font } from '$lib/stores/store';
 
 	let element;
 	let intersecting = false;

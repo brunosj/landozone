@@ -12,21 +12,21 @@
 		}
 	);
 
-	let size = spring(10);
+	let size = spring(7);
 	let mouseX = 0;
 	let mouseY = 0;
 
 	function handleMouseMove(event: MouseEvent) {
 		mouseX = event.pageX;
 		mouseY = event.pageY;
+		coords.set({ x: mouseX, y: mouseY });
+		console.log(mouseX, mouseY);
 	}
 
 	onMount(() => {
 		document.addEventListener('mousemove', handleMouseMove);
 		return () => document.removeEventListener('mousemove', handleMouseMove);
 	});
-
-	$: coords.set({ x: mouseX, y: mouseY });
 
 	$: {
 		afterUpdate(
@@ -44,15 +44,16 @@
 	}
 </script>
 
+<!-- svelte-ignore a11y-no-static-element-interactions -->
 <svg
 	on:mousedown={() => {
-		size.set(30);
+		size.set(15);
 	}}
 	on:mouseup={() => {
 		size.set(10);
 	}}>
 	<circle cx={$coords.x} cy={$coords.y} r={$size} />
-	<rect />
+	<!-- <rect /> -->
 </svg>
 
 <style>
@@ -66,16 +67,6 @@
 	}
 
 	circle {
-		fill: #00cfa1;
-	}
-
-	rect {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: transparent;
-		fill: transparent;
+		fill: var(--color-primary);
 	}
 </style>

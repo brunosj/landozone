@@ -1,5 +1,29 @@
 export const projects = [
 	{
+		name: 'SIPLAB',
+		date: '2023-12-12',
+		url: 'https://siplab.ca',
+		repo: 'https://github.com/brunosj/siplab',
+		slug: 'siplab',
+		image: 'siplab-bg.png',
+		color: '#B2754E',
+		colorRGB: [178, 117, 78],
+		keepTextLight: true,
+		type: 'Website',
+		description: 'Research hub based in Montreal',
+		technologies: [
+			'React',
+			'Next.js',
+			'TypeScript',
+			'Tailwind CSS',
+			'Strapi CMS',
+			'Node.js',
+			'MySQL'
+		],
+		features: ['Multilingual'],
+		featured: false
+	},
+	{
 		name: 'THF Radio',
 		date: '2023-08-10',
 		url: 'https://thfradio.de/',
@@ -11,12 +35,6 @@ export const projects = [
 		keepTextLight: true,
 		type: 'Website',
 		description: 'Platform for Berlin-based community radio',
-		longDescription: `
-		
-		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-		
-		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-		`,
 		technologies: [
 			'React',
 			'Next.js',
@@ -43,7 +61,7 @@ export const projects = [
 		description: 'Discourse network analysis of 2019 EU Copyright Directive debate',
 		technologies: ['R', 'igraph', 'DNA', 'Java'],
 		features: ['Network Analysis'],
-		featured: true
+		featured: false
 	},
 	{
 		name: 'EconCrime Lab',
@@ -67,7 +85,7 @@ export const projects = [
 			'MySQL'
 		],
 		features: ['Multilingual'],
-		featured: true
+		featured: false
 	},
 	{
 		name: 'Rigo Woodworks',
@@ -115,7 +133,7 @@ export const projects = [
 		description: 'Record label online store',
 		technologies: ['React', 'Gatsby', 'Tailwind CSS', 'Contentful CMS'],
 		features: ['Integration with Shopify'],
-		featured: true
+		featured: false
 	},
 	{
 		name: 'Sebastian Díaz de León',
@@ -147,7 +165,7 @@ export const projects = [
 		description: 'Architect and interior designer portfolio',
 		technologies: ['React', 'Next.js', 'Tailwind CSS', 'Strapi CMS', 'Node.js', 'MySQL'],
 		features: ['Multilingual (EN, DE, FR)'],
-		featured: false
+		featured: true
 	},
 	{
 		name: 'Berlin Carsharing Price Calculator',

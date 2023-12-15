@@ -1,11 +1,20 @@
 import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/kit/vite';
+import { mdsvex } from 'mdsvex';
+import relativeImages from 'mdsvex-relative-images';
+
+/** @type {import('mdsvex').MdsvexOptions} */
+const mdsvexOptions = {
+	extensions: ['.md'],
+	remarkPlugins: [relativeImages]
+};
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
 	// for more information about preprocessors
-	preprocess: [vitePreprocess()],
+	extensions: ['.svelte', '.md'],
+	preprocess: [vitePreprocess(), mdsvex(mdsvexOptions)],
 
 	kit: {
 		adapter: adapter(),
@@ -13,7 +22,8 @@ const config = {
 			$components: 'src/lib/components',
 			$lib: 'src/lib',
 			$data: 'src/lib/data',
-			$assets: 'src/lib/assets'
+			$assets: 'src/lib/assets',
+			$static: 'static'
 		}
 		// csp: {
 		// 	directives: {

@@ -7,6 +7,7 @@ import TMGImage from '$lib/assets/images/tmg-bg.jpg';
 import DNAImage from '$lib/assets/images/dna-bg.jpg';
 import DeremetzImage from '$lib/assets/images/deremetz-bg.jpg';
 import ZebiImage from '$lib/assets/images/zebi-bg.jpg';
+import SIPLABImage from '$lib/assets/images/siplab-bg.png';
 
 import LZLogo from '$lib/assets/svg/logos/lz-logo.svelte';
 import THFLogo from '$lib/assets/svg/logos/thf-logo.svelte';
@@ -29,7 +30,8 @@ export function getImageComponent(name: string): ImageComponent {
 		'Pinewax Records': PWXImage,
 		'EU Copyright Directive': DNAImage,
 		'Studio Deremetz': DeremetzImage,
-		'Sebastian Díaz de León': ZebiImage
+		'Sebastian Díaz de León': ZebiImage,
+		SIPLAB: SIPLABImage
 	};
 
 	return imageMap[name] || '';

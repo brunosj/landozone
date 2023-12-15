@@ -62,31 +62,35 @@
 						</p>
 					</div>
 					<div class="details" transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
-						<div class="features">
-							<p class="category">Features</p>
-							<ul class="feature">
-								{#each features as item}
-									<span>
-										{item}
-									</span>
-									{#if item !== features[features.length - 1]}
+						{#if features.length > 0}
+							<div class="features">
+								<p class="category">Features</p>
+								<ul class="feature">
+									{#each features as item}
 										<span>
-											{' - '}
+											{item}
 										</span>
-									{/if}
-								{/each}
-							</ul>
-						</div>
-						<div class="technologies">
-							<p class="category">Technologies</p>
-							<ul class="technology">
-								{#each technologies as item}
-									<Tag {keepTextLight}>
-										{item}
-									</Tag>
-								{/each}
-							</ul>
-						</div>
+										{#if item !== features[features.length - 1]}
+											<span>
+												{' - '}
+											</span>
+										{/if}
+									{/each}
+								</ul>
+							</div>
+						{/if}
+						{#if technologies.length > 0}
+							<div class="technologies">
+								<p class="category">Technologies</p>
+								<ul class="technology">
+									{#each technologies as item}
+										<Tag {keepTextLight}>
+											{item}
+										</Tag>
+									{/each}
+								</ul>
+							</div>
+						{/if}
 					</div>
 				</div>
 			{/if}
@@ -94,28 +98,29 @@
 	</section>
 
 	<div class="page-container">
-		<!-- <div class="html">
-				{@html longDescription}
-			</div> -->
-		<div class="grid">
+		<div class="links">
+			<div class="link">
+				<Button to={url} text="Visit site" {color} {keepTextLight}>
+					<IconInternet width="1.3rem" />
+				</Button>
+			</div>
+			<div class="link">
+				<Button to={repo} text="View code" {color} {keepTextLight}>
+					<IconGithub width="1.3rem" />
+				</Button>
+			</div>
+		</div>
+		<div class="markdown">
+			<svelte:component this={data.content} />
+		</div>
+
+		{#if !data.content}
 			<div class="images">
 				{#if ImageComponent}
 					<img src={ImageComponent} alt={name} />
 				{/if}
 			</div>
-			<div class="links">
-				<div class="link">
-					<Button to={url} text="Visit site" {color} {keepTextLight}>
-						<IconInternet width="1.3rem" />
-					</Button>
-				</div>
-				<div class="link">
-					<Button to={repo} text="View code" {color} {keepTextLight}>
-						<IconGithub width="1.3rem" />
-					</Button>
-				</div>
-			</div>
-		</div>
+		{/if}
 	</div>
 </article>
 
@@ -126,10 +131,6 @@
 		background-color: var(--color-black);
 		color: white;
 		position: relative;
-	}
-
-	section {
-		margin-bottom: 3rem;
 	}
 
 	img {
@@ -163,13 +164,6 @@
 		padding: 1.5rem 0;
 	}
 
-	.grid {
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-		margin-bottom: 3rem;
-	}
-
 	.header > * + * {
 		margin-top: 1rem;
 	}
@@ -193,11 +187,13 @@
 
 	.links {
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		flex-direction: row;
+		justify-content: space-between;
 		align-items: center;
 		gap: 2rem;
 		height: 100%;
+		margin: 3rem auto;
+		width: 100%;
 	}
 
 	.link {
@@ -259,6 +255,14 @@
 
 		.details > * + * {
 			margin-top: 2rem;
+		}
+
+		.links {
+			width: 65%;
+		}
+
+		.link {
+			width: 30%;
 		}
 	}
 </style>
