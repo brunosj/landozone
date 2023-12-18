@@ -1,6 +1,8 @@
 <script lang="ts">
 	export let data;
 
+	import { PUBLIC_SITE_URL } from '$env/static/public';
+
 	import type { Project } from '$lib/types/types';
 	import { fade, fly } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
@@ -19,6 +21,7 @@
 		url,
 		color,
 		image,
+		slug,
 		colorRGB,
 		keepTextLight,
 		repo,
@@ -32,9 +35,10 @@
 
 	let element;
 	let intersecting = false;
+	let ImageComponent: string;
 </script>
 
-<Seo title={`landozone | ${name}`} {description} />
+<Seo title={`landozone | ${name}`} {description} image={`${PUBLIC_SITE_URL}/${image}`} />
 
 <article>
 	<section style={`background-color:${color};`} bind:this={element}>

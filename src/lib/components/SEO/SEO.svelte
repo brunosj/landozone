@@ -4,6 +4,7 @@
 
 	export let description = siteDescription;
 	export let title = siteTitle;
+	export let image: string;
 </script>
 
 <svelte:head>
@@ -13,7 +14,7 @@
 	<meta name="image" content={siteImage} />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description || siteDescription} />
-	<meta property="og:image" content={siteImage} />
+	<meta property="og:image" content={image || siteImage} />
 	<meta property="og:type" content="website" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={title} />
