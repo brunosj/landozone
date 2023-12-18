@@ -40,10 +40,10 @@
 
 <Seo title={`landozone | ${name}`} {description} image={`${PUBLIC_SITE_URL}/${image}`} />
 
-<article>
-	<section style={`background-color:${color};`} bind:this={element}>
-		<IntersectionObserver {element} bind:intersecting once threshold={0.3}>
-			{#if intersecting}
+<article bind:this={element}>
+	<IntersectionObserver {element} bind:intersecting once threshold={0.3}>
+		{#if intersecting}
+			<section style={`background-color:${color};`}>
 				<div class="header" style={`color:${textColor}`}>
 					<div class="title" transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>
 						<p id="type">{type}</p>
@@ -84,27 +84,27 @@
 						{/if}
 					</div>
 				</div>
-			{/if}
-		</IntersectionObserver>
-	</section>
+			</section>
 
-	<div class="page-container">
-		<div class="links">
-			<div class="link">
-				<Button to={url} text="Visit site" {color} {keepTextLight}>
-					<IconInternet width="1.3rem" />
-				</Button>
+			<div class="page-container">
+				<div class="links" transition:fade={{ duration: 500, delay: 500, easing: cubicInOut }}>
+					<div class="link">
+						<Button to={url} text="Visit site" {color} {keepTextLight}>
+							<IconInternet width="1.3rem" />
+						</Button>
+					</div>
+					<div class="link">
+						<Button to={repo} text="View code" {color} {keepTextLight}>
+							<IconGithub width="1.3rem" />
+						</Button>
+					</div>
+				</div>
+				<div class="markdown" transition:fade={{ duration: 500, delay: 500, easing: cubicInOut }}>
+					<svelte:component this={data.content} />
+				</div>
 			</div>
-			<div class="link">
-				<Button to={repo} text="View code" {color} {keepTextLight}>
-					<IconGithub width="1.3rem" />
-				</Button>
-			</div>
-		</div>
-		<div class="markdown">
-			<svelte:component this={data.content} />
-		</div>
-	</div>
+		{/if}
+	</IntersectionObserver>
 </article>
 
 <style>

@@ -33,7 +33,7 @@
 						</div>
 						<div
 							class="projects"
-							transition:fly={{ y: 75, duration: 500, delay: 500, easing: cubicInOut }}>
+							transition:fly={{ y: 75, duration: 500, delay: 250, easing: cubicInOut }}>
 							{#each featuredProjects as item}
 								<ProjectCard {item} />
 								<ProjectCardMobile {item} />
