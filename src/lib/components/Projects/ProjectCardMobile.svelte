@@ -41,7 +41,7 @@
 	<li style="--border-color: {color}; ">
 		<a href={`/projects/${slug}`}>
 			<div class="project">
-				<img src={`./src/lib/assets/images/${image}`} alt={name} />
+				<img src={`./${image}`} alt={name} />
 				<div class="info">
 					<div class="title">
 						<h4>

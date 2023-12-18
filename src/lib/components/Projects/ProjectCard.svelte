@@ -37,7 +37,7 @@
 				showDetails ? '2rem' : '1rem'
 			}`}">
 			<a href={url} target="_blank">
-				<img src={`./src/lib/assets/images/${image}`} alt={name} />
+				<img src={`./${image}`} alt={name} />
 			</a>
 			<div class="info">
 				<div class="title">
