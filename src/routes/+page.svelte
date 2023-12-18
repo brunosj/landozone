@@ -1,9 +1,10 @@
 <script lang="ts">
+	export let data;
+
 	import Landing from '$components/Landing/Landing.svelte';
 	import About from '$components/About/About.svelte';
-	import Work from '$components/Projects/Projects.svelte';
+	import Projects from '$components/Projects/Projects.svelte';
 	import Contact from '$components/Contact/Contact.svelte';
-	import { projects } from '$lib/data/projectsV2';
 	import type { Project } from '$lib/types/types';
 	import SEO from '$lib/components/SEO/index.svelte';
 
@@ -24,10 +25,14 @@
 		datePublished: '2023-12-05T14:19:33.000+0100',
 		lastUpdated: '2021-12-05T14:19:33.000+0100'
 	};
+
+	// Logic
+
+	let projects: Project[] = data.projects;
 </script>
 
 <SEO {...seoProps} />
 <Landing />
 <About />
-<Work />
+<Projects {projects} />
 <Contact />

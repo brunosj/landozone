@@ -103,7 +103,14 @@ p {
 
 @media (min-width: 50em) {
 	.markdown {
-		width: 65%;
+		width: 75%;
+		margin: auto;
+	}
+}
+
+@media (min-width: 60em) {
+	.markdown {
+		width: 60%;
 		margin: auto;
 	}
 	h1 {
@@ -154,7 +161,7 @@ p {
 	}
 
 	.markdown :is(h3) {
-		font-size: 2.5rem;
+		font-size: 2rem;
 		line-height: 2.5rem;
 	}
 
@@ -166,6 +173,10 @@ p {
 	}
 
 	.markdown :is(img) {
-		margin: 1rem 0;
+		margin-bottom: 3rem;
+		margin-top: 1rem;
+	}
+	.markdown :is(code) {
+		font-size: 1rem;
 	}
 }

@@ -5,41 +5,28 @@
 	import { fade, fly } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 	import IntersectionObserver from 'svelte-intersection-observer';
-	import { onMount } from 'svelte';
 	import Button from '$components/UI/Button.svelte';
-	import IconArrow from '$lib/assets/svg/icons/HeroiconsArrowLongRight.svelte';
 	import IconGithub from '$lib/assets/svg/icons/SimpleIconsGithub.svelte';
 	import IconInternet from '$lib/assets/svg/icons/IconoirInternet.svelte';
 	import Tag from '$components/UI/Tag.svelte';
-	import { getLogoComponent, getImageComponent } from '$lib/utils/getProjectVisuals';
 	import Seo from '$components/SEO/SEO.svelte';
 
-	let item: Project = data.item;
+	let item: Project = data.meta;
 
 	let {
 		name,
 		date,
 		url,
 		color,
+		image,
 		colorRGB,
-		longDescription,
 		keepTextLight,
 		repo,
 		type,
-		image,
 		description,
 		technologies,
 		features
 	} = item;
-
-	let animate = false;
-	let LogoComponent: any;
-	let ImageComponent: string;
-
-	onMount(() => {
-		LogoComponent = getLogoComponent(name);
-		ImageComponent = getImageComponent(name);
-	});
 
 	let textColor = keepTextLight ? '#fff' : '#202129';
 
@@ -113,14 +100,6 @@
 		<div class="markdown">
 			<svelte:component this={data.content} />
 		</div>
-
-		{#if !data.content}
-			<div class="images">
-				{#if ImageComponent}
-					<img src={ImageComponent} alt={name} />
-				{/if}
-			</div>
-		{/if}
 	</div>
 </article>
 
@@ -212,6 +191,16 @@
 	}
 
 	@media (min-width: 50em) {
+		.links {
+			width: 75%;
+		}
+
+		.link {
+			width: 40%;
+		}
+	}
+
+	@media (min-width: 60em) {
 		ul {
 			row-gap: 0.5rem;
 			column-gap: 0.7rem;
@@ -258,7 +247,7 @@
 		}
 
 		.links {
-			width: 65%;
+			width: 60%;
 		}
 
 		.link {

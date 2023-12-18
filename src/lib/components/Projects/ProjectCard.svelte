@@ -3,15 +3,10 @@
 	export let showDetails = false;
 
 	import type { Project } from '$lib/types/types';
-	import { fade, fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import Button from '$components/UI/Button.svelte';
-	import IconGithub from '$lib/assets/svg/icons/SimpleIconsGithub.svelte';
-	import Tag from '$components/UI/Tag.svelte';
 	import IconInternet from '$lib/assets/svg/icons/IconoirInternet.svelte';
 	import IconArrow from '$lib/assets/svg/icons/MaterialSymbolsArrowOutwardRounded.svelte';
-
-	import { getLogoComponent, getImageComponent } from '$lib/utils/getProjectVisuals';
 
 	let {
 		name,
@@ -29,13 +24,8 @@
 	} = item;
 	let animate = false;
 
-	let LogoComponent: any;
-	let ImageComponent: string;
-
 	onMount(() => {
 		animate = true;
-		LogoComponent = getLogoComponent(name);
-		ImageComponent = getImageComponent(name);
 	});
 </script>
 
@@ -46,11 +36,9 @@
 			style="width:{`${showDetails ? '80%' : '100%'}`}; padding:{`${
 				showDetails ? '2rem' : '1rem'
 			}`}">
-			{#if ImageComponent}
-				<a href={url} target="_blank">
-					<img src={ImageComponent} alt={name} />
-				</a>
-			{/if}
+			<a href={url} target="_blank">
+				<img src={`./src/lib/assets/images/${image}`} alt={name} />
+			</a>
 			<div class="info">
 				<div class="title">
 					<h4>

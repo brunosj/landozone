@@ -140,7 +140,7 @@ export const projects = [
 		date: '2022-06-01',
 		url: 'https://sdiazdeleon.eu/',
 		repo: 'https://github.com/brunosj/sdiazdeleon.eu',
-		slug: 'sebastian-diaz-de-leon',
+		slug: 'sdiaz-de-leon',
 		image: 'zebi-bg.jpg',
 		color: '#3037F4',
 		colorRGB: [48, 55, 244],
