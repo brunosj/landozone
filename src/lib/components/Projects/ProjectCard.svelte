@@ -7,6 +7,7 @@
 	import Button from '$components/UI/Button.svelte';
 	import IconInternet from '$lib/assets/svg/icons/IconoirInternet.svelte';
 	import IconArrow from '$lib/assets/svg/icons/MaterialSymbolsArrowOutwardRounded.svelte';
+	import { getImageComponent } from '$lib/utils/getProjectVisuals';
 
 	let {
 		name,
@@ -22,10 +23,13 @@
 		technologies,
 		features
 	} = item;
+
 	let animate = false;
+	let ImageComponent: string;
 
 	onMount(() => {
 		animate = true;
+		ImageComponent = getImageComponent(slug);
 	});
 </script>
 
@@ -36,9 +40,11 @@
 			style="width:{`${showDetails ? '80%' : '100%'}`}; padding:{`${
 				showDetails ? '2rem' : '1rem'
 			}`}">
-			<a href={url} target="_blank">
-				<img src={`./${image}`} alt={name} />
-			</a>
+			{#if ImageComponent}
+				<a href={url} target="_blank">
+					<img src={ImageComponent} alt={name} />
+				</a>
+			{/if}
 			<div class="info">
 				<div class="title">
 					<h4>

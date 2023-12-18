@@ -9,45 +9,21 @@ import DeremetzImage from '$lib/assets/images/deremetz-bg.jpg';
 import ZebiImage from '$lib/assets/images/zebi-bg.jpg';
 import SIPLABImage from '$lib/assets/images/siplab-bg.png';
 
-import LZLogo from '$lib/assets/svg/logos/lz-logo.svelte';
-import THFLogo from '$lib/assets/svg/logos/thf-logo.svelte';
-import ECLabLogo from '$lib/assets/svg/logos/eclab-logo.svelte';
-import RigoLogo from '$lib/assets/images/rigo-logo.png';
-import TMGLogo from '$lib/assets/images/tmg-logo.png';
-import PWXLogo from '$lib/assets/svg/logos/pwx-logo.svelte';
-import BCPCLogo from '$lib/assets/svg/logos/bcpc-logo.svelte';
-
-type LogoComponent = any;
 type ImageComponent = string;
 
 export function getImageComponent(name: string): ImageComponent {
 	const imageMap: Record<string, ImageComponent> = {
-		'THF Radio': THFImage,
-		'EconCrime Lab': ECLabImage,
-		'Berlin Carsharing Price Calculator': BCPCImage,
-		'TMG Think Tank': TMGImage,
-		'Rigo Woodworks': RigoImage,
-		'Pinewax Records': PWXImage,
-		'EU Copyright Directive': DNAImage,
-		'Studio Deremetz': DeremetzImage,
-		'Sebastian Díaz de León': ZebiImage,
-		SIPLAB: SIPLABImage
+		'thf-radio': THFImage,
+		'econcrime-lab': ECLabImage,
+		'berlin-carsharing': BCPCImage,
+		'tmg-thinktank': TMGImage,
+		'rigo-woodworks': RigoImage,
+		'pinewax-records': PWXImage,
+		'dna-copyright': DNAImage,
+		'studio-deremetz': DeremetzImage,
+		'sdiaz-de-leon': ZebiImage,
+		siplab: SIPLABImage
 	};
 
 	return imageMap[name] || '';
 }
-
-export function getLogoComponent(name: string): LogoComponent {
-	const logoMap: Record<string, LogoComponent> = {
-		'THF Radio': THFLogo,
-		'EconCrime Lab': ECLabLogo,
-		'Berlin Carsharing Price Calculator': BCPCLogo,
-		'TMG Think Tank': TMGLogo,
-		'Rigo Woodworks': RigoLogo,
-		'Pinewax Records': PWXLogo
-	};
-
-	return logoMap[name] || LZLogo;
-}
-
-

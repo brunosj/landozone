@@ -9,7 +9,7 @@
 	import IconInternet from '$lib/assets/svg/icons/IconoirInternet.svelte';
 	import IconArrow from '$lib/assets/svg/icons/MaterialSymbolsLightArrowCircleDownRounded.svelte';
 
-	import { getLogoComponent, getImageComponent } from '$lib/utils/getProjectVisuals';
+	import { getImageComponent } from '$lib/utils/getProjectVisuals';
 
 	let {
 		name,
@@ -32,8 +32,7 @@
 
 	onMount(() => {
 		animate = true;
-		LogoComponent = getLogoComponent(name);
-		ImageComponent = getImageComponent(name);
+		ImageComponent = getImageComponent(slug);
 	});
 </script>
 
@@ -41,7 +40,9 @@
 	<li style="--border-color: {color}; ">
 		<a href={`/projects/${slug}`}>
 			<div class="project">
-				<img src={`./${image}`} alt={name} />
+				{#if ImageComponent}
+					<img src={ImageComponent} alt={name} />
+				{/if}
 				<div class="info">
 					<div class="title">
 						<h4>
