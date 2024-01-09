@@ -1,5 +1,21 @@
 export const projects = [
 	{
+		name: 'aconium Akademie',
+		date: '2024-01-13',
+		url: 'https://aconium-akademie.eu',
+		repo: null,
+		slug: 'aconium-akademie',
+		image: 'aconium-bg.jpg',
+		color: '#3E8085',
+		colorRGB: [62, 128, 133],
+		keepTextLight: true,
+		type: 'Website',
+		description: 'Digital education platform',
+		technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Wordpress CMS'],
+		features: ['Light/Dark Mode', 'Custom Calendar'],
+		featured: true
+	},
+	{
 		name: 'SIPLAB',
 		date: '2023-12-12',
 		url: 'https://siplab.ca',
@@ -165,7 +181,7 @@ export const projects = [
 		description: 'Architect and interior designer portfolio',
 		technologies: ['React', 'Next.js', 'Tailwind CSS', 'Strapi CMS', 'Node.js', 'MySQL'],
 		features: ['Multilingual (EN, DE, FR)'],
-		featured: true
+		featured: false
 	},
 	{
 		name: 'Berlin Carsharing Price Calculator',
@@ -181,6 +197,6 @@ export const projects = [
 		description: 'Price calculator for carsharing services in Berlin',
 		technologies: ['Svelte'],
 		features: ['Price calculation based on user input'],
-		featured: true
+		featured: false
 	}
 ];

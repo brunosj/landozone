@@ -93,11 +93,14 @@
 							<IconInternet width="1.3rem" />
 						</Button>
 					</div>
-					<div class="link">
-						<Button to={repo} text="View code" {color} {keepTextLight}>
-							<IconGithub width="1.3rem" />
-						</Button>
-					</div>
+
+					{#if repo !== null}
+						<div class="link">
+							<Button to={repo} text="View code" {color} {keepTextLight}>
+								<IconGithub width="1.3rem" />
+							</Button>
+						</div>
+					{/if}
 				</div>
 				<div class="markdown" transition:fade={{ duration: 500, delay: 500, easing: cubicInOut }}>
 					<svelte:component this={data.content} />

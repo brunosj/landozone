@@ -28,7 +28,7 @@
 						<div class="description">
 							<h2 transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>projects</h2>
 							<p transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
-								Here are a few of my works
+								Here are a few of my selected works
 							</p>
 						</div>
 						<div
@@ -95,6 +95,7 @@
 		margin-left: auto;
 		gap: 0.2rem;
 		margin-top: 1rem;
+		margin-bottom: 1rem;
 	}
 
 	.link .icon {

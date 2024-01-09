@@ -8,6 +8,7 @@ import DNAImage from '$lib/assets/images/dna-bg.jpg';
 import DeremetzImage from '$lib/assets/images/deremetz-bg.jpg';
 import ZebiImage from '$lib/assets/images/zebi-bg.jpg';
 import SIPLABImage from '$lib/assets/images/siplab-bg.png';
+import aconiumImage from '$lib/assets/images/aconium-bg.jpg';
 
 type ImageComponent = string;
 
@@ -22,7 +23,8 @@ export function getImageComponent(name: string): ImageComponent {
 		'dna-copyright': DNAImage,
 		'studio-deremetz': DeremetzImage,
 		'sdiaz-de-leon': ZebiImage,
-		siplab: SIPLABImage
+		siplab: SIPLABImage,
+		'aconium-akademie': aconiumImage
 	};
 
 	return imageMap[name] || '';
