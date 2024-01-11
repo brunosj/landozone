@@ -11,6 +11,8 @@ Bruno SJ<br/>contact@landozone.net
 
 Please do not hesitate to contact us if you have any questions or concerns regarding the content of this website.
 
+<br/>
+
 ### Privacy Policy for landozone.net
 
 1. **Introduction:**
@@ -34,4 +36,6 @@ Please do not hesitate to contact us if you have any questions or concerns regar
 7. **Contact Information:**
    If you have any questions or concerns about this Privacy Policy, you can contact us at contact@landozone.net.
 
-Last updated on 11.01.2024.
+<br/>
+
+Last updated on 11.01.2024

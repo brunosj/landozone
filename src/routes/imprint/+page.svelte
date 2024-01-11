@@ -66,6 +66,7 @@
 		color: white;
 		position: relative;
 		margin-top: 1rem;
+		margin-bottom: 2rem;
 	}
 
 	h2 {
@@ -86,18 +87,6 @@
 		margin-bottom: 1rem;
 	}
 
-	.description > * + * {
-		margin-top: 0.5rem;
-	}
-
-	.projects {
-		position: relative;
-		display: flex;
-		flex-wrap: wrap;
-		gap: 2rem;
-		width: 100%;
-	}
-
 	@media (min-width: 50em) {
 		section {
 			margin-top: 2rem;
@@ -108,16 +97,8 @@
 			top: -35%;
 		}
 
-		.projects {
-			gap: 2rem;
-		}
-
 		.description {
 			margin-bottom: 4rem;
-		}
-
-		.description > * + * {
-			margin-top: 1rem;
 		}
 	}
 </style>

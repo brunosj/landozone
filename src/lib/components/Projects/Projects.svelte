@@ -52,9 +52,9 @@
 		/* background-color: var(--color-black); */
 		width: 100%;
 		height: 100%;
-		color: white;
+		color: var(--color-white);
 		position: relative;
-		transition: background-color 1s ease;
+		transition: all 1s cubic-bezier(0.07, 0.95, 0, 1);
 		margin-top: 1.5rem;
 	}
 

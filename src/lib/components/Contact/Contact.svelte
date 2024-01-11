@@ -231,11 +231,6 @@
 			font-size: 1.2rem;
 		}
 
-		.svg-bg {
-			width: 100%;
-			top: -37%;
-		}
-
 		.grid {
 			grid-template-columns: 1fr 1fr;
 			gap: 3rem;

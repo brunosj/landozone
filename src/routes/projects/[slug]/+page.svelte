@@ -117,11 +117,7 @@
 		background-color: var(--color-black);
 		color: white;
 		position: relative;
-	}
-
-	img {
-		border-radius: 12px;
-		width: 100%;
+		margin-bottom: 2rem;
 	}
 
 	ul {
@@ -187,12 +183,6 @@
 		width: 50%;
 	}
 
-	.images {
-		display: flex;
-		/* justify-content: center; */
-		width: 100%;
-	}
-
 	.details > * + * {
 		margin-top: 0.5rem;
 	}
@@ -211,13 +201,6 @@
 		ul {
 			row-gap: 0.5rem;
 			column-gap: 0.7rem;
-		}
-
-		.grid {
-			display: grid;
-			grid-template-columns: 2fr 1fr;
-			gap: 3rem;
-			margin-bottom: 3rem;
 		}
 
 		.header {
