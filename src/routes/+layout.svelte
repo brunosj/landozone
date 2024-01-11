@@ -56,8 +56,8 @@
 </script>
 
 <!-- <MouseTracker /> -->
-<Header />
 <main class="content">
+	<Header />
 	<slot />
 </main>
 
@@ -66,6 +66,7 @@
 		width: 100%;
 		order: -9999;
 		z-index: 10;
+		position: relative;
 	}
 
 	:global(body) {
@@ -76,12 +77,13 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		margin: 0rem 0;
 	}
 
 	:global(.page-container) {
 		max-width: 85%;
 		height: 100%;
-		margin: 0rem auto;
+		margin: 3rem auto;
 		position: relative;
 		display: flex;
 		flex-direction: column;
@@ -93,7 +95,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		margin: 2rem auto;
+		margin: 0rem auto;
 	}
 
 	@media (min-width: 50em) {
@@ -112,10 +114,6 @@
 	@media (min-width: 100em) {
 		:global(.fullpage-section) {
 			min-height: 85vh;
-		}
-
-		:global(.content) {
-			margin: 3rem auto;
 		}
 	}
 </style>

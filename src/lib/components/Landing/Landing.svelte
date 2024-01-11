@@ -27,7 +27,7 @@
 							imaginative web development
 						</h1>
 						<p transition:fade={{ duration: 750, delay: 250, easing: cubicInOut }}>
-							hi! my name is bruno sj and <span id="landozone">landozone</span> is my independent development
+							hi! my name is bruno and <span id="landozone">landozone</span> is my independent development
 							and design practice. I am passionate about crafting innovative applications and experiences
 							on the web.
 						</p>
