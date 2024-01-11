@@ -83,7 +83,7 @@
 	:global(.page-container) {
 		max-width: 85%;
 		height: 100%;
-		margin: 3rem auto;
+		margin: 2rem auto;
 		position: relative;
 		display: flex;
 		flex-direction: column;
@@ -105,15 +105,20 @@
 
 		:global(.fullpage-section) {
 			min-height: 100vh;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
+		}
+
+		:global(.page-container) {
+			margin: 1rem auto;
 		}
 	}
 
 	@media (min-width: 100em) {
 		:global(.fullpage-section) {
-			min-height: 85vh;
+			min-height: 100vh;
+		}
+
+		:global(.page-container) {
+			margin: 0rem auto;
 		}
 	}
 </style>

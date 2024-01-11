@@ -195,7 +195,7 @@
 
 	@media (min-width: 100em) {
 		.svg-bg {
-			top: -50%;
+			top: -35%;
 		}
 	}
 </style>

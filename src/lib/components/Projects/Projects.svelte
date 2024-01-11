@@ -7,7 +7,7 @@
 	import IntersectionObserver from 'svelte-intersection-observer';
 	import ProjectCard from '$components/Projects/ProjectCard.svelte';
 	import ProjectCardMobile from '$components/Projects/ProjectCardMobile.svelte';
-	import IconArrow from '$lib/assets/svg/icons/MaterialSymbolsArrowOutwardRounded.svelte';
+	import ArrowLink from '$components/UI/ArrowLink.svelte';
 
 	let element;
 	let intersecting = false;
@@ -39,12 +39,7 @@
 								<ProjectCardMobile {item} />
 							{/each}
 						</div>
-						<a class="link" href="/projects">
-							<span id="underline"> see all projects </span>
-							<span class="icon">
-								<IconArrow width="1.3rem" />
-							</span>
-						</a>
+						<ArrowLink path="/projects">see all projects</ArrowLink>
 					</div>
 				</div>
 			{/if}
@@ -90,54 +85,6 @@
 		margin: auto;
 	}
 
-	.link {
-		display: flex;
-		margin-left: auto;
-		gap: 0.2rem;
-		margin-top: 1rem;
-		margin-bottom: 1rem;
-	}
-
-	.link .icon {
-		transform: translateY(0.1rem);
-	}
-
-	.link:hover .icon {
-		transform: translateY(-0.1rem);
-		transform: translateX(0.1rem);
-		transition: all 0.2s ease-in-out;
-		color: var(--color-secondary);
-	}
-
-	#underline {
-		font-size: 0.9rem;
-		position: relative;
-		z-index: 20;
-	}
-
-	#underline:after {
-		transition: all 0.2s ease-in-out;
-		content: '';
-		position: absolute;
-		bottom: 10%;
-		z-index: -1;
-		height: 30%;
-		width: 102%;
-		left: -1%;
-		opacity: 0.5;
-		border-radius: 2px;
-		background: linear-gradient(
-			65deg,
-			var(--color-secondary) 0%,
-			var(--color-secondary) 100%,
-			rgba(255, 209, 0, 0) 100%
-		);
-	}
-
-	#underline:hover:after {
-		height: 80%;
-	}
-
 	@media (min-width: 50em) {
 		section {
 			margin-top: 3rem;
@@ -153,14 +100,6 @@
 
 		.projects {
 			gap: 3rem;
-		}
-
-		.link {
-			margin-top: 3rem;
-		}
-
-		#underline {
-			font-size: 1.1rem;
 		}
 	}
 </style>

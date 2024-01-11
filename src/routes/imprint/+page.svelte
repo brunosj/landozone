@@ -1,27 +1,23 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { projects } from '$lib/data/projectsV2';
-	import type { Project } from '$lib/types/types';
+	export let data;
+
 	import { fade, fly } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 	import IntersectionObserver from 'svelte-intersection-observer';
-	import ProjectCard from '$components/Projects/ProjectCard.svelte';
-	import ProjectCardMobile from '$components/Projects/ProjectCardMobile.svelte';
-	import Seo from '$components/SEO/SEO.svelte';
 	import Waveform from '$lib/assets/svg/waveform.svelte';
 	import SEO from '$lib/components/SEO/index.svelte';
 
 	// SEO
-	let title = 'projects';
-	let metadescription = 'Explore my recent works and the technologies I used to build them';
+	let title = 'imprint + privacy policy';
+	let metadescription = '';
 	const breadcrumbs = [
 		{
 			name: 'Home',
 			slug: ''
 		},
 		{
-			name: 'Projects',
-			slug: 'projects'
+			name: 'Imprint',
+			slug: 'imprint'
 		}
 	];
 	const seoProps = {
@@ -34,19 +30,10 @@
 	};
 
 	// Logic
-	let items: Project[] = projects.map((project) => ({
-		...project,
-		repo: project.repo || ''
-	}));
-
-	let projectsByDate: Project[] = items.sort((a, b) => {
-		const dateA = new Date(a.date);
-		const dateB = new Date(b.date);
-		return dateB.getTime() - dateA.getTime();
-	});
-
 	let element;
 	let intersecting = false;
+
+	console.log(data);
 </script>
 
 <SEO {...seoProps} />
@@ -59,19 +46,12 @@
 			{#if intersecting}
 				<div class="content">
 					<div class="description">
-						<h2 transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>projects</h2>
-						<p transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
-							Explore my recent works and the technologies I used to build them
-						</p>
+						<h2 transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>
+							imprint + privacy policy
+						</h2>
 					</div>
-					<div
-						class="projects"
-						transition:fly={{ y: 75, duration: 500, delay: 500, easing: cubicInOut }}>
-						{#each projectsByDate as item}
-							<ProjectCardMobile {item} />
-							<ProjectCard {item} showDetails={true} />
-						{/each}
-						<div></div>
+					<div class="markdown" transition:fade={{ duration: 500, delay: 500, easing: cubicInOut }}>
+						<svelte:component this={data.content} />
 					</div>
 				</div>
 			{/if}
@@ -103,7 +83,7 @@
 	}
 
 	.description {
-		margin-bottom: 3rem;
+		margin-bottom: 1rem;
 	}
 
 	.description > * + * {

@@ -8,8 +8,8 @@
 	import IconMail from '$lib/assets/svg/icons/MaterialSymbolsLightMailRounded.svelte';
 	import IconTelegram from '$lib/assets/svg/icons/SimpleIconsTelegram.svelte';
 	import Button from '$components/UI/Button.svelte';
-	import Waveform from '$lib/assets/svg/waveform.svelte';
 	import { background, font } from '$lib/stores/store';
+	import ArrowLink from '$components/UI/ArrowLink.svelte';
 
 	let element;
 	let intersecting = false;
@@ -20,9 +20,6 @@
 	style:background-color={$background}
 	style:color={$font}
 	class="fullpage-section">
-	<!-- <div class="svg-bg">
-		<Waveform />
-	</div> -->
 	<div class="page-container" bind:this={element}>
 		<IntersectionObserver {element} bind:intersecting once threshold={0.3}>
 			{#if intersecting}
@@ -85,6 +82,8 @@
 							</div>
 						</div>
 					</div>
+
+					<ArrowLink path="/imprint">imprint + privacy policy</ArrowLink>
 				</div>
 			{/if}
 		</IntersectionObserver>
@@ -111,16 +110,6 @@
 		width: 4rem;
 		margin-bottom: 0rem;
 		border-radius: 100%;
-	}
-
-	.svg-bg {
-		position: absolute;
-		top: 25%;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		width: 100%;
-		opacity: 0.5;
 	}
 
 	.picture {
