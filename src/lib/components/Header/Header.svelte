@@ -6,13 +6,13 @@
 <header>
 	<nav class="">
 		<div class="logo">
-			<a href="/">
+			<a href="/" aria-label="landozone logo">
 				<div class="logo-shape">
 					<Logo />
 				</div>
 			</a>
 		</div>
-		<div class="menu">
+		<ul class="menu">
 			{#each menu as { name, slug }}
 				<li>
 					<a href={slug} class="active-page">
@@ -20,7 +20,7 @@
 					</a>
 				</li>
 			{/each}
-		</div>
+		</ul>
 	</nav>
 </header>
 
