@@ -9,9 +9,9 @@ color: '#4449ED'
 colorRGB: [68, 73, 237]
 keepTextLight: true
 type: 'Website'
-description: 'Record label online store'
+description: 'Record label'
 technologies: ['React', 'Gatsby', 'Tailwind CSS', 'Contentful CMS']
-features: ['Integration with Shopify']
+features: []
 featured: false
 ---
 
