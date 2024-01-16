@@ -10,80 +10,43 @@
 	import Button from '$components/UI/Button.svelte';
 	import { background, font } from '$lib/stores/store';
 	import ArrowLink from '$components/UI/ArrowLink.svelte';
+	import Form from './Form.svelte';
+	import ContactCard from './ContactCard.svelte';
+	import Figures from '$components/Figures/Figures.svelte';
 
 	let element;
 	let intersecting = false;
 </script>
 
-<section
-	id="contact"
-	style:background-color={$background}
-	style:color={$font}
-	class="fullpage-section">
+<section id="contact" style:background-color={$background} style:color={$font} class="page-section">
 	<div class="page-container" bind:this={element}>
-		<IntersectionObserver {element} bind:intersecting once threshold={0.3}>
+		<IntersectionObserver {element} bind:intersecting once threshold={0}>
 			{#if intersecting}
 				<div class="content">
 					<div class="grid">
 						<div class="description">
-							<!-- <h3 >get in touch!</h3> -->
-
-							<p transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>
+							<h2 transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>
+								get in touch!
+							</h2>
+							<p transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
 								Have an exciting project you would like to collaborate on?
 							</p>
-							<p transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>
-								Send me a message and I would be happy to further discuss your ideas with you.
+							<p transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
+								Use the contact form or send me a message and I would be happy to further discuss
+								your ideas with you.
 							</p>
 							<p transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
 								<a id="underline" href="mailto:contact@landozone.net">contact@landozone.net</a>
 							</p>
 						</div>
-						<div
-							class="info info-grid"
-							transition:fly={{ x: 100, duration: 500, delay: 250, easing: cubicInOut }}>
-							<div class="grid-item">
-								<div class="picture">
-									<img src={BSJ3} alt="BSJ" />
-									<div>
-										<h3>Bruno SJ</h3>
-										<span>Web Developer/Designer</span>
-									</div>
-								</div>
-							</div>
-							<div class="icons grid-item desktop">
-								<Button to="mailto:contact@landozone.net" text="Email">
-									<IconMail width="1.3rem" />
-								</Button>
-
-								<Button to="https://t.me/bruno_sj" text="Telegram">
-									<IconTelegram width="1.3rem" />
-								</Button>
-								<Button to="https://www.linkedin.com/in/brunosj/" text="LinkedIn">
-									<IconLinkedIn width="1.3rem" />
-								</Button>
-
-								<Button to="https://github.com/brunosj" text="GitHub">
-									<IconGithub width="1.3rem" />
-								</Button>
-							</div>
-							<div class="icons grid-item mobile">
-								<a href="mailto:contact@landozone.net" target="_blank">
-									<IconMail width="1.3rem" />
-								</a>
-								<a href="https://t.me/bruno_sj" target="_blank">
-									<IconTelegram width="1.3rem" />
-								</a>
-								<a href="https://www.linkedin.com/in/brunosj/" target="_blank">
-									<IconLinkedIn width="1.3rem" />
-								</a>
-								<a href="https://github.com/brunosj" target="_blank">
-									<IconGithub width="1.3rem" />
-								</a>
-							</div>
-						</div>
+						<Figures />
 					</div>
-
-					<ArrowLink path="/imprint">imprint + privacy policy</ArrowLink>
+					<Form />
+					<span
+						class="imprint-link"
+						transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
+						<ArrowLink path="/imprint">imprint + privacy policy</ArrowLink>
+					</span>
 				</div>
 			{/if}
 		</IntersectionObserver>
@@ -92,35 +55,18 @@
 
 <style>
 	section {
-		/* background-color: var(--color-black); */
-		width: 100%;
-		height: 100%;
 		color: var(--color-white);
 		position: relative;
 		transition: all 1s cubic-bezier(0.07, 0.95, 0, 1);
 	}
 
-	h3 {
-		color: var(--color-secondary);
-		font-weight: 500;
-		margin-bottom: 0.2rem;
+	h2 {
+		margin-bottom: 2rem;
 	}
 
-	img {
-		width: 4rem;
-		margin-bottom: 0rem;
-		border-radius: 100%;
-	}
-
-	.picture {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		column-gap: 1rem;
-	}
-
-	.picture span {
-		font-size: 0.9rem;
+	.imprint-link {
+		margin-left: auto;
+		margin-bottom: 4rem;
 	}
 
 	#underline {
@@ -152,38 +98,6 @@
 		height: 80%;
 	}
 
-	.icons {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 1.5rem;
-	}
-
-	.info {
-		background-color: var(--color-gray);
-		width: 80%;
-		padding: 1.5rem 2rem;
-		color: var(--color-white);
-		border-radius: 12px;
-		position: relative;
-		z-index: auto;
-	}
-
-	.info::before {
-		content: '';
-		display: block;
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		left: 0;
-		top: 0;
-		/* z-index: -1; */
-		border-radius: 12px;
-		border: 2px solid var(--color-secondary);
-		transform: translate(0.5rem, -0.5rem);
-		box-sizing: border-box;
-		pointer-events: none;
-	}
-
 	.description > * + * {
 		margin-top: 1rem;
 	}
@@ -194,37 +108,13 @@
 		gap: 3rem;
 	}
 
-	.info-grid {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 1.5rem;
-	}
-
-	.grid-item {
-		margin: auto;
-		position: relative;
-	}
-
 	.description {
 		margin: auto 0;
 	}
 
-	.mobile {
-		display: flex;
-	}
-
-	.desktop {
-		display: none;
-	}
-
 	@media (min-width: 50em) {
-		h3 {
-			margin-bottom: 0.5rem;
-		}
-		img {
-			width: 5.5rem;
-			border-radius: 100%;
-			margin-bottom: 1.5rem;
+		h2 {
+			margin-bottom: 3rem;
 		}
 
 		#underline {
@@ -234,40 +124,6 @@
 		.grid {
 			grid-template-columns: 1fr 1fr;
 			gap: 3rem;
-		}
-
-		.info-grid {
-			grid-template-columns: 1fr 1fr;
-			gap: 3rem;
-		}
-
-		.picture {
-			flex-direction: column;
-			align-items: flex-start;
-		}
-
-		.picture span {
-			font-size: 1rem;
-		}
-
-		.info {
-			padding: 4rem;
-			width: 75%;
-		}
-
-		.info::before {
-			transform: translate(1rem, -1rem);
-		}
-
-		.icons {
-			width: 80%;
-		}
-		.desktop {
-			display: flex;
-		}
-
-		.mobile {
-			display: none;
 		}
 	}
 </style>

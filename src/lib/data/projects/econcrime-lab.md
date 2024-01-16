@@ -19,7 +19,7 @@ technologies:
   - 'Node.js'
   - 'MySQL'
 features: ['Multilingual']
-featured: true
+featured: false
 ---
 
 ![EconCrime Lab Devices](../../assets/images/eclab-devices.png)

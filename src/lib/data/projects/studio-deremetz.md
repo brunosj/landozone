@@ -12,7 +12,7 @@ type: 'Website'
 description: 'Architect and interior designer portfolio'
 technologies: ['React', 'Next.js', 'Tailwind CSS', 'Strapi CMS', 'Node.js', 'MySQL']
 features: ['Multilingual (EN, DE, FR)']
-featured: true
+featured: false
 ---
 
 ![Studio Deremetz Devices](../../assets/images/deremetz-devices.png)

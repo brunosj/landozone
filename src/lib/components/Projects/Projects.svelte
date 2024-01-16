@@ -15,31 +15,28 @@
 	const featuredProjects = projects.filter((project) => project.featured === true);
 </script>
 
-<section
-	id="projects"
-	style:background-color={`var(--color-black)`}
-	style:color={`var(--color-white)`}
-	class="fullpage-section">
+<section id="projects" style:color={`var(--color-white)`} class="page-section">
 	<div class="page-container" bind:this={element}>
-		<IntersectionObserver {element} bind:intersecting once threshold={0.3}>
+		<IntersectionObserver {element} bind:intersecting once threshold={0}>
 			{#if intersecting}
 				<div class="content">
 					<div class="grid">
 						<div class="description">
-							<h2 transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>projects</h2>
-							<p transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
-								Here are a few of my selected works
-							</p>
+							<h2 transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>
+								recent projects
+							</h2>
+							<span class="projects-link">
+								<ArrowLink path="/projects">see all projects</ArrowLink>
+							</span>
 						</div>
 						<div
 							class="projects"
 							transition:fly={{ y: 75, duration: 500, delay: 250, easing: cubicInOut }}>
 							{#each featuredProjects as item}
-								<ProjectCard {item} />
+								<ProjectCard {item} showDetails={true} />
 								<ProjectCardMobile {item} />
 							{/each}
 						</div>
-						<ArrowLink path="/projects">see all projects</ArrowLink>
 					</div>
 				</div>
 			{/if}
@@ -55,7 +52,10 @@
 		color: var(--color-white);
 		position: relative;
 		transition: all 1s cubic-bezier(0.07, 0.95, 0, 1);
-		margin-top: 1.5rem;
+	}
+
+	.projects-link {
+		margin-left: auto;
 	}
 
 	.grid {
@@ -67,35 +67,25 @@
 	}
 
 	.description {
-		margin-bottom: 1.5rem;
-	}
-
-	.description > * + * {
-		margin-top: 1rem;
+		margin-bottom: 2rem;
+		display: flex;
+		align-items: center;
 	}
 
 	.projects {
 		position: relative;
-		display: flex;
+		/* display: flex;
 		flex-wrap: wrap;
-		flex-direction: row;
+		flex-direction: row; */
 		justify-content: center;
-		gap: 1.5rem;
+		/* gap: 1.5rem; */
 		z-index: 1;
 		margin: auto;
 	}
 
 	@media (min-width: 50em) {
-		section {
-			margin-top: 3rem;
-		}
-
 		.description {
 			margin-bottom: 3rem;
-		}
-
-		.description > * + * {
-			margin-top: 1.5rem;
 		}
 
 		.projects {

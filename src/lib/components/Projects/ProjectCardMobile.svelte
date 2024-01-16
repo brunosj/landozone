@@ -64,6 +64,11 @@
 		border-radius: 12px;
 		z-index: 100;
 		z-index: auto;
+		margin-bottom: 1rem;
+	}
+
+	li:last-child {
+		margin-bottom: 0;
 	}
 
 	h4 {

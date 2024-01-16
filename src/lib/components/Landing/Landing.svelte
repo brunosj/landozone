@@ -5,16 +5,13 @@
 	import { background, font } from '$lib/stores/store';
 	import IntersectionObserver from 'svelte-intersection-observer';
 	import { cubicInOut } from 'svelte/easing';
+	import PersonalInfo from './PersonalInfo.svelte';
 
 	let element;
 	let intersecting = false;
 </script>
 
-<section
-	id="landing"
-	class="fullpage-section"
-	style:background-color={`var(--color-black)`}
-	style:color={`var(--color-white)`}>
+<section id="landing" class="page-section" style:color={`var(--color-white)`}>
 	<div class="svg-bg">
 		<Waveform />
 	</div>
@@ -26,11 +23,13 @@
 						<h1 transition:fade={{ duration: 750, delay: 0, easing: cubicInOut }}>
 							imaginative web development
 						</h1>
-						<p transition:fade={{ duration: 750, delay: 250, easing: cubicInOut }}>
-							hi! my name is bruno and <span id="landozone">landozone</span> is my independent development
-							and design practice. I am passionate about crafting innovative applications and experiences
-							on the web.
-						</p>
+						<h4 transition:fade={{ duration: 750, delay: 250, easing: cubicInOut }}>
+							hi! my name is Bruno SJ and I am passionate about crafting innovative applications and
+							experiences on the web.
+						</h4>
+						<div transition:fade={{ duration: 750, delay: 500, easing: cubicInOut }}>
+							<PersonalInfo />
+						</div>
 					</div>
 				{/if}
 				<!-- <div class="helper">
@@ -50,23 +49,61 @@
 		color: white;
 		position: relative;
 		transition: background-color 1s ease;
+		margin-top: 5rem;
 	}
 
 	h1 {
 		color: var(--color-primary);
 		opacity: 1;
 		/* transition: 750ms ease all; */
+		font-size: 2em;
+		font-weight: bold;
+		font-family: sans-serif;
+		text-decoration: none;
+		background: rgba(0, 0, 0, 0) -webkit-gradient(
+				linear,
+				left top,
+				right top,
+				from(var(--color-secondary)),
+				color-stop(var(--color-primary))
+			) repeat scroll 0% 0%/200% 200%;
+		background: rgba(0, 0, 0, 0)
+			linear-gradient(125deg, var(--color-secondary), var(--color-primary)) repeat scroll 0% 0%/200%
+			200%;
+		background-clip: border-box;
+		color: transparent;
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-animation: GradientAnimation 3s ease infinite;
+		animation: GradientAnimation 3s ease infinite;
 	}
 
-	p {
-		opacity: 1;
-		transition: 750ms ease all;
-		/* transition-delay: 200ms; */
+	@keyframes GradientAnimation {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
 	}
 
-	span {
-		opacity: 1;
-		/* transition: 750ms ease all; */
+	h4 {
+		line-height: 1.5rem;
+	}
+
+	@keyframes GradientAnimation {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
 	}
 
 	.svg-bg {
@@ -76,7 +113,7 @@
 		bottom: 0;
 		right: 0;
 		width: 100%;
-		opacity: 0.5;
+		opacity: 0.4;
 		transition: 750ms ease all;
 	}
 
@@ -84,81 +121,8 @@
 		margin-top: 1.5rem;
 	}
 
-	.fade-in {
-		opacity: 1;
-	}
-
 	.hero {
 		width: 100%;
-	}
-
-	#landozone {
-		font-family: 'IBM Plex Mono', sans-serif;
-		font-weight: 600;
-		color: var(--color-secondary);
-	}
-
-	#link {
-		/* font-size: 1.5rem; */
-		position: relative;
-		z-index: 20;
-		font-weight: 600;
-		color: var(--color-secondary);
-		transition: all 0.2s ease-in-out;
-	}
-
-	#link:after {
-		transition: all 0.2s ease-in-out;
-		content: '';
-		position: absolute;
-		bottom: 10%;
-		z-index: -1;
-		height: 0%;
-		width: 102%;
-		left: -1%;
-		opacity: 0.5;
-		border-radius: 2px;
-		background: linear-gradient(
-			65deg,
-			var(--color-secondary) 0%,
-			var(--color-secondary) 100%,
-			rgba(255, 209, 0, 0) 100%
-		);
-	}
-
-	#link:hover:after {
-		height: 80%;
-		opacity: 0.8;
-	}
-
-	#link:hover {
-		color: var(--color-white);
-	}
-
-	.helper {
-		width: 100%;
-		height: auto;
-		overflow: hidden;
-		position: absolute;
-		left: 0;
-		right: 0;
-		bottom: 10%;
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		font-size: 0.6rem;
-		text-transform: uppercase;
-		letter-spacing: 0.7px;
-		font-family: 'IBM Plex Mono', sans-serif;
-		font-weight: 600;
-		color: var(--color-secondary);
-		gap: 0.5rem;
-	}
-
-	.inner {
-		display: flex;
-		animation: wiggle 1.5s ease infinite;
 	}
 
 	@keyframes wiggle {
@@ -176,20 +140,25 @@
 	}
 
 	@media screen and (min-width: 50em) {
-		section {
-			margin-top: -3rem;
+		h1 {
+			font-size: 5em;
 		}
+		h4 {
+			line-height: 2.5rem;
+		}
+
 		.hero {
-			width: 50%;
+			width: 80%;
+			margin: auto;
+		}
+
+		.hero > * + * {
+			margin-top: 2.5rem;
 		}
 
 		.svg-bg {
 			width: 100%;
-			top: -40%;
-		}
-
-		.helper {
-			font-size: 0.8rem;
+			top: -70%;
 		}
 	}
 

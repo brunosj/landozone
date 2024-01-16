@@ -11,48 +11,48 @@
 	import Header from '$components/Header/Header.svelte';
 	import MouseTracker from '$components/MouseTracker/MouseTracker.svelte';
 
-	if (browser) {
-		const handleScroll = () => {
-			const landingSection = document.getElementById('landing');
-			const aboutSection = document.getElementById('about');
-			const workSection = document.getElementById('projects');
-			const contactSection = document.getElementById('contact');
+	// if (browser) {
+	// 	const handleScroll = () => {
+	// 		const landingSection = document.getElementById('landing');
+	// 		const aboutSection = document.getElementById('about');
+	// 		const workSection = document.getElementById('projects');
+	// 		const contactSection = document.getElementById('contact');
 
-			const scrollPosition = window.scrollY;
-			const windowHeight = window.innerHeight;
+	// 		const scrollPosition = window.scrollY;
+	// 		const windowHeight = window.innerHeight;
 
-			const offset = 25;
+	// 		const offset = 25;
 
-			const isFullyVisible = (element: HTMLElement, offset = 0) => {
-				const elementRect = element.getBoundingClientRect();
-				const elementTop = elementRect.top + offset;
-				const elementBottom = elementRect.bottom - offset;
-				return elementTop >= 0 && elementBottom <= windowHeight;
-			};
+	// 		const isFullyVisible = (element: HTMLElement, offset = 0) => {
+	// 			const elementRect = element.getBoundingClientRect();
+	// 			const elementTop = elementRect.top + offset;
+	// 			const elementBottom = elementRect.bottom - offset;
+	// 			return elementTop >= 0 && elementBottom <= windowHeight;
+	// 		};
 
-			if (landingSection && isFullyVisible(landingSection, offset)) {
-				background.set('var(--color-black)');
-				font.set('var(--color-white)');
-			} else if (aboutSection && isFullyVisible(aboutSection, offset)) {
-				background.set('var(--color-secondary)');
-				font.set('var(--color-black)');
-			} else if (workSection && isFullyVisible(workSection, offset)) {
-				background.set('var(--color-black)');
-				font.set('var(--color-white)');
-			} else if (contactSection && isFullyVisible(contactSection, offset)) {
-				background.set('var(--color-black)');
-				font.set('var(--color-white)');
-			}
-		};
+	// 		if (landingSection && isFullyVisible(landingSection, offset)) {
+	// 			background.set('var(--color-black)');
+	// 			font.set('var(--color-white)');
+	// 		} else if (aboutSection && isFullyVisible(aboutSection, offset)) {
+	// 			background.set('var(--color-secondary)');
+	// 			font.set('var(--color-black)');
+	// 		} else if (workSection && isFullyVisible(workSection, offset)) {
+	// 			background.set('var(--color-black)');
+	// 			font.set('var(--color-white)');
+	// 		} else if (contactSection && isFullyVisible(contactSection, offset)) {
+	// 			background.set('var(--color-black)');
+	// 			font.set('var(--color-white)');
+	// 		}
+	// 	};
 
-		onMount(() => {
-			window.addEventListener('scroll', handleScroll);
+	// 	onMount(() => {
+	// 		window.addEventListener('scroll', handleScroll);
 
-			return () => {
-				window.removeEventListener('scroll', handleScroll);
-			};
-		});
-	}
+	// 		return () => {
+	// 			window.removeEventListener('scroll', handleScroll);
+	// 		};
+	// 	});
+	// }
 </script>
 
 <!-- <MouseTracker /> -->
@@ -73,7 +73,7 @@
 		min-height: 100vh;
 	}
 
-	:global(.fullpage-section) {
+	:global(.page-section) {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -101,24 +101,25 @@
 	@media (min-width: 50em) {
 		:global(.content) {
 			height: 100%;
+			width: 90%;
 		}
 
-		:global(.fullpage-section) {
-			min-height: 100vh;
+		:global(.page-section) {
+			min-height: 75vh;
 		}
 
 		:global(.page-container) {
-			margin: 1rem auto;
+			margin: 2rem auto;
 		}
 	}
 
-	@media (min-width: 100em) {
-		:global(.fullpage-section) {
+	/* @media (min-width: 100em) {
+		:global(.page-section) {
 			min-height: 100vh;
 		}
 
 		:global(.page-container) {
 			margin: 0rem auto;
 		}
-	}
+	} */
 </style>

@@ -12,7 +12,7 @@ type: 'Website'
 description: 'Sustainability think tank based in Berlin'
 technologies: ['SvelteKit', 'Tailwind CSS', 'Contentful CMS', 'Cloudinary']
 features: ['Automated content generation']
-featured: true
+featured: false
 ---
 
 ![TMG Think Tank Devices](../../assets/images/tmg-devices.png)

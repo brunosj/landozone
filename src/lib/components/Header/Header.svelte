@@ -1,32 +1,51 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import { fly, slide, fade } from 'svelte/transition';
+	import { cubicInOut } from 'svelte/easing';
 	import Logo from '$lib/assets/svg/logos/logo.svelte';
 	import { menu } from '$lib/data/menu';
+
+	let animate = false;
+
+	onMount(() => {
+		animate = true;
+	});
 </script>
 
 <header>
-	<nav class="">
-		<div class="logo">
-			<a href="/" aria-label="landozone logo">
-				<div class="logo-shape">
-					<Logo />
-				</div>
-			</a>
-		</div>
-		<ul class="menu">
-			{#each menu as { name, slug }}
-				<li>
-					<a href={slug} class="active-page">
-						<span>{name}</span>
-					</a>
-				</li>
-			{/each}
-		</ul>
-	</nav>
+	{#if animate}
+		<nav
+			transition:fly={{
+				y: -100,
+				duration: 500,
+				easing: cubicInOut,
+				opacity: 1,
+				delay: 500
+			}}>
+			<div class="logo">
+				<a href="/" aria-label="landozone logo">
+					<div class="logo-shape">
+						<Logo />
+					</div>
+				</a>
+			</div>
+			<ul class="menu">
+				{#each menu as { name, slug }}
+					<li>
+						<a href={slug} class="active-page">
+							<span>{name}</span>
+						</a>
+					</li>
+				{/each}
+			</ul>
+		</nav>
+	{/if}
 </header>
 
 <style>
 	header {
-		position: sticky;
+		position: fixed;
+		width: 100%;
 		z-index: 50;
 		top: 0.5rem;
 		background-color: rgb(var(--color-blackRGB), 1);

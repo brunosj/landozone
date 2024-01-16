@@ -18,8 +18,6 @@
 		display: flex;
 		margin-left: auto;
 		gap: 0.2rem;
-		margin-top: 1rem;
-		margin-bottom: 1rem;
 	}
 
 	.arrowLink .arrowIcon {
@@ -34,7 +32,7 @@
 	}
 
 	#arrowUnderline {
-		font-size: 0.9rem;
+		font-size: 1rem;
 		position: relative;
 		z-index: 20;
 	}
@@ -63,10 +61,6 @@
 	}
 
 	@media (min-width: 50em) {
-		.arrowLink {
-			margin-top: 3rem;
-		}
-
 		#arrowUnderline {
 			font-size: 1.1rem;
 		}

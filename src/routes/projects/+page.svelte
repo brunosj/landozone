@@ -85,7 +85,7 @@
 		width: 100%;
 		color: white;
 		position: relative;
-		margin-top: 1rem;
+		margin-top: 3rem;
 	}
 
 	h2 {

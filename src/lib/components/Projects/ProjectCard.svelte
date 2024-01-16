@@ -37,32 +37,51 @@
 	<li style="--border-color: {color}; width:{`${showDetails ? '100%' : '46%'}`}">
 		<div
 			class="project"
-			style="width:{`${showDetails ? '80%' : '100%'}`}; padding:{`${
-				showDetails ? '2rem' : '1rem'
+			style="width:{`${showDetails ? '100%' : '100%'}`}; padding:{`${
+				showDetails ? '0rem' : '1rem'
 			}`}">
 			{#if ImageComponent}
-				<a href={url} target="_blank">
-					<img src={ImageComponent} alt={name} />
-				</a>
+				<div class="image-container">
+					<a href={url} target="_blank">
+						<img src={ImageComponent} alt={name} />
+					</a>
+				</div>
 			{/if}
 			<div class="info">
-				<div class="title">
-					<h4>
-						{name}
-					</h4>
-					<p class="description">{description}</p>
-				</div>
-				{#if showDetails}
-					<div class="details">
-						{#if features.length >= 1}
+				<div class="info-content">
+					<div class="title">
+						<h4>
+							{name}
+						</h4>
+						<p class="description">{description}</p>
+					</div>
+					{#if showDetails}
+						<div class="details">
+							{#if features.length >= 1}
+								<div>
+									<p class="category">Features</p>
+									<ul class="feature">
+										{#each features as item}
+											<span>
+												{item}
+											</span>
+											{#if item !== features[features.length - 1]}
+												<span>
+													{' - '}
+												</span>
+											{/if}
+										{/each}
+									</ul>
+								</div>
+							{/if}
 							<div>
-								<p class="category">Features</p>
+								<p class="category">Technologies</p>
 								<ul class="feature">
-									{#each features as item}
+									{#each technologies as item}
 										<span>
 											{item}
 										</span>
-										{#if item !== features[features.length - 1]}
+										{#if item !== technologies[technologies.length - 1]}
 											<span>
 												{' - '}
 											</span>
@@ -70,34 +89,19 @@
 									{/each}
 								</ul>
 							</div>
-						{/if}
-						<div>
-							<p class="category">Technologies</p>
-							<ul class="feature">
-								{#each technologies as item}
-									<span>
-										{item}
-									</span>
-									{#if item !== technologies[technologies.length - 1]}
-										<span>
-											{' - '}
-										</span>
-									{/if}
-								{/each}
-							</ul>
 						</div>
-					</div>
-				{/if}
-				<div class="links" style="width:{`${showDetails ? '60%' : '100%'}`}">
-					<div class="link">
-						<Button to={url} text="Visit site" {color} {keepTextLight}>
-							<IconInternet width="1.3rem" />
-						</Button>
-					</div>
-					<div class="link">
-						<Button to={`/projects/${slug}`} text="Learn more" {color} {keepTextLight}>
-							<IconArrow width="1.3rem" />
-						</Button>
+					{/if}
+					<div class="links" style="width:{`${showDetails ? '100%' : '100%'}`}">
+						<div class="link">
+							<Button to={url} text="Visit site" {color} {keepTextLight}>
+								<IconInternet width="1.3rem" />
+							</Button>
+						</div>
+						<div class="link">
+							<Button to={`/projects/${slug}`} text="Learn more" {color} {keepTextLight}>
+								<IconArrow width="1.3rem" />
+							</Button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -114,6 +118,11 @@
 			border-radius: 12px;
 			display: flex;
 			justify-content: center;
+			margin-bottom: 3rem;
+		}
+
+		li:last-child {
+			margin-bottom: 0;
 		}
 
 		a {
@@ -125,16 +134,16 @@
 		}
 
 		h4 {
-			font-size: 1.5rem;
+			font-size: 1.75rem;
 		}
 
 		p {
-			font-size: 0.9rem;
+			font-size: 1.1rem;
 			color: var(--color-lightgray);
 		}
 
 		ul span {
-			font-size: 0.9rem;
+			font-size: 1rem;
 			color: var(--color-lightgray);
 		}
 
@@ -142,16 +151,66 @@
 			display: flex;
 			flex-direction: row;
 			align-items: center;
-			background-color: var(--color-gray);
 			border-radius: 12px;
-			gap: 2rem;
+			gap: 0.5rem;
 			/* height: 100%; */
-			width: 80%;
+		}
+
+		.image-container {
+			background-color: var(--color-gray);
+			padding: 2rem;
+			border-radius: 12px;
+			width: 50%;
+			margin-bottom: auto;
+			position: relative;
+		}
+
+		.image-container::before {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			border-radius: 12px;
+			border: 1px solid var(--border-color);
+			opacity: 0.6;
+			transform: translate(0.5rem, -0.5rem);
+			box-sizing: border-box;
+			pointer-events: none;
+		}
+
+		.info::before {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			border-radius: 12px;
+			border: 1px solid var(--border-color);
+			opacity: 0.6;
+			transform: translate(-0.5rem, -0.5rem);
+			box-sizing: border-box;
+			pointer-events: none;
 		}
 
 		.info {
-			display: block;
-			width: 100%;
+			width: 70%;
+			padding: 2rem;
+			border-radius: 12px;
+			background-color: var(--color-gray);
+			margin-top: 3rem;
+			position: relative;
+			margin-left: -2rem;
+		}
+
+		.info-content {
+			width: 80%;
+			margin: auto;
+			position: relative;
 		}
 
 		.category {
@@ -162,22 +221,22 @@
 			margin: 1rem 0;
 		}
 
-		.details > * + * {
-			margin-top: 1rem;
+		.details > * {
+			margin: 2rem 0rem;
 		}
 
 		.links {
 			display: flex;
+			/* width: 100%; */
 			flex-direction: row;
 			justify-content: space-between;
-			align-items: center;
-			margin-top: 1.5rem;
+			/* align-items: center; */
 			gap: 4rem;
 		}
 
 		.link {
 			display: flex;
-			width: 100%;
+			width: 30%;
 		}
 
 		.description {

@@ -23,7 +23,7 @@ features:
   - 'Live Streaming'
   - 'Automated Calendar'
   - 'Automated Show Uploads'
-featured: true
+featured: false
 ---
 
 ![THF Radio Devices](../../assets/images/thf-devices.png)
