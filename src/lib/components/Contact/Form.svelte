@@ -17,12 +17,12 @@
 	let message_type = 'error';
 
 	const handle_result = (result: any) => {
-		action_result = result;
-		console.log(action_result, result);
-		if (result.data.type === 'success') {
+		if (result.data.success === true) {
 			success = true;
-		} else if (result.data.type === 'failure') {
+		} else if (result.data.success === false) {
+			action_result = 'failure';
 			message_type = 'error';
+			form.missing = true;
 		}
 	};
 
@@ -72,7 +72,7 @@
 				{#if success}
 					<p class="success-message">Thanks! Your email has been sent</p>
 				{:else if action_result === 'failure'}
-					<p class="error-message">Ooops! There was an error.</p>
+					<p class="error-message">There was an error. Please send a message per email.</p>
 				{:else}
 					<button type="submit" style="--border-color: #00cfa1; --text-hover-color: #14151d">
 						<span class="button-content"> Submit</span>
@@ -106,6 +106,10 @@
 
 	form > * + * {
 		margin-top: 1.5rem;
+	}
+
+	p {
+		font-weight: 500;
 	}
 
 	.field > * + * {
