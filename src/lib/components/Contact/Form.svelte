@@ -108,10 +108,6 @@
 		margin-top: 1.5rem;
 	}
 
-	p {
-		font-weight: 500;
-	}
-
 	.field > * + * {
 		margin-top: 0.75rem;
 	}
@@ -142,7 +138,7 @@
 	}
 
 	.message {
-		padding-bottom: 10rem;
+		padding-bottom: 5rem;
 		font-family: 'Rubik Variable', sans-serif;
 	}
 
@@ -238,6 +234,10 @@
 
 		.button-content {
 			font-size: 0.7rem;
+		}
+
+		.message {
+			padding-bottom: 10rem;
 		}
 	}
 </style>

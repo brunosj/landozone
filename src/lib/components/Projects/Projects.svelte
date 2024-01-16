@@ -25,18 +25,18 @@
 							<h2 transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>
 								recent projects
 							</h2>
-							<span class="projects-link">
-								<ArrowLink path="/projects">see all projects</ArrowLink>
-							</span>
 						</div>
-						<div
+						<ul
 							class="projects"
 							transition:fly={{ y: 75, duration: 500, delay: 250, easing: cubicInOut }}>
 							{#each featuredProjects as item}
 								<ProjectCard {item} showDetails={true} />
 								<ProjectCardMobile {item} />
 							{/each}
-						</div>
+						</ul>
+						<span class="projects-link">
+							<ArrowLink path="/projects">see all projects</ArrowLink>
+						</span>
 					</div>
 				</div>
 			{/if}
@@ -55,6 +55,7 @@
 	}
 
 	.projects-link {
+		margin-top: 1rem;
 		margin-left: auto;
 	}
 
@@ -74,11 +75,11 @@
 
 	.projects {
 		position: relative;
-		/* display: flex;
+		display: flex;
 		flex-wrap: wrap;
-		flex-direction: row; */
+		flex-direction: row;
 		justify-content: center;
-		/* gap: 1.5rem; */
+		gap: 1rem;
 		z-index: 1;
 		margin: auto;
 	}

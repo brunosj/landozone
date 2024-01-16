@@ -118,11 +118,7 @@
 			border-radius: 12px;
 			display: flex;
 			justify-content: center;
-			margin-bottom: 3rem;
-		}
-
-		li:last-child {
-			margin-bottom: 0;
+			/* margin-bottom: 3rem; */
 		}
 
 		a {

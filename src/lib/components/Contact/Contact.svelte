@@ -32,7 +32,7 @@
 								Have an exciting project you would like to collaborate on?
 							</p>
 							<p transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
-								Use the contact form or send me a message and I would be happy to further discuss
+								Use the contact form or send me a message and I will be happy to further discuss
 								your ideas with you.
 							</p>
 							<p transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
@@ -124,6 +124,7 @@
 		.grid {
 			grid-template-columns: 1fr 1fr;
 			gap: 3rem;
+			margin-top: 2rem;
 		}
 	}
 </style>
