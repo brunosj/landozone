@@ -90,7 +90,7 @@
 <style>
 	section {
 		width: 100%;
-		margin: 3rem auto;
+		margin: 2rem auto;
 		border-radius: 12px;
 		background-color: var(--color-gray);
 	}
@@ -219,9 +219,10 @@
 		margin: auto;
 	}
 
-	@media (min-width: 50em) {
+	@media (min-width: 55em) {
 		section {
-			width: 80%;
+			margin: 3rem auto;
+			width: 100%;
 		}
 
 		button {
@@ -242,6 +243,13 @@
 
 		.message {
 			padding-bottom: 10rem;
+		}
+	}
+
+	@media (min-width: 75em) {
+		section {
+			margin: 3rem auto;
+			width: 80%;
 		}
 	}
 </style>

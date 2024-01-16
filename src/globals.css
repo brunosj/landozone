@@ -103,7 +103,7 @@ p {
 	margin-bottom: 1rem;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 55em) {
 	.markdown {
 		width: 75%;
 		margin: auto;

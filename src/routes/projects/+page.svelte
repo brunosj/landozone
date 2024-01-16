@@ -119,7 +119,7 @@
 		width: 100%;
 	}
 
-	@media (min-width: 50em) {
+	@media (min-width: 55em) {
 		section {
 			margin-top: 7rem;
 		}

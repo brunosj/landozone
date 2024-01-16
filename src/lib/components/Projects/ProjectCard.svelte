@@ -112,7 +112,7 @@
 {/if}
 
 <style>
-	@media (min-width: 50em) {
+	@media (min-width: 55em) {
 		li {
 			position: relative;
 			list-style: none;
@@ -251,7 +251,7 @@
 		}
 	}
 
-	@media (max-width: 50em) {
+	@media (max-width: 55em) {
 		li,
 		img {
 			display: none;

@@ -42,7 +42,7 @@
 		font-size: 0.85rem;
 	}
 
-	@media (min-width: 50em) {
+	@media (min-width: 55em) {
 		.info {
 			display: flex;
 			flex-direction: row;

@@ -129,7 +129,7 @@
 		display: none;
 	}
 
-	@media (min-width: 50em) {
+	@media (min-width: 55em) {
 		h3 {
 			margin-bottom: 0.5rem;
 		}

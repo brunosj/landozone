@@ -11,7 +11,7 @@ export const actions = {
 		const email = formData.get('email');
 		const message = formData.get('message');
 
-		console.log('Received form data:', { name, email, message });
+		// console.log('Received form data:', { name, email, message });
 
 		if (!email) {
 			console.log('Email is missing');
@@ -35,7 +35,7 @@ export const actions = {
 			htmlContent: `<html><head></head><body><p>Hello,</p>${message}</body></html>`
 		};
 
-		console.log('Sending email with data:', emailData);
+		// console.log('Sending email with data:', emailData);
 
 		try {
 			const response = await fetch(url, {
@@ -48,7 +48,7 @@ export const actions = {
 				body: JSON.stringify(emailData)
 			});
 
-			console.log('Email response:', response);
+			// console.log('Email response:', response);
 
 			if (response.status === 200) {
 				return {
@@ -59,7 +59,7 @@ export const actions = {
 					}
 				};
 			} else {
-				console.log('Email sending failed. Response:', response);
+				// console.log('Email sending failed. Response:', response);
 				return { success: false, message: 'Email sending failed' };
 			}
 		} catch (error) {

@@ -71,7 +71,7 @@
 
 	.imprint-link {
 		margin-left: auto;
-		margin-bottom: 4rem;
+		margin-bottom: 2rem;
 	}
 
 	#underline {
@@ -117,7 +117,7 @@
 		margin: auto 0;
 	}
 
-	@media (min-width: 50em) {
+	@media (min-width: 55em) {
 		h2 {
 			margin-bottom: 3rem;
 		}
@@ -126,6 +126,9 @@
 			font-size: 1.2rem;
 		}
 
+		.imprint-link {
+			margin-bottom: 4rem;
+		}
 		.grid {
 			grid-template-columns: 1fr 1fr;
 			gap: 3rem;

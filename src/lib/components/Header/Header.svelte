@@ -95,7 +95,7 @@
 		font-family: 'Sora Variable', sans-serif;
 	}
 
-	@media (min-width: 50em) {
+	@media (min-width: 55em) {
 		span {
 			font-size: 0.9rem;
 		}

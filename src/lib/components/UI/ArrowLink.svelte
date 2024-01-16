@@ -60,7 +60,7 @@
 		height: 80%;
 	}
 
-	@media (min-width: 50em) {
+	@media (min-width: 55em) {
 		#arrowUnderline {
 			font-size: 1.1rem;
 		}

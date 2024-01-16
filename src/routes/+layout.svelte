@@ -98,7 +98,7 @@
 		margin: 0rem auto;
 	}
 
-	@media (min-width: 50em) {
+	@media (min-width: 55em) {
 		:global(.content) {
 			height: 100%;
 			width: 90%;

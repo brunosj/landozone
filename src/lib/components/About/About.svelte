@@ -140,7 +140,7 @@
 		display: none;
 	}
 
-	@media (min-width: 50em) {
+	@media (min-width: 55em) {
 		a {
 			font-size: 1.2rem;
 		}

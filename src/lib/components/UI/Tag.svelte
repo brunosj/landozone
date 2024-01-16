@@ -28,7 +28,7 @@
 		transition: all 0.3s ease-in-out;
 	}
 
-	@media (min-width: 50em) {
+	@media (min-width: 55em) {
 		span {
 			padding: 0.2rem 0.6rem;
 		}

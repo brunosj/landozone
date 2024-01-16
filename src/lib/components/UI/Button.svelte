@@ -77,7 +77,7 @@
 		font-weight: 500;
 	}
 
-	@media (min-width: 50em) {
+	@media (min-width: 55em) {
 		.button-content {
 			font-size: 0.7rem;
 		}

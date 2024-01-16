@@ -103,7 +103,7 @@
 		padding: 1rem 0.5rem 1rem 0.5rem;
 	}
 
-	@media (min-width: 50em) {
+	@media (min-width: 55em) {
 		li,
 		img {
 			display: none;

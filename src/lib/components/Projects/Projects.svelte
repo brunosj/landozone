@@ -86,7 +86,7 @@
 		margin: auto;
 	}
 
-	@media (min-width: 50em) {
+	@media (min-width: 55em) {
 		h2 {
 			margin-bottom: 3rem;
 		}
@@ -96,9 +96,6 @@
 			flex-wrap: wrap;
 			flex-direction: row;
 			justify-content: center;
-		}
-		.description {
-			margin-bottom: 3rem;
 		}
 
 		.projects {

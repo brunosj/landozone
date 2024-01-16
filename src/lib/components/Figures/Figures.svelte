@@ -16,9 +16,9 @@
 
 <style>
 	.figures {
-		display: flex;
+		display: none;
 		flex-direction: row;
-		justify-content: center;
+		justify-content: space-between;
 		gap: 2rem;
 		width: 100%;
 		/* margin: auto; */
@@ -56,13 +56,14 @@
 		opacity: 0.5;
 		border-radius: 12px;
 		border: 2px solid var(--color-primary);
-		transform: translate(0.5rem, -0.5rem);
+		transform: translate(-0.3rem, -0.5rem);
 		box-sizing: border-box;
 	}
 
-	@media (min-width: 50em) {
+	@media (min-width: 55em) {
 		.figures {
 			margin-left: auto;
+			display: flex;
 		}
 
 		.website {

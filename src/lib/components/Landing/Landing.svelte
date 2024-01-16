@@ -134,7 +134,7 @@
 		}
 	}
 
-	@media screen and (min-width: 50em) {
+	@media screen and (min-width: 55em) {
 		h1 {
 			font-size: 5em;
 		}
@@ -143,7 +143,7 @@
 		}
 
 		.hero {
-			width: 80%;
+			width: 100%;
 			margin: auto;
 		}
 
@@ -153,6 +153,17 @@
 
 		.svg-bg {
 			width: 100%;
+			top: -50%;
+		}
+	}
+
+	@media screen and (min-width: 75em) {
+		.hero {
+			width: 80%;
+			margin: auto;
+		}
+
+		.svg-bg {
 			top: -70%;
 		}
 	}
