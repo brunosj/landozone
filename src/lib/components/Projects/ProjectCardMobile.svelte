@@ -98,9 +98,9 @@
 		align-items: center;
 		background-color: var(--color-gray);
 		border-radius: 12px;
-		padding: 0.5rem;
 		gap: 1rem;
 		height: 100%;
+		padding: 1rem 0.5rem 1rem 0.5rem;
 	}
 
 	@media (min-width: 50em) {

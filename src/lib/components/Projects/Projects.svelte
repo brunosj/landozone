@@ -54,8 +54,15 @@
 		transition: all 1s cubic-bezier(0.07, 0.95, 0, 1);
 	}
 
+	h2 {
+		margin-bottom: 1rem;
+	}
+
+	ul {
+		margin: 0;
+	}
+
 	.projects-link {
-		margin-top: 1rem;
 		margin-left: auto;
 	}
 
@@ -68,29 +75,38 @@
 	}
 
 	.description {
-		margin-bottom: 2rem;
 		display: flex;
 		align-items: center;
 	}
 
 	.projects {
 		position: relative;
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: row;
-		justify-content: center;
 		gap: 1rem;
 		z-index: 1;
 		margin: auto;
 	}
 
 	@media (min-width: 50em) {
+		h2 {
+			margin-bottom: 3rem;
+		}
+
+		.projects {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: center;
+		}
 		.description {
 			margin-bottom: 3rem;
 		}
 
 		.projects {
 			gap: 3rem;
+		}
+
+		.projects-link {
+			margin-top: 1rem;
 		}
 	}
 </style>

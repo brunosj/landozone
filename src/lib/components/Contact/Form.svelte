@@ -162,7 +162,7 @@
 
 	button {
 		position: relative;
-		width: 20%;
+		width: 30%;
 		/* height: 1.5rem; */
 		padding: 0.4rem 0.4rem;
 		border-radius: 2px;
@@ -222,6 +222,10 @@
 	@media (min-width: 50em) {
 		section {
 			width: 80%;
+		}
+
+		button {
+			width: 20%;
 		}
 
 		form {
