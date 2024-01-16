@@ -18,11 +18,16 @@
 	let intersecting = false;
 </script>
 
-<section id="contact" style:background-color={$background} style:color={$font} class="page-section">
-	<div class="page-container" bind:this={element}>
-		<IntersectionObserver {element} bind:intersecting once threshold={0}>
-			{#if intersecting}
-				<div class="content">
+<section
+	id="contact"
+	style:background-color={$background}
+	style:color={$font}
+	class="page-section"
+	bind:this={element}>
+	<div class="page-container">
+		<div class="content">
+			<IntersectionObserver {element} bind:intersecting once threshold={0}>
+				{#if intersecting}
 					<div class="grid">
 						<div class="description">
 							<h2 transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>
@@ -47,9 +52,9 @@
 						transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
 						<ArrowLink path="/imprint">imprint + privacy policy</ArrowLink>
 					</span>
-				</div>
-			{/if}
-		</IntersectionObserver>
+				{/if}
+			</IntersectionObserver>
+		</div>
 	</div>
 </section>
 

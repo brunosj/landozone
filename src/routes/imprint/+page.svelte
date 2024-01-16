@@ -32,8 +32,6 @@
 	// Logic
 	let element;
 	let intersecting = false;
-
-	console.log(data);
 </script>
 
 <SEO {...seoProps} />
@@ -65,7 +63,7 @@
 		width: 100%;
 		color: white;
 		position: relative;
-		margin-top: 1rem;
+		margin-top: 4rem;
 		margin-bottom: 2rem;
 	}
 
@@ -80,7 +78,7 @@
 		bottom: 0;
 		right: 0;
 		width: 100%;
-		opacity: 0.4;
+		opacity: 0.15;
 	}
 
 	.description {
@@ -89,7 +87,7 @@
 
 	@media (min-width: 50em) {
 		section {
-			margin-top: 2rem;
+			margin-top: 7rem;
 		}
 
 		.svg-bg {
@@ -98,7 +96,9 @@
 		}
 
 		.description {
-			margin-bottom: 4rem;
+			width: 60%;
+			margin: 0 auto;
+			margin-bottom: 2rem;
 		}
 	}
 </style>

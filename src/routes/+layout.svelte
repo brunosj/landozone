@@ -113,13 +113,9 @@
 		}
 	}
 
-	/* @media (min-width: 100em) {
+	@media (min-width: 100em) {
 		:global(.page-section) {
-			min-height: 100vh;
+			min-height: 60vh;
 		}
-
-		:global(.page-container) {
-			margin: 0rem auto;
-		}
-	} */
+	}
 </style>

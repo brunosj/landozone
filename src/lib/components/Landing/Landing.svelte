@@ -16,8 +16,8 @@
 		<Waveform />
 	</div>
 	<div class="page-container" bind:this={element}>
-		<IntersectionObserver {element} bind:intersecting once threshold={0.3}>
-			<div class="content">
+		<div class="content">
+			<IntersectionObserver {element} bind:intersecting once threshold={0.3}>
 				{#if intersecting}
 					<div class="hero">
 						<h1 transition:fade={{ duration: 750, delay: 0, easing: cubicInOut }}>
@@ -32,14 +32,8 @@
 						</div>
 					</div>
 				{/if}
-				<!-- <div class="helper">
-					<span class:fade-in={animate} class="scroll">Scroll down</span>
-					<span class:fade-in={animate} class="inner">
-						<IconArrowDown width="1.5rem" />
-					</span>
-				</div> -->
-			</div>
-		</IntersectionObserver>
+			</IntersectionObserver>
+		</div>
 	</div>
 </section>
 
@@ -58,6 +52,7 @@
 		/* transition: 750ms ease all; */
 		font-size: 2em;
 		font-weight: bold;
+		line-height: normal;
 		font-family: sans-serif;
 		text-decoration: none;
 		background: rgba(0, 0, 0, 0) -webkit-gradient(
@@ -164,7 +159,7 @@
 
 	@media (min-width: 100em) {
 		.svg-bg {
-			top: -35%;
+			top: -85%;
 		}
 	}
 </style>

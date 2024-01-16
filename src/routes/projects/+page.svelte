@@ -85,7 +85,7 @@
 		width: 100%;
 		color: white;
 		position: relative;
-		margin-top: 3rem;
+		margin-top: 4rem;
 	}
 
 	h2 {
@@ -99,11 +99,12 @@
 		bottom: 0;
 		right: 0;
 		width: 100%;
-		opacity: 0.4;
+		opacity: 0.15;
 	}
 
 	.description {
 		margin-bottom: 3rem;
+		/* text-align: center; */
 	}
 
 	.description > * + * {
@@ -120,7 +121,7 @@
 
 	@media (min-width: 50em) {
 		section {
-			margin-top: 2rem;
+			margin-top: 7rem;
 		}
 
 		.svg-bg {

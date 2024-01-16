@@ -42,9 +42,11 @@
 			}`}">
 			{#if ImageComponent}
 				<div class="image-container">
-					<a href={url} target="_blank">
-						<img src={ImageComponent} alt={name} />
-					</a>
+					<div class="image">
+						<a href={url} target="_blank">
+							<img src={ImageComponent} alt={name} />
+						</a>
+					</div>
 				</div>
 			{/if}
 			<div class="info">
@@ -121,12 +123,9 @@
 			/* margin-bottom: 3rem; */
 		}
 
-		a {
-			width: 50%;
-		}
-
 		img {
 			border-radius: 4px;
+			object-fit: cover;
 		}
 
 		h4 {
@@ -156,9 +155,26 @@
 			background-color: var(--color-gray);
 			padding: 2rem;
 			border-radius: 12px;
-			width: 50%;
+			width: 40%;
 			margin-bottom: auto;
 			position: relative;
+		}
+
+		.image {
+			width: 100%;
+			display: flex;
+			margin-left: auto;
+			justify-content: center;
+		}
+
+		.info {
+			width: 60%;
+			padding: 2rem;
+			border-radius: 12px;
+			background-color: var(--color-gray);
+			margin-top: 3rem;
+			position: relative;
+			margin-left: -2rem;
 		}
 
 		.image-container::before {
@@ -172,7 +188,7 @@
 			border-radius: 12px;
 			border: 1px solid var(--border-color);
 			opacity: 0.6;
-			transform: translate(0.5rem, -0.5rem);
+			transform: translate(-0.5rem, -0.5rem);
 			box-sizing: border-box;
 			pointer-events: none;
 		}
@@ -191,16 +207,6 @@
 			transform: translate(-0.5rem, -0.5rem);
 			box-sizing: border-box;
 			pointer-events: none;
-		}
-
-		.info {
-			width: 70%;
-			padding: 2rem;
-			border-radius: 12px;
-			background-color: var(--color-gray);
-			margin-top: 3rem;
-			position: relative;
-			margin-left: -2rem;
 		}
 
 		.info-content {

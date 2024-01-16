@@ -18,9 +18,10 @@
 	.figures {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
-		width: 80%;
-		margin: auto;
+		justify-content: center;
+		gap: 2rem;
+		width: 100%;
+		/* margin: auto; */
 	}
 
 	.website {
@@ -53,7 +54,6 @@
 		left: 0;
 		top: 0;
 		opacity: 0.5;
-		/* z-index: -1; */
 		border-radius: 12px;
 		border: 2px solid var(--color-primary);
 		transform: translate(0.5rem, -0.5rem);

@@ -17,9 +17,9 @@
 
 <section id="projects" style:color={`var(--color-white)`} class="page-section">
 	<div class="page-container" bind:this={element}>
-		<IntersectionObserver {element} bind:intersecting once threshold={0}>
-			{#if intersecting}
-				<div class="content">
+		<div class="content">
+			<IntersectionObserver {element} bind:intersecting once threshold={0}>
+				{#if intersecting}
 					<div class="grid">
 						<div class="description">
 							<h2 transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>
@@ -38,9 +38,9 @@
 							<ArrowLink path="/projects">see all projects</ArrowLink>
 						</span>
 					</div>
-				</div>
-			{/if}
-		</IntersectionObserver>
+				{/if}
+			</IntersectionObserver>
+		</div>
 	</div>
 </section>
 
