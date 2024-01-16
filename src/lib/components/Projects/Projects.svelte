@@ -15,8 +15,8 @@
 	const featuredProjects = projects.filter((project) => project.featured === true);
 </script>
 
-<section id="projects" style:color={`var(--color-white)`} class="page-section">
-	<div class="page-container" bind:this={element}>
+<section id="projects" style:color={`var(--color-white)`} class="page-section" bind:this={element}>
+	<div class="page-container">
 		<div class="content">
 			<IntersectionObserver {element} bind:intersecting once threshold={0}>
 				{#if intersecting}

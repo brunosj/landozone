@@ -50,11 +50,11 @@
 </script>
 
 <SEO {...seoProps} />
-<section>
+<section bind:this={element}>
 	<div class="svg-bg">
 		<Waveform />
 	</div>
-	<div class="page-container" bind:this={element}>
+	<div class="page-container">
 		<IntersectionObserver {element} bind:intersecting once threshold={0.3}>
 			{#if intersecting}
 				<div class="content">

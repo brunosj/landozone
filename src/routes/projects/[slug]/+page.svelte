@@ -86,7 +86,7 @@
 				</div>
 			</section>
 
-			<div class="page-container">
+			<section class="page-container">
 				<div class="links" transition:fade={{ duration: 500, delay: 500, easing: cubicInOut }}>
 					<div class="link">
 						<Button to={url} text="Visit site" {color} {keepTextLight}>
@@ -105,7 +105,7 @@
 				<div class="markdown" transition:fade={{ duration: 500, delay: 500, easing: cubicInOut }}>
 					<svelte:component this={data.content} />
 				</div>
-			</div>
+			</section>
 		{/if}
 	</IntersectionObserver>
 </article>
@@ -117,7 +117,12 @@
 		background-color: var(--color-black);
 		color: white;
 		position: relative;
+		margin-top: 3rem;
 		margin-bottom: 2rem;
+	}
+
+	section {
+		margin: auto;
 	}
 
 	ul {
@@ -208,6 +213,7 @@
 			grid-template-columns: 1fr 1fr;
 			gap: 3rem;
 			padding: 2rem;
+			width: 75%;
 		}
 
 		.title {

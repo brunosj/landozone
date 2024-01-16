@@ -19,8 +19,13 @@
 	let intersecting = false;
 </script>
 
-<section id="about" style:background-color={$background} style:color={$font} class="page-section">
-	<div class="page-container" bind:this={element}>
+<section
+	id="about"
+	style:background-color={$background}
+	style:color={$font}
+	class="page-section"
+	bind:this={element}>
+	<div class="page-container">
 		<IntersectionObserver {element} bind:intersecting once threshold={0}>
 			{#if intersecting}
 				<div class="content grid">
