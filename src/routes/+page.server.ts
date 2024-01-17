@@ -24,7 +24,8 @@ export const actions = {
 				access_key: accessKey,
 				name: name,
 				email: email,
-				message: message
+				message: message,
+				subject: 'landozone - contact form submission'
 			};
 
 			const response = await fetch(web3FormsUrl, {

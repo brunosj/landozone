@@ -35,10 +35,9 @@
 
 	let element;
 	let intersecting = false;
-	let ImageComponent: string;
 </script>
 
-<Seo title={`landozone | ${name}`} {description} image={`${PUBLIC_SITE_URL}/${image}`} />
+<Seo title={`${name} | landozone`} {description} image={`${PUBLIC_SITE_URL}/${image}`} />
 
 <article bind:this={element}>
 	<IntersectionObserver {element} bind:intersecting once threshold={0.3}>

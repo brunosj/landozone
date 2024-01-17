@@ -1,11 +1,15 @@
 export const menu = [
 	{
+		name: 'About',
+		slug: '/#about'
+	},
+	{
 		name: 'Projects',
 		slug: '/projects'
 	},
 	{
-		name: 'About',
-		slug: '/#about'
+		name: 'Blog',
+		slug: '/blog'
 	},
 	{
 		name: 'Contact',

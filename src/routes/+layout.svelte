@@ -3,8 +3,10 @@
 	import '@fontsource-variable/rubik';
 	import '@fontsource/ibm-plex-mono';
 	import '@fontsource-variable/fredoka';
-	import '../reset.css';
-	import '../globals.css';
+	import '../styles/reset.css';
+	// import '../styles/laserwave-theme.css';
+	import '../styles/one-dark-theme.css';
+	import '../styles/globals.css';
 	import { browser } from '$app/environment';
 	import { onMount } from 'svelte';
 	import { background, font } from '$lib/stores/store';

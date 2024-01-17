@@ -7,9 +7,9 @@
 	 * @type {{ name: string; slug: string }[]}
 	 */
 	export let breadcrumbs;
-	export let datePublished;
+	export let datePublished = '2024';
 	export let entity;
-	export let lastUpdated;
+	export let lastUpdated = '2024';
 	export let featuredImage;
 	export let metadescription;
 	export let siteLanguage;
@@ -53,7 +53,7 @@
 						`https://t.me/${telegramUsername}`,
 						`https://linkedin.com/in/${linkedinProfile}`
 					]
-			  }
+				}
 			: null;
 
 	const schemaOrgWebsite = {

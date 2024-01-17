@@ -19,11 +19,9 @@
 	} = website;
 
 	export let entityMeta = null;
-	export let lastUpdated;
 	export let metadescription = '';
 	export let slug;
 	export let title;
-	export let datePublished = '2023-12-05';
 	export let entity = {};
 
 	const defaultAlt =
@@ -46,7 +44,7 @@
 	};
 
 	const url = `${siteUrl}/${slug}`;
-	const pageTitle = `${siteTitle} ${title ? `| ${title}` : ''}`;
+	const pageTitle = `${title ? `${title} | landozone` : 'landozone'}`;
 	const openGraphProps = {
 		image: ogImage,
 		squareImage: ogSquareImage,
@@ -64,9 +62,7 @@
 				slug: ''
 			}
 		],
-		datePublished,
 		entity,
-		lastUpdated,
 		entityMeta,
 		featuredImage,
 		metadescription,
@@ -74,7 +70,7 @@
 		siteTitle,
 		siteTitleAlt: siteShortTitle,
 		siteUrl,
-		title: pageTitle,
+		title,
 		url,
 		githubPage,
 		linkedinProfile,

@@ -1,27 +1,25 @@
 <script lang="ts">
 	export let data;
 
-	import type { Project } from '$lib/types/types';
+	import type { Blog } from '$lib/types/types';
 	import { fade, fly } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 	import IntersectionObserver from 'svelte-intersection-observer';
-	import ProjectCard from '$components/Projects/ProjectCard.svelte';
-	import ProjectCardMobile from '$components/Projects/ProjectCardMobile.svelte';
-	import Seo from '$components/SEO/SEO.svelte';
 	import Waveform from '$lib/assets/svg/waveform.svelte';
 	import SEO from '$lib/components/SEO/index.svelte';
+	import BlogCard from '$components/Blog/BlogCard.svelte';
 
 	// SEO
-	let title = 'projects';
-	let metadescription = 'explore my recent works and the technologies I used to build them';
+	let title = 'blog';
+	let metadescription = 'some thoughts on web development and other things';
 	const breadcrumbs = [
 		{
 			name: 'Home',
 			slug: ''
 		},
 		{
-			name: 'Projects',
-			slug: 'projects'
+			name: 'Blog',
+			slug: 'blog'
 		}
 	];
 	const seoProps = {
@@ -32,9 +30,9 @@
 	};
 
 	// Logic
-	let projects: Project[] = data.projects;
+	let blogs: Blog[] = data.blogs;
 
-	let projectsByDate: Project[] = projects.sort((a, b) => {
+	let blogsByDate: Blog[] = blogs.sort((a, b) => {
 		const dateA = new Date(a.date);
 		const dateB = new Date(b.date);
 		return dateB.getTime() - dateA.getTime();
@@ -54,20 +52,18 @@
 			{#if intersecting}
 				<div class="content">
 					<div class="description">
-						<h2 transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>projects</h2>
+						<h2 transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>blog</h2>
 						<p transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
-							explore my recent works and the technologies I used to build them
+							some thoughts on web development and other things
 						</p>
 					</div>
-					<div
-						class="projects"
+					<ul
+						class="blogs"
 						transition:fly={{ y: 75, duration: 500, delay: 500, easing: cubicInOut }}>
-						{#each projectsByDate as item}
-							<ProjectCardMobile {item} />
-							<ProjectCard {item} showDetails={true} />
+						{#each blogsByDate as item}
+							<BlogCard {item} />
 						{/each}
-						<div></div>
-					</div>
+					</ul>
 				</div>
 			{/if}
 		</IntersectionObserver>
@@ -84,7 +80,7 @@
 	}
 
 	h2 {
-		color: var(--color-secondary);
+		color: var(--color-primary);
 	}
 
 	.svg-bg {
@@ -106,7 +102,7 @@
 		margin-top: 0.5rem;
 	}
 
-	.projects {
+	.blogs {
 		position: relative;
 		display: flex;
 		flex-wrap: wrap;
@@ -124,7 +120,7 @@
 			top: -35%;
 		}
 
-		.projects {
+		.blogs {
 			gap: 2rem;
 		}
 

@@ -10,8 +10,21 @@ export interface Project {
 	type: string;
 	image: string;
 	description: string;
-	longDescription?: string;
 	technologies: string[];
 	features: string[];
 	featured: boolean;
+}
+
+export interface Blog {
+	name: string;
+	date: string;
+	slug: string;
+	description: string;
+	technologies: string[];
+}
+
+export interface Heading {
+	level: number;
+	text: string;
+	id: string;
 }

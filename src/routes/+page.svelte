@@ -21,9 +21,7 @@
 		breadcrumbs,
 		title,
 		metadescription,
-		slug: '',
-		datePublished: '2023-12-05T14:19:33.000+0100',
-		lastUpdated: '2021-12-05T14:19:33.000+0100'
+		slug: ''
 	};
 
 	// Logic

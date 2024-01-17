@@ -1,18 +1,17 @@
 <script lang="ts">
 	import { website } from '$data/config';
 	const { siteLanguage, siteTitle, siteDescription, siteImage, twitter } = website;
-
-	export let description = siteDescription;
-	export let title = siteTitle;
-	export let image: string;
+	export let description: string;
+	export let title: string;
+	export let image = siteImage;
 </script>
 
 <svelte:head>
-	<title>{title}</title>
-	<meta name="description" content={description || siteDescription} />
+	<title>{title || siteTitle}</title>
+	<meta name="title" content={title || siteTitle} />
 	<meta name="description" content={description || siteDescription} />
 	<meta name="image" content={siteImage} />
-	<meta property="og:title" content={title} />
+	<meta property="og:title" content={title || siteTitle} />
 	<meta property="og:description" content={description || siteDescription} />
 	<meta property="og:image" content={image || siteImage} />
 	<meta property="og:type" content="website" />

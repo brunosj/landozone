@@ -45,8 +45,8 @@ h3 {
 }
 
 h4 {
-	font-size: 1rem;
-	line-height: 1rem;
+	font-size: 1.25rem;
+	line-height: 1.5rem;
 	font-weight: 400;
 }
 
@@ -54,6 +54,10 @@ p {
 	font-size: 1rem;
 	line-height: 1.5rem;
 	font-weight: 300;
+}
+
+.markdown {
+	overflow-wrap: break-word;
 }
 
 .markdown :is(a) {
@@ -96,11 +100,37 @@ p {
 	/* letter-spacing: 1px; */
 }
 
+.markdown :is(li) {
+	font-weight: 300;
+	font-size: 1.2rem;
+	line-height: 1.8rem;
+	font-weight: 400;
+	list-style: disc;
+	list-style-position: inside;
+}
+
 .markdown :is(p) {
 	font-size: 1rem;
 	line-height: 1.5rem;
-	font-weight: 300;
+	font-weight: 400;
 	margin-bottom: 1rem;
+}
+
+.markdown :is(img) {
+	margin-bottom: 3rem;
+	margin-top: 1rem;
+}
+
+.markdown :is(code) {
+	font-size: 0.8rem;
+	color: var(--color-primary);
+	margin: 1rem 0rem;
+	padding: 1rem;
+	background-color: var(--color-gray);
+	/* width: 100%; */
+	display: block;
+	border-radius: 12px;
+	white-space: pre-wrap !important;
 }
 
 @media (min-width: 55em) {
@@ -133,21 +163,21 @@ p {
 
 	h4 {
 		font-size: 2rem;
-		line-height: 2rem;
+		line-height: 2.5rem;
 		font-weight: 400;
 	}
 
 	p {
 		font-weight: 300;
 		font-size: 1.2rem;
-		line-height: 1.8rem;
+		line-height: 1.9rem;
 		font-weight: 400;
 	}
 
 	.markdown :is(p) {
 		font-weight: 300;
 		font-size: 1.2rem;
-		line-height: 1.8rem;
+		line-height: 2rem;
 		font-weight: 400;
 	}
 
@@ -174,11 +204,8 @@ p {
 		margin-bottom: 0.5rem;
 	}
 
-	.markdown :is(img) {
-		margin-bottom: 3rem;
-		margin-top: 1rem;
-	}
 	.markdown :is(code) {
 		font-size: 1rem;
+		margin: 1rem 0rem;
 	}
 }
