@@ -1,17 +1,10 @@
 <script lang="ts">
-	import { fade, fly } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 	import IntersectionObserver from 'svelte-intersection-observer';
-	import BSJ3 from '$lib/assets/images/bsj_3.jpg';
-	import IconGithub from '$lib/assets/svg/icons/SimpleIconsGithub.svelte';
-	import IconLinkedIn from '$lib/assets/svg/icons/SimpleIconsLinkedin.svelte';
-	import IconMail from '$lib/assets/svg/icons/MaterialSymbolsLightMailRounded.svelte';
-	import IconTelegram from '$lib/assets/svg/icons/SimpleIconsTelegram.svelte';
-	import Button from '$components/UI/Button.svelte';
 	import { background, font } from '$lib/stores/store';
 	import ArrowLink from '$components/UI/ArrowLink.svelte';
 	import Form from './Form.svelte';
-	import ContactCard from './ContactCard.svelte';
 	import Figures from '$components/Figures/Figures.svelte';
 
 	let element;

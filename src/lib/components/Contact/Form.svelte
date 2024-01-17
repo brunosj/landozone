@@ -17,12 +17,12 @@
 	let message_type = 'error';
 
 	const handle_result = (result: any) => {
+		console.log(result);
 		if (result.data.success === true) {
 			success = true;
 		} else if (result.data.success === false) {
 			action_result = 'failure';
 			message_type = 'error';
-			form.missing = true;
 		}
 	};
 
@@ -48,7 +48,7 @@
 			use:enhance={() => {
 				return ({ update, result }) => {
 					handle_result(result);
-					update({ reset: true });
+					update({ reset: false });
 				};
 			}}>
 			<div class="field">

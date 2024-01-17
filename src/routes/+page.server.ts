@@ -1,65 +1,55 @@
 export const prerender = false;
 
 import { fail } from '@sveltejs/kit';
-import { SECRET_BREVO_API_KEY } from '$env/static/private';
-import { PUBLIC_BREVO_URL } from '$env/static/public';
+import { SECRET_WEB3FORMS_KEY } from '$env/static/private';
+import { PUBLIC_WEB3FORMS_URL } from '$env/static/public';
 
 export const actions = {
 	default: async ({ request }) => {
-		const formData = await request.formData();
-		const name = formData.get('name');
-		const email = formData.get('email');
-		const message = formData.get('message');
-
-		// console.log('Received form data:', { name, email, message });
-
-		if (!email) {
-			console.log('Email is missing');
-			return fail(400, { email, missing: true });
-		}
-
-		const apiKey = SECRET_BREVO_API_KEY;
-		const url = PUBLIC_BREVO_URL;
-
-		const emailData = {
-			sender: {
-				name: name,
-				email: email
-			},
-			to: [
-				{
-					email: 'contact@landozone.net',
-					name: 'landozone | contact'
-				}
-			],
-			htmlContent: `<html><head></head><body><p>Hello,</p>${message}</body></html>`
-		};
-
-		// console.log('Sending email with data:', emailData);
-
 		try {
-			const response = await fetch(url, {
+			const formData = await request.formData();
+			const name = formData.get('name');
+			const email = formData.get('email');
+			const message = formData.get('message');
+
+			if (!email) {
+				console.log('Email is missing');
+				return fail(400, { email, missing: true });
+			}
+
+			const web3FormsUrl = PUBLIC_WEB3FORMS_URL;
+			const accessKey = SECRET_WEB3FORMS_KEY;
+
+			const web3FormsData = {
+				access_key: accessKey,
+				name: name,
+				email: email,
+				message: message
+			};
+
+			const response = await fetch(web3FormsUrl, {
 				method: 'POST',
 				headers: {
-					accept: 'application/json',
-					'api-key': apiKey,
-					'content-type': 'application/json'
+					'Content-Type': 'application/json',
+					Accept: 'application/json'
 				},
-				body: JSON.stringify(emailData)
+				body: JSON.stringify(web3FormsData)
 			});
 
-			// console.log('Email response:', response);
-
-			if (response.status === 200) {
-				return {
-					status: 200,
-					body: {
-						message: 'Email sent successfully'
-						// messageId: info.messageId
-					}
-				};
+			if (response.ok) {
+				const result = await response.json();
+				if (result.success) {
+					return {
+						success: true,
+						status: 200,
+						body: {
+							message: 'Email sent successfully'
+						}
+					};
+				} else {
+					return { success: false, message: 'Email sending failed' };
+				}
 			} else {
-				// console.log('Email sending failed. Response:', response);
 				return { success: false, message: 'Email sending failed' };
 			}
 		} catch (error) {
