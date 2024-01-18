@@ -11,7 +11,7 @@
 	let intersecting = false;
 </script>
 
-<section id="landing" class="page-section" style:color={`var(--color-white)`}>
+<section id="landing" class="page-section">
 	<div class="svg-bg">
 		<Waveform />
 	</div>

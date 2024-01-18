@@ -41,12 +41,12 @@
 
 <SEO title={`landozone | ${name}`} {description} />
 
-<article bind:this={element}>
+<article bind:this={element} class="">
 	<IntersectionObserver {element} bind:intersecting once threshold={0.3}>
 		{#if intersecting}
 			<div
 				class="table-of-contents"
-				transition:fly={{ x: -100, duration: 500, delay: 500, easing: cubicInOut }}>
+				transition:fly={{ x: -100, duration: 500, delay: 250, easing: cubicInOut }}>
 				<Toc
 					title=""
 					--toc-width="20vw"
@@ -71,7 +71,6 @@
 							</ul>
 						</div>
 					</div>
-
 					<svelte:component this={data.content} />
 					<span>Published on {formatDate(date)}</span>
 				</div>
@@ -83,6 +82,7 @@
 <style>
 	article {
 		display: grid;
+
 		grid-template-columns: 1fr auto;
 		width: 100%;
 		height: 100%;

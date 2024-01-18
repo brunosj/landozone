@@ -40,7 +40,7 @@
 	};
 </script>
 
-<section transition:fade={{ duration: 500, delay: 500, easing: cubicInOut }}>
+<section>
 	<div class="container">
 		<form
 			method="POST"

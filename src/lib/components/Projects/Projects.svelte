@@ -15,20 +15,16 @@
 	const featuredProjects = projects.filter((project) => project.featured === true);
 </script>
 
-<section id="projects" style:color={`var(--color-white)`} class="page-section" bind:this={element}>
+<section id="projects" class="page-section" bind:this={element}>
 	<div class="page-container">
 		<div class="content">
 			<IntersectionObserver {element} bind:intersecting once threshold={0}>
 				{#if intersecting}
 					<div class="grid">
 						<div class="description">
-							<h2 transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>
-								recent projects
-							</h2>
+							<h2>recent projects</h2>
 						</div>
-						<ul
-							class="projects"
-							transition:fly={{ y: 75, duration: 500, delay: 250, easing: cubicInOut }}>
+						<ul class="projects">
 							{#each featuredProjects as item}
 								<ProjectCard {item} showDetails={true} />
 								<ProjectCardMobile {item} />

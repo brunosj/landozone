@@ -5,7 +5,7 @@
 	import throttle from 'lodash.throttle';
 
 	let coords = spring(
-		{ x: 50, y: 50 },
+		{ x: 20, y: 50 },
 		{
 			stiffness: 0.15,
 			damping: 0.7
@@ -64,6 +64,7 @@
 		left: 0;
 		right: 0;
 		z-index: 100;
+		pointer-events: none;
 	}
 
 	circle {

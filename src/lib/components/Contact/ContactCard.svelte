@@ -9,9 +9,7 @@
 	import Button from '$components/UI/Button.svelte';
 </script>
 
-<div
-	class="info info-grid"
-	transition:fly={{ x: 100, duration: 500, delay: 250, easing: cubicInOut }}>
+<div class="info info-grid">
 	<div class="grid-item">
 		<div class="picture">
 			<img src={BSJ3} alt="BSJ" />

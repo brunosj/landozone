@@ -4,60 +4,14 @@
 	import '@fontsource/ibm-plex-mono';
 	import '@fontsource-variable/fredoka';
 	import '../styles/reset.css';
-	// import '../styles/laserwave-theme.css';
 	import '../styles/one-dark-theme.css';
 	import '../styles/globals.css';
-	import { browser } from '$app/environment';
-	import { onMount } from 'svelte';
-	import { background, font } from '$lib/stores/store';
+
 	import Header from '$components/Header/Header.svelte';
 	import MouseTracker from '$components/MouseTracker/MouseTracker.svelte';
-
-	// if (browser) {
-	// 	const handleScroll = () => {
-	// 		const landingSection = document.getElementById('landing');
-	// 		const aboutSection = document.getElementById('about');
-	// 		const workSection = document.getElementById('projects');
-	// 		const contactSection = document.getElementById('contact');
-
-	// 		const scrollPosition = window.scrollY;
-	// 		const windowHeight = window.innerHeight;
-
-	// 		const offset = 25;
-
-	// 		const isFullyVisible = (element: HTMLElement, offset = 0) => {
-	// 			const elementRect = element.getBoundingClientRect();
-	// 			const elementTop = elementRect.top + offset;
-	// 			const elementBottom = elementRect.bottom - offset;
-	// 			return elementTop >= 0 && elementBottom <= windowHeight;
-	// 		};
-
-	// 		if (landingSection && isFullyVisible(landingSection, offset)) {
-	// 			background.set('var(--color-black)');
-	// 			font.set('var(--color-white)');
-	// 		} else if (aboutSection && isFullyVisible(aboutSection, offset)) {
-	// 			background.set('var(--color-secondary)');
-	// 			font.set('var(--color-black)');
-	// 		} else if (workSection && isFullyVisible(workSection, offset)) {
-	// 			background.set('var(--color-black)');
-	// 			font.set('var(--color-white)');
-	// 		} else if (contactSection && isFullyVisible(contactSection, offset)) {
-	// 			background.set('var(--color-black)');
-	// 			font.set('var(--color-white)');
-	// 		}
-	// 	};
-
-	// 	onMount(() => {
-	// 		window.addEventListener('scroll', handleScroll);
-
-	// 		return () => {
-	// 			window.removeEventListener('scroll', handleScroll);
-	// 		};
-	// 	});
-	// }
 </script>
 
-<!-- <MouseTracker /> -->
+<MouseTracker />
 <main class="content">
 	<Header />
 	<slot />

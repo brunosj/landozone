@@ -27,6 +27,7 @@ body {
 	color: var(--color-white);
 	background-color: var(--color-black);
 	scroll-behavior: smooth;
+	scroll-padding-top: 3rem;
 }
 
 h1 {

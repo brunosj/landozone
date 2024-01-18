@@ -31,7 +31,7 @@
 				<div class="content grid">
 					<div class="description">
 						<!-- <h2 transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>about</h2> -->
-						<div transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
+						<div>
 							<p>
 								I'm a freelance web developer whose experise lies in <span
 									>front-end development</span>

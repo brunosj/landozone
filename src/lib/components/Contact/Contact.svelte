@@ -11,38 +11,27 @@
 	let intersecting = false;
 </script>
 
-<section
-	id="contact"
-	style:background-color={$background}
-	style:color={$font}
-	class="page-section"
-	bind:this={element}>
+<section id="contact" class="page-section" bind:this={element}>
 	<div class="page-container">
 		<div class="content">
 			<IntersectionObserver {element} bind:intersecting once threshold={0}>
 				{#if intersecting}
 					<div class="grid">
 						<div class="description">
-							<h2 transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>
-								get in touch!
-							</h2>
-							<p transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
-								Have an exciting project you would like to collaborate on?
-							</p>
-							<p transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
+							<h2>get in touch!</h2>
+							<p>Have an exciting project you would like to collaborate on?</p>
+							<p>
 								Use the contact form or send me a message and I will be happy to further discuss
 								your ideas with you.
 							</p>
-							<p transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
+							<p>
 								<a id="underline" href="mailto:contact@landozone.net">contact@landozone.net</a>
 							</p>
 						</div>
 						<Figures />
 					</div>
 					<Form />
-					<span
-						class="imprint-link"
-						transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
+					<span class="imprint-link">
 						<ArrowLink path="/imprint">imprint + privacy policy</ArrowLink>
 					</span>
 				{/if}
