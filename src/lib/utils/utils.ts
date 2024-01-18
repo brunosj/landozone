@@ -28,3 +28,29 @@ export function extractHeadingsFromMarkdown(markdown: string): Heading[] {
 
 	return headings;
 }
+
+export function generateTOC(content: HTMLElement): HTMLUListElement {
+	const headings = content.querySelectorAll('h2, h3, h4, h5, h6');
+	const toc = document.createElement('ul');
+
+	headings.forEach((heading) => {
+		const id =
+			heading.id || heading.getAttribute('id') || generateUniqueId(heading.textContent || '');
+		heading.id = id;
+
+		const listItem = document.createElement('li');
+		listItem.textContent = heading.textContent || '';
+		listItem.id = id;
+
+		toc.appendChild(listItem);
+	});
+
+	return toc;
+}
+
+function generateUniqueId(text: string): string {
+	return text
+		.toLowerCase()
+		.replace(/\s+/g, '-')
+		.replace(/[^\w-]/g, '');
+}

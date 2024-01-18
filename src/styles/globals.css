@@ -14,6 +14,12 @@
 	overflow: visible;
 }
 
+/* .toc {
+	position: sticky;
+	right: 0;
+	font-family: 'IBM Plex Mono', sans-serif;
+} */
+
 html,
 body {
 	font-family: 'Rubik Variable', sans-serif;
@@ -133,18 +139,7 @@ p {
 	white-space: pre-wrap !important;
 }
 
-@media (min-width: 55em) {
-	.markdown {
-		width: 75%;
-		margin: auto;
-	}
-}
-
 @media (min-width: 60em) {
-	.markdown {
-		width: 60%;
-		margin: auto;
-	}
 	h1 {
 		font-size: 4rem;
 		line-height: 4rem;

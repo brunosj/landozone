@@ -2,11 +2,14 @@ import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 import { mdsvex } from 'mdsvex';
 import relativeImages from 'mdsvex-relative-images';
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
-	extensions: ['.md'],
-	remarkPlugins: [relativeImages]
+	extensions: ['.md', '.svelte.md', '.svx'],
+	remarkPlugins: [relativeImages],
+	rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings]
 };
 
 /** @type {import('@sveltejs/kit').Config} */

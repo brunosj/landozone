@@ -1,21 +1,42 @@
 <script lang="ts">
 	export let data;
 
-	import type { Blog, Heading } from '$lib/types/types';
-	import { onMount } from 'svelte';
+	import type { Blog } from '$lib/types/types';
+	import { onMount, afterUpdate } from 'svelte';
 	import { fade, fly } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 	import IntersectionObserver from 'svelte-intersection-observer';
-
 	import Tag from '$components/UI/Tag.svelte';
 	import SEO from '$components/SEO/SEO.svelte';
-	import { formatDate } from '$lib/utils/utils.js';
+	import { formatDate, generateTOC } from '$lib/utils/utils.js';
+	// @ts-ignore
+	import Toc from 'svelte-toc';
 
 	let item: Blog = data.meta;
 	let { name, date, slug, description, technologies } = item;
 
 	let element;
 	let intersecting = false;
+
+	let contentElement: HTMLElement | null;
+	let tocElement: HTMLElement | null;
+	let activeListItem: HTMLLIElement | null;
+
+	onMount(() => {
+		checkContentElement();
+	});
+
+	afterUpdate(() => {
+		checkContentElement();
+	});
+
+	function checkContentElement() {
+		contentElement = document.querySelector('.markdown');
+		if (contentElement) {
+			tocElement = generateTOC(contentElement);
+			console.log('Generated TOC:', tocElement);
+		}
+	}
 </script>
 
 <SEO title={`landozone | ${name}`} {description} />
@@ -23,10 +44,25 @@
 <article bind:this={element}>
 	<IntersectionObserver {element} bind:intersecting once threshold={0.3}>
 		{#if intersecting}
+			<div
+				class="table-of-contents"
+				transition:fly={{ x: -100, duration: 500, delay: 500, easing: cubicInOut }}>
+				<Toc
+					title=""
+					--toc-width="20vw"
+					--toc-desktop-sticky-top="15vh"
+					--toc-desktop-nav-margin="0 0 0 2rem"
+					--toc-overflow="hidden"
+					--toc-active-bg="transparent"
+					--toc-li-padding="0.4rem 0rem"
+					--toc-active-color="#00cfa1"
+					--toc-li-hover-color="#00cfa1"
+					--toc-active-font-weight="500" />
+			</div>
 			<section class="page-container">
-				<div class="markdown" transition:fade={{ duration: 500, delay: 500, easing: cubicInOut }}>
+				<div class="markdown" transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>
 					<div class="header">
-						<h2>{name}</h2>
+						<span class="title">{name}</span>
 						<div class="details">
 							<ul>
 								{#each technologies as item}
@@ -35,6 +71,7 @@
 							</ul>
 						</div>
 					</div>
+
 					<svelte:component this={data.content} />
 					<span>Published on {formatDate(date)}</span>
 				</div>
@@ -45,6 +82,8 @@
 
 <style>
 	article {
+		display: grid;
+		grid-template-columns: 1fr auto;
 		width: 100%;
 		height: 100%;
 		background-color: var(--color-black);
@@ -69,11 +108,6 @@
 		margin: 0.5rem 0;
 	}
 
-	h1,
-	h2 {
-		color: var(--color-primary);
-	}
-
 	.header {
 		display: flex;
 		flex-direction: column;
@@ -81,11 +115,45 @@
 		margin-bottom: 2rem;
 	}
 
+	.title {
+		font-family: 'Sora Variable', sans-serif;
+		font-size: 1.5rem;
+		line-height: 1.5rem;
+		font-weight: 600;
+		color: var(--color-primary);
+		margin-bottom: 1rem;
+	}
+
+	.table-of-contents {
+		display: none;
+	}
+
 	@media (min-width: 55em) {
+		.title {
+			font-size: 3rem;
+			line-height: 3rem;
+		}
+
+		.title {
+			margin-bottom: 2rem;
+		}
+
+		.table-of-contents {
+			display: block;
+		}
+
+		.markdown {
+			width: 75%;
+		}
+
 		.details {
-			/* flex-direction: row; */
-			/* align-items: center; */
 			gap: 1.5rem;
+		}
+	}
+
+	@media (min-width: 100em) {
+		.markdown {
+			width: 65%;
 		}
 	}
 </style>

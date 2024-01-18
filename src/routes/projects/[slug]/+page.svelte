@@ -199,12 +199,22 @@
 		.link {
 			width: 40%;
 		}
+
+		.markdown {
+			width: 75%;
+			margin: auto;
+		}
 	}
 
 	@media (min-width: 60em) {
 		ul {
 			row-gap: 0.5rem;
 			column-gap: 0.7rem;
+		}
+
+		.markdown {
+			width: 60%;
+			margin: auto;
 		}
 
 		.header {
