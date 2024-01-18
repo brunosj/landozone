@@ -20,7 +20,7 @@
 				duration: 500,
 				easing: cubicInOut,
 				opacity: 1,
-				delay: 500
+				delay: 700
 			}}>
 			<div class="logo">
 				<a href="/" aria-label="landozone logo">

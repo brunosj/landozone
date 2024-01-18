@@ -23,11 +23,11 @@
 						<h1 transition:fade={{ duration: 750, delay: 0, easing: cubicInOut }}>
 							imaginative web development
 						</h1>
-						<h4 transition:fade={{ duration: 750, delay: 250, easing: cubicInOut }}>
+						<h4 transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
 							hi! my name is Bruno SJ and I am passionate about crafting innovative applications and
 							experiences on the web.
 						</h4>
-						<div transition:fade={{ duration: 750, delay: 500, easing: cubicInOut }}>
+						<div transition:fade={{ duration: 500, delay: 350, easing: cubicInOut }}>
 							<PersonalInfo />
 						</div>
 					</div>

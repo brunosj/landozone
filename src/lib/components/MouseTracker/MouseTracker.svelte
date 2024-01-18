@@ -5,7 +5,7 @@
 	import throttle from 'lodash.throttle';
 
 	let coords = spring(
-		{ x: 20, y: 50 },
+		{ x: -100, y: -100 },
 		{
 			stiffness: 0.15,
 			damping: 0.7
@@ -15,12 +15,13 @@
 	let size = spring(7);
 	let mouseX = 0;
 	let mouseY = 0;
+	let isFirstMouseMove = true;
 
 	function handleMouseMove(event: MouseEvent) {
 		mouseX = event.pageX;
 		mouseY = event.pageY;
 		coords.set({ x: mouseX, y: mouseY });
-		console.log(mouseX, mouseY);
+		isFirstMouseMove = false;
 	}
 
 	onMount(() => {
@@ -31,8 +32,10 @@
 	$: {
 		afterUpdate(
 			throttle(() => {
+				if (isFirstMouseMove) return;
+
 				let elements = document.elementsFromPoint(mouseX, mouseY);
-				let links = elements.filter((el) => el.tagName === 'A');
+				let links = elements.filter((el) => el.tagName === 'a');
 
 				if (links.length) {
 					document.body.style.cursor = 'pointer';
@@ -53,7 +56,6 @@
 		size.set(10);
 	}}>
 	<circle cx={$coords.x} cy={$coords.y} r={$size} />
-	<!-- <rect /> -->
 </svg>
 
 <style>
