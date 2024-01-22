@@ -11,7 +11,7 @@
 	import MouseTracker from '$components/MouseTracker/MouseTracker.svelte';
 </script>
 
-<MouseTracker />
+<!-- <MouseTracker /> -->
 <main class="content">
 	<Header />
 	<slot />

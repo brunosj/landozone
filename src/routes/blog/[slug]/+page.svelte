@@ -34,7 +34,6 @@
 		contentElement = document.querySelector('.markdown');
 		if (contentElement) {
 			tocElement = generateTOC(contentElement);
-			console.log('Generated TOC:', tocElement);
 		}
 	}
 </script>

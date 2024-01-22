@@ -11,7 +11,7 @@ keepTextLight: true
 type: 'Web App'
 description: 'Price calculator for carsharing services in Berlin'
 technologies: ['Svelte', 'Google Maps APIs']
-features: ['Price calculation based on user input']
+features: ['Google Maps Integration', 'Short/Long Trip Calculation']
 featured: true
 ---
 

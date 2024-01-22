@@ -19,6 +19,7 @@ import ZebiImage from '$lib/assets/images/sdiaz-devices.png';
 import SIPLABImage from '$lib/assets/images/siplab-devices.png';
 // import aconiumImage from '$lib/assets/images/aconium-bg.jpg';
 import aconiumImage from '$lib/assets/images/aconium-devices.png';
+import entlebuchImage from '$lib/assets/images/entlebuch-devices.png';
 
 type ImageComponent = string;
 
@@ -34,7 +35,8 @@ export function getImageComponent(name: string): ImageComponent {
 		'studio-deremetz': DeremetzImage,
 		'sdiaz-de-leon': ZebiImage,
 		siplab: SIPLABImage,
-		'aconium-akademie': aconiumImage
+		'aconium-akademie': aconiumImage,
+		entlebuch: entlebuchImage
 	};
 
 	return imageMap[name] || '';
