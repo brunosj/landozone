@@ -80,6 +80,7 @@
 		color: var(--color-black);
 		position: relative;
 		transition: all 1s cubic-bezier(0.07, 0.95, 0, 1);
+		color: var(--color-white);
 	}
 
 	span {

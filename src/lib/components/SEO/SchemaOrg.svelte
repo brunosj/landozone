@@ -1,6 +1,6 @@
 <script>
 	// @ts-ignore
-	import hash from 'object-hash';
+	// import hash from 'object-hash';
 	export let author;
 
 	/**
@@ -28,13 +28,13 @@
 	 */
 	export let entityMeta = null;
 
-	const entityHash = hash({ author }, { algorithm: 'md5' });
+	// const entityHash = hash({ author }, { algorithm: 'md5' });
 
 	const schemaOrgEntity =
 		entityMeta !== null
 			? {
 					'@type': ['Person', 'Organization'],
-					'@id': `${siteUrl}/#/schema/person/${entityHash}`,
+					'@id': `${siteUrl}/#/schema/person/}`,
 					name: author,
 					image: {
 						'@type': 'ImageObject',
@@ -63,7 +63,7 @@
 		name: siteTitle,
 		description: siteTitleAlt,
 		publisher: {
-			'@id': `${siteUrl}/#/schema/person/${entityHash}`
+			'@id': `${siteUrl}/#/schema/person/`
 		},
 		potentialAction: [
 			{
@@ -117,7 +117,7 @@
 		datePublished,
 		dateModified: lastUpdated,
 		author: {
-			'@id': `${siteUrl}/#/schema/person/${entityHash}`
+			'@id': `${siteUrl}/#/schema/person/`
 		},
 		description: metadescription,
 		breadcrumb: {
@@ -134,7 +134,7 @@
 
 	const schemaOrgPublisher = {
 		'@type': ['Person', 'Organization'],
-		'@id': `${siteUrl}/#/schema/person/${entityHash}`,
+		'@id': `${siteUrl}/#/schema/person/`,
 		name: entity,
 		image: {
 			'@type': 'ImageObject',

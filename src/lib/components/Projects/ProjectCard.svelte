@@ -24,10 +24,11 @@
 		features
 	} = item;
 
-	let animate = false;
+	let animate = true;
 	let ImageComponent: string;
 
 	onMount(() => {
+		console.log('mounted');
 		animate = true;
 		ImageComponent = getImageComponent(slug);
 	});
