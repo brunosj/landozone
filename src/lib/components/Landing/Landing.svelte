@@ -49,11 +49,9 @@
 	h1 {
 		color: var(--color-primary);
 		opacity: 1;
-		/* transition: 750ms ease all; */
 		font-size: 2em;
-		font-weight: bold;
-		line-height: normal;
-		font-family: sans-serif;
+		line-height: 1em;
+		font-weight: 700;
 		text-decoration: none;
 		background: rgba(0, 0, 0, 0) -webkit-gradient(
 				linear,

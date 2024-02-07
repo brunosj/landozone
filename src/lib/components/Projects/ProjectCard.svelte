@@ -3,6 +3,7 @@
 	export let showDetails = false;
 
 	import type { Project } from '$lib/types/types';
+	import Img from '@zerodevx/svelte-img';
 	import { onMount } from 'svelte';
 	import Button from '$components/UI/Button.svelte';
 	import IconInternet from '$lib/assets/svg/icons/IconoirInternet.svelte';

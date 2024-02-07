@@ -52,14 +52,14 @@
 			{#if intersecting}
 				<div class="content">
 					<div class="description">
-						<h2 transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>blog</h2>
-						<p transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
+						<h2 transition:fade={{ duration: 350, delay: 0, easing: cubicInOut }}>blog</h2>
+						<p transition:fade={{ duration: 350, delay: 250, easing: cubicInOut }}>
 							some thoughts on web development and other things
 						</p>
 					</div>
 					<ul
 						class="blogs"
-						transition:fly={{ y: 75, duration: 500, delay: 500, easing: cubicInOut }}>
+						transition:fly={{ y: 75, duration: 500, delay: 250, easing: cubicInOut }}>
 						{#each blogsByDate as item}
 							<BlogCard {item} />
 						{/each}

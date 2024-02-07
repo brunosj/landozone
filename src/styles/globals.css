@@ -30,6 +30,10 @@ body {
 	scroll-padding-top: 3rem;
 }
 
+img {
+	background: none;
+}
+
 h1 {
 	font-family: 'Sora Variable', sans-serif;
 	font-size: 2rem;
@@ -107,13 +111,22 @@ p {
 	/* letter-spacing: 1px; */
 }
 
+.markdown :is(ul) {
+	list-style: disc;
+	list-style-position: inside;
+}
+
+.markdown :is(ol) {
+	list-style: decimal;
+	list-style-position: outside;
+	padding-left: 1rem;
+}
+
 .markdown :is(li) {
 	font-weight: 300;
 	font-size: 1.2rem;
 	line-height: 1.8rem;
 	font-weight: 400;
-	list-style: disc;
-	list-style-position: inside;
 }
 
 .markdown :is(p) {

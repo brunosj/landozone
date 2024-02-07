@@ -54,14 +54,14 @@
 			{#if intersecting}
 				<div class="content">
 					<div class="description">
-						<h2 transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>projects</h2>
-						<p transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
+						<h2 transition:fade={{ duration: 350, delay: 0, easing: cubicInOut }}>projects</h2>
+						<p transition:fade={{ duration: 350, delay: 250, easing: cubicInOut }}>
 							explore my recent works and the technologies I used to build them
 						</p>
 					</div>
 					<div
 						class="projects"
-						transition:fly={{ y: 75, duration: 500, delay: 500, easing: cubicInOut }}>
+						transition:fly={{ y: 75, duration: 500, delay: 250, easing: cubicInOut }}>
 						{#each projectsByDate as item}
 							<ProjectCardMobile {item} />
 							<ProjectCard {item} showDetails={true} />

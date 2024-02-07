@@ -44,14 +44,14 @@
 		{#if intersecting}
 			<section style={`background-color:${color};`}>
 				<div class="header" style={`color:${textColor}`}>
-					<div class="title" transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>
+					<div class="title" transition:fade={{ duration: 350, delay: 0, easing: cubicInOut }}>
 						<p id="type">{type}</p>
 						<h2>{name}</h2>
 						<p class="description">
 							{description}
 						</p>
 					</div>
-					<div class="details" transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
+					<div class="details" transition:fade={{ duration: 350, delay: 250, easing: cubicInOut }}>
 						{#if features.length > 0}
 							<div class="features">
 								<p class="category">Features</p>
@@ -86,7 +86,7 @@
 			</section>
 
 			<section class="page-container">
-				<div class="links" transition:fade={{ duration: 500, delay: 500, easing: cubicInOut }}>
+				<div class="links" transition:fade={{ duration: 350, delay: 500, easing: cubicInOut }}>
 					<div class="link">
 						<Button to={url} text="Visit site" {color} {keepTextLight}>
 							<IconInternet width="1.3rem" />
@@ -101,7 +101,7 @@
 						</div>
 					{/if}
 				</div>
-				<div class="markdown" transition:fade={{ duration: 500, delay: 500, easing: cubicInOut }}>
+				<div class="markdown" transition:fade={{ duration: 350, delay: 500, easing: cubicInOut }}>
 					<svelte:component this={data.content} />
 				</div>
 			</section>

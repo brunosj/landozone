@@ -45,7 +45,7 @@
 		{#if intersecting}
 			<div
 				class="table-of-contents"
-				transition:fly={{ x: -100, duration: 500, delay: 250, easing: cubicInOut }}>
+				transition:fly={{ x: -100, duration: 350, delay: 250, easing: cubicInOut }}>
 				<Toc
 					title=""
 					--toc-width="20vw"
@@ -59,7 +59,7 @@
 					--toc-active-font-weight="500" />
 			</div>
 			<section class="page-container">
-				<div class="markdown" transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>
+				<div class="markdown" transition:fade={{ duration: 350, delay: 0, easing: cubicInOut }}>
 					<div class="header">
 						<span class="title">{name}</span>
 						<div class="details">

@@ -48,7 +48,9 @@
 							imprint + privacy policy
 						</h2>
 					</div>
-					<div class="markdown" transition:fade={{ duration: 500, delay: 500, easing: cubicInOut }}>
+					<div
+						class="markdown list"
+						transition:fade={{ duration: 500, delay: 500, easing: cubicInOut }}>
 						<svelte:component this={data.content} />
 					</div>
 				</div>
@@ -69,6 +71,10 @@
 
 	h2 {
 		color: var(--color-secondary);
+	}
+
+	.markdown {
+		margin: auto;
 	}
 
 	.svg-bg {
@@ -96,9 +102,13 @@
 		}
 
 		.description {
-			width: 60%;
+			width: 75%;
 			margin: 0 auto;
 			margin-bottom: 2rem;
+		}
+
+		.markdown {
+			width: 75%;
 		}
 	}
 </style>
