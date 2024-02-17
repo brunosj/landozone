@@ -7,7 +7,7 @@ slug: 'imprint'
 
 Responsible for the content of this website:
 
-Bruno SJ<br/>contact@landozone.net
+Bruno SJ<br/>contact [at] landozone.net
 
 Please do not hesitate to contact us if you have any questions or concerns regarding the content of this website.
 
@@ -34,7 +34,7 @@ Please do not hesitate to contact us if you have any questions or concerns regar
    We reserve the right to update or change this Privacy Policy at any time. Any changes will be posted on this page.
 
 7. **Contact Information:**
-   If you have any questions or concerns about this Privacy Policy, you can contact us at contact@landozone.net.
+   If you have any questions or concerns about this Privacy Policy, you can contact us at contact [at] landozone.net.
 
 <br/>
 

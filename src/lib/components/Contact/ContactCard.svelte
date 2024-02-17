@@ -20,7 +20,7 @@
 		</div>
 	</div>
 	<div class="icons grid-item desktop">
-		<Button to="mailto:contact@landozone.net" text="Email">
+		<Button to="mailto:ccontact [at] landozone.net" text="Email">
 			<IconMail width="1.3rem" />
 		</Button>
 
@@ -36,7 +36,7 @@
 		</Button>
 	</div>
 	<div class="icons grid-item mobile">
-		<a href="mailto:contact@landozone.net" target="_blank">
+		<a href="mailto:contact [at] landozone.net" target="_blank">
 			<IconMail width="1.3rem" />
 		</a>
 		<a href="https://t.me/bruno_sj" target="_blank">

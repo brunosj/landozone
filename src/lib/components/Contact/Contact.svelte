@@ -25,7 +25,8 @@
 								your ideas with you.
 							</p>
 							<p>
-								<a id="underline" href="mailto:contact@landozone.net">contact@landozone.net</a>
+								<a id="underline" href="mailto:contact [at] landozone.net"
+									>contact [at] landozone.net</a>
 							</p>
 						</div>
 						<Figures />
