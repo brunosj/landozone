@@ -12,7 +12,7 @@ type: 'Website'
 description: 'Digital education platform'
 technologies: ['React', 'Next.js', 'Tailwind CSS', 'Wordpress CMS']
 features: ['Light/Dark Mode', 'Custom Calendar']
-featured: true
+featured: false
 ---
 
 ![aconium Devices](../../assets/images/aconium-devices.png)
