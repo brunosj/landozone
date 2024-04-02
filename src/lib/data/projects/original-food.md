@@ -1,7 +1,7 @@
 ---
 name: 'Original Food'
 date: '2024-04-01'
-url: 'https://original-food.coffee'
+url: 'https://originalfood.coffee'
 repo: 'https://github.com/brunosj/original-food'
 slug: 'original-food'
 image: 'original-food-devices.png'
