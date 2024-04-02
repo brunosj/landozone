@@ -40,10 +40,7 @@
 							</p>
 							<p>
 								I enhance workflows and build applications using the latest web technologies, being
-								well-versed in
-								<a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"
-									>JavaScript/TypeScript</a>
-								tools including frameworks like
+								well-versed in JavaScript/TypeScript tools including frameworks like
 								<a href="https://kit.svelte.dev/" target="_blank" rel="noreferrer">SvelteKit</a>
 								and
 								<a href="https://nextjs.org/" target="_blank" rel="noreferrer">Next.js</a>, the
