@@ -14,7 +14,7 @@
 		<div class="picture">
 			<img src={BSJ3} alt="BSJ" />
 			<div>
-				<h3>Bruno St-Jacques</h3>
+				<h3>Bruno <br /> St-Jacques</h3>
 				<span>Web Developer/Designer</span>
 			</div>
 		</div>
@@ -138,7 +138,7 @@
 		}
 
 		.info-grid {
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: 2fr 1fr;
 			gap: 3rem;
 		}
 
