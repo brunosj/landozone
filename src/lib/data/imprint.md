@@ -7,7 +7,7 @@ slug: 'imprint'
 
 Responsible for the content of this website:
 
-Bruno SJ<br/>contact [at] landozone.net
+Bruno St-Jacques<br/>contact [at] landozone.net
 
 Please do not hesitate to contact us if you have any questions or concerns regarding the content of this website.
 
