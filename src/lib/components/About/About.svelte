@@ -33,7 +33,7 @@
 						<!-- <h2 transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>about</h2> -->
 						<div>
 							<p>
-								I'm a freelance web developer whose experise lies in <span
+								I'm a freelance web developer whose expertise lies in <span
 									>front-end development</span>
 								(with some back-end here and there) and <span>data visualization</span>. I am based
 								in Berlin and have roots in political science and climate policy.
@@ -50,7 +50,8 @@
 							</p>
 							<p>
 								These tools enable me to create elegant and performant websites and produce
-								compelling data stories. Check out my projects to discover more about my work!
+								compelling data visualizations. Check out my projects to discover more about my
+								work!
 							</p>
 						</div>
 
