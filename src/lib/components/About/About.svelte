@@ -10,6 +10,8 @@
 	import IconR from '$lib/assets/svg/icons/SimpleIconsR.svelte';
 	import IconReact from '$lib/assets/svg/icons/SimpleIconsReact.svelte';
 	import IconSvelte from '$lib/assets/svg/icons/SimpleIconsSvelte.svelte';
+	import IconVue from '$lib/assets/svg/icons/SimpleIconsVue.svelte';
+	import IconECharts from '$lib/assets/svg/icons/SimpleIconsApacheecharts.svelte';
 	import { background, font } from '$lib/stores/store';
 	import Contact from '$components/Contact/Contact.svelte';
 	import ContactCard from '$components/Contact/ContactCard.svelte';
@@ -40,13 +42,22 @@
 							</p>
 							<p>
 								I enhance workflows and build applications using the latest web technologies, being
-								well-versed in JavaScript/TypeScript tools including frameworks like
-								<a href="https://kit.svelte.dev/" target="_blank" rel="noreferrer">SvelteKit</a>
-								and
-								<a href="https://nextjs.org/" target="_blank" rel="noreferrer">Next.js</a>, the
+								well-versed in JavaScript/TypeScript tools (including <a
+									href="https://svelte.dev/"
+									target="_blank"
+									rel="noreferrer">Svelte</a
+								>/<a href="https://react.dev/" target="_blank" rel="noreferrer">React</a>/<a
+									href="https://vuejs.org/"
+									target="_blank"
+									rel="noreferrer">Vue</a
+								>), the
 								<a href="https://nodejs.org/en" target="_blank" rel="noreferrer">Node.js</a>
-								environment and the
-								<a href="https://d3js.org/" target="_blank" rel="noreferrer">D3.js</a> library.
+								environment as well as data viz librairies (<a
+									href="https://d3js.org/"
+									target="_blank"
+									rel="noreferrer">D3.js</a
+								>/<a href="https://echarts.apache.org/" target="_blank" rel="noreferrer">ECharts</a
+								>)
 							</p>
 							<p>
 								These tools enable me to create elegant and performant websites and produce
@@ -60,7 +71,9 @@
 							<IconTS width="1.5rem" />
 							<IconSvelte width="1.5rem" />
 							<IconReact width="1.5rem" />
+							<IconVue width="1.5rem" />
 							<IconD3 width="1.5rem" />
+							<IconECharts width="1.5rem" />
 							<IconR width="1.5rem" />
 						</div>
 					</div>
