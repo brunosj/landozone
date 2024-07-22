@@ -21,7 +21,7 @@
 				{#if intersecting}
 					<div class="hero">
 						<h1 transition:fade={{ duration: 750, delay: 0, easing: cubicInOut }}>
-							imaginative web development
+							imaginative web design
 						</h1>
 						<h4 transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
 							hi! my name is Bruno and I am passionate about crafting innovative applications and
@@ -50,7 +50,7 @@
 		color: var(--color-primary);
 		opacity: 1;
 		font-size: 2em;
-		line-height: 1em;
+		line-height: 1.2em;
 		font-weight: 700;
 		text-decoration: none;
 		background: rgba(0, 0, 0, 0) -webkit-gradient(

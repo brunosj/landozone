@@ -2,6 +2,9 @@
 	import { fade, fly } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 	import BSJ3 from '$lib/assets/images/bsj_3.jpg';
+	import BSJ2 from '$lib/assets/images/bsj_2.jpg';
+	import BSJ1 from '$lib/assets/images/bsj_1.jpg';
+
 	import IconGithub from '$lib/assets/svg/icons/SimpleIconsGithub.svelte';
 	import IconLinkedIn from '$lib/assets/svg/icons/SimpleIconsLinkedin.svelte';
 	import IconMail from '$lib/assets/svg/icons/MaterialSymbolsLightMailRounded.svelte';
