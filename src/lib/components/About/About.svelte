@@ -35,7 +35,7 @@
 						<!-- <h2 transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>about</h2> -->
 						<div>
 							<p>
-								I'm a freelance web designer and developer whose expertise lies in
+								I'm a freelance web designer/developer whose expertise lies in
 								<span>web design</span> and
 								<span>front-end development</span>.
 								<!-- and <span>data visualization</span>.  -->
