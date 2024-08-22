@@ -12,7 +12,9 @@
 	let element;
 	let intersecting = false;
 
-	const featuredProjects = projects.filter((project) => project.featured === true);
+	const featuredProjects = projects
+		.filter((project) => project.featured === true)
+		.sort((a, b) => (a.date > b.date ? -1 : 1));
 </script>
 
 <section id="projects" class="page-section" bind:this={element}>
