@@ -1,10 +1,15 @@
 <script lang="ts">
-	export let keepTextLight = false;
+	interface Props {
+		keepTextLight?: boolean;
+		children?: import('svelte').Snippet;
+	}
+
+	let { keepTextLight = false, children }: Props = $props();
 </script>
 
 <li class:textLight={keepTextLight}>
 	<span>
-		<slot />
+		{@render children?.()}
 	</span>
 </li>
 

@@ -1,12 +1,17 @@
 <script lang="ts">
-	export let path: string;
 
 	import IconArrow from '$lib/assets/svg/icons/MaterialSymbolsArrowOutwardRounded.svelte';
+	interface Props {
+		path: string;
+		children?: import('svelte').Snippet;
+	}
+
+	let { path, children }: Props = $props();
 </script>
 
 <a class="arrowLink" href={path}>
 	<span id="arrowUnderline">
-		<slot />
+		{@render children?.()}
 	</span>
 	<span class="arrowIcon">
 		<IconArrow width="1.3rem" />

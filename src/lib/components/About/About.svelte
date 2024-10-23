@@ -17,8 +17,8 @@
 	import ContactCard from '$components/Contact/ContactCard.svelte';
 	import Figures from '$components/Figures/Figures.svelte';
 
-	let element;
-	let intersecting = false;
+	let element: HTMLElement | null | undefined = $state();
+	let intersecting = $state(false);
 </script>
 
 <section

@@ -12,8 +12,8 @@
 
 	interface SvelteNode extends Element {}
 
-	let action_result: any;
-	let success = false;
+	let action_result: any = $state();
+	let success = $state(false);
 	let message_type = 'error';
 
 	const handle_result = (result: any) => {
@@ -63,7 +63,7 @@
 			<div class="field">
 				<label for="message" class="font-semibold"> Message</label>
 				<div>
-					<textarea name="message" class="form-input message" />
+					<textarea name="message" class="form-input message"></textarea>
 				</div>
 			</div>
 			<div>

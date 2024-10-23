@@ -1,42 +1,31 @@
 <script lang="ts">
-	import { fade } from 'svelte/transition';
-	import { cubicInOut } from 'svelte/easing';
-	import IntersectionObserver from 'svelte-intersection-observer';
-	import { background, font } from '$lib/stores/store';
 	import ArrowLink from '$components/UI/ArrowLink.svelte';
 	import Form from './Form.svelte';
 	import Figures from '$components/Figures/Figures.svelte';
-
-	let element;
-	let intersecting = false;
 </script>
 
-<section id="contact" class="page-section" bind:this={element}>
+<section id="contact" class="page-section">
 	<div class="page-container">
 		<div class="content">
-			<IntersectionObserver {element} bind:intersecting once threshold={0}>
-				{#if intersecting}
-					<div class="grid">
-						<div class="description">
-							<h2>get in touch!</h2>
-							<p>Have an exciting project you would like to collaborate on?</p>
-							<p>
-								Use the contact form or send me a message and I will be happy to further discuss
-								your ideas with you.
-							</p>
-							<p>
-								<a id="underline" href="mailto:contact [at] landozone.net"
-									>contact [at] landozone.net</a>
-							</p>
-						</div>
-						<Figures />
-					</div>
-					<Form />
-					<span class="imprint-link">
-						<ArrowLink path="/imprint">imprint + privacy policy</ArrowLink>
-					</span>
-				{/if}
-			</IntersectionObserver>
+			<div class="grid">
+				<div class="description">
+					<h2>get in touch!</h2>
+					<p>Have an exciting project you would like to collaborate on?</p>
+					<p>
+						Use the contact form or send me a message and I will be happy to further discuss your
+						ideas with you.
+					</p>
+					<p>
+						<a id="underline" href="mailto:contact [at] landozone.net"
+							>contact [at] landozone.net</a>
+					</p>
+				</div>
+				<Figures />
+			</div>
+			<Form />
+			<span class="imprint-link">
+				<ArrowLink path="/imprint">imprint + privacy policy</ArrowLink>
+			</span>
 		</div>
 	</div>
 </section>

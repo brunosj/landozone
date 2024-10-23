@@ -9,12 +9,17 @@
 
 	import Header from '$components/Header/Header.svelte';
 	import MouseTracker from '$components/MouseTracker/MouseTracker.svelte';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 </script>
 
 <!-- <MouseTracker /> -->
 <main class="content">
 	<Header />
-	<slot />
+	{@render children?.()}
 </main>
 
 <style>

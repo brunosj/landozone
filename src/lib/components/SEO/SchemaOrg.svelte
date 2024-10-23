@@ -1,32 +1,52 @@
 <script>
 	// @ts-ignore
-	// import hash from 'object-hash';
-	export let author;
+	
 
-	/**
-	 * @type {{ name: string; slug: string }[]}
-	 */
-	export let breadcrumbs;
-	export let datePublished = '2024';
-	export let entity;
-	export let lastUpdated = '2024';
-	export let featuredImage;
-	export let metadescription;
-	export let siteLanguage;
-	export let siteTitle;
-	export let siteTitleAlt;
-	// @ts-ignore
-	export let siteUrl;
-	export let title;
-	export let url;
-	export let githubPage;
-	export let linkedinProfile;
-	export let telegramUsername;
+	
+	
 
+	
 	/**
-	 * @type {{ url: string; faviconWidth: number; faviconHeight: number } | null}
+	 * @typedef {Object} Props
+	 * @property {any} author - import hash from 'object-hash';
+	 * @property {{ name: string; slug: string }[]} breadcrumbs
+	 * @property {string} [datePublished]
+	 * @property {any} entity
+	 * @property {string} [lastUpdated]
+	 * @property {any} featuredImage
+	 * @property {any} metadescription
+	 * @property {any} siteLanguage
+	 * @property {any} siteTitle
+	 * @property {any} siteTitleAlt
+	 * @property {any} siteUrl
+	 * @property {any} title
+	 * @property {any} url
+	 * @property {any} githubPage
+	 * @property {any} linkedinProfile
+	 * @property {any} telegramUsername
+	 * @property {{ url: string; faviconWidth: number; faviconHeight: number } | null} [entityMeta]
 	 */
-	export let entityMeta = null;
+
+	/** @type {Props} */
+	let {
+		author,
+		breadcrumbs,
+		datePublished = '2024',
+		entity,
+		lastUpdated = '2024',
+		featuredImage,
+		metadescription,
+		siteLanguage,
+		siteTitle,
+		siteTitleAlt,
+		siteUrl,
+		title,
+		url,
+		githubPage,
+		linkedinProfile,
+		telegramUsername,
+		entityMeta = null
+	} = $props();
 
 	// const entityHash = hash({ author }, { algorithm: 'md5' });
 

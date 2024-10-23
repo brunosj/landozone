@@ -1,5 +1,4 @@
 <script lang="ts">
-	export let item: Project;
 	import type { Project } from '$lib/types/types';
 	import { fade, fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
@@ -10,6 +9,11 @@
 	import IconArrow from '$lib/assets/svg/icons/MaterialSymbolsLightArrowCircleDownRounded.svelte';
 
 	import { getImageComponent } from '$lib/utils/getProjectVisuals';
+	interface Props {
+		item: Project;
+	}
+
+	let { item }: Props = $props();
 
 	let {
 		name,
@@ -25,10 +29,10 @@
 		technologies,
 		features
 	} = item;
-	let animate = false;
+	let animate = $state(false);
 
 	let LogoComponent: any;
-	let ImageComponent: string;
+	let ImageComponent: string = $state();
 
 	onMount(() => {
 		animate = true;

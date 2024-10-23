@@ -5,7 +5,7 @@
 	import Logo from '$lib/assets/svg/logos/logo.svelte';
 	import { menu } from '$lib/data/menu';
 
-	let animate = false;
+	let animate = $state(false);
 
 	onMount(() => {
 		animate = true;

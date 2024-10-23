@@ -1,14 +1,18 @@
 <script lang="ts">
-	export let item: Blog;
 
 	import type { Blog } from '$lib/types/types';
 	import { onMount } from 'svelte';
 	import Tag from '$components/UI/Tag.svelte';
 	import { formatDate } from '$lib/utils/utils.js';
+	interface Props {
+		item: Blog;
+	}
+
+	let { item }: Props = $props();
 
 	let { name, date, slug, description, technologies } = item;
-	let animate = false;
-	let isHovered = false;
+	let animate = $state(false);
+	let isHovered = $state(false);
 
 	onMount(() => {
 		animate = true;
@@ -16,7 +20,7 @@
 </script>
 
 {#if animate}
-	<li on:mouseenter={() => (isHovered = true)} on:mouseleave={() => (isHovered = false)}>
+	<li onmouseenter={() => (isHovered = true)} onmouseleave={() => (isHovered = false)}>
 		<a class="blog" href={`/blog/${slug}`}>
 			<div class="info">
 				<p>{formatDate(date)}</p>

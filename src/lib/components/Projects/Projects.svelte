@@ -1,43 +1,37 @@
 <script lang="ts">
-	export let projects: Project[];
-
 	import type { Project } from '$lib/types/types';
-	import { fade, fly } from 'svelte/transition';
-	import { cubicInOut } from 'svelte/easing';
-	import IntersectionObserver from 'svelte-intersection-observer';
 	import ProjectCard from '$components/Projects/ProjectCard.svelte';
 	import ProjectCardMobile from '$components/Projects/ProjectCardMobile.svelte';
 	import ArrowLink from '$components/UI/ArrowLink.svelte';
 
-	let element;
-	let intersecting = false;
+	interface Props {
+		projects: Project[];
+	}
+
+	let { projects }: Props = $props();
 
 	const featuredProjects = projects
 		.filter((project) => project.featured === true)
 		.sort((a, b) => (a.date > b.date ? -1 : 1));
 </script>
 
-<section id="projects" class="page-section" bind:this={element}>
+<section id="projects" class="page-section">
 	<div class="page-container">
 		<div class="content">
-			<IntersectionObserver {element} bind:intersecting once threshold={0}>
-				{#if intersecting}
-					<div class="grid">
-						<div class="description">
-							<h2>recent projects</h2>
-						</div>
-						<ul class="projects">
-							{#each featuredProjects as item}
-								<ProjectCard {item} showDetails={true} />
-								<ProjectCardMobile {item} />
-							{/each}
-						</ul>
-						<span class="projects-link">
-							<ArrowLink path="/projects">see all projects</ArrowLink>
-						</span>
-					</div>
-				{/if}
-			</IntersectionObserver>
+			<div class="grid">
+				<div class="description">
+					<h2>recent projects</h2>
+				</div>
+				<ul class="projects">
+					{#each featuredProjects as item}
+						<ProjectCard {item} showDetails={true} />
+						<ProjectCardMobile {item} />
+					{/each}
+				</ul>
+				<span class="projects-link">
+					<ArrowLink path="/projects">see all projects</ArrowLink>
+				</span>
+			</div>
 		</div>
 	</div>
 </section>

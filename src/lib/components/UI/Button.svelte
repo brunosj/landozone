@@ -1,8 +1,19 @@
 <script lang="ts">
-	export let to: string;
-	export let text: string;
-	export let color = '#8786df';
-	export let keepTextLight = false;
+	interface Props {
+		to: string;
+		text: string;
+		color?: string;
+		keepTextLight?: boolean;
+		children?: import('svelte').Snippet;
+	}
+
+	let {
+		to,
+		text,
+		color = '#8786df',
+		keepTextLight = false,
+		children
+	}: Props = $props();
 
 	let textHoverColor = keepTextLight ? '#fff' : '#202129';
 
@@ -15,7 +26,7 @@
 	style="--border-color: {color}; --text-hover-color: {textHoverColor}">
 	<span class="button-content">
 		{text}
-		<slot />
+		{@render children?.()}
 	</span>
 </a>
 

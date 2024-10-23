@@ -1,11 +1,23 @@
 <script lang="ts">
-	export let image: { url: string; alt: string };
-	export let squareImage: { url: string; alt: string };
-	export let metadescription: string;
-	export let ogLanguage: string;
-	export let pageTitle: string;
-	export let siteTitle: string;
-	export let url: string;
+	interface Props {
+		image: { url: string; alt: string };
+		squareImage: { url: string; alt: string };
+		metadescription: string;
+		ogLanguage: string;
+		pageTitle: string;
+		siteTitle: string;
+		url: string;
+	}
+
+	let {
+		image,
+		squareImage,
+		metadescription,
+		ogLanguage,
+		pageTitle,
+		siteTitle,
+		url
+	}: Props = $props();
 </script>
 
 <svelte:head>

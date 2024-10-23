@@ -1,6 +1,12 @@
 <script>
-	export let color1 = '#00cfa1';
-	export let color2 = '#8786df';
+	/**
+	 * @typedef {Object} Props
+	 * @property {string} [color1]
+	 * @property {string} [color2]
+	 */
+
+	/** @type {Props} */
+	let { color1 = '#00cfa1', color2 = '#8786df' } = $props();
 </script>
 
 <svg

@@ -1,11 +1,11 @@
 <script lang="ts">
-	export let data;
 
 	import { fade, fly } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 	import IntersectionObserver from 'svelte-intersection-observer';
 	import Waveform from '$lib/assets/svg/waveform.svelte';
 	import SEO from '$lib/components/SEO/index.svelte';
+	let { data } = $props();
 
 	// SEO
 	let title = 'imprint + privacy policy';
@@ -30,8 +30,8 @@
 	};
 
 	// Logic
-	let element;
-	let intersecting = false;
+	let element = $state();
+	let intersecting = $state(false);
 </script>
 
 <SEO {...seoProps} />
@@ -51,7 +51,7 @@
 					<div
 						class="markdown list"
 						transition:fade={{ duration: 500, delay: 500, easing: cubicInOut }}>
-						<svelte:component this={data.content} />
+						<data.content />
 					</div>
 				</div>
 			{/if}

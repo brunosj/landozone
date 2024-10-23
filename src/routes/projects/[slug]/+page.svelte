@@ -1,6 +1,4 @@
 <script lang="ts">
-	export let data;
-
 	import { PUBLIC_SITE_URL } from '$env/static/public';
 
 	import type { Project } from '$lib/types/types';
@@ -12,6 +10,7 @@
 	import IconInternet from '$lib/assets/svg/icons/IconoirInternet.svelte';
 	import Tag from '$components/UI/Tag.svelte';
 	import Seo from '$components/SEO/SEO.svelte';
+	let { data } = $props();
 
 	let item: Project = data.meta;
 
@@ -33,8 +32,8 @@
 
 	let textColor = keepTextLight ? '#fff' : '#202129';
 
-	let element;
-	let intersecting = false;
+	let element: HTMLElement | null | undefined = $state();
+	let intersecting = $state(false);
 </script>
 
 <Seo title={`${name} | landozone`} {description} image={`${PUBLIC_SITE_URL}/${image}`} />
@@ -102,7 +101,7 @@
 					{/if}
 				</div>
 				<div class="markdown" transition:fade={{ duration: 350, delay: 500, easing: cubicInOut }}>
-					<svelte:component this={data.content} />
+					<data.content />
 				</div>
 			</section>
 		{/if}

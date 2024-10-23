@@ -3,15 +3,23 @@
 	import Website from '$lib/assets/svg/website.svelte';
 	import { fade, fly } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
+	import IntersectionObserver from 'svelte-intersection-observer';
+
+	let element: HTMLElement | null | undefined = $state();
+	let intersecting = $state(false);
 </script>
 
-<div class="figures" transition:fly={{ x: 100, duration: 500, delay: 250, easing: cubicInOut }}>
-	<div class="website">
-		<Website />
-	</div>
-	<div class="chart">
-		<Chart />
-	</div>
+<div class="figures" bind:this={element}>
+	<IntersectionObserver {element} bind:intersecting once threshold={0.3}>
+		{#if intersecting}
+			<div class="website" in:fly={{ x: 100, duration: 500, delay: 250, easing: cubicInOut }}>
+				<Website />
+			</div>
+			<div class="chart" in:fly={{ x: 100, duration: 500, delay: 250, easing: cubicInOut }}>
+				<Chart />
+			</div>
+		{/if}
+	</IntersectionObserver>
 </div>
 
 <style>

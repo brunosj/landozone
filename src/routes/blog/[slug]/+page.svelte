@@ -1,8 +1,8 @@
+<!-- @migration-task Error while migrating Svelte code: Can't migrate code with afterUpdate. Please migrate by hand. -->
 <script lang="ts">
-	export let data;
+	let { data } = $props();
 
 	import type { Blog } from '$lib/types/types';
-	import { onMount, afterUpdate } from 'svelte';
 	import { fade, fly } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 	import IntersectionObserver from 'svelte-intersection-observer';
@@ -15,18 +15,18 @@
 	let item: Blog = data.meta;
 	let { name, date, slug, description, technologies } = item;
 
-	let element;
-	let intersecting = false;
+	let element: HTMLElement | null | undefined = $state();
+	let intersecting = $state(false);
 
 	let contentElement: HTMLElement | null;
 	let tocElement: HTMLElement | null;
 	let activeListItem: HTMLLIElement | null;
 
-	onMount(() => {
+	$effect(() => {
 		checkContentElement();
 	});
 
-	afterUpdate(() => {
+	$effect(() => {
 		checkContentElement();
 	});
 
@@ -42,22 +42,22 @@
 
 <article bind:this={element} class="">
 	<IntersectionObserver {element} bind:intersecting once threshold={0.3}>
+		<div
+			class="table-of-contents"
+			transition:fly={{ x: -100, duration: 350, delay: 250, easing: cubicInOut }}>
+			<Toc
+				title=""
+				--toc-width="20vw"
+				--toc-desktop-sticky-top="15vh"
+				--toc-desktop-nav-margin="0 0 0 2rem"
+				--toc-overflow="hidden"
+				--toc-active-bg="transparent"
+				--toc-li-padding="0.4rem 0rem"
+				--toc-active-color="#00cfa1"
+				--toc-li-hover-color="#00cfa1"
+				--toc-active-font-weight="500" />
+		</div>
 		{#if intersecting}
-			<div
-				class="table-of-contents"
-				transition:fly={{ x: -100, duration: 350, delay: 250, easing: cubicInOut }}>
-				<Toc
-					title=""
-					--toc-width="20vw"
-					--toc-desktop-sticky-top="15vh"
-					--toc-desktop-nav-margin="0 0 0 2rem"
-					--toc-overflow="hidden"
-					--toc-active-bg="transparent"
-					--toc-li-padding="0.4rem 0rem"
-					--toc-active-color="#00cfa1"
-					--toc-li-hover-color="#00cfa1"
-					--toc-active-font-weight="500" />
-			</div>
 			<section class="page-container">
 				<div class="markdown" transition:fade={{ duration: 350, delay: 0, easing: cubicInOut }}>
 					<div class="header">
@@ -81,7 +81,6 @@
 <style>
 	article {
 		display: grid;
-
 		grid-template-columns: 1fr auto;
 		width: 100%;
 		height: 100%;

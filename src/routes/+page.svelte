@@ -1,12 +1,12 @@
 <script lang="ts">
-	export let data;
-
 	import Landing from '$components/Landing/Landing.svelte';
 	import About from '$components/About/About.svelte';
 	import Projects from '$components/Projects/Projects.svelte';
 	import Contact from '$components/Contact/Contact.svelte';
 	import type { Project } from '$lib/types/types';
 	import SEO from '$lib/components/SEO/index.svelte';
+
+	let { data } = $props();
 
 	// SEO
 	let title = '';

@@ -1,6 +1,4 @@
 <script lang="ts">
-	export let item: Project;
-	export let showDetails = false;
 
 	import type { Project } from '$lib/types/types';
 	import Img from '@zerodevx/svelte-img';
@@ -9,6 +7,12 @@
 	import IconInternet from '$lib/assets/svg/icons/IconoirInternet.svelte';
 	import IconArrow from '$lib/assets/svg/icons/MaterialSymbolsArrowOutwardRounded.svelte';
 	import { getImageComponent } from '$lib/utils/getProjectVisuals';
+	interface Props {
+		item: Project;
+		showDetails?: boolean;
+	}
+
+	let { item, showDetails = false }: Props = $props();
 
 	let {
 		name,
@@ -25,8 +29,8 @@
 		features
 	} = item;
 
-	let animate = true;
-	let ImageComponent: string;
+	let animate = $state(true);
+	let ImageComponent: string = $state();
 
 	onMount(() => {
 		console.log('mounted');

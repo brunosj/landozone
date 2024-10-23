@@ -7,8 +7,8 @@
 	import { cubicInOut } from 'svelte/easing';
 	import PersonalInfo from './PersonalInfo.svelte';
 
-	let element;
-	let intersecting = false;
+	let element = $state();
+	let intersecting = $state(false);
 </script>
 
 <section id="landing" class="page-section">

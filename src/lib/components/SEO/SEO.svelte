@@ -1,9 +1,13 @@
 <script lang="ts">
 	import { website } from '$data/config';
 	const { siteLanguage, siteTitle, siteDescription, siteImage, twitter } = website;
-	export let description: string;
-	export let title: string;
-	export let image = siteImage;
+	interface Props {
+		description: string;
+		title: string;
+		image?: any;
+	}
+
+	let { description, title, image = siteImage }: Props = $props();
 </script>
 
 <svelte:head>

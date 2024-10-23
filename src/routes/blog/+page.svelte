@@ -1,6 +1,4 @@
 <script lang="ts">
-	export let data;
-
 	import type { Blog } from '$lib/types/types';
 	import { fade, fly } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
@@ -8,6 +6,7 @@
 	import Waveform from '$lib/assets/svg/waveform.svelte';
 	import SEO from '$lib/components/SEO/index.svelte';
 	import BlogCard from '$components/Blog/BlogCard.svelte';
+	let { data } = $props();
 
 	// SEO
 	let title = 'blog';
@@ -38,8 +37,8 @@
 		return dateB.getTime() - dateA.getTime();
 	});
 
-	let element;
-	let intersecting = false;
+	let element: HTMLElement | null | undefined = $state();
+	let intersecting = $state(false);
 </script>
 
 <SEO {...seoProps} />

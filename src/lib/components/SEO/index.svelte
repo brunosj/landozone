@@ -18,30 +18,45 @@
 		telegramUsername
 	} = website;
 
-	export let entityMeta = null;
-	export let metadescription = '';
-	export let slug;
-	export let title;
-	export let entity = {};
 
 	const defaultAlt =
 		'logo of the website, a stylized paranthesis and the beginning of a closing tag (less than sign)';
 
-	export let featuredImage = {
+	/**
+	 * @typedef {Object} Props
+	 * @property {any} [entityMeta]
+	 * @property {string} [metadescription]
+	 * @property {any} slug
+	 * @property {any} title
+	 * @property {any} [entity]
+	 * @property {any} [featuredImage]
+	 * @property {any} [ogImage]
+	 * @property {any} [ogSquareImage]
+	 */
+
+	/** @type {Props} */
+	let {
+		entityMeta = null,
+		metadescription = '',
+		slug,
+		title,
+		entity = {},
+		featuredImage = {
 		url: featuredImageSrc,
 		alt: defaultAlt,
 		width: 672,
 		height: 448,
 		caption: 'Home page'
-	};
-	export let ogImage = {
+	},
+		ogImage = {
 		url: ogImageSrc,
 		alt: defaultAlt
-	};
-	export let ogSquareImage = {
+	},
+		ogSquareImage = {
 		url: ogSquareImageSrc,
 		alt: defaultAlt
-	};
+	}
+	} = $props();
 
 	const url = `${siteUrl}/${slug}`;
 	const pageTitle = `${title ? `${title} | landozone` : 'landozone'}`;
