@@ -37,7 +37,7 @@
 		width: 30%;
 		padding: 0.5rem;
 		height: auto;
-		background-color: var(--color-gray);
+		background-color: var(--color-black);
 		border-radius: 12px;
 		z-index: auto;
 	}
@@ -47,7 +47,7 @@
 		width: 30%;
 		padding: 0.5rem;
 		height: auto;
-		background-color: var(--color-gray);
+		background-color: var(--color-black);
 		border-radius: 12px;
 		z-index: auto;
 	}
