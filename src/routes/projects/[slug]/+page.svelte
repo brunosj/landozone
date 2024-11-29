@@ -32,7 +32,7 @@
 
 	let textColor = keepTextLight ? '#fff' : '#202129';
 
-	let element: HTMLElement | null | undefined = $state();
+	let element: HTMLElement | null = $state() as HTMLElement | null;
 	let intersecting = $state(false);
 </script>
 

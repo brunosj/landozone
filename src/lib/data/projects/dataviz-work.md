@@ -1,5 +1,5 @@
 ---
-name: 'Dataviz Work'
+name: 'Dataviz'
 date: '2028-11-05'
 url: ''
 repo: ''

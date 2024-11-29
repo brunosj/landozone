@@ -71,7 +71,7 @@
 						</div>
 					</div>
 					<svelte:component this={data.content} />
-					<span>Published on {formatDate(date)}</span>
+					<div class="date">Published on {formatDate(date)}</div>
 				</div>
 			</section>
 		{/if}
@@ -124,6 +124,11 @@
 
 	.table-of-contents {
 		display: none;
+	}
+
+	.date {
+		margin-top: 2rem;
+		color: var(--color-lightgray);
 	}
 
 	@media (min-width: 55em) {

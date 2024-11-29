@@ -1,26 +1,20 @@
 <script lang="ts">
 	import ArrowLink from '$components/UI/ArrowLink.svelte';
 	import Form from './Form.svelte';
-	import Figures from '$components/Figures/Figures.svelte';
 </script>
 
 <section id="contact" class="page-section">
 	<div class="page-container">
 		<div class="content">
-			<div class="grid">
-				<div class="description">
-					<h2>get in touch!</h2>
-					<p>Have an exciting project you would like to collaborate on?</p>
-					<p>
-						Use the contact form or send me a message and I will be happy to further discuss your
-						ideas with you.
-					</p>
-					<p>
-						<a id="underline" href="mailto:contact [at] landozone.net"
-							>contact [at] landozone.net</a>
-					</p>
-				</div>
-				<Figures />
+			<div class="description">
+				<h2>get in touch</h2>
+				<p>
+					Use the contact form or send me a message and I will be happy to further discuss your
+					ideas with you.
+				</p>
+				<p>
+					<a id="underline" href="mailto:contact [at] landozone.net">contact [at] landozone.net</a>
+				</p>
 			</div>
 			<Form />
 			<span class="imprint-link">
@@ -44,6 +38,14 @@
 	.imprint-link {
 		margin-left: auto;
 		margin-bottom: 2rem;
+	}
+
+	.description {
+		width: 100%;
+	}
+
+	.description > * + * {
+		margin-top: 1rem;
 	}
 
 	#underline {
@@ -75,20 +77,6 @@
 		height: 80%;
 	}
 
-	.description > * + * {
-		margin-top: 1rem;
-	}
-
-	.grid {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 3rem;
-	}
-
-	.description {
-		margin: auto 0;
-	}
-
 	@media (min-width: 55em) {
 		h2 {
 			margin-bottom: 3rem;
@@ -98,13 +86,13 @@
 			font-size: 1.2rem;
 		}
 
+		.description {
+			margin-top: 2rem;
+			width: 66%;
+		}
+
 		.imprint-link {
 			margin-bottom: 4rem;
-		}
-		.grid {
-			grid-template-columns: 1fr 1fr;
-			gap: 3rem;
-			margin-top: 2rem;
 		}
 	}
 </style>

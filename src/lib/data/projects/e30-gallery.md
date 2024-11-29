@@ -10,9 +10,9 @@ colorRGB: [102, 60, 245]
 keepTextLight: true
 type: 'Website'
 description: 'Art gallery located in Frankfurt, Germany'
-technologies: ['React', 'Next.js', 'Payload CMS', 'Node.js']
+technologies: ['React', 'Next.js', 'Payload CMS', 'Node.js', 'GitHub Actions']
 features: ['Multilingual (EN, DE)', 'Authentication']
-featured: true
+featured: false
 ---
 
 ![E30 Devices](../../assets/images/e30-devices.png)

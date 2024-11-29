@@ -5,11 +5,11 @@
 	import Contact from '$components/Contact/Contact.svelte';
 	import type { Project } from '$lib/types/types';
 	import SEO from '$lib/components/SEO/index.svelte';
-
+	import USP from '$components/USP/USP.svelte';
 	let { data } = $props();
 
 	// SEO
-	let title = '';
+	let title = 'imaginative web development';
 	let metadescription = 'landozone - crafting innovative applications and experiences on the web';
 	const breadcrumbs = [
 		{
@@ -37,6 +37,7 @@
 <Landing />
 <About />
 <Projects {projects} />
+<USP />
 <Contact />
 
 <style>

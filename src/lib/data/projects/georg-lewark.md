@@ -12,7 +12,7 @@ type: 'Website'
 description: 'Filmmaker portfolio'
 technologies: ['SvelteKit', 'TypeScript']
 features: []
-featured: true
+featured: false
 ---
 
 ![Georg Lewawrk Devices](../../assets/images/glewark-devices.png)

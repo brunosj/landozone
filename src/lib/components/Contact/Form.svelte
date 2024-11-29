@@ -234,7 +234,7 @@
 		}
 
 		.container {
-			width: 60%;
+			width: 80%;
 		}
 
 		.button-content {
@@ -249,7 +249,7 @@
 	@media (min-width: 75em) {
 		section {
 			margin: 3rem auto;
-			width: 80%;
+			width: 100%;
 		}
 	}
 </style>

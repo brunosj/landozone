@@ -35,16 +35,11 @@
 						<!-- <h2 transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>about</h2> -->
 						<div>
 							<p>
-								I'm a freelance web designer/developer whose expertise lies in
-								<span>web design</span> and
-								<span>front-end development</span>.
+								I'm a freelance developer/designer whose expertise lies in
+								<span>front-end/back-end development</span> and <span>web design</span>.
 								<!-- and <span>data visualization</span>.  -->
-								I am based in Berlin and have roots in political science and climate policy.
-							</p>
-							<p>
-								My passion for aesthetic excellence shines through in every web design project,
-								where I blend innovative design principles with cutting-edge technology to create
-								visually stunning and user-friendly websites
+								I am based in Berlin and have roots in political science and climate policy, having worked
+								in several NGOs and think tanks over the last years.
 							</p>
 							<p>
 								I enhance workflows and build applications using the latest web technologies, being
@@ -65,7 +60,7 @@
 								>/<a href="https://echarts.apache.org/" target="_blank" rel="noreferrer">ECharts</a
 								>)
 							</p>
-							<p>Check out my projects to discover more about my work!</p>
+							<p>Check out my projects below to discover more about my work.</p>
 						</div>
 
 						<div class="icons">
