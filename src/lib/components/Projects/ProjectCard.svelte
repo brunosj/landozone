@@ -1,5 +1,4 @@
 <script lang="ts">
-
 	import type { Project } from '$lib/types/types';
 	import Img from '@zerodevx/svelte-img';
 	import { onMount } from 'svelte';
@@ -49,7 +48,7 @@
 			{#if ImageComponent}
 				<div class="image-container">
 					<div class="image">
-						<a href={url} target="_blank">
+						<a href={`/projects/${slug}`}>
 							<img src={ImageComponent} alt={name} />
 						</a>
 					</div>
@@ -101,9 +100,11 @@
 					{/if}
 					<div class="links" style="width:{`${showDetails ? '100%' : '100%'}`}">
 						<div class="link">
-							<Button to={url} text="Visit site" {color} {keepTextLight}>
-								<IconInternet width="1.3rem" />
-							</Button>
+							{#if url}
+								<Button to={url} text="Visit site" {color} {keepTextLight}>
+									<IconInternet width="1.3rem" />
+								</Button>
+							{/if}
 						</div>
 						<div class="link">
 							<Button to={`/projects/${slug}`} text="Learn more" {color} {keepTextLight}>

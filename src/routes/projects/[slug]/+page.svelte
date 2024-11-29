@@ -86,13 +86,15 @@
 
 			<section class="page-container">
 				<div class="links" transition:fade={{ duration: 350, delay: 500, easing: cubicInOut }}>
-					<div class="link">
-						<Button to={url} text="Visit site" {color} {keepTextLight}>
-							<IconInternet width="1.3rem" />
-						</Button>
-					</div>
+					{#if url}
+						<div class="link">
+							<Button to={url} text="Visit site" {color} {keepTextLight}>
+								<IconInternet width="1.3rem" />
+							</Button>
+						</div>
+					{/if}
 
-					{#if repo !== null}
+					{#if repo}
 						<div class="link">
 							<Button to={repo} text="View code" {color} {keepTextLight}>
 								<IconGithub width="1.3rem" />

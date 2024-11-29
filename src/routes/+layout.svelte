@@ -8,7 +8,7 @@
 	import '../styles/globals.css';
 
 	import Header from '$components/Header/Header.svelte';
-	import MouseTracker from '$components/MouseTracker/MouseTracker.svelte';
+
 	interface Props {
 		children?: import('svelte').Snippet;
 	}

@@ -1,10 +1,10 @@
 ---
-name: 'Some of the tools I use'
-date: '2024-11-26'
+name: 'Deploy Strapi CMS to Uberspace Ubuntu Server'
+date: '2024-01-18'
 repo: null
-slug: 'tools-i-use'
-description: 'I always find it interesting to see what tools people use, here are mine if you are curious'
-technologies: ['Web', 'Fun']
+slug: 'deploy-strapi-uberspace'
+description: 'A guide to easily self-host the headless CMS'
+technologies: ['Strapi', 'JavaScript', 'Node.js', 'Bash', 'Ubuntu']
 ---
 
 A lof of my projects involve setting up Content Management Systems (CMS) to host clients' data. One of my preferred solution is Strapi, a highly-customizable open-source CMS which can run as a self-hosted Node.js app.
