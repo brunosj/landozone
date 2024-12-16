@@ -1,6 +1,6 @@
 ---
 name: 'Dataviz'
-date: '2028-11-05'
+date: '2024-11-05'
 url: ''
 repo: ''
 slug: 'dataviz-work'
@@ -24,9 +24,9 @@ featured: true
 
 My journey into coding actually started with data visualization, back in my university days learning R and spending countless hours trying to make plots look pretty and meaningful. While I've since ventured into web development, I am always eager to experiment with data visualization techniques and libraries and always on the lookout for more opportunities to do so. Got an interesting dataviz project in mind? [Let's chat](/#contact)!
 
-### Birmingham Now (Launching soon!)
+### Birmingham Now
 
-I recently had the pleasure of working on Birmingham Now, an interactive sound map that brings Birmingham's past and present to life through audio. Working with the team at Birmingham Museums and the folks at Devision, we created a digital space where anyone can explore and contribute to the city's sonic history.
+I recently had the pleasure of working on [Birmingham Now](https://brumnow.birminghammuseums.org.uk/), an interactive sound map that brings Birmingham's past and present to life through audio. Working with the team at Birmingham Museums and the folks at Devision, we created a digital space where anyone can explore and contribute to the city's sonic history.
 
 The project combines Next.js with Payload CMS and Mapbox GL to create an immersive experience where users can both listen to existing stories and add their own soundbites to the growing collection.
 

@@ -9,7 +9,6 @@
 	import Tag from '$components/UI/Tag.svelte';
 	import SEO from '$components/SEO/SEO.svelte';
 	import { formatDate, generateTOC } from '$lib/utils/utils.js';
-	// @ts-ignore
 	import Toc from 'svelte-toc';
 
 	let item: Blog = data.meta;

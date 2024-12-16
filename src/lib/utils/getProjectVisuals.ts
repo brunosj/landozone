@@ -24,6 +24,7 @@ import glewarkImage from '$lib/assets/images/glewark-devices.png';
 import originalFoodImage from '$lib/assets/images/original-food-devices.png';
 import e30Image from '$lib/assets/images/e30-devices.png';
 import datavizImage from '$lib/assets/images/dataviz-devices.png';
+import bnowImage from '$lib/assets/images/bnow-devices.png';
 
 type ImageComponent = string;
 
@@ -44,7 +45,8 @@ export function getImageComponent(name: string): ImageComponent {
 		'georg-lewark': glewarkImage,
 		'original-food': originalFoodImage,
 		'e30-gallery': e30Image,
-		'dataviz-work': datavizImage
+		'dataviz-work': datavizImage,
+		'birmingham-now': bnowImage
 	};
 
 	return imageMap[name] || '';
