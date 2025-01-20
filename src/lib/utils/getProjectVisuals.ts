@@ -25,7 +25,7 @@ import originalFoodImage from '$lib/assets/images/original-food-devices.png';
 import e30Image from '$lib/assets/images/e30-devices.png';
 import datavizImage from '$lib/assets/images/dataviz-devices.png';
 import bnowImage from '$lib/assets/images/bnow-devices.png';
-
+import shushImage from '$lib/assets/images/shush-devices.png';
 type ImageComponent = string;
 
 export function getImageComponent(name: string): ImageComponent {
@@ -46,7 +46,8 @@ export function getImageComponent(name: string): ImageComponent {
 		'original-food': originalFoodImage,
 		'e30-gallery': e30Image,
 		'dataviz-work': datavizImage,
-		'birmingham-now': bnowImage
+		'birmingham-now': bnowImage,
+		shush: shushImage
 	};
 
 	return imageMap[name] || '';
