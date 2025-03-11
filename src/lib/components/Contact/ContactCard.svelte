@@ -23,7 +23,7 @@
 		</div>
 	</div>
 	<div class="icons grid-item desktop">
-		<Button to="mailto:ccontact [at] landozone.net" text="Email">
+		<Button to="mailto:contact [at] landozone.net" text="Email">
 			<IconMail width="1.3rem" />
 		</Button>
 
