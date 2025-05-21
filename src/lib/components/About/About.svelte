@@ -16,7 +16,7 @@
 	import Contact from '$components/Contact/Contact.svelte';
 	import ContactCard from '$components/Contact/ContactCard.svelte';
 	import Figures from '$components/Figures/Figures.svelte';
-
+	import IconPython from '$lib/assets/svg/icons/SimpleIconsPython.svelte';
 	let element: HTMLElement | null | undefined = $state();
 	let intersecting = $state(false);
 </script>
@@ -70,7 +70,7 @@
 							<IconReact width="1.5rem" />
 							<IconVue width="1.5rem" />
 							<IconD3 width="1.5rem" />
-							<IconECharts width="1.5rem" />
+							<IconPython width="1.5rem" />
 							<IconR width="1.5rem" />
 						</div>
 					</div>

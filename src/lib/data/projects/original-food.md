@@ -18,7 +18,7 @@ technologies:
   - 'Node.js'
   - 'MySQL'
 features: []
-featured: true
+featured: false
 ---
 
 ![Original Food Devices](../../assets/images/original-food-devices.png)

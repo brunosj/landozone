@@ -29,7 +29,7 @@
 	} = item;
 
 	let animate = $state(true);
-	let ImageComponent: string = $state();
+	let ImageComponent: string = $state(getImageComponent(slug));
 
 	onMount(() => {
 		console.log('mounted');

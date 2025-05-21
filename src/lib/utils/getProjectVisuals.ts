@@ -1,23 +1,13 @@
-// import THFImage from '$lib/assets/images/thf-bg.jpg';
 import THFImage from '$lib/assets/images/thf-devices.png';
-// import ECLabImage from '$lib/assets/images/eclab-bg.jpg';
 import ECLabImage from '$lib/assets/images/eclab-devices.png';
-// import BCPCImage from '$lib/assets/images/bcpc-bg.png';
 import BCPCImage from '$lib/assets/images/bcpc-devices.png';
-// import PWXImage from '$lib/assets/images/pwx-bg.jpg';
 import PWXImage from '$lib/assets/images/pinewax-devices.png';
-// import RigoImage from '$lib/assets/images/rigo-bg.jpg';
 import RigoImage from '$lib/assets/images/rigo-devices.png';
-// import TMGImage from '$lib/assets/images/tmg-bg.jpg';
 import TMGImage from '$lib/assets/images/tmg-devices.png';
 import DNAImage from '$lib/assets/images/dna-bg.jpg';
-// import DeremetzImage from '$lib/assets/images/deremetz-bg.jpg';
 import DeremetzImage from '$lib/assets/images/deremetz-devices.png';
-// import ZebiImage from '$lib/assets/images/zebi-bg.jpg';
 import ZebiImage from '$lib/assets/images/sdiaz-devices.png';
-// import SIPLABImage from '$lib/assets/images/siplab-bg.png';
 import SIPLABImage from '$lib/assets/images/siplab-devices.png';
-// import aconiumImage from '$lib/assets/images/aconium-bg.jpg';
 import aconiumImage from '$lib/assets/images/aconium-devices.png';
 import entlebuchImage from '$lib/assets/images/entlebuch-devices.png';
 import glewarkImage from '$lib/assets/images/glewark-devices.png';
@@ -26,6 +16,9 @@ import e30Image from '$lib/assets/images/e30-devices.png';
 import datavizImage from '$lib/assets/images/dataviz-devices.png';
 import bnowImage from '$lib/assets/images/bnow-devices.png';
 import shushImage from '$lib/assets/images/shush-devices.png';
+import dfcImage from '$lib/assets/images/dfc-devices.png';
+import nzlrImage from '$lib/assets/images/nzlr-devices.png';
+
 type ImageComponent = string;
 
 export function getImageComponent(name: string): ImageComponent {
@@ -47,7 +40,9 @@ export function getImageComponent(name: string): ImageComponent {
 		'e30-gallery': e30Image,
 		'dataviz-work': datavizImage,
 		'birmingham-now': bnowImage,
-		shush: shushImage
+		shush: shushImage,
+		'dfc-studios': dfcImage,
+		'net-zero-land-rights': nzlrImage
 	};
 
 	return imageMap[name] || '';
