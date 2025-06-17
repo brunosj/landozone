@@ -1,6 +1,6 @@
 ---
 name: 'SHUSH'
-date: '2024-12-16'
+date: '2025-02-16'
 url: 'https://shush.dance'
 repo: 'https://github.com/brunosj/shush-dance'
 slug: 'shush'

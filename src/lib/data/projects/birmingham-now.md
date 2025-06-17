@@ -4,7 +4,7 @@ date: '2024-12-16'
 url: 'https://brumnow.birminghammuseums.org.uk/'
 repo: 'https://github.com/brunosj/bnow'
 slug: 'birmingham-now'
-image: 'deremetz-bg.jpg'
+image: 'bnow-devices.png'
 color: '#E79601'
 colorRGB: [231, 150, 1]
 keepTextLight: false
