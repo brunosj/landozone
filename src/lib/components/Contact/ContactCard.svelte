@@ -63,8 +63,15 @@
 
 	img {
 		width: 4rem;
+		height: 4rem;
 		margin-bottom: 0rem;
 		border-radius: 100%;
+		object-fit: cover;
+		display: block;
+		overflow: hidden;
+		transform: translateZ(0);
+		-webkit-transform: translate3d(0, 0, 0);
+		backface-visibility: hidden;
 	}
 
 	.picture {
@@ -136,8 +143,15 @@
 		}
 		img {
 			width: 5.5rem;
+			height: 5.5rem;
 			border-radius: 100%;
 			margin-bottom: 1.5rem;
+			object-fit: cover;
+			display: block;
+			overflow: hidden;
+			transform: translateZ(0);
+			-webkit-transform: translate3d(0, 0, 0);
+			backface-visibility: hidden;
 		}
 
 		.info-grid {
