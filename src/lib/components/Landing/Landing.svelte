@@ -24,8 +24,8 @@
 							imaginative web development
 						</h1>
 						<h4 transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
-							hi! my name is Bruno and I am passionate about crafting applications and experiences
-							on the web.
+							hi! my name is Bruno and I am passionate about building applications, visualizing
+							data, and crafting experiences on the web.
 						</h4>
 						<div transition:fade={{ duration: 500, delay: 350, easing: cubicInOut }}>
 							<PersonalInfo />

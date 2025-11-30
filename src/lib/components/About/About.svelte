@@ -35,15 +35,13 @@
 						<!-- <h2 transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>about</h2> -->
 						<div>
 							<p>
-								I'm a freelance developer/designer whose expertise lies in
-								<span>front-end/back-end development</span> and <span>web design</span>.
-								<!-- and <span>data visualization</span>.  -->
-								I am based in Berlin and have roots in political science and climate policy, having worked
-								in several NGOs and think tanks over the last years.
+								I'm a freelance developer with expertise spanning
+								<span>full-stack web development</span> and
+								<span>data science</span>. I’m based in Berlin and have a background in political
+								science and climate policy, which informs my approach to data work.
 							</p>
 							<p>
-								I enhance workflows and build applications using the latest web technologies, being
-								well-versed in JavaScript/TypeScript tools (including <a
+								I build applications and visualize complex data using JavaScript/TypeScript tools (<a
 									href="https://svelte.dev/"
 									target="_blank"
 									rel="noreferrer">Svelte</a
@@ -51,14 +49,19 @@
 									href="https://vuejs.org/"
 									target="_blank"
 									rel="noreferrer">Vue</a
-								>), the
-								<a href="https://nodejs.org/en" target="_blank" rel="noreferrer">Node.js</a>
-								environment as well as data viz librairies (<a
+								>),
+								<a href="https://nodejs.org/en" target="_blank" rel="noreferrer">Node.js</a>, data
+								visualization libraries (<a
 									href="https://d3js.org/"
 									target="_blank"
 									rel="noreferrer">D3.js</a
 								>/<a href="https://echarts.apache.org/" target="_blank" rel="noreferrer">ECharts</a
-								>)
+								>) as well as
+								<a href="https://www.python.org/" target="_blank" rel="noreferrer"
+									><span>Python</span></a>
+								and
+								<a href="https://www.r-project.org/" target="_blank" rel="noreferrer"
+									><span>R</span></a> for data analysis.
 							</p>
 							<p>Check out my projects below to discover more about my work.</p>
 						</div>
