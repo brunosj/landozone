@@ -18,6 +18,7 @@ import bnowImage from '$lib/assets/images/bnow-devices.png';
 import shushImage from '$lib/assets/images/shush-devices.png';
 import dfcImage from '$lib/assets/images/dfc-devices.png';
 import nzlrImage from '$lib/assets/images/nzlr-devices.png';
+import pkImage from '$lib/assets/images/pk-devices.png';
 
 type ImageComponent = string;
 
@@ -42,7 +43,8 @@ export function getImageComponent(name: string): ImageComponent {
 		'birmingham-now': bnowImage,
 		shush: shushImage,
 		'dfc-studios': dfcImage,
-		'net-zero-land-rights': nzlrImage
+		'net-zero-land-rights': nzlrImage,
+		powerkonnekt: pkImage
 	};
 
 	return imageMap[name] || '';

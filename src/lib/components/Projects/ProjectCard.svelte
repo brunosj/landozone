@@ -32,7 +32,6 @@
 	let ImageComponent: string = $state(getImageComponent(slug));
 
 	onMount(() => {
-		console.log('mounted');
 		animate = true;
 		ImageComponent = getImageComponent(slug);
 	});

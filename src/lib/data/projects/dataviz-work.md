@@ -1,6 +1,6 @@
 ---
 name: 'Dataviz'
-date: '2024-11-05'
+date: '2025-11-05'
 url: ''
 repo: ''
 slug: 'dataviz-work'
@@ -26,7 +26,7 @@ My journey into coding actually started with data visualization, back in my univ
 
 ### Birmingham Now
 
-I recently had the pleasure of working on [Birmingham Now](https://brumnow.birminghammuseums.org.uk/), an interactive sound map that brings Birmingham's past and present to life through audio. Working with the team at Birmingham Museums and the folks at Devision, we created a digital space where anyone can explore and contribute to the city's sonic history.
+In 2025 I had the pleasure of working on [Birmingham Now](https://brumnow.birminghammuseums.org.uk/), an interactive sound map that brings Birmingham's past and present to life through audio. Working with the team at Birmingham Museums and the folks at Devision, we created a digital space where anyone can explore and contribute to the city's sonic history.
 
 The project combines Next.js with Payload CMS and Mapbox GL to create an immersive experience where users can both listen to existing stories and add their own soundbites to the growing collection.
 
@@ -39,6 +39,19 @@ Technologies:
 <br/>
 
 ![Birmingham Now ](../../assets/images/bnow-screen.jpg)
+
+### DFC Studios Dataviz Lab
+
+Together with [DFC Studios](https://dfc.studio/) we are building a suite of interactive dashboards for different organizations active in the climate advocacy sector (Climate Action Tracker, Steelwatch, etc.). Building on state-of-the-art information design and visualization technologies, we aim to provide compelling and informative visualizations able to support the mission of these organizations.
+
+Technologies:
+
+- Svelte
+- D3.js
+
+<br/>
+
+![DFC Dataviz ](../../assets/images/dataviz-desktop.png)
 
 ### SISTA
 
