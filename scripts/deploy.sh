@@ -21,8 +21,9 @@ LOCK_FILE="$APP_BASE_DIR/deploy.lock"
 TIMESTAMP="$(date '+%Y-%m-%d %H:%M:%S')"
 
 # Ensure non-interactive shells (e.g. GitHub runner over SSH) can resolve tools.
-export PATH="/home/lando/.local/share/pnpm:/home/lando/.nvm/versions/node/v20.12.2/bin:$PATH"
-NODE_BIN="${NODE_BIN:-/home/lando/.nvm/versions/node/v20.12.2/bin/node}"
+export PATH="/home/lando/.local/share/pnpm:$PATH"
+NVM_DIR="${NVM_DIR:-/home/lando/.nvm}"
+NODE_VERSION="${NODE_VERSION:-22}"
 PNPM_BIN="${PNPM_BIN:-/home/lando/.local/share/pnpm/pnpm}"
 PM2_BIN="${PM2_BIN:-/home/lando/.local/share/pnpm/pm2}"
 
@@ -36,9 +37,23 @@ fail() {
 }
 
 command -v git >/dev/null 2>&1 || fail "git is not installed"
-[ -x "$NODE_BIN" ] || fail "node binary not found at $NODE_BIN"
+
+# Prefer nvm-managed Node so engine requirements stay compatible over time.
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+	# shellcheck disable=SC1090
+	. "$NVM_DIR/nvm.sh"
+	nvm install "$NODE_VERSION" >/dev/null
+	nvm use "$NODE_VERSION" >/dev/null
+else
+	log "nvm not found at $NVM_DIR, using system node from PATH"
+fi
+
+NODE_BIN="$(command -v node || true)"
+[ -n "$NODE_BIN" ] || fail "node is not available in PATH"
 [ -x "$PNPM_BIN" ] || fail "pnpm binary not found at $PNPM_BIN"
 [ -x "$PM2_BIN" ] || log "pm2 binary not found at $PM2_BIN (only needed if your restart command uses pm2)"
+log "Using node: $NODE_BIN ($("$NODE_BIN" -v))"
+log "Using pnpm: $PNPM_BIN ($("$PNPM_BIN" -v))"
 
 [ -d "$APP_BASE_DIR" ] || fail "Base dir not found: $APP_BASE_DIR"
 [ -d "$APP_DIR/.git" ] || fail "Git repo not found at: $APP_DIR"
