@@ -157,7 +157,7 @@
 
 		.info-grid {
 			grid-template-columns: 2fr 1fr;
-			gap: 3rem;
+			gap: 2rem;
 		}
 
 		.picture {
@@ -170,7 +170,7 @@
 		}
 
 		.info {
-			padding: 4rem;
+			padding: 3rem;
 		}
 
 		.info::before {

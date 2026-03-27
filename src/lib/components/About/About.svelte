@@ -39,18 +39,18 @@
 								{m.about_p1()}
 							</p>
 							<p>
-								{m.about_p2_prefix()} (<a href="https://svelte.dev/" target="_blank" rel="noreferrer"
-									>Svelte</a
+								{m.about_p2_prefix()} (<a
+									href="https://svelte.dev/"
+									target="_blank"
+									rel="noreferrer">Svelte</a
 								>/<a href="https://react.dev/" target="_blank" rel="noreferrer">React</a>/<a
 									href="https://vuejs.org/"
 									target="_blank"
 									rel="noreferrer">Vue</a
 								>),
 								<a href="https://nodejs.org/en" target="_blank" rel="noreferrer">Node.js</a>, data
-								{m.about_p2_middle()} (<a
-									href="https://d3js.org/"
-									target="_blank"
-									rel="noreferrer">D3.js</a
+								{m.about_p2_middle()} (<a href="https://d3js.org/" target="_blank" rel="noreferrer"
+									>D3.js</a
 								>/<a href="https://echarts.apache.org/" target="_blank" rel="noreferrer">ECharts</a
 								>) {m.about_p2_suffix()}
 							</p>
@@ -158,7 +158,7 @@
 		.grid {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
-			gap: 6rem;
+			gap: 4rem;
 		}
 
 		.grid p {

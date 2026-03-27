@@ -74,6 +74,7 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
+		width: 100%;
 		gap: 0.45rem;
 		white-space: nowrap;
 		font-size: 0.6rem;
@@ -86,7 +87,7 @@
 	@media (min-width: 55em) {
 		a {
 			display: inline-flex;
-			width: fit-content;
+			width: 100%;
 			min-width: 9.5rem;
 			height: auto;
 			padding: 0.45rem 0.6rem;
