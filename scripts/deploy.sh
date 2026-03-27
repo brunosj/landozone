@@ -17,6 +17,8 @@ set -Eeuo pipefail
 APP_BASE_DIR="/home/lando/landozone"
 APP_DIR="${APP_DIR:-/home/lando/landozone/repo}"
 BRANCH="${BRANCH:-main}"
+APP_PORT="${APP_PORT:-5175}"
+APP_HOST="${APP_HOST:-0.0.0.0}"
 LOCK_FILE="$APP_BASE_DIR/deploy.lock"
 TIMESTAMP="$(date '+%Y-%m-%d %H:%M:%S')"
 
@@ -54,6 +56,7 @@ NODE_BIN="$(command -v node || true)"
 [ -x "$PM2_BIN" ] || log "pm2 binary not found at $PM2_BIN (only needed if your restart command uses pm2)"
 log "Using node: $NODE_BIN ($("$NODE_BIN" -v))"
 log "Using pnpm: $PNPM_BIN ($("$PNPM_BIN" -v))"
+log "Runtime bind: $APP_HOST:$APP_PORT"
 
 [ -d "$APP_BASE_DIR" ] || fail "Base dir not found: $APP_BASE_DIR"
 [ -d "$APP_DIR/.git" ] || fail "Git repo not found at: $APP_DIR"
@@ -86,8 +89,11 @@ if [ ! -f "$APP_DIR/build/index.js" ] && [ ! -f "$APP_DIR/build/server/index.js"
 	fail "build output not found (expected adapter-node output in build/)"
 fi
 
+export HOST="$APP_HOST"
+export PORT="$APP_PORT"
+
 if [ -z "${RESTART_CMD:-}" ]; then
-	RESTART_CMD="$PM2_BIN restart landozone || $PM2_BIN start build/index.js --name landozone"
+	RESTART_CMD="$PM2_BIN restart landozone --update-env || $PM2_BIN start build/index.js --name landozone --update-env"
 fi
 
 if [ -n "${RESTART_CMD:-}" ]; then
