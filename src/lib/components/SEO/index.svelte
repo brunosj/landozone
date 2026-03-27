@@ -2,25 +2,15 @@
 	import ogSquareImageSrc from '$lib/assets/images/lz_logo_500px.png';
 	import ogImageSrc from '$lib/assets/images/lz_logo_seo.jpg';
 	import featuredImageSrc from '$lib/assets/images/lz_logo_seo.jpg';
-	import { website } from '$lib/data/config';
+	import { getWebsiteConfig } from '$lib/data/config';
+	import * as m from '$lib/paraglide/messages';
 	import OpenGraph from './OpenGraph.svelte';
 	import SchemaOrg from './SchemaOrg.svelte';
 
-	const {
-		author,
-		ogLanguage,
-		siteLanguage,
-		siteShortTitle,
-		siteTitle,
-		siteUrl,
-		githubPage,
-		linkedinProfile,
-		telegramUsername
-	} = website;
+	const website = $derived(getWebsiteConfig());
 
 
-	const defaultAlt =
-		'logo of the website, a stylized paranthesis and the beginning of a closing tag (less than sign)';
+	const defaultAlt = $derived(m.seo_default_alt());
 
 	/**
 	 * @typedef {Object} Props
@@ -46,7 +36,7 @@
 		alt: defaultAlt,
 		width: 672,
 		height: 448,
-		caption: 'Home page'
+		caption: m.seo_home_page()
 	},
 		ogImage = {
 		url: ogImageSrc,
@@ -58,22 +48,22 @@
 	}
 	} = $props();
 
-	const url = `${siteUrl}/${slug}`;
-	const pageTitle = `${title ? `${title} | landozone` : 'landozone'}`;
-	const openGraphProps = {
+	const url = $derived(`${website.siteUrl}/${slug}`);
+	const pageTitle = $derived(`${title ? `${title} | ${m.site_name()}` : m.site_name()}`);
+	const openGraphProps = $derived({
 		image: ogImage,
 		squareImage: ogSquareImage,
 		metadescription,
-		ogLanguage,
+		ogLanguage: website.ogLanguage,
 		pageTitle,
-		siteTitle,
+		siteTitle: website.siteTitle,
 		url
-	};
-	const schemaOrgProps = {
-		author,
+	});
+	const schemaOrgProps = $derived({
+		author: website.author,
 		breadcrumbs: [
 			{
-				name: 'Home',
+				name: m.home(),
 				slug: ''
 			}
 		],
@@ -81,16 +71,16 @@
 		entityMeta,
 		featuredImage,
 		metadescription,
-		siteLanguage,
-		siteTitle,
-		siteTitleAlt: siteShortTitle,
-		siteUrl,
+		siteLanguage: website.siteLanguage,
+		siteTitle: website.siteTitle,
+		siteTitleAlt: website.siteShortTitle,
+		siteUrl: website.siteUrl,
 		title,
 		url,
-		githubPage,
-		linkedinProfile,
-		telegramUsername
-	};
+		githubPage: website.githubPage,
+		linkedinProfile: website.linkedinProfile,
+		telegramUsername: website.telegramUsername
+	});
 </script>
 
 <svelte:head>

@@ -6,6 +6,7 @@
 	import IntersectionObserver from 'svelte-intersection-observer';
 	import { cubicInOut } from 'svelte/easing';
 	import PersonalInfo from './PersonalInfo.svelte';
+	import * as m from '$lib/paraglide/messages';
 
 	let element: HTMLElement | null = $state() as HTMLElement | null;
 	let intersecting = $state(false);
@@ -21,11 +22,10 @@
 				{#if intersecting}
 					<div class="hero">
 						<h1 transition:fade={{ duration: 750, delay: 0, easing: cubicInOut }}>
-							imaginative web development
+							{m.landing_title()}
 						</h1>
 						<h4 transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
-							hi! my name is Bruno and I am passionate about building applications, visualizing
-							data, and crafting experiences on the web.
+							{m.landing_intro()}
 						</h4>
 						<div transition:fade={{ duration: 500, delay: 350, easing: cubicInOut }}>
 							<PersonalInfo />

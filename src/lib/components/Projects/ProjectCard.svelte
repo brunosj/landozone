@@ -1,11 +1,10 @@
 <script lang="ts">
 	import type { Project } from '$lib/types/types';
-	import Img from '@zerodevx/svelte-img';
-	import { onMount } from 'svelte';
 	import Button from '$components/UI/Button.svelte';
 	import IconInternet from '$lib/assets/svg/icons/IconoirInternet.svelte';
 	import IconArrow from '$lib/assets/svg/icons/MaterialSymbolsArrowOutwardRounded.svelte';
 	import { getImageComponent } from '$lib/utils/getProjectVisuals';
+	import * as m from '$lib/paraglide/messages';
 	interface Props {
 		item: Project;
 		showDetails?: boolean;
@@ -13,28 +12,17 @@
 
 	let { item, showDetails = false }: Props = $props();
 
-	let {
-		name,
-		date,
-		url,
-		color,
-		keepTextLight,
-		slug,
-		repo,
-		type,
-		image,
-		description,
-		technologies,
-		features
-	} = item;
+	let name = $derived(item.name);
+	let url = $derived(item.url);
+	let color = $derived(item.color);
+	let keepTextLight = $derived(item.keepTextLight);
+	let slug = $derived(item.slug);
+	let description = $derived(item.description);
+	let technologies = $derived(item.technologies);
+	let features = $derived(item.features);
 
 	let animate = $state(true);
-	let ImageComponent: string = $state(getImageComponent(slug));
-
-	onMount(() => {
-		animate = true;
-		ImageComponent = getImageComponent(slug);
-	});
+	let ImageComponent: string = $derived(getImageComponent(slug));
 </script>
 
 {#if animate}
@@ -65,7 +53,7 @@
 						<div class="details">
 							{#if features.length >= 1}
 								<div>
-									<p class="category">Features</p>
+									<p class="category">{m.features()}</p>
 									<ul class="feature">
 										{#each features as item}
 											<span>
@@ -81,7 +69,7 @@
 								</div>
 							{/if}
 							<div>
-								<p class="category">Technologies</p>
+								<p class="category">{m.technologies()}</p>
 								<ul class="feature">
 									{#each technologies as item}
 										<span>
@@ -100,13 +88,13 @@
 					<div class="links" style="width:{`${showDetails ? '100%' : '100%'}`}">
 						<div class="link">
 							{#if url}
-								<Button to={url} text="Visit site" {color} {keepTextLight}>
+								<Button to={url} text={m.visit_site()} {color} {keepTextLight}>
 									<IconInternet width="1.3rem" />
 								</Button>
 							{/if}
 						</div>
 						<div class="link">
-							<Button to={`/projects/${slug}`} text="Learn more" {color} {keepTextLight}>
+							<Button to={`/projects/${slug}`} text={m.learn_more()} {color} {keepTextLight}>
 								<IconArrow width="1.3rem" />
 							</Button>
 						</div>

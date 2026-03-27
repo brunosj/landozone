@@ -1,4 +1,3 @@
-<!-- @migration-task Error while migrating Svelte code: Can't migrate code with afterUpdate. Please migrate by hand. -->
 <script lang="ts">
 	let { data } = $props();
 
@@ -10,9 +9,13 @@
 	import SEO from '$components/SEO/SEO.svelte';
 	import { formatDate, generateTOC } from '$lib/utils/utils.js';
 	import Toc from 'svelte-toc';
+	import * as m from '$lib/paraglide/messages';
 
-	let item: Blog = data.meta;
-	let { name, date, slug, description, technologies } = item;
+	let item: Blog = $derived(data.meta);
+	let name = $derived(item.name);
+	let date = $derived(item.date);
+	let description = $derived(item.description);
+	let technologies = $derived(item.technologies);
 
 	let element: HTMLElement | null | undefined = $state();
 	let intersecting = $state(false);
@@ -69,8 +72,8 @@
 							</ul>
 						</div>
 					</div>
-					<svelte:component this={data.content} />
-					<div class="date">Published on {formatDate(date)}</div>
+					<data.content />
+					<div class="date">{m.published_on()} {formatDate(date)}</div>
 				</div>
 			</section>
 		{/if}

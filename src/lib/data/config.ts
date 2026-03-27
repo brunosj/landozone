@@ -5,21 +5,36 @@ import {
 	PUBLIC_SITE_URL,
 	PUBLIC_TELEGRAM_USERNAME
 } from '$env/static/public';
+import { getLocale } from '$lib/paraglide/runtime';
+import * as m from '$lib/paraglide/messages';
 
-export const website = {
-	author: `bruno sj`,
-	ogLanguage: 'en_US',
-	siteLanguage: 'en-US',
-	siteTitle: `landozone - freelance web developer and designer based in Berlin`,
-	siteShortTitle: 'landozone - freelance web developer and designer based in Berlin',
-	siteDescription: `landozone - freelance web developer and designer based in Berlin`,
-	siteImage: `https://www.landozone.net/lz_logo_seo.jpg`,
-	twitter: `@brunosj`,
-	backgroundColor: '#14151d',
-	themeColor: '#8786df',
-	siteUrl: PUBLIC_SITE_URL,
-	contactEmail: PUBLIC_CONTACT_EMAIL,
-	githubPage: PUBLIC_GITHUB_PAGE,
-	linkedinProfile: PUBLIC_LINKEDIN_PROFILE,
-	telegramUsername: PUBLIC_TELEGRAM_USERNAME
+const localeMap = {
+	en: { ogLanguage: 'en_US', siteLanguage: 'en-US' },
+	de: { ogLanguage: 'de_DE', siteLanguage: 'de-DE' }
+};
+
+export const getWebsiteConfig = () => {
+	const locale = getLocale();
+	const { ogLanguage, siteLanguage } = localeMap[locale] ?? localeMap.en;
+	const siteName = m.site_name();
+	const siteTagline = m.site_tagline();
+	const siteTitle = `${siteName} - ${siteTagline}`;
+
+	return {
+		author: 'bruno sj',
+		ogLanguage,
+		siteLanguage,
+		siteTitle,
+		siteShortTitle: siteTitle,
+		siteDescription: siteTitle,
+		siteImage: 'https://www.landozone.net/lz_logo_seo.jpg',
+		twitter: '@brunosj',
+		backgroundColor: '#14151d',
+		themeColor: '#8786df',
+		siteUrl: PUBLIC_SITE_URL,
+		contactEmail: PUBLIC_CONTACT_EMAIL,
+		githubPage: PUBLIC_GITHUB_PAGE,
+		linkedinProfile: PUBLIC_LINKEDIN_PROFILE,
+		telegramUsername: PUBLIC_TELEGRAM_USERNAME
+	};
 };

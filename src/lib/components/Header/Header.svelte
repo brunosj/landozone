@@ -1,15 +1,20 @@
 <script lang="ts">
+	import { localizeHref } from '$lib/paraglide/runtime';
 	import { onMount } from 'svelte';
 	import { fly, slide, fade } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 	import Logo from '$lib/assets/svg/logos/logo.svelte';
-	import { menu } from '$lib/data/menu';
+	import { getMenu } from '$lib/data/menu';
+	import * as m from '$lib/paraglide/messages';
+	import LanguageSwitcher from './LanguageSwitcher.svelte';
 
 	let animate = $state(false);
 
 	onMount(() => {
 		animate = true;
 	});
+
+	const menu = $derived(getMenu().map((item) => ({ ...item, slug: localizeHref(item.slug) })));
 </script>
 
 <header>
@@ -23,7 +28,7 @@
 				delay: 700
 			}}>
 			<div class="logo">
-				<a href="/" aria-label="landozone logo">
+				<a href={localizeHref('/')} aria-label={m.logo_aria_label()}>
 					<div class="logo-shape">
 						<Logo />
 					</div>
@@ -37,6 +42,7 @@
 						</a>
 					</li>
 				{/each}
+				<LanguageSwitcher />
 			</ul>
 		</nav>
 	{/if}
@@ -73,7 +79,7 @@
 		display: flex;
 		align-items: center;
 		flex-direction: row;
-		gap: 1rem;
+		gap: 2rem;
 	}
 
 	li {

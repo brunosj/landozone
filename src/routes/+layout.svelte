@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { page } from '$app/state';
+	import { locales, localizeHref } from '$lib/paraglide/runtime';
 	import '@fontsource-variable/sora';
 	import '@fontsource-variable/rubik';
 	import '@fontsource/ibm-plex-mono';
@@ -6,21 +8,21 @@
 	import '../styles/reset.css';
 	import '../styles/one-dark-theme.css';
 	import '../styles/globals.css';
-
 	import Header from '$components/Header/Header.svelte';
 
-	interface Props {
-		children?: import('svelte').Snippet;
-	}
+	interface Props { children?: import('svelte').Snippet }
 
 	let { children }: Props = $props();
 </script>
 
 <!-- <MouseTracker /> -->
-<main class="content">
-	<Header />
-	{@render children?.()}
-</main>
+<main class="content"><Header />{@render children?.()}</main>
+
+<div style="display:none">
+	{#each locales as locale}
+		<a href={localizeHref(page.url.pathname, { locale })}>{locale}</a>
+	{/each}
+</div>
 
 <style>
 	.content {
@@ -64,11 +66,9 @@
 			height: 100%;
 			width: 90%;
 		}
-
 		:global(.page-section) {
 			min-height: 75vh;
 		}
-
 		:global(.page-container) {
 			margin: 2rem auto;
 		}

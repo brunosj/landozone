@@ -5,18 +5,19 @@
 	import IntersectionObserver from 'svelte-intersection-observer';
 	import Waveform from '$lib/assets/svg/waveform.svelte';
 	import SEO from '$lib/components/SEO/index.svelte';
+	import * as m from '$lib/paraglide/messages';
 	let { data } = $props();
 
 	// SEO
-	let title = 'imprint + privacy policy';
+	let title = m.imprint_title();
 	let metadescription = '';
 	const breadcrumbs = [
 		{
-			name: 'Home',
+			name: m.home(),
 			slug: ''
 		},
 		{
-			name: 'Imprint',
+			name: m.imprint_title(),
 			slug: 'imprint'
 		}
 	];
@@ -24,13 +25,13 @@
 		breadcrumbs,
 		title,
 		metadescription,
-		slug: 'contact',
+		slug: 'imprint',
 		datePublished: '2023-12-05T14:19:33.000+0100',
 		lastUpdated: '2021-12-05T14:19:33.000+0100'
 	};
 
 	// Logic
-	let element = $state();
+	let element: HTMLElement | null | undefined = $state();
 	let intersecting = $state(false);
 </script>
 
@@ -45,7 +46,7 @@
 				<div class="content">
 					<div class="description">
 						<h2 transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>
-							imprint + privacy policy
+							{m.imprint_title()}
 						</h2>
 					</div>
 					<div

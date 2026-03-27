@@ -1,12 +1,15 @@
 import { json } from '@sveltejs/kit';
 import type { Blog } from '$lib/types/types';
+import { isLocale } from '$lib/paraglide/runtime';
 
-async function getBlogs() {
+async function getBlogs(lang: string) {
 	const blogs: Blog[] = [];
+	const locale = isLocale(lang) ? lang : 'en';
 
-	const paths = import.meta.glob('/src/lib/data/blog/*.md', { eager: true });
+	const paths = import.meta.glob('/src/lib/data/blog/**/*.md', { eager: true });
 
 	for (const path in paths) {
+		if (!path.includes(`/blog/${locale}/`)) continue;
 		const file = paths[path];
 		const slug = path.split('/').at(-1)?.replace('.md', '');
 
@@ -20,7 +23,8 @@ async function getBlogs() {
 	return blogs;
 }
 
-export async function GET() {
-	const blogs = await getBlogs();
+export async function GET({ url }) {
+	const lang = url.searchParams.get('lang') ?? 'en';
+	const blogs = await getBlogs(lang);
 	return json(blogs);
 }

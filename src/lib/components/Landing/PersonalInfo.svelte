@@ -1,22 +1,23 @@
 <script lang="ts">
 	import ArrowLink from '$components/UI/ArrowLink.svelte';
+	import * as m from '$lib/paraglide/messages';
 </script>
 
 <div class="info">
 	<div>
-		<ArrowLink path="#contact">Get in touch</ArrowLink>
+		<ArrowLink path="#contact">{m.get_in_touch()}</ArrowLink>
 	</div>
 	<div class="details">
 		<p>Svelte & Node.js</p>
-		<span class="category">Favorite Stack</span>
+		<span class="category">{m.favorite_stack()}</span>
 	</div>
 	<div class="details">
 		<p>English, German, French & Spanish</p>
-		<span class="category">Languages</span>
+		<span class="category">{m.languages()}</span>
 	</div>
 	<div class="details">
 		<p>Berlin</p>
-		<span class="category">Location</span>
+		<span class="category">{m.location()}</span>
 	</div>
 </div>
 

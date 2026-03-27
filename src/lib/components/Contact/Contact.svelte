@@ -1,16 +1,16 @@
 <script lang="ts">
 	import ArrowLink from '$components/UI/ArrowLink.svelte';
 	import Form from './Form.svelte';
+	import * as m from '$lib/paraglide/messages';
 </script>
 
 <section id="contact" class="page-section">
 	<div class="page-container">
 		<div class="content">
 			<div class="description">
-				<h2>get in touch</h2>
+				<h2>{m.contact_title()}</h2>
 				<p>
-					Use the contact form or send me a message and I will be happy to further discuss your
-					ideas with you.
+					{m.contact_intro()}
 				</p>
 				<p>
 					<a id="underline" href="mailto:contact [at] landozone.net">contact [at] landozone.net</a>
@@ -18,7 +18,7 @@
 			</div>
 			<Form />
 			<span class="imprint-link">
-				<ArrowLink path="/imprint">imprint + privacy policy</ArrowLink>
+				<ArrowLink path="/imprint">{m.imprint_privacy()}</ArrowLink>
 			</span>
 		</div>
 	</div>

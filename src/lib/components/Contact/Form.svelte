@@ -2,8 +2,9 @@
 	import { enhance } from '$app/forms';
 	import { elasticOut, cubicInOut } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
+	import * as m from '$lib/paraglide/messages';
 
-	let form: HTMLFormElement;
+	let form = $state<{ email?: string; missing?: boolean } | undefined>(undefined);
 
 	interface SpinParams {
 		delay: number;
@@ -52,30 +53,30 @@
 				};
 			}}>
 			<div class="field">
-				<label for="name" class="font-semibold"> Name </label>
+				<label for="name" class="font-semibold"> {m.form_name()} </label>
 				<input type="text" name="name" class="form-input" />
 			</div>
 			<div class="field">
-				<label for="email" class="font-semibold"> Email</label>
+				<label for="email" class="font-semibold"> {m.form_email()}</label>
 				<input type="email" name="email" class="form-input" value={form?.email ?? ''} required />
 			</div>
 
 			<div class="field">
-				<label for="message" class="font-semibold"> Message</label>
+				<label for="message" class="font-semibold"> {m.form_message()}</label>
 				<div>
 					<textarea name="message" class="form-input message"></textarea>
 				</div>
 			</div>
 			<div>
-				{#if form?.missing}<p class="error-message">The email field is required</p>{/if}
+				{#if form?.missing}<p class="error-message">{m.form_email_required()}</p>{/if}
 
 				{#if success}
-					<p class="success-message">Thanks! Your email has been sent</p>
+					<p class="success-message">{m.form_success()}</p>
 				{:else if action_result === 'failure'}
-					<p class="error-message">There was an error. Please send a message per email.</p>
+					<p class="error-message">{m.form_error()}</p>
 				{:else}
 					<button type="submit" style="--border-color: #00cfa1; --text-hover-color: #14151d">
-						<span class="button-content"> Submit</span>
+						<span class="button-content"> {m.form_submit()}</span>
 					</button>
 				{/if}
 			</div>

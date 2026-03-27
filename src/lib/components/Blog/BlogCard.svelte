@@ -10,7 +10,11 @@
 
 	let { item }: Props = $props();
 
-	let { name, date, slug, description, technologies } = item;
+	let name = $derived(item.name);
+	let date = $derived(item.date);
+	let slug = $derived(item.slug);
+	let description = $derived(item.description);
+	let technologies = $derived(item.technologies);
 	let animate = $state(false);
 	let isHovered = $state(false);
 

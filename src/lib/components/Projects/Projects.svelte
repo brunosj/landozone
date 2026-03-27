@@ -3,6 +3,7 @@
 	import ProjectCard from '$components/Projects/ProjectCard.svelte';
 	import ProjectCardMobile from '$components/Projects/ProjectCardMobile.svelte';
 	import ArrowLink from '$components/UI/ArrowLink.svelte';
+	import * as m from '$lib/paraglide/messages';
 
 	interface Props {
 		projects: Project[];
@@ -10,9 +11,11 @@
 
 	let { projects }: Props = $props();
 
-	const featuredProjects = projects
-		.filter((project) => project.featured === true)
-		.sort((a, b) => (a.date > b.date ? -1 : 1));
+	const featuredProjects = $derived(
+		[...projects]
+			.filter((project) => project.featured === true)
+			.sort((a, b) => (a.date > b.date ? -1 : 1))
+	);
 </script>
 
 <section id="projects" class="page-section">
@@ -20,7 +23,7 @@
 		<div class="content">
 			<div class="grid">
 				<div class="description">
-					<h2>recent projects</h2>
+					<h2>{m.recent_projects()}</h2>
 				</div>
 				<ul class="projects">
 					{#each featuredProjects as item}
@@ -29,7 +32,7 @@
 					{/each}
 				</ul>
 				<span class="projects-link">
-					<ArrowLink path="/projects">see all projects</ArrowLink>
+					<ArrowLink path="/projects">{m.see_all_projects()}</ArrowLink>
 				</span>
 			</div>
 		</div>

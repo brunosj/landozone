@@ -1,3 +1,4 @@
+import { getLocale } from '$lib/paraglide/runtime';
 import type { Heading } from '$lib/types/types';
 
 export const formatDate = (inputDate: string): string => {
@@ -9,7 +10,8 @@ export const formatDate = (inputDate: string): string => {
 		year: 'numeric'
 	};
 
-	const formattedDate: string = dateObject.toLocaleDateString('en-UK', options);
+	const locale = getLocale() === 'de' ? 'de-DE' : 'en-GB';
+	const formattedDate: string = dateObject.toLocaleDateString(locale, options);
 
 	return formattedDate;
 };

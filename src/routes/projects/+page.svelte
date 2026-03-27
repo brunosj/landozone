@@ -6,21 +6,21 @@
 	import IntersectionObserver from 'svelte-intersection-observer';
 	import ProjectCard from '$components/Projects/ProjectCard.svelte';
 	import ProjectCardMobile from '$components/Projects/ProjectCardMobile.svelte';
-	import Seo from '$components/SEO/SEO.svelte';
 	import Waveform from '$lib/assets/svg/waveform.svelte';
 	import SEO from '$lib/components/SEO/index.svelte';
+	import * as m from '$lib/paraglide/messages';
 	let { data } = $props();
 
 	// SEO
-	let title = 'projects';
-	let metadescription = 'explore my recent works and the technologies I used to build them';
+	let title = m.projects();
+	let metadescription = m.projects_meta();
 	const breadcrumbs = [
 		{
-			name: 'Home',
+			name: m.home(),
 			slug: ''
 		},
 		{
-			name: 'Projects',
+			name: m.projects(),
 			slug: 'projects'
 		}
 	];
@@ -28,19 +28,19 @@
 		breadcrumbs,
 		title,
 		metadescription,
-		slug: 'contact'
+		slug: 'projects'
 	};
 
 	// Logic
-	let projects: Project[] = data.projects;
+	let projects: Project[] = $derived(data.projects);
 
-	let projectsByDate: Project[] = projects.sort((a, b) => {
+	let projectsByDate: Project[] = $derived([...projects].sort((a, b) => {
 		const dateA = new Date(a.date);
 		const dateB = new Date(b.date);
 		return dateB.getTime() - dateA.getTime();
-	});
+	}));
 
-	let element = $state();
+	let element: HTMLElement | null | undefined = $state();
 	let intersecting = $state(false);
 </script>
 
@@ -54,9 +54,9 @@
 			{#if intersecting}
 				<div class="content">
 					<div class="description">
-						<h2 transition:fade={{ duration: 350, delay: 0, easing: cubicInOut }}>projects</h2>
+						<h2 transition:fade={{ duration: 350, delay: 0, easing: cubicInOut }}>{m.projects()}</h2>
 						<p transition:fade={{ duration: 350, delay: 250, easing: cubicInOut }}>
-							explore my recent works and the technologies I used to build them
+							{m.projects_meta()}
 						</p>
 					</div>
 					<div

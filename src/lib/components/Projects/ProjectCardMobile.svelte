@@ -1,12 +1,6 @@
 <script lang="ts">
 	import type { Project } from '$lib/types/types';
-	import { fade, fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
-	import Button from '$components/UI/Button.svelte';
-	import IconGithub from '$lib/assets/svg/icons/SimpleIconsGithub.svelte';
-	import Tag from '$components/UI/Tag.svelte';
-	import IconInternet from '$lib/assets/svg/icons/IconoirInternet.svelte';
-	import IconArrow from '$lib/assets/svg/icons/MaterialSymbolsLightArrowCircleDownRounded.svelte';
 
 	import { getImageComponent } from '$lib/utils/getProjectVisuals';
 	interface Props {
@@ -15,24 +9,14 @@
 
 	let { item }: Props = $props();
 
-	let {
-		name,
-		date,
-		url,
-		color,
-		keepTextLight,
-		slug,
-		repo,
-		type,
-		image,
-		description,
-		technologies,
-		features
-	} = item;
+	let name = $derived(item.name);
+	let color = $derived(item.color);
+	let slug = $derived(item.slug);
+	let description = $derived(item.description);
 	let animate = $state(false);
 
 	let LogoComponent: any;
-	let ImageComponent: string = $state();
+	let ImageComponent: string | undefined = $state();
 
 	onMount(() => {
 		animate = true;

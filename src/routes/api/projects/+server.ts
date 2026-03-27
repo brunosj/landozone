@@ -1,12 +1,15 @@
 import { json } from '@sveltejs/kit';
 import type { Project } from '$lib/types/types';
+import { isLocale } from '$lib/paraglide/runtime';
 
-async function getProjects() {
+async function getProjects(lang: string) {
 	const projects: Project[] = [];
 
-	const paths = import.meta.glob('/src/lib/data/projects/*.md', { eager: true });
+	const locale = isLocale(lang) ? lang : 'en';
+	const paths = import.meta.glob('/src/lib/data/projects/**/*.md', { eager: true });
 
 	for (const path in paths) {
+		if (!path.includes(`/projects/${locale}/`)) continue;
 		const file = paths[path];
 		const slug = path.split('/').at(-1)?.replace('.md', '');
 
@@ -20,7 +23,8 @@ async function getProjects() {
 	return projects;
 }
 
-export async function GET() {
-	const projects = await getProjects();
+export async function GET({ url }) {
+	const lang = url.searchParams.get('lang') ?? 'en';
+	const projects = await getProjects(lang);
 	return json(projects);
 }

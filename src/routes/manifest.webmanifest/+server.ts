@@ -1,10 +1,10 @@
-import { website } from '$lib/data/config';
+import { getWebsiteConfig } from '$lib/data/config';
 
 export const prerender = true;
 
 /** @type {import('./$types').RequestHandler} */
 export const GET = function get({ setHeaders }) {
-	const { backgroundColor, siteDescription, siteShortTitle, siteTitle, themeColor } = website;
+	const { backgroundColor, siteDescription, siteShortTitle, siteTitle, themeColor } = getWebsiteConfig();
 
 	const manifest = {
 		name: siteTitle,

@@ -10,27 +10,22 @@
 	import IconInternet from '$lib/assets/svg/icons/IconoirInternet.svelte';
 	import Tag from '$components/UI/Tag.svelte';
 	import Seo from '$components/SEO/SEO.svelte';
+	import * as m from '$lib/paraglide/messages';
 	let { data } = $props();
 
-	let item: Project = data.meta;
+	let item: Project = $derived(data.meta);
+	let name = $derived(item.name);
+	let url = $derived(item.url);
+	let color = $derived(item.color);
+	let image = $derived(item.image);
+	let keepTextLight = $derived(item.keepTextLight);
+	let repo = $derived(item.repo);
+	let type = $derived(item.type);
+	let description = $derived(item.description);
+	let technologies = $derived(item.technologies);
+	let features = $derived(item.features);
 
-	let {
-		name,
-		date,
-		url,
-		color,
-		image,
-		slug,
-		colorRGB,
-		keepTextLight,
-		repo,
-		type,
-		description,
-		technologies,
-		features
-	} = item;
-
-	let textColor = keepTextLight ? '#fff' : '#202129';
+	let textColor = $derived(keepTextLight ? '#fff' : '#202129');
 
 	let element: HTMLElement | null = $state() as HTMLElement | null;
 	let intersecting = $state(false);
@@ -53,7 +48,7 @@
 					<div class="details" transition:fade={{ duration: 350, delay: 250, easing: cubicInOut }}>
 						{#if features.length > 0}
 							<div class="features">
-								<p class="category">Features</p>
+								<p class="category">{m.features()}</p>
 								<ul class="feature">
 									{#each features as item}
 										<span>
@@ -70,7 +65,7 @@
 						{/if}
 						{#if technologies.length > 0}
 							<div class="technologies">
-								<p class="category">Technologies</p>
+								<p class="category">{m.technologies()}</p>
 								<ul class="technology">
 									{#each technologies as item}
 										<Tag {keepTextLight}>
@@ -88,7 +83,7 @@
 				<div class="links" transition:fade={{ duration: 350, delay: 500, easing: cubicInOut }}>
 					{#if url}
 						<div class="link">
-							<Button to={url} text="Visit site" {color} {keepTextLight}>
+							<Button to={url} text={m.visit_site()} {color} {keepTextLight}>
 								<IconInternet width="1.3rem" />
 							</Button>
 						</div>
@@ -96,7 +91,7 @@
 
 					{#if repo}
 						<div class="link">
-							<Button to={repo} text="View code" {color} {keepTextLight}>
+							<Button to={repo} text={m.view_code()} {color} {keepTextLight}>
 								<IconGithub width="1.3rem" />
 							</Button>
 						</div>

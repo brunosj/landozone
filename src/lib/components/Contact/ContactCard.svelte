@@ -10,6 +10,7 @@
 	import IconMail from '$lib/assets/svg/icons/MaterialSymbolsLightMailRounded.svelte';
 	import IconTelegram from '$lib/assets/svg/icons/SimpleIconsTelegram.svelte';
 	import Button from '$components/UI/Button.svelte';
+	import * as m from '$lib/paraglide/messages';
 </script>
 
 <div class="info info-grid">
@@ -18,7 +19,7 @@
 			<img src={BSJ3} alt="BSJ" />
 			<div>
 				<h3>Bruno <br /> St-Jacques</h3>
-				<span>Web Developer/Designer</span>
+				<span>{m.role()}</span>
 			</div>
 		</div>
 	</div>

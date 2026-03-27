@@ -7,17 +7,10 @@
 		children?: import('svelte').Snippet;
 	}
 
-	let {
-		to,
-		text,
-		color = '#8786df',
-		keepTextLight = false,
-		children
-	}: Props = $props();
+	let { to, text, color = '#8786df', keepTextLight = false, children }: Props = $props();
 
-	let textHoverColor = keepTextLight ? '#fff' : '#202129';
-
-	const isExternal = to.slice(0, 4) === 'http';
+	let textHoverColor = $derived(keepTextLight ? '#fff' : '#202129');
+	const isExternal = $derived(to.slice(0, 4) === 'http');
 </script>
 
 <a
@@ -81,6 +74,8 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
+		gap: 0.45rem;
+		white-space: nowrap;
 		font-size: 0.6rem;
 		text-transform: uppercase;
 		letter-spacing: 0.6px;
@@ -89,6 +84,14 @@
 	}
 
 	@media (min-width: 55em) {
+		a {
+			display: inline-flex;
+			width: fit-content;
+			min-width: 9.5rem;
+			height: auto;
+			padding: 0.45rem 0.6rem;
+		}
+
 		.button-content {
 			font-size: 0.7rem;
 		}

@@ -17,6 +17,7 @@
 	import ContactCard from '$components/Contact/ContactCard.svelte';
 	import Figures from '$components/Figures/Figures.svelte';
 	import IconPython from '$lib/assets/svg/icons/SimpleIconsPython.svelte';
+	import * as m from '$lib/paraglide/messages';
 	let element: HTMLElement | null | undefined = $state();
 	let intersecting = $state(false);
 </script>
@@ -35,35 +36,27 @@
 						<!-- <h2 transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>about</h2> -->
 						<div>
 							<p>
-								I'm a freelance developer with expertise spanning
-								<span>full-stack web development</span> and
-								<span>data science</span>. I’m based in Berlin and have a background in political
-								science and climate policy, which informs my approach to data work.
+								{m.about_p1()}
 							</p>
 							<p>
-								I build applications and visualize complex data using JavaScript/TypeScript tools (<a
-									href="https://svelte.dev/"
-									target="_blank"
-									rel="noreferrer">Svelte</a
+								{m.about_p2_prefix()} (<a href="https://svelte.dev/" target="_blank" rel="noreferrer"
+									>Svelte</a
 								>/<a href="https://react.dev/" target="_blank" rel="noreferrer">React</a>/<a
 									href="https://vuejs.org/"
 									target="_blank"
 									rel="noreferrer">Vue</a
 								>),
 								<a href="https://nodejs.org/en" target="_blank" rel="noreferrer">Node.js</a>, data
-								visualization libraries (<a
+								{m.about_p2_middle()} (<a
 									href="https://d3js.org/"
 									target="_blank"
 									rel="noreferrer">D3.js</a
 								>/<a href="https://echarts.apache.org/" target="_blank" rel="noreferrer">ECharts</a
-								>) as well as
-								<a href="https://www.python.org/" target="_blank" rel="noreferrer"
-									><span>Python</span></a>
-								and
-								<a href="https://www.r-project.org/" target="_blank" rel="noreferrer"
-									><span>R</span></a> for data analysis.
+								>) {m.about_p2_suffix()}
 							</p>
-							<p>Check out my projects below to discover more about my work.</p>
+							<p>
+								{m.about_p3()}
+							</p>
 						</div>
 
 						<div class="icons">
@@ -92,10 +85,6 @@
 		position: relative;
 		transition: all 1s cubic-bezier(0.07, 0.95, 0, 1);
 		color: var(--color-white);
-	}
-
-	span {
-		font-weight: 600;
 	}
 
 	a {

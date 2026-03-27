@@ -6,18 +6,19 @@
 	import Waveform from '$lib/assets/svg/waveform.svelte';
 	import SEO from '$lib/components/SEO/index.svelte';
 	import BlogCard from '$components/Blog/BlogCard.svelte';
+	import * as m from '$lib/paraglide/messages';
 	let { data } = $props();
 
 	// SEO
-	let title = 'blog';
-	let metadescription = 'some thoughts on web development and other things';
+	let title = m.blog();
+	let metadescription = m.blog_meta();
 	const breadcrumbs = [
 		{
-			name: 'Home',
+			name: m.home(),
 			slug: ''
 		},
 		{
-			name: 'Blog',
+			name: m.blog(),
 			slug: 'blog'
 		}
 	];
@@ -25,17 +26,17 @@
 		breadcrumbs,
 		title,
 		metadescription,
-		slug: 'contact'
+		slug: 'blog'
 	};
 
 	// Logic
-	let blogs: Blog[] = data.blogs;
+	let blogs: Blog[] = $derived(data.blogs);
 
-	let blogsByDate: Blog[] = blogs.sort((a, b) => {
+	let blogsByDate: Blog[] = $derived([...blogs].sort((a, b) => {
 		const dateA = new Date(a.date);
 		const dateB = new Date(b.date);
 		return dateB.getTime() - dateA.getTime();
-	});
+	}));
 
 	let element: HTMLElement | null | undefined = $state();
 	let intersecting = $state(false);
@@ -51,9 +52,9 @@
 			{#if intersecting}
 				<div class="content">
 					<div class="description">
-						<h2 transition:fade={{ duration: 350, delay: 0, easing: cubicInOut }}>blog</h2>
+						<h2 transition:fade={{ duration: 350, delay: 0, easing: cubicInOut }}>{m.blog()}</h2>
 						<p transition:fade={{ duration: 350, delay: 250, easing: cubicInOut }}>
-							some thoughts on web development and other things
+							{m.blog_meta()}
 						</p>
 					</div>
 					<ul

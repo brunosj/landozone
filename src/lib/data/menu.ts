@@ -1,18 +1,20 @@
-export const menu = [
+import * as m from '$lib/paraglide/messages';
+
+export const getMenu = () => [
 	{
-		name: 'About',
+		name: m.menu_about(),
 		slug: '/#about'
 	},
 	{
-		name: 'Projects',
+		name: m.menu_projects(),
 		slug: '/projects'
 	},
 	{
-		name: 'Blog',
+		name: m.menu_blog(),
 		slug: '/blog'
 	},
 	{
-		name: 'Contact',
+		name: m.menu_contact(),
 		slug: '/#contact'
 	}
 ];

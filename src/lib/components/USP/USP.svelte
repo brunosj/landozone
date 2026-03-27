@@ -4,6 +4,7 @@
 	import { fade, fly } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 	import IntersectionObserver from 'svelte-intersection-observer';
+	import * as m from '$lib/paraglide/messages';
 
 	let element: HTMLElement | null | undefined = $state();
 	let intersecting = $state(false);
@@ -17,18 +18,16 @@
 					<IntersectionObserver {element} bind:intersecting once threshold={0.3}>
 						{#if intersecting}
 							<h2 in:fly={{ x: -100, duration: 500, delay: 250, easing: cubicInOut }}>
-								Let me help you bring your vision to life
+								{m.usp_title()}
 							</h2>
 							<p in:fly={{ x: -100, duration: 500, delay: 250, easing: cubicInOut }}>
-								Whether you need a simple website, a complex web app, or stunning data
-								visualizations, I'm here to help!
+								{m.usp_p1()}
 							</p>
 							<p in:fly={{ x: -100, duration: 500, delay: 250, easing: cubicInOut }}>
-								I’m an open-minded freelancer ready to help you through the entire process — from
-								design to implementation and ongoing support.
+								{m.usp_p2()}
 							</p>
 							<p in:fly={{ x: -100, duration: 500, delay: 250, easing: cubicInOut }}>
-								Have an exciting project you would like to collaborate on? Let's chat!
+								{m.usp_p3()}
 							</p>
 						{/if}
 					</IntersectionObserver>

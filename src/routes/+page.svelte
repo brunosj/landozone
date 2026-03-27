@@ -6,14 +6,15 @@
 	import type { Project } from '$lib/types/types';
 	import SEO from '$lib/components/SEO/index.svelte';
 	import USP from '$components/USP/USP.svelte';
+	import * as m from '$lib/paraglide/messages';
 	let { data } = $props();
 
 	// SEO
-	let title = 'imaginative web development';
-	let metadescription = 'landozone - crafting innovative applications and experiences on the web';
+	let title = m.landing_title();
+	let metadescription = m.site_tagline();
 	const breadcrumbs = [
 		{
-			name: 'Home',
+			name: m.home(),
 			slug: ''
 		}
 	];
@@ -26,7 +27,7 @@
 
 	// Logic
 
-	let projects: Project[] = data.projects;
+	let projects: Project[] = $derived(data.projects);
 </script>
 
 <SEO {...seoProps} />

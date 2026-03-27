@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { website } from '$data/config';
-	const { siteLanguage, siteTitle, siteDescription, siteImage, twitter } = website;
+	import { getWebsiteConfig } from '$data/config';
+	const { siteLanguage, siteTitle, siteDescription, siteImage, twitter } = getWebsiteConfig();
 	interface Props {
 		description: string;
 		title: string;
