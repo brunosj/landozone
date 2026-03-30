@@ -1,5 +1,6 @@
 <script lang="ts">
-	import BSJ3 from '$lib/assets/images/bsj_3.jpg';
+	// import BSJ3 from '$lib/assets/images/bsj_3.jpg';
+	import BSJ from '$lib/assets/images/bsj_4.jpg';
 	import IconGithub from '$lib/assets/svg/icons/SimpleIconsGithub.svelte';
 	import IconLinkedIn from '$lib/assets/svg/icons/SimpleIconsLinkedin.svelte';
 	import IconMail from '$lib/assets/svg/icons/MaterialSymbolsLightMailRounded.svelte';
@@ -11,7 +12,7 @@
 <div class="info info-grid">
 	<div class="grid-item">
 		<div class="picture">
-			<img src={BSJ3} alt="BSJ" />
+			<img src={BSJ} alt="BSJ" />
 			<div>
 				<h3>Bruno <br /> St-Jacques</h3>
 				<span>{m.role()}</span>

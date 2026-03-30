@@ -12,7 +12,7 @@
 		<span class="category">{m.favorite_stack()}</span>
 	</div>
 	<div class="details">
-		<p>English, German, French & Spanish</p>
+		<p>{m.languages_list()}</p>
 		<span class="category">{m.languages()}</span>
 	</div>
 	<div class="details">
