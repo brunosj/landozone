@@ -1,10 +1,5 @@
 <script lang="ts">
-	import { fade, fly } from 'svelte/transition';
-	import { cubicInOut } from 'svelte/easing';
 	import BSJ3 from '$lib/assets/images/bsj_3.jpg';
-	import BSJ2 from '$lib/assets/images/bsj_2.jpg';
-	import BSJ1 from '$lib/assets/images/bsj_1.jpg';
-
 	import IconGithub from '$lib/assets/svg/icons/SimpleIconsGithub.svelte';
 	import IconLinkedIn from '$lib/assets/svg/icons/SimpleIconsLinkedin.svelte';
 	import IconMail from '$lib/assets/svg/icons/MaterialSymbolsLightMailRounded.svelte';
@@ -156,7 +151,7 @@
 		}
 
 		.info-grid {
-			grid-template-columns: 2fr 1fr;
+			grid-template-columns: 1fr 1fr;
 			gap: 2rem;
 		}
 
@@ -178,7 +173,7 @@
 		}
 
 		.icons {
-			width: 100%;
+			width: 75%;
 		}
 		.desktop {
 			display: flex;

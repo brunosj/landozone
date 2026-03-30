@@ -1,9 +1,5 @@
 <script lang="ts">
-	import { fade, fly } from 'svelte/transition';
-	import { cubicInOut } from 'svelte/easing';
 	import IntersectionObserver from 'svelte-intersection-observer';
-	import Chart from '$lib/assets/svg/chart.svelte';
-	import Website from '$lib/assets/svg/website.svelte';
 	import IconD3 from '$lib/assets/svg/icons/SimpleIconsD3dotjs.svelte';
 	import IconJS from '$lib/assets/svg/icons/SimpleIconsJavascript.svelte';
 	import IconTS from '$lib/assets/svg/icons/SimpleIconsTypescript.svelte';
@@ -11,11 +7,8 @@
 	import IconReact from '$lib/assets/svg/icons/SimpleIconsReact.svelte';
 	import IconSvelte from '$lib/assets/svg/icons/SimpleIconsSvelte.svelte';
 	import IconVue from '$lib/assets/svg/icons/SimpleIconsVue.svelte';
-	import IconECharts from '$lib/assets/svg/icons/SimpleIconsApacheecharts.svelte';
 	import { background, font } from '$lib/stores/store';
-	import Contact from '$components/Contact/Contact.svelte';
 	import ContactCard from '$components/Contact/ContactCard.svelte';
-	import Figures from '$components/Figures/Figures.svelte';
 	import IconPython from '$lib/assets/svg/icons/SimpleIconsPython.svelte';
 	import * as m from '$lib/paraglide/messages';
 	let element: HTMLElement | null | undefined = $state();

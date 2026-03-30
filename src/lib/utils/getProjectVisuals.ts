@@ -19,6 +19,8 @@ import shushImage from '$lib/assets/images/shush-devices.png';
 import dfcImage from '$lib/assets/images/dfc-devices.png';
 import nzlrImage from '$lib/assets/images/nzlr-devices.png';
 import pkImage from '$lib/assets/images/pk-devices.png';
+import flareImage from '$lib/assets/images/flare-devices.png';
+import teghImage from '$lib/assets/images/tegh-devices.png';
 
 type ImageComponent = string;
 
@@ -44,7 +46,9 @@ export function getImageComponent(name: string): ImageComponent {
 		shush: shushImage,
 		'dfc-studios': dfcImage,
 		'net-zero-land-rights': nzlrImage,
-		powerkonnekt: pkImage
+		powerkonnekt: pkImage,
+		flare: flareImage,
+		tegh: teghImage
 	};
 
 	return imageMap[name] || '';
