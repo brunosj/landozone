@@ -8,8 +8,8 @@ image: 'entlebuch-devices.png'
 color: '#765E6A'
 colorRGB: [178, 117, 78]
 keepTextLight: true
-type: 'Website'
-description: 'Sustainable chocolate brand landing page'
+type: 'Site web'
+description: 'Page d’atterrissage pour une marque de chocolat durable'
 technologies:
   - 'SvelteKit'
   - 'TypeScript'
@@ -21,4 +21,4 @@ features: []
 featured: false
 ---
 
-![Entlebuch Devices](../../assets/images/entlebuch-devices.png)
+![Entlebuch Devices](../../../assets/images/entlebuch-devices.png)

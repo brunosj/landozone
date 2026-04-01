@@ -8,11 +8,11 @@ image: 'deremetz-bg.jpg'
 color: '#051074'
 colorRGB: [102, 60, 245]
 keepTextLight: true
-type: 'Website'
-description: 'Art gallery located in Frankfurt, Germany'
+type: 'Site web'
+description: 'Galerie d’art à Francfort, Allemagne'
 technologies: ['React', 'Next.js', 'Payload CMS', 'Node.js', 'GitHub Actions']
-features: ['Multilingual (EN, DE)', 'Authentication']
+features: ['Multilingue (EN, DE)', 'Authentification']
 featured: false
 ---
 
-![E30 Devices](../../assets/images/e30-devices.png)
+![E30 Devices](../../../assets/images/e30-devices.png)

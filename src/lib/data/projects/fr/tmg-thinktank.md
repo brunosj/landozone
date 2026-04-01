@@ -8,11 +8,11 @@ image: 'tmg-bg.jpg'
 color: '#67797B'
 colorRGB: [103, 121, 123]
 keepTextLight: true
-type: 'Website'
-description: 'Sustainability think tank based in Berlin'
+type: 'Site web'
+description: 'Think tank du développement durable basé à Berlin'
 technologies: ['SvelteKit', 'Tailwind CSS', 'Contentful CMS', 'Cloudinary']
-features: ['Automated content generation']
+features: ['Génération de contenu automatisée']
 featured: false
 ---
 
-![TMG Think Tank Devices](../../assets/images/tmg-devices.png)
+![TMG Think Tank Devices](../../../assets/images/tmg-devices.png)

@@ -21,7 +21,7 @@ import nzlrImage from '$lib/assets/images/nzlr-devices.png';
 import pkImage from '$lib/assets/images/pk-devices.png';
 import flareImage from '$lib/assets/images/flare-devices.png';
 import teghImage from '$lib/assets/images/tegh-devices.png';
-
+import steelwatchImage from '$lib/assets/images/steelwatch-devices.png';
 type ImageComponent = string;
 
 export function getImageComponent(name: string): ImageComponent {
@@ -48,7 +48,8 @@ export function getImageComponent(name: string): ImageComponent {
 		'net-zero-land-rights': nzlrImage,
 		powerkonnekt: pkImage,
 		flare: flareImage,
-		tegh: teghImage
+		tegh: teghImage,
+		'steelwatch-corporate-scorecard': steelwatchImage
 	};
 
 	return imageMap[name] || '';

@@ -8,11 +8,11 @@ image: 'pwx-bg.jpg'
 color: '#4449ED'
 colorRGB: [68, 73, 237]
 keepTextLight: true
-type: 'Website'
-description: 'Record label'
+type: 'Site web'
+description: 'Label de musique'
 technologies: ['React', 'Gatsby', 'Tailwind CSS', 'Contentful CMS']
 features: []
 featured: false
 ---
 
-![Pinewax Devices](../../assets/images/pinewax-devices.png)
+![Pinewax Devices](../../../assets/images/pinewax-devices.png)

@@ -10,7 +10,9 @@ export const formatDate = (inputDate: string): string => {
 		year: 'numeric'
 	};
 
-	const locale = getLocale() === 'de' ? 'de-DE' : 'en-GB';
+	const tag = getLocale();
+	const locale =
+		tag === 'de' ? 'de-DE' : tag === 'fr' ? 'fr-FR' : 'en-GB';
 	const formattedDate: string = dateObject.toLocaleDateString(locale, options);
 
 	return formattedDate;

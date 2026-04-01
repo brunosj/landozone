@@ -8,9 +8,9 @@ image: 'dna-bg.jpg'
 color: '#BEDBB6'
 colorRGB: [190, 219, 182]
 keepTextLight: false
-type: 'Data Visualization'
-description: 'Discourse network analysis of 2019 EU Copyright Directive debate'
+type: 'Visualisation de données'
+description: 'Analyse de réseau discursif du débat sur la directive européenne sur le droit d’auteur (2019)'
 technologies: ['R', 'igraph', 'DNA', 'Java']
-features: ['Network Analysis']
+features: ['Analyse de réseau']
 featured: false
 ---

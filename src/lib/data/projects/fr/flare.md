@@ -1,5 +1,5 @@
 ---
-name: 'Flare Report – Infostealer und Identitätsrisiken im Unternehmen'
+name: 'Rapport Flare sur l’exposition des identités aux infostealers'
 date: '2026-01-31'
 url: 'https://flare.io/learn/resources/2026-enterprise-infostealer-identity-exposure'
 # repo: 'https://github.com/brunosj/powerkonnekt'
@@ -8,14 +8,14 @@ image: 'nzlr-image.jpg'
 color: '#4640DB'
 colorRGB: [231, 150, 1]
 keepTextLight: true
-type: 'Datenvisualisierung'
-description: 'Interaktives Scrollytelling zum Flare-Bericht über Infostealer und Identitätsrisiken im Unternehmen (2026)'
+type: 'Site web'
+description: "Récit interactif présentant l’état 2026 de Flare sur l’exposition des identités d’entreprise aux infostealers"
 technologies: ['Svelte', 'D3.js', 'Node.js']
-features: ['Scrollytelling', 'Datenvisualisierung']
+features: ['Scrollytelling', 'Visualisation de données']
 featured: true
 ---
 
-![Flare Geräte](../../../assets/images/flare-devices.png)
+![Flare Devices](../../../assets/images/flare-devices.png)
 
 <!-- In collaboration with TMG Research and the Robert Bosch Stiftung, I designed and developed [Net Zero & Land Rights](https://netzerolandrights.com/), the companion website to their latest joint report. The report brings together insights from science, civil society, and voices from both Europe and the Global South, offering a critical analysis of how global climate strategies intersect with land rights, biodiversity, and social justice.
 

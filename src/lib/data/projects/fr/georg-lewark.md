@@ -8,11 +8,11 @@ image: 'aconium-bg.jpg'
 color: '#efcfe3'
 colorRGB: [102, 60, 245]
 keepTextLight: false
-type: 'Website'
-description: 'Filmmaker portfolio'
+type: 'Site web'
+description: 'Portfolio de cinéaste'
 technologies: ['SvelteKit', 'TypeScript']
 features: []
 featured: false
 ---
 
-![Georg Lewawrk Devices](../../assets/images/glewark-devices.png)
+![Georg Lewawrk Devices](../../../assets/images/glewark-devices.png)

@@ -1,21 +1,21 @@
 ---
-name: 'Flare Report – Infostealer und Identitätsrisiken im Unternehmen'
-date: '2026-01-31'
-url: 'https://flare.io/learn/resources/2026-enterprise-infostealer-identity-exposure'
+name: 'PowerKonnekt'
+date: '2026-01-07'
+url: 'https://powerkonnekt.com'
 # repo: 'https://github.com/brunosj/powerkonnekt'
-slug: 'flare'
+slug: 'powerkonnekt'
 image: 'nzlr-image.jpg'
-color: '#4640DB'
+color: '#8a00f8'
 colorRGB: [231, 150, 1]
 keepTextLight: true
-type: 'Datenvisualisierung'
-description: 'Interaktives Scrollytelling zum Flare-Bericht über Infostealer und Identitätsrisiken im Unternehmen (2026)'
-technologies: ['Svelte', 'D3.js', 'Node.js']
-features: ['Scrollytelling', 'Datenvisualisierung']
+type: 'Site web'
+description: 'Système européen de gestion de l’énergie de nouvelle génération'
+technologies: ['React', 'Next.js', 'Payload CMS', 'Node.js', 'GitHub Actions']
+features: ['Carte interactive', 'Animations avancées', 'Multilingue', 'Intégration CMS']
 featured: true
 ---
 
-![Flare Geräte](../../../assets/images/flare-devices.png)
+![PowerKonnekt Devices](../../../assets/images/pk-devices.png)
 
 <!-- In collaboration with TMG Research and the Robert Bosch Stiftung, I designed and developed [Net Zero & Land Rights](https://netzerolandrights.com/), the companion website to their latest joint report. The report brings together insights from science, civil society, and voices from both Europe and the Global South, offering a critical analysis of how global climate strategies intersect with land rights, biodiversity, and social justice.
 

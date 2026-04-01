@@ -7,8 +7,8 @@ slug: 'dataviz-work'
 image: 'dataviz-devices.png'
 color: '#F06292'
 colorRGB: [102, 60, 245]
-keepTextLight: true
-type: 'Website'
+keepTextLight: false
+type: 'Data visualization'
 description: 'Some of my projects centered around data visualization'
 technologies: ['Svelte', 'D3.js', 'R', 'E-Charts', 'Vue 3', 'Storybook']
 features: ['Interactive', 'Custom']
@@ -22,7 +22,29 @@ featured: true
 
 ![Dataviz Devices](../../../assets/images/dataviz-devices.png)
 
-My journey into coding actually started with data visualization, back in my university days learning R and spending countless hours trying to make plots look pretty and meaningful. While I've since ventured into web development, I am always eager to experiment with data visualization techniques and libraries and always on the lookout for more opportunities to do so. Got an interesting dataviz project in mind? [Let's chat](/#contact)!
+My journey into coding actually started with data visualization, back in my university days learning R and spending countless hours trying to make plots look pretty and meaningful. While I've since ventured into web development, I am always eager to experiment with data visualization techniques and libraries and always on the lookout for more opportunities to do so.
+
+Got an interesting dataviz project in mind? [Let's chat](/#contact)!
+
+### SteelWatch Corporate Scorecard 2026
+
+In collaboration with [Designers for Climate Studios](https://dfc.studio) and SteelWatch, we built an interactive dashboard exploring the decarbonisation performance of major steelmakers.
+
+[SteelWatch Corporate Scorecard](https://steelwatch.org/scorecard/) is a public dashboard for comparing 18 major steelmakers (29 countries) on transition readiness. The main view is a company grid: each tile shows identity, rank, and a mini score snapshot, sortable by overall score or by size; in the size view, a world map ties footprint to geography.
+
+Choosing a company opens a detail panel where you can step through producers without losing context, see how the overall result breaks down across the six methodology categories, and drill from category into sub-indicators—so a headline score is never a black box: you can see where a company earns or loses points, how it ranks peers on that slice, and read sub-indicator charts and narrative that explain the evidence behind each band. That layout is meant for analysts, journalists, and campaigners who need both a quick leaderboard and defensible depth in one session.
+
+Technically it is a SvelteKit app with server-loaded scorecard data in Postgres (Drizzle), D3-based charts (including the grid mini charts and sub-indicator graphics), and packaging aimed at embedding the same views in WordPress alongside SteelWatch’s editorial site.
+
+Explore the scorecard [here](https://steelwatch.org/scorecard/).
+
+![SteelWatch Screen](../../../assets/images/sw-screen.png)
+
+### Flare 2026 State of Enterprise Infostealer Identity Exposure Report
+
+Partnering up with Flare, a cybersecurity firm based in Montreal, I've transposed the content of their "[2026 State of Enterprise Infostealer Identity Exposure](https://flare.io/learn/resources/2026-enterprise-infostealer-identity-exposure)" report. Using a combination of scrollytelling and data visualization techniques, the goal was to take a static report and turn it into an interactive and compelling experience.
+
+![Flare Desktop](../../../assets/images/flare-desktop.png)
 
 ### Birmingham Now
 
@@ -42,7 +64,7 @@ Technologies:
 
 ### DFC Studios Dataviz Lab
 
-Together with [DFC Studios](https://dfc.studio/) we are building a suite of interactive dashboards for different organizations active in the climate advocacy sector (Climate Action Tracker, Steelwatch, etc.). Building on state-of-the-art information design and visualization technologies, we aim to provide compelling and informative visualizations able to support the mission of these organizations.
+Together with [DFC Studios](https://dfc.studio/) we are building a suite of interactive dashboards for different organizations active in the climate advocacy sector (Climate Action Tracker, SteelWatch, etc.). Building on state-of-the-art information design and visualization technologies, we aim to provide compelling and informative visualizations able to support the mission of these organizations.
 
 Technologies:
 

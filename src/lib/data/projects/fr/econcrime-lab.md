@@ -8,8 +8,8 @@ image: 'eclab-bg.jpg'
 color: '#669AAB'
 colorRGB: [102, 154, 171]
 keepTextLight: false
-type: 'Website'
-description: 'Research hub based in Montreal'
+type: 'Site web'
+description: 'Pôle de recherche basé à Montréal'
 technologies:
   - 'React'
   - 'Next.js'
@@ -18,8 +18,8 @@ technologies:
   - 'Strapi CMS'
   - 'Node.js'
   - 'MySQL'
-features: ['Multilingual']
+features: ['Multilingue']
 featured: false
 ---
 
-![EconCrime Lab Devices](../../assets/images/eclab-devices.png)
+![EconCrime Lab Devices](../../../assets/images/eclab-devices.png)

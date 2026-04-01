@@ -8,11 +8,11 @@ image: 'deremetz-bg.jpg'
 color: '#663CF5'
 colorRGB: [102, 60, 245]
 keepTextLight: true
-type: 'Website'
-description: 'Architect and interior designer portfolio'
+type: 'Site web'
+description: 'Portfolio d’architecte et designer d’intérieur'
 technologies: ['React', 'Next.js', 'Tailwind CSS', 'Strapi CMS', 'Node.js', 'MySQL']
-features: ['Multilingual (EN, DE, FR)']
+features: ['Multilingue (EN, DE, FR)']
 featured: false
 ---
 
-![Studio Deremetz Devices](../../assets/images/deremetz-devices.png)
+![Studio Deremetz Devices](../../../assets/images/deremetz-devices.png)

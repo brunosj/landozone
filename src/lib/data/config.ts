@@ -10,7 +10,8 @@ import * as m from '$lib/paraglide/messages';
 
 const localeMap = {
 	en: { ogLanguage: 'en_US', siteLanguage: 'en-US' },
-	de: { ogLanguage: 'de_DE', siteLanguage: 'de-DE' }
+	de: { ogLanguage: 'de_DE', siteLanguage: 'de-DE' },
+	fr: { ogLanguage: 'fr_FR', siteLanguage: 'fr-FR' }
 };
 
 export const getWebsiteConfig = () => {

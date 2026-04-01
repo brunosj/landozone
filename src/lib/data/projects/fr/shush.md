@@ -8,11 +8,11 @@ image: 'shush-devices.png'
 color: '#FEFEF6'
 colorRGB: [254, 254, 246]
 keepTextLight: false
-type: 'Website'
-description: 'Berlin-based sound system, music community and label'
+type: 'Site web'
+description: 'Sound system, communauté musicale et label berlinois'
 technologies: ['React', 'Next.js', 'Payload CMS', 'Node.js', 'GitHub Actions']
-features: ['CMS Integration', 'Online Store']
+features: ['Intégration CMS', 'Boutique en ligne']
 featured: true
 ---
 
-![SHUSH Devices](../../assets/images/shush-devices.png)
+![SHUSH Devices](../../../assets/images/shush-devices.png)

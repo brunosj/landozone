@@ -8,11 +8,11 @@ image: 'aconium-bg.jpg'
 color: '#3F868B'
 colorRGB: [102, 60, 245]
 keepTextLight: true
-type: 'Website'
-description: 'Digital education platform'
+type: 'Site web'
+description: 'Plateforme d’éducation numérique'
 technologies: ['React', 'Next.js', 'Tailwind CSS', 'Wordpress CMS']
-features: ['Light/Dark Mode', 'Custom Calendar']
+features: ['Mode clair / sombre', 'Calendrier personnalisé']
 featured: false
 ---
 
-![aconium Devices](../../assets/images/aconium-devices.png)
+![aconium Devices](../../../assets/images/aconium-devices.png)

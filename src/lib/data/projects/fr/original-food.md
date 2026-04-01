@@ -8,8 +8,8 @@ image: 'original-food-devices.png'
 color: '#4F6F7E'
 colorRGB: [178, 117, 78]
 keepTextLight: true
-type: 'Website'
-description: 'Sustainable and fair food products'
+type: 'Site web'
+description: 'Produits alimentaires durables et équitables'
 technologies:
   - 'SvelteKit'
   - 'TypeScript'
@@ -21,4 +21,4 @@ features: []
 featured: false
 ---
 
-![Original Food Devices](../../assets/images/original-food-devices.png)
+![Original Food Devices](../../../assets/images/original-food-devices.png)

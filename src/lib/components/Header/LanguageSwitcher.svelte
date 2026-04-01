@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { localizeHref } from '$lib/paraglide/runtime';
+	import { getLocale, localizeHref } from '$lib/paraglide/runtime';
 	import * as m from '$lib/paraglide/messages';
 
-	const currentLocale = $derived(page.url.pathname.startsWith('/de') ? 'de' : 'en');
+	const currentLocale = $derived(getLocale());
 </script>
 
 <div class="switcher">
@@ -19,6 +19,13 @@
 		aria-current={currentLocale === 'de'}
 		data-sveltekit-reload>
 		{m.lang_switch_de()}
+	</a>
+	<span>/</span>
+	<a
+		href={localizeHref(page.url.pathname + page.url.search, { locale: 'fr' })}
+		aria-current={currentLocale === 'fr'}
+		data-sveltekit-reload>
+		{m.lang_switch_fr()}
 	</a>
 </div>
 

@@ -8,8 +8,8 @@ image: 'siplab-bg.png'
 color: '#B2754E'
 colorRGB: [178, 117, 78]
 keepTextLight: true
-type: 'Website'
-description: 'Research hub based in Montreal'
+type: 'Site web'
+description: 'Pôle de recherche basé à Montréal'
 technologies:
   - 'React'
   - 'Next.js'
@@ -18,8 +18,8 @@ technologies:
   - 'Strapi CMS'
   - 'Node.js'
   - 'MySQL'
-features: ['Multilingual']
+features: ['Multilingue']
 featured: false
 ---
 
-![SIPLAB Devices](../../assets/images/siplab-devices.png)
+![SIPLAB Devices](../../../assets/images/siplab-devices.png)
