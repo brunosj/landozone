@@ -21,4 +21,4 @@ Partnering up with Flare, a cybersecurity firm based in Montreal, I've transpose
 
 Using a combination of scrollytelling and data visualization techniques, the goal was to take a static report and turn it into an interactive and compelling experience.
 
-![Flare Desktop](../../assets/images/flare-desktop.png)
+![Flare Desktop](../../../assets/images/flare-desktop.png)
