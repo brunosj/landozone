@@ -13,6 +13,8 @@ export interface Project {
 	technologies: string[];
 	features: string[];
 	featured: boolean;
+	client: string;
+	team: string[];
 }
 
 export interface Blog {
@@ -27,4 +29,12 @@ export interface Heading {
 	level: number;
 	text: string;
 	id: string;
+}
+
+export interface TeamMember {
+	name: string;
+	title: string;
+	skills: string[];
+	order: number;
+	slug: string;
 }

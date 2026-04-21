@@ -12,14 +12,16 @@ type: 'Web-App'
 description: 'Preisrechner fur Carsharing-Dienste in Berlin'
 technologies: ['Svelte', 'Google Maps APIs']
 features: ['Google-Maps-Integration', 'Kurz-/Langstrecken-Berechnung']
-featured: true
+client: 'Personal'
+team:
+  - 'Bruno St-Jacques, developer'
 ---
 
 ![BCPC Devices](../../../assets/images/bcpc-devices.png)
 
-Was ich am Leben in Berlin besonders mag: Ich nutze fur die meisten Wege mein Fahrrad. Das ist nicht nur umweltfreundlich, sondern haelt mich auch fit 🚴🏼‍♂️. Wenn es regnet und eine Strecke mit dem OPNV zu viele Umstiege bedeuten wurde, greife ich manchmal auf eines der Carsharing-Angebote in der Stadt zuruck.
+Berlin ist unser Alltagshub – für kurze Wege greifen wir meist zum Fahrrad: wenig Impact und gut für den Kopf 🚴🏼‍♂️. An regnerischen Tagen, wenn die Bahn zu viele Umstiege bedeuten würde, landen wir oft bei einem der Carsharing-Angebote der Stadt.
 
-Im letzten Herbst hat es oft geregnet, und an einem Tag kam mir beim Vergleichen der Anbieter die Idee: Warum nicht eine einfache App bauen, die die Preise unterschiedlicher Anbieter direkt gegenuberstellt? Da alle verschiedene Preismodelle haben - pro Minute, pro Kilometer, mit unterschiedlichen Entsperr- und Flughafen-Gebuhren - kann so ein Vergleich die Entscheidung deutlich einfacher machen.
+Nach ein paar zu grauen Wochen mit manuellem Provider-Vergleich stellten wir uns eine einfache Frage: Wäre eine kleine Seite hilfreich, die Preise direkt gegenüberstellt? Jede Firma rechnet anders – pro Minute, pro Kilometer, Entsperrgebühren, Flughafenzuschläge – und ein Rechner nimmt dem Raten etwas Luft.
 
 Ein paar hundert Zeilen Code spater war der [Berlin Carsharing Preisrechner](https://carsharing.landozone.net) online. Die App ist bewusst simpel: Man gibt Distanz und geschaetzte Dauer einer Fahrt ein und sieht sofort die Preise verschiedener Anbieter. Enthalten sind MILES, ShareNow, Bolt und SIXT. Man kann zwischen Kurzstrecken (unter einer Stunde) und Langstrecken (uber einer Stunde) umschalten und optional Flughafen-Zu- oder Abschlage berucksichtigen.
 

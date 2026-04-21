@@ -10,9 +10,13 @@ export const getMenu = () => [
 		slug: '/projects'
 	},
 	{
-		name: m.menu_blog(),
-		slug: '/blog'
+		name: m.menu_team(),
+		slug: '/#team'
 	},
+	// {
+	// 	name: m.menu_blog(),
+	// 	slug: '/blog'
+	// },
 	{
 		name: m.menu_contact(),
 		slug: '/#contact'

@@ -12,7 +12,9 @@ type: 'Website'
 description: 'Kunstgalerie in Frankfurt am Main'
 technologies: ['React', 'Next.js', 'Payload CMS', 'Node.js', 'GitHub Actions']
 features: ['Mehrsprachig (EN, DE)', 'Authentifizierung']
-featured: false
+client: 'E30 Gallery'
+team:
+  - 'Bruno St-Jacques, developer'
 ---
 
 ![E30 Devices](../../../assets/images/e30-devices.png)

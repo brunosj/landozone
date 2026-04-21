@@ -12,7 +12,9 @@ type: 'Site web'
 description: 'Portfolio de cinéaste'
 technologies: ['SvelteKit', 'TypeScript']
 features: []
-featured: false
+client: 'Georg Lewark'
+team:
+  - 'Bruno St-Jacques, developer'
 ---
 
 ![Georg Lewawrk Devices](../../../assets/images/glewark-devices.png)

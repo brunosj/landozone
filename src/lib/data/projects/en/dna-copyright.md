@@ -12,5 +12,7 @@ type: 'Data Visualization'
 description: 'Discourse network analysis of 2019 EU Copyright Directive debate'
 technologies: ['R', 'igraph', 'DNA', 'Java']
 features: ['Network Analysis']
-featured: false
+client: 'Personal / academic'
+team:
+  - 'Bruno St-Jacques, developer'
 ---

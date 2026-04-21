@@ -21,13 +21,17 @@
 			<IntersectionObserver {element} bind:intersecting once threshold={0.3}>
 				{#if intersecting}
 					<div class="hero">
-						<h1 transition:fade={{ duration: 750, delay: 0, easing: cubicInOut }}>
-							{m.landing_title()}
-						</h1>
-						<h4 transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
-							{m.landing_intro()}
-						</h4>
-						<div transition:fade={{ duration: 500, delay: 350, easing: cubicInOut }}>
+						<div class="hero-head">
+							<h1 transition:fade={{ duration: 750, delay: 0, easing: cubicInOut }}>
+								{m.landing_title()}
+							</h1>
+							<h4 transition:fade={{ duration: 500, delay: 250, easing: cubicInOut }}>
+								{m.landing_intro()}
+							</h4>
+						</div>
+						<div
+							class="hero-info"
+							transition:fade={{ duration: 500, delay: 350, easing: cubicInOut }}>
 							<PersonalInfo />
 						</div>
 					</div>
@@ -59,7 +63,8 @@
 				right top,
 				from(var(--color-secondary)),
 				color-stop(var(--color-primary))
-			) repeat scroll 0% 0%/200% 200%;
+			)
+			repeat scroll 0% 0%/200% 200%;
 		background: rgba(0, 0, 0, 0)
 			linear-gradient(125deg, var(--color-secondary), var(--color-primary)) repeat scroll 0% 0%/200%
 			200%;
@@ -110,12 +115,21 @@
 		transition: 750ms ease all;
 	}
 
+	.hero {
+		width: 100%;
+	}
+
+	.hero-head > * + * {
+		margin-top: 1.5rem;
+	}
+
 	.hero > * + * {
 		margin-top: 1.5rem;
 	}
 
-	.hero {
+	.hero-info {
 		width: 100%;
+		min-width: 0;
 	}
 
 	@keyframes wiggle {
@@ -145,6 +159,10 @@
 			margin: auto;
 		}
 
+		.hero-head > * + * {
+			margin-top: 2.5rem;
+		}
+
 		.hero > * + * {
 			margin-top: 2.5rem;
 		}
@@ -156,9 +174,10 @@
 	}
 
 	@media screen and (min-width: 75em) {
-		.hero {
-			width: 80%;
-			margin: auto;
+		.hero-head,
+		.hero-info {
+			width: 90%;
+			margin-inline: auto;
 		}
 
 		.svg-bg {

@@ -12,7 +12,9 @@ type: 'Website'
 description: 'Wooden furniture online store'
 technologies: ['React', 'Gatsby', 'Tailwind CSS', 'Contentful CMS']
 features: ['Integration with Shopify']
-featured: false
+client: 'Rigo Woodworks'
+team:
+  - 'Bruno St-Jacques, developer'
 ---
 
 ![Rigo Woodworks Devices](../../../assets/images/rigo-devices.png)

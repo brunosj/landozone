@@ -9,11 +9,11 @@ technologies: ['Strapi', 'JavaScript', 'Node.js', 'Bash', 'Ubuntu']
 
 Beaucoup de mes projets impliquent la mise en place de systèmes de gestion de contenu (CMS) pour héberger les données des clients. Une de mes solutions préférées est Strapi, un CMS open source très personnalisable qui tourne comme application Node.js auto-hébergée.
 
-Il existe d’innombrables hébergeurs, mais je choisis souvent [Uberspace](https://uberspace.de/en/), une petite structure d’une dizaine de personnes en Allemagne et en Autriche. Plateforme « shell first » sans fioritures, avec l’essentiel déjà installé et une documentation fournie sur une grande variété d’outils. Ce n’est peut-être pas un VPS haut de gamme, mais c’est largement suffisant pour déployer et gérer des CMS. Vous choisissez même votre tarif — je recommande volontiers !
+Il existe d’innombrables hébergeurs, mais je choisis souvent [Uberspace](https://uberspace.de/en/), une petite structure d’une dizaine de personnes en Allemagne et en Autriche. Plateforme « shell first » sans fioritures, avec l’essentiel déjà installé et une documentation fournie sur une grande variété d’outils. Ce n’est peut-être pas un VPS haut de gamme, mais c’est largement suffisant pour déployer et gérer des CMS. Vous choisissez même votre tarif ; je recommande volontiers !
 
 Une fois votre serveur Uberspace prêt, voyons comment déployer Strapi. Le guide couvre : accès SSH, création d’une base MySQL, installation de Strapi, configuration et mise en ligne sur le domaine souhaité.
 
-Pour cet exemple, nous supposons que le nom d’utilisateur Uberspace est `lando` et l’hôte `landozone.uberspace.de` — adaptez ces valeurs à votre cas !
+Pour cet exemple, nous supposons que le nom d’utilisateur Uberspace est `lando` et l’hôte `landozone.uberspace.de` (adaptez ces valeurs à votre cas).
 
 ### Étape 1 : accéder au serveur Uberspace en SSH
 
@@ -131,7 +131,7 @@ Fichier d’entrée minimal ; vous pourrez ajouter config ou middleware selon le
 
 ### Étape 7 : ajouter le domaine au serveur
 
-Pour exposer Strapi sur une URL, configurez le domaine. Par exemple un sous-domaine <span style="color:var(--color-secondary)">cms.landozone.net</span> — Uberspace fournit des outils intégrés (sans nginx à configurer à la main pour l’essentiel).
+Pour exposer Strapi sur une URL, configurez le domaine. Par exemple un sous-domaine <span style="color:var(--color-secondary)">cms.landozone.net</span> : Uberspace fournit des outils intégrés (sans nginx à configurer à la main pour l’essentiel).
 
 ```bash
 uberspace web domain add cms.landozone.net

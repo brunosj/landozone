@@ -8,7 +8,7 @@
 	import IconSvelte from '$lib/assets/svg/icons/SimpleIconsSvelte.svelte';
 	import IconVue from '$lib/assets/svg/icons/SimpleIconsVue.svelte';
 	import { background, font } from '$lib/stores/store';
-	import ContactCard from '$components/Contact/ContactCard.svelte';
+	import ArrowLink from '$components/UI/ArrowLink.svelte';
 	import IconPython from '$lib/assets/svg/icons/SimpleIconsPython.svelte';
 	import * as m from '$lib/paraglide/messages';
 	let element: HTMLElement | null | undefined = $state();
@@ -26,7 +26,6 @@
 			{#if intersecting}
 				<div class="content grid">
 					<div class="description">
-						<!-- <h2 transition:fade={{ duration: 500, delay: 0, easing: cubicInOut }}>about</h2> -->
 						<div>
 							<p>
 								{m.about_p1()}
@@ -41,7 +40,7 @@
 									target="_blank"
 									rel="noreferrer">Vue</a
 								>),
-								<a href="https://nodejs.org/en" target="_blank" rel="noreferrer">Node.js</a>, data
+								<a href="https://nodejs.org/en" target="_blank" rel="noreferrer">Node.js</a>,
 								{m.about_p2_middle()} (<a href="https://d3js.org/" target="_blank" rel="noreferrer"
 									>D3.js</a
 								>/<a href="https://echarts.apache.org/" target="_blank" rel="noreferrer">ECharts</a
@@ -63,7 +62,10 @@
 							<IconR width="1.5rem" />
 						</div>
 					</div>
-					<ContactCard />
+					<div class="cta-column">
+						<ArrowLink path="#contact">{m.about_cta_contact()}</ArrowLink>
+						<ArrowLink path="#team">{m.about_cta_team()}</ArrowLink>
+					</div>
 				</div>
 			{/if}
 		</IntersectionObserver>
@@ -134,6 +136,14 @@
 		display: none;
 	}
 
+	.cta-column {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 1rem;
+		width: 100%;
+	}
+
 	@media (min-width: 55em) {
 		a {
 			font-size: 1.2rem;
@@ -150,8 +160,9 @@
 
 		.grid {
 			display: grid;
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: 1fr minmax(12rem, 18rem);
 			gap: 4rem;
+			align-items: start;
 		}
 
 		.grid p {
@@ -166,6 +177,11 @@
 			display: flex;
 			flex-wrap: wrap;
 			gap: 1.5rem;
+		}
+
+		.cta-column {
+			gap: 1.25rem;
+			padding-top: 0.25rem;
 		}
 	}
 </style>

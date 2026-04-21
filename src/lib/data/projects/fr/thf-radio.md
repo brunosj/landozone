@@ -23,14 +23,16 @@ features:
   - 'Diffusion en direct'
   - 'Calendrier automatisé'
   - 'Publication automatisée des émissions'
-featured: true
+client: 'THF Radio'
+team:
+  - 'Bruno St-Jacques, developer'
 ---
 
 ![THF Radio Devices](../../../assets/images/thf-devices.png)
 
-Refaire le site de THF Radio compte parmi les projets qui comptent le plus pour mon parcours de développeur. D’abord, je suis impliqué musicalement dans cette communauté depuis ses débuts et j’y ai rencontré des tas de personnes passionnantes. Ensuite, j’ai découvert les frameworks JavaScript grâce au développeur qui avait construit la première version du site en 2020 — il m’a patiemment expliqué npm, variables d’environnement, récupération de données, bundlers, etc., ce qui m’a vraiment lancé dans cet univers sans fin.
+Refaire le site de THF Radio reste un repère fort pour notre façon de penser les produits portés par une communauté. Nous sommes proches de cette communauté musicale depuis les débuts, et la station nous a fait croiser quantité de collaborations et d’auditeurs. La personne derrière la version de 2020 a aussi pris le temps d’expliquer patiemment les frameworks JavaScript (npm, variables d’environnement, récupération de données, bundlers) et a marqué notre manière d’aborder le web aujourd’hui.
 
-En 2023, le site d’origine montrait des signes de fatigue, sa maintenance devenait difficile et freinait les nouvelles fonctionnalités. La communauté radio grandissait et voulait une plateforme plus aboutie. J’avais alors assez d’expérience sur d’autres projets et le temps de m’y consacrer pleinement.
+En 2023, le site d’origine montrait des signes de fatigue, la maintenance freinait les sorties et les nouvelles fonctionnalités peinaient à arriver. La communauté grandissait et demandait une plateforme plus solide. Avec plus d’expérience accumulée sur d’autres chantiers, nous avons pu enfin dédier un vrai cycle à une nouvelle version.
 
 La transition a impliqué de réécrire une grande partie du code. Côté front, passage de Gatsby à Next.js et nouveau design (signé [Eli Michiel](https://www.instagram.com/elmidesign)). Côté back, nous avons conservé notre serveur Ubuntu pour le CMS et déployé le site via Vercel.
 
@@ -44,7 +46,7 @@ Comme sur la version précédente, le direct repose sur Airtime Pro et l’archi
 
 #### Pages par émission
 
-Chaque émission a désormais sa page : les auditeurs peuvent explorer le détail des programmes. Les données viennent de Strapi (CMS Node.js sur notre serveur [Uberspace](https://uberspace.de) — hébergeur que je recommande chaudement).
+Chaque émission a désormais sa page : les auditeurs peuvent explorer le détail des programmes. Les données viennent de Strapi (CMS Node.js sur notre serveur [Uberspace](https://uberspace.de), un hébergeur que nous recommandons volontiers).
 
 #### Support bilingue
 
@@ -64,4 +66,4 @@ Navigation simplifiée grâce au filtrage des émissions.
 
 ### Découvrir THF Radio
 
-Parcourez le nouveau [THF Radio](https://thfradio.de/) et, pour le côté technique, le dépôt [GitHub](https://github.com/brunosj/thfradio-nextjs). THF Radio, c’est aussi une plateforme portée par une communauté, localement et au-delà — bienvenue à bord !
+Parcourez le nouveau [THF Radio](https://thfradio.de/) et, pour le côté technique, le dépôt [GitHub](https://github.com/brunosj/thfradio-nextjs). THF Radio, c’est aussi une plateforme portée par une communauté, localement et au-delà : bienvenue à bord !

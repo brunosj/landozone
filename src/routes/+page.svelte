@@ -1,9 +1,10 @@
 <script lang="ts">
 	import Landing from '$components/Landing/Landing.svelte';
 	import About from '$components/About/About.svelte';
+	import Team from '$components/Team/Team.svelte';
 	import Projects from '$components/Projects/Projects.svelte';
 	import Contact from '$components/Contact/Contact.svelte';
-	import type { Project } from '$lib/types/types';
+	import type { Project, TeamMember } from '$lib/types/types';
 	import SEO from '$lib/components/SEO/index.svelte';
 	import USP from '$components/USP/USP.svelte';
 	import * as m from '$lib/paraglide/messages';
@@ -28,6 +29,7 @@
 	// Logic
 
 	let projects: Project[] = $derived(data.projects);
+	let team: TeamMember[] = $derived(data.team);
 </script>
 
 <SEO {...seoProps} />
@@ -38,6 +40,7 @@
 <Landing />
 <About />
 <Projects {projects} />
+<Team {team} />
 <USP />
 <Contact />
 

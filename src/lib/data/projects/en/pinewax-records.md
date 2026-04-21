@@ -12,7 +12,9 @@ type: 'Website'
 description: 'Record label'
 technologies: ['React', 'Gatsby', 'Tailwind CSS', 'Contentful CMS']
 features: []
-featured: false
+client: 'Pinewax Records'
+team:
+  - 'Bruno St-Jacques, developer'
 ---
 
 ![Pinewax Devices](../../../assets/images/pinewax-devices.png)

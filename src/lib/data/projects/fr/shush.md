@@ -12,7 +12,9 @@ type: 'Site web'
 description: 'Sound system, communauté musicale et label berlinois'
 technologies: ['React', 'Next.js', 'Payload CMS', 'Node.js', 'GitHub Actions']
 features: ['Intégration CMS', 'Boutique en ligne']
-featured: true
+client: 'SHUSH'
+team:
+  - 'Bruno St-Jacques, developer'
 ---
 
 ![SHUSH Devices](../../../assets/images/shush-devices.png)

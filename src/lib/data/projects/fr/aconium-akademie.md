@@ -12,7 +12,9 @@ type: 'Site web'
 description: 'Plateforme d’éducation numérique'
 technologies: ['React', 'Next.js', 'Tailwind CSS', 'Wordpress CMS']
 features: ['Mode clair / sombre', 'Calendrier personnalisé']
-featured: false
+client: 'aconium'
+team:
+  - 'Bruno St-Jacques, developer'
 ---
 
 ![aconium Devices](../../../assets/images/aconium-devices.png)

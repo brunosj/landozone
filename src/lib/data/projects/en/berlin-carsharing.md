@@ -12,14 +12,16 @@ type: 'Web App'
 description: 'Price calculator for carsharing services in Berlin'
 technologies: ['Svelte', 'Google Maps APIs']
 features: ['Google Maps Integration', 'Short/Long Trip Calculation']
-featured: true
+client: 'Personal'
+team:
+  - 'Bruno St-Jacques, developer'
 ---
 
 ![BCPC Devices](../../../assets/images/bcpc-devices.png)
 
-What I appreciate most about living in Berlin is that I use my bicycle for most of my commuting, which is not only environmentally-friendly but also keeps me in shape 🚴🏼‍♂️ However, when it's rainy and I need to travel a distance which would involve too many transfers with public transport I sometimes opt to use one of the different car sharing options available in the city.
+Berlin is our everyday base, and for most short trips we still reach for bicycles: low impact and good for the head 🚴🏼‍♂️ On rainy days, when public transport would mean too many transfers, we often fall back on the city's car-sharing options.
 
-Last fall was pretty rainy, and one day while I was figuring out which company to pick I had the following idea - why not build a simple app/website which would compare the prices of different providers? Since they all have different pricing models - per minute, per kilometer, with different unlocking and airport fees - this could make it easier to decide on a provider.
+After one too many grey weeks comparing providers by hand, we sketched a simple question: what if a small site compared prices side by side? Each operator uses different rules (per minute, per kilometer, unlock fees, airport surcharges), so a single calculator could make the choice less guessy.
 
 A few hundreds of lines of code later, the [Berlin Carsharing Price Calculator](https://carsharing.landozone.net) was born! It is a simple price calculator based on user input - one only needs to add the distance and estimated duration of a trip to get the different prices and find out which provider is the cheapest. It includes price data from MILES, ShareNow, Bolt and SIXT. You can toggle between short trips (under an hour) and long trips (more than an hour). There's also an option to add Airport Pick-Up/Drop-Off.
 

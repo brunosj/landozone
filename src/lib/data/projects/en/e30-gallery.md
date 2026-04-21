@@ -12,7 +12,9 @@ type: 'Website'
 description: 'Art gallery located in Frankfurt, Germany'
 technologies: ['React', 'Next.js', 'Payload CMS', 'Node.js', 'GitHub Actions']
 features: ['Multilingual (EN, DE)', 'Authentication']
-featured: false
+client: 'E30 Gallery'
+team:
+  - 'Bruno St-Jacques, developer'
 ---
 
 ![E30 Devices](../../../assets/images/e30-devices.png)

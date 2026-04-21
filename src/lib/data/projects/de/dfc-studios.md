@@ -12,7 +12,9 @@ type: 'Website'
 description: 'Portfolio-Website von DFC (Designers for Climate) Studios'
 technologies: ['React', 'Next.js', 'Payload CMS', 'Node.js', 'GitHub Actions']
 features: ['Hell-/Dunkelmodus']
-featured: true
+client: 'DFC Studios (Designers for Climate)'
+team:
+  - 'Bruno St-Jacques, developer'
 ---
 
 ![DFC Studios Devices](../../../assets/images/dfc-devices.png)

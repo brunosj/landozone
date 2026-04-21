@@ -1,5 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { Project } from '$lib/types/types';
+import { isFeaturedProjectSlug } from '$lib/data/featuredProjectSlugs';
 import { isLocale } from '$lib/paraglide/runtime';
 
 async function getProjects(lang: string) {
@@ -15,7 +16,11 @@ async function getProjects(lang: string) {
 
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
 			const metadata = file.metadata as Omit<Project, 'slug'>;
-			const post = { ...metadata, slug } as Project;
+			const post = {
+				...metadata,
+				slug,
+				featured: isFeaturedProjectSlug(slug)
+			} as Project;
 			projects.push(post);
 		}
 	}

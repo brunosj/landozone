@@ -12,12 +12,14 @@ type: 'Data Visualization'
 description: "An interactive scrollytelling piece showcasing Flare's 2026 State of Enterprise Infostealer Identity Exposure"
 technologies: ['Svelte', 'D3.js', 'Node.js']
 features: ['Scrollytelling', 'Data visualization']
-featured: true
+client: 'Flare'
+team:
+  - 'Bruno St-Jacques, developer'
 ---
 
 ![Flare Devices](../../../assets/images/flare-devices.png)
 
-Partnering up with Flare, a cybersecurity firm based in Montreal, I've transposed the content of their "[2026 State of Enterprise Infostealer Identity Exposure](https://flare.io/learn/resources/2026-enterprise-infostealer-identity-exposure)" report.
+Partnering with Flare, a cybersecurity firm based in Montreal, we transposed the content of their "[2026 State of Enterprise Infostealer Identity Exposure](https://flare.io/learn/resources/2026-enterprise-infostealer-identity-exposure)" report.
 
 Using a combination of scrollytelling and data visualization techniques, the goal was to take a static report and turn it into an interactive and compelling experience.
 

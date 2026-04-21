@@ -12,7 +12,9 @@ type: 'Website'
 description: 'Onlineshop fur Mobel aus Holz'
 technologies: ['React', 'Gatsby', 'Tailwind CSS', 'Contentful CMS']
 features: ['Shopify-Integration']
-featured: false
+client: 'Rigo Woodworks'
+team:
+  - 'Bruno St-Jacques, developer'
 ---
 
 ![Rigo Woodworks Devices](../../../assets/images/rigo-devices.png)

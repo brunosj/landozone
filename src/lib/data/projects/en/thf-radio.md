@@ -23,14 +23,16 @@ features:
   - 'Live Streaming'
   - 'Automated Calendar'
   - 'Automated Show Uploads'
-featured: true
+client: 'THF Radio'
+team:
+  - 'Bruno St-Jacques, developer'
 ---
 
 ![THF Radio Devices](../../../assets/images/thf-devices.png)
 
-Revamping the THF Radio website is a project that holds a special place in my developer journey. First, I am musically involved with its community since its early beginnings and I have met countless interesting people through it. Second. I was literally introduced to JavaScript frameworks by the programmer who had built the first version of the site in 2020. He was kind enough to walk me through everything from npm to environment variables, data fetching, bundlers and so on - which truly helped me get started into this infinite world.
+Revamping the THF Radio website is a project that still anchors a lot of how we think about community-led products. We have been close to its musical community since the early days, and the station has introduced us to countless collaborators and listeners. The developer behind the 2020 stack also gave our side a patient tour of JavaScript frameworks (npm, environment variables, data fetching, bundlers), which shaped how we approach the web today.
 
-Fast forward to 2023. The original site had started showing signs of strain since a little while already, maintaining it had become a challenge and hindered the implementation of new features. At the same time the radio community was growing and its members were eager to evolve on an enhanced platform. By then I had gained considerable experience by working on other projects and I finally found the time to dedicate myself to developing a fresh version of the site.
+Fast forward to 2023. The original site had started showing signs of strain, maintenance was slowing releases, and new features were hard to land. The radio community was growing and asking for a stronger platform. With more experience from other builds behind us, we could finally dedicate a full pass to a fresh version of the site.
 
 The transition implied rewriting most of the codebase. On the frontend, we moved from Gatsby to Next.js and implemented a new design (by the talented [Eli Michiel](https://www.instagram.com/elmidesign)). On the backend, we kept our Ubuntu server to host our CMS and deployed the site through Vercel instead.
 
@@ -44,7 +46,7 @@ In continuity with the previous version of the site, the live stream remains pow
 
 #### Individual Show Pages
 
-A key addition is the introduction of dedicated pages for each radio show. Now, users can explore the details of their favorite shows more effectively. Show data is fetched from Strapi, a Node.js open-source CMS running on our server (hosted on [Uberspace](https://uberspace.de), an amazing provider I definitely recommend!).
+A key addition is the introduction of dedicated pages for each radio show. Now, users can explore the details of their favorite shows more effectively. Show data is fetched from Strapi, a Node.js open-source CMS running on our server (hosted on [Uberspace](https://uberspace.de), a host we happily recommend).
 
 #### Bilingual Support
 

@@ -12,7 +12,9 @@ type: 'Site web'
 description: 'Portfolio d’architecte et designer d’intérieur'
 technologies: ['React', 'Next.js', 'Tailwind CSS', 'Strapi CMS', 'Node.js', 'MySQL']
 features: ['Multilingue (EN, DE, FR)']
-featured: false
+client: 'Studio Deremetz'
+team:
+  - 'Bruno St-Jacques, developer'
 ---
 
 ![Studio Deremetz Devices](../../../assets/images/deremetz-devices.png)

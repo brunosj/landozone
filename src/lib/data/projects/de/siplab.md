@@ -19,7 +19,9 @@ technologies:
   - 'Node.js'
   - 'MySQL'
 features: ['Mehrsprachig']
-featured: false
+client: 'SIPLAB'
+team:
+  - 'Bruno St-Jacques, developer'
 ---
 
 ![SIPLAB Devices](../../../assets/images/siplab-devices.png)

@@ -12,7 +12,9 @@ type: 'Site web'
 description: 'Think tank du développement durable basé à Berlin'
 technologies: ['SvelteKit', 'Tailwind CSS', 'Contentful CMS', 'Cloudinary']
 features: ['Génération de contenu automatisée']
-featured: false
+client: 'TMG Think Tank'
+team:
+  - 'Bruno St-Jacques, developer'
 ---
 
 ![TMG Think Tank Devices](../../../assets/images/tmg-devices.png)

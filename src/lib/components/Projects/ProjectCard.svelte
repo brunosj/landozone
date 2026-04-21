@@ -20,6 +20,8 @@
 	let description = $derived(item.description);
 	let technologies = $derived(item.technologies);
 	let features = $derived(item.features);
+	let client = $derived(item.client);
+	let team = $derived(item.team);
 
 	let animate = $state(true);
 	let ImageComponent: string = $derived(getImageComponent(slug));
@@ -51,6 +53,23 @@
 					</div>
 					{#if showDetails}
 						<div class="details">
+							<div>
+								<p class="category">{m.project_client()}</p>
+								<p class="client-value">{client}</p>
+							</div>
+							<!-- {#if team.length >= 1}
+								<div>
+									<p class="category">{m.project_team()}</p>
+									<ul class="feature">
+										{#each team as member}
+											<span>{member}</span>
+											{#if member !== team[team.length - 1]}
+												<span>{' - '}</span>
+											{/if}
+										{/each}
+									</ul>
+								</div>
+							{/if} -->
 							{#if features.length >= 1}
 								<div>
 									<p class="category">{m.features()}</p>
@@ -68,7 +87,7 @@
 									</ul>
 								</div>
 							{/if}
-							<div>
+							<!-- <div>
 								<p class="category">{m.technologies()}</p>
 								<ul class="feature">
 									{#each technologies as item}
@@ -82,7 +101,7 @@
 										{/if}
 									{/each}
 								</ul>
-							</div>
+							</div> -->
 						</div>
 					{/if}
 					<div class="links" style="width:{`${showDetails ? '100%' : '100%'}`}">
@@ -123,7 +142,10 @@
 		}
 
 		h4 {
-			font-size: 1.75rem;
+			font-size: 1.65rem;
+			line-height: 1.2;
+			margin: 0;
+			font-weight: 400;
 		}
 
 		p {
@@ -133,6 +155,7 @@
 
 		ul span {
 			font-size: 1rem;
+			line-height: 1.3;
 			color: var(--color-lightgray);
 		}
 
@@ -163,7 +186,7 @@
 
 		.info {
 			width: 60%;
-			padding: 2rem;
+			padding: 1.5rem 1.75rem;
 			border-radius: 12px;
 			background-color: var(--color-gray);
 			margin-top: 3rem;
@@ -211,14 +234,32 @@
 
 		.category {
 			color: var(--color-white);
+			margin: 0 0 0.2rem;
+			line-height: 1.2;
+		}
+
+		.client-value {
+			font-size: 1rem;
+			line-height: 1.3;
+			color: var(--color-lightgray);
+			margin: 0;
 		}
 
 		.details {
-			margin: 1rem 0;
+			margin: 1.25rem 0;
+			display: flex;
+			flex-direction: column;
+			gap: 0.65rem;
 		}
 
 		.details > * {
-			margin: 2rem 0rem;
+			margin: 0;
+		}
+
+		.details ul.feature {
+			margin: 0;
+			padding: 0;
+			list-style: none;
 		}
 
 		.links {
@@ -227,6 +268,7 @@
 			flex-direction: row;
 			justify-content: space-between;
 			/* align-items: center; */
+			margin-top: 1.5rem;
 			gap: 4rem;
 		}
 
@@ -235,12 +277,9 @@
 			width: 30%;
 		}
 
-		.description {
-			line-height: 1.2rem;
-			margin-top: 0.5rem;
-		}
-
-		.description {
+		.title .description {
+			line-height: 1.35;
+			margin-top: 0.35rem;
 			display: flex;
 		}
 	}

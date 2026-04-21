@@ -33,7 +33,7 @@
 	.switcher {
 		display: flex;
 		align-items: center;
-		gap: 0.25rem;
+		gap: 0.08rem;
 		font-size: 0.75rem;
 		font-family: 'IBM Plex Mono', sans-serif;
 	}
@@ -43,6 +43,7 @@
 	}
 	@media (min-width: 55em) {
 		.switcher {
+			gap: 0.2rem;
 			font-size: 0.85rem;
 		}
 	}

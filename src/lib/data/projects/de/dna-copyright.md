@@ -12,6 +12,8 @@ type: 'Datenvisualisierung'
 description: 'Diskursnetzwerkanalyse zur EU-Urheberrechtsdebatte 2019'
 technologies: ['R', 'igraph', 'DNA', 'Java']
 features: ['Netzwerkanalyse']
-featured: false
+client: 'Personal / academic'
+team:
+  - 'Bruno St-Jacques, developer'
 ---
 

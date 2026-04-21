@@ -12,7 +12,9 @@ type: 'Website'
 description: 'Digital education platform'
 technologies: ['React', 'Next.js', 'Tailwind CSS', 'Wordpress CMS']
 features: ['Light/Dark Mode', 'Custom Calendar']
-featured: false
+client: 'aconium'
+team:
+  - 'Bruno St-Jacques, developer'
 ---
 
 ![aconium Devices](../../../assets/images/aconium-devices.png)

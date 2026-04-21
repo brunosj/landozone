@@ -24,6 +24,8 @@
 	let description = $derived(item.description);
 	let technologies = $derived(item.technologies);
 	let features = $derived(item.features);
+	let client = $derived(item.client);
+	let team = $derived(item.team);
 
 	let textColor = $derived(keepTextLight ? '#fff' : '#202129');
 
@@ -46,6 +48,23 @@
 						</p>
 					</div>
 					<div class="details" transition:fade={{ duration: 350, delay: 250, easing: cubicInOut }}>
+						<div class="client-block">
+							<p class="category">{m.project_client()}</p>
+							<p class="client-value">{client}</p>
+						</div>
+						<!-- {#if team.length > 0}
+							<div class="team-block">
+								<p class="category">{m.project_team()}</p>
+								<ul class="feature">
+									{#each team as member}
+										<span>{member}</span>
+										{#if member !== team[team.length - 1]}
+											<span>{' - '}</span>
+										{/if}
+									{/each}
+								</ul>
+							</div>
+						{/if} -->
 						{#if features.length > 0}
 							<div class="features">
 								<p class="category">{m.features()}</p>
@@ -163,6 +182,17 @@
 		display: none;
 	}
 
+	.client-block,
+	.team-block {
+		display: none;
+	}
+
+	.client-value {
+		font-size: 0.9rem;
+		line-height: 1.2rem;
+		margin: 0;
+	}
+
 	.category {
 		display: none;
 	}
@@ -243,8 +273,39 @@
 			display: block;
 		}
 
+		.client-block,
+		.team-block {
+			display: block;
+		}
+
+		.client-value {
+			font-size: 1rem;
+			line-height: 1.35;
+			margin: 0;
+		}
+
+		.details ul.feature span {
+			font-size: 1rem;
+			line-height: 1.35;
+		}
+
+		.details {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+		}
+
 		.details > * + * {
-			margin-top: 2rem;
+			margin-top: 0;
+		}
+
+		.details .category {
+			display: block;
+			margin: 0 0 0.25rem;
+		}
+
+		.details :is(ul) {
+			margin: 0;
 		}
 
 		.links {

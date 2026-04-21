@@ -12,12 +12,14 @@ type: 'Website'
 description: 'Audioausschnitte aus Birminghams Vergangenheit und Gegenwart'
 technologies: ['React', 'Next.js', 'Mapbox GL JS', 'Payload CMS', 'Node.js', 'GitHub Actions']
 features: ['Interaktive Karte', 'Audiogeschichten', 'Nutzerbeitrage']
-featured: true
+client: 'Birmingham Museums Trust'
+team:
+  - 'Bruno St-Jacques, developer'
 ---
 
 ![Birmingham Now Devices](../../../assets/images/bnow-devices.png)
 
-Ich hatte vor Kurzem die Freude, an [Birmingham Now](https://brumnow.birminghammuseums.org.uk/) mitzuarbeiten - einer interaktiven Soundkarte, die Birminghams Vergangenheit und Gegenwart uber Audio erlebbar macht. Gemeinsam mit dem Team der Birmingham Museums und den Leuten von Devision haben wir einen digitalen Raum geschaffen, in dem Menschen die klangliche Geschichte der Stadt entdecken und selbst mitgestalten konnen.
+Wir haben kürzlich an [Birmingham Now](https://brumnow.birminghammuseums.org.uk/) gearbeitet – einer interaktiven Soundkarte, die Birminghams Vergangenheit und Gegenwart über Audio erlebbar macht. Gemeinsam mit dem Team der Birmingham Museums und den Leuten von Devision haben wir einen digitalen Raum geschaffen, in dem Menschen die klangliche Geschichte der Stadt entdecken und selbst mitgestalten können.
 
 Das Projekt kombiniert Next.js mit Payload CMS und Mapbox GL zu einem immersiven Erlebnis: Nutzerinnen und Nutzer konnen bestehende Geschichten anhoren und gleichzeitig eigene Audiobeitrage zur wachsenden Sammlung hinzufugen.
 

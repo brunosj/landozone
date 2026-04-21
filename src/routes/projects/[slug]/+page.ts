@@ -1,3 +1,4 @@
+import { isFeaturedProjectSlug } from '$lib/data/featuredProjectSlugs';
 import { getLocale } from '$lib/paraglide/runtime';
 
 export async function load({ params }) {
@@ -6,7 +7,10 @@ export async function load({ params }) {
 		const item = await import(`../../../lib/data/projects/${locale}/${params.slug}.md`);
 		return {
 			content: item.default,
-			meta: item.metadata
+			meta: {
+				...item.metadata,
+				featured: isFeaturedProjectSlug(params.slug)
+			}
 		};
 	} catch (postError) {
 		return { content: null, meta: null };

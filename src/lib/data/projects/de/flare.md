@@ -12,13 +12,15 @@ type: 'Datenvisualisierung'
 description: 'Interaktives Scrollytelling zum Flare-Bericht über Infostealer und Identitätsrisiken im Unternehmen (2026)'
 technologies: ['Svelte', 'D3.js', 'Node.js']
 features: ['Scrollytelling', 'Datenvisualisierung']
-featured: true
+client: 'Flare'
+team:
+  - 'Bruno St-Jacques, developer'
 ---
 
 ![Flare Geräte](../../../assets/images/flare-devices.png)
 
-<!-- In collaboration with TMG Research and the Robert Bosch Stiftung, I designed and developed [Net Zero & Land Rights](https://netzerolandrights.com/), the companion website to their latest joint report. The report brings together insights from science, civil society, and voices from both Europe and the Global South, offering a critical analysis of how global climate strategies intersect with land rights, biodiversity, and social justice.
+Gemeinsam mit Flare, einem Cybersicherheitsunternehmen mit Sitz in Montreal, haben wir die Inhalte ihres Berichts „[2026 State of Enterprise Infostealer Identity Exposure](https://flare.io/learn/resources/2026-enterprise-infostealer-identity-exposure)“ in eine digitale Erzählung übertragen.
 
-The website showcases each chapter in an engaging and visually cohesive way, enhanced by the stunning illustrations of STOCKMAR+WALTER. Every section is carefully designed to present figures and content in an aesthetically refined layout. A dedicated resources page allows users to download all figures and graphs in both PNG and SVG formats, alongside access to supplementary materials such as videos and publications. Additionally, the platform includes a media center where the organizations can publish commentaries and blog posts—ensuring the website remains a living, evolving resource in the years to come. -->
+Mit Scrollytelling und Datenvisualisierung sollte aus einem statischen Bericht ein interaktives, eindringliches Erlebnis werden.
 
-<!-- ![Net Zero & Land Rights Logo](../../../assets/images/nzlr-image.jpg) -->
+![Flare Desktop-Ansicht](../../../assets/images/flare-desktop.png)

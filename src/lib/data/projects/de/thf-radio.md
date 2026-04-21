@@ -23,14 +23,16 @@ features:
   - 'Live-Streaming'
   - 'Automatisierter Kalender'
   - 'Automatisierte Show-Uploads'
-featured: true
+client: 'THF Radio'
+team:
+  - 'Bruno St-Jacques, developer'
 ---
 
 ![THF Radio Devices](../../../assets/images/thf-devices.png)
 
-Der Relaunch der THF-Radio-Website hat fur mich einen besonderen Stellenwert. Erstens bin ich seit den fruhen Anfangen musikalisch in der Community dabei und habe uber das Projekt viele spannende Menschen kennengelernt. Zweitens hat mich genau dieses Projekt in JavaScript-Frameworks eingefuhrt: Der Entwickler der ersten Version von 2020 hat mir damals grosszugig alles von npm uber Umgebungsvariablen bis zu Datenabfragen und Bundlern erklart - ein entscheidender Einstieg in diese Welt.
+Der Relaunch der THF-Radio-Website prägt bis heute, wie wir über community-getriebene Produkte denken. Wir sind der musikalischen Community seit frühen Tagen nah und haben über die Station unzählige Kooperationen und Hörer:innen kennengelernt. Die Person hinter dem Stack von 2020 hat unserer Seite damals geduldig JavaScript-Frameworks erklärt – von npm über Umgebungsvariablen bis zu Datenabfragen und Bundlern – und damit geprägt, wie wir heute ans Web gehen.
 
-Sprung ins Jahr 2023: Die ursprungliche Seite stiess technisch zunehmend an Grenzen. Wartung wurde aufwendig, neue Funktionen liessen sich nur schwer umsetzen. Gleichzeitig wuchs die Community, und der Wunsch nach einer besseren Plattform wurde lauter. Mit der Erfahrung aus anderen Projekten konnte ich mir endlich die Zeit nehmen, eine neue Version zu bauen.
+Sprung ins Jahr 2023: Die alte Seite stieß technisch an Grenzen, Releases wurden durch Wartung gebremst und neue Features waren schwer umzusetzen. Die Community wuchs und wünschte sich eine klarere Plattform. Mit mehr Erfahrung aus anderen Builds konnten wir uns endlich einen vollen Durchlauf für eine neue Version nehmen.
 
 Der Umstieg bedeutete, einen grossen Teil der Codebasis neu zu schreiben. Im Frontend wechselten wir von Gatsby zu Next.js und setzten ein neues Design um (von [Eli Michiel](https://www.instagram.com/elmidesign)). Im Backend blieben wir bei unserem Ubuntu-Server fur das CMS, deployten die Website jedoch uber Vercel.
 
@@ -64,4 +66,4 @@ Durch eine intuitive Filterfunktion lassen sich Inhalte schneller finden und bes
 
 ### THF Radio entdecken
 
-Schau dir die neue Version von [THF Radio](https://thfradio.de/) einfach selbst an. Wenn dich die technische Umsetzung interessiert, findest du den Projektverlauf auf [GitHub](https://github.com/brunosj/thfradio-nextjs). THF Radio ist fur mich mehr als ein Projekt - es ist ein praktischer Beitrag zu einer communitybasierten Plattform mit lokaler Verankerung und Reichweite daruber hinaus.
+Schau dir die neue Version von [THF Radio](https://thfradio.de/) einfach selbst an. Wenn dich die technische Umsetzung interessiert, findest du den Projektverlauf auf [GitHub](https://github.com/brunosj/thfradio-nextjs). THF Radio ist für uns mehr als ein Projekt – ein praktischer Beitrag zu einer communitybasierten Plattform mit lokaler Verankerung und Reichweite darüber hinaus.

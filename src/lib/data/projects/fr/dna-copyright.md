@@ -12,5 +12,7 @@ type: 'Visualisation de données'
 description: 'Analyse de réseau discursif du débat sur la directive européenne sur le droit d’auteur (2019)'
 technologies: ['R', 'igraph', 'DNA', 'Java']
 features: ['Analyse de réseau']
-featured: false
+client: 'Personal / academic'
+team:
+  - 'Bruno St-Jacques, developer'
 ---

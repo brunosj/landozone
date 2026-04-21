@@ -64,7 +64,9 @@
 		margin: 0.6rem auto;
 		flex-direction: row;
 		justify-content: space-between;
-		max-width: 95%;
+		max-width: 98%;
+		box-sizing: border-box;
+		padding: 0 0.15rem;
 	}
 
 	.active-page {
@@ -79,7 +81,9 @@
 		display: flex;
 		align-items: center;
 		flex-direction: row;
-		gap: 2rem;
+		flex-wrap: nowrap;
+		min-width: 0;
+		gap: 0.7rem;
 	}
 
 	li {
@@ -102,6 +106,15 @@
 	}
 
 	@media (min-width: 55em) {
+		nav {
+			max-width: 95%;
+			padding: 0;
+		}
+
+		.menu {
+			gap: 2rem;
+		}
+
 		span {
 			font-size: 0.9rem;
 		}

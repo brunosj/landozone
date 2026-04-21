@@ -18,7 +18,9 @@ technologies:
   - 'Node.js'
   - 'MySQL'
 features: []
-featured: false
+client: 'die beste Art / Entlebuch'
+team:
+  - 'Bruno St-Jacques, developer'
 ---
 
 ![Entlebuch Devices](../../../assets/images/entlebuch-devices.png)

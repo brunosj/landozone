@@ -19,7 +19,9 @@ technologies:
   - 'Node.js'
   - 'MySQL'
 features: ['Mehrsprachig']
-featured: false
+client: 'EconCrime Lab'
+team:
+  - 'Bruno St-Jacques, developer'
 ---
 
 ![EconCrime Lab Devices](../../../assets/images/eclab-devices.png)

@@ -18,7 +18,9 @@ technologies:
   - 'Node.js'
   - 'MySQL'
 features: []
-featured: false
+client: 'Original Food'
+team:
+  - 'Bruno St-Jacques, developer'
 ---
 
 ![Original Food Devices](../../../assets/images/original-food-devices.png)
