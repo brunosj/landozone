@@ -64,7 +64,7 @@
 					</div>
 					<div class="cta-column">
 						<ArrowLink path="#contact">{m.about_cta_contact()}</ArrowLink>
-						<ArrowLink path="#team">{m.about_cta_team()}</ArrowLink>
+						<!-- <ArrowLink path="#team">{m.about_cta_team()}</ArrowLink> -->
 					</div>
 				</div>
 			{/if}
