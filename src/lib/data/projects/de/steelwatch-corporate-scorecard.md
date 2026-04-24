@@ -11,7 +11,7 @@ keepTextLight: true
 type: 'Datenvisualisierung'
 description: 'Öffentliches Dashboard zum Vergleich von 18 großen Stahlherstellern in 29 Ländern hinsichtlich Dekarbonisierung und Transformationsbereitschaft'
 technologies: ['Svelte', 'D3.js', 'Node.js']
-features: ['Datenvisualisierung', 'Postgres (Drizzle) + D3-Diagramme', 'Einbettung in WordPress']
+features: ['Datenvisualisierung', 'Postgres (Drizzle) + D3-Diagramme', 'WordPress-Integration']
 client: 'SteelWatch'
 team:
   - 'Bruno St-Jacques, developer'

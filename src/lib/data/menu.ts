@@ -9,10 +9,10 @@ export const getMenu = () => [
 		name: m.menu_projects(),
 		slug: '/projects'
 	},
-	{
-		name: m.menu_team(),
-		slug: '/#team'
-	},
+	// {
+	// 	name: m.menu_team(),
+	// 	slug: '/#team'
+	// },
 	// {
 	// 	name: m.menu_blog(),
 	// 	slug: '/blog'

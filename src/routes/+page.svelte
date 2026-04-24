@@ -40,7 +40,7 @@
 <Landing />
 <About />
 <Projects {projects} />
-<Team {team} />
+<!-- <Team {team} /> -->
 <USP />
 <Contact />
 

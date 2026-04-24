@@ -11,7 +11,7 @@ keepTextLight: true
 type: 'Data Visualization'
 description: 'Public dashboard comparing 18 major steelmakers across 29 countries on decarbonisation and transition readiness'
 technologies: ['Svelte', 'D3.js', 'Node.js']
-features: ['Data visualization', 'Postgres (Drizzle) + D3 charts', 'WordPress embedding']
+features: ['Data visualization', 'Postgres (Drizzle) + D3 charts', 'WordPress integration']
 client: 'SteelWatch'
 team:
   - 'Bruno St-Jacques, developer'
