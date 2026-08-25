@@ -1,58 +1,51 @@
 export const prerender = false;
 
 import { fail } from '@sveltejs/kit';
-import { SECRET_WEB3FORMS_KEY } from '$env/static/private';
-import { PUBLIC_WEB3FORMS_URL } from '$env/static/public';
+import { Resend } from 'resend';
+import { RESEND_API_KEY } from '$env/static/private';
+import { PUBLIC_CONTACT_EMAIL } from '$env/static/public';
+
+const resend = new Resend(RESEND_API_KEY);
 
 export const actions = {
 	default: async ({ request }) => {
 		try {
 			const formData = await request.formData();
-			const name = formData.get('name');
-			const email = formData.get('email');
-			const message = formData.get('message');
+			const name = String(formData.get('name') ?? '').trim();
+			const email = String(formData.get('email') ?? '').trim();
+			const message = String(formData.get('message') ?? '').trim();
+			const honeypot = String(formData.get('_gotcha') ?? '').trim();
+
+			if (honeypot) {
+				return { success: true };
+			}
 
 			if (!email) {
-				console.log('Email is missing');
 				return fail(400, { email, missing: true });
 			}
 
-			const web3FormsUrl = PUBLIC_WEB3FORMS_URL;
-			const accessKey = SECRET_WEB3FORMS_KEY;
-
-			const web3FormsData = {
-				access_key: accessKey,
-				name: name,
-				email: email,
-				message: message,
-				subject: 'landozone - contact form submission'
-			};
-
-			const response = await fetch(web3FormsUrl, {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-					Accept: 'application/json'
-				},
-				body: JSON.stringify(web3FormsData)
+			const { error } = await resend.emails.send({
+				from: `landozone <${PUBLIC_CONTACT_EMAIL}>`,
+				to: [PUBLIC_CONTACT_EMAIL],
+				replyTo: email,
+				subject: 'landozone - contact form submission',
+				text: [`Name: ${name || '(not provided)'}`, `Email: ${email}`, '', message || '(empty message)'].join(
+					'\n'
+				)
 			});
 
-			if (response.ok) {
-				const result = await response.json();
-				if (result.success) {
-					return {
-						success: true,
-						status: 200,
-						body: {
-							message: 'Email sent successfully'
-						}
-					};
-				} else {
-					return { success: false, message: 'Email sending failed' };
-				}
-			} else {
+			if (error) {
+				console.error('Resend error:', error);
 				return { success: false, message: 'Email sending failed' };
 			}
+
+			return {
+				success: true,
+				status: 200,
+				body: {
+					message: 'Email sent successfully'
+				}
+			};
 		} catch (error) {
 			console.error('Error sending email:', error);
 			return fail(500, {

@@ -15,7 +15,6 @@
 	let { children }: Props = $props();
 </script>
 
-<!-- <MouseTracker /> -->
 <main class="content"><Header />{@render children?.()}</main>
 
 <div style="display:none">

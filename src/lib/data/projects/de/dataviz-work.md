@@ -19,7 +19,6 @@ team:
 
 <script>
   import ExternalLink from '$lib/components/Link/ExternalLink.svelte';
-  import Link from '$lib/components/Link/Link.svelte';  
 </script>
 
 ![Dataviz auf mehreren Geräten](../../../assets/images/dataviz-devices.png)
