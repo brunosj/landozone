@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { turnstileSiteKey } from '$lib/turnstile-site-key';
 	import { getLocale } from '$lib/paraglide/runtime';
 	import type { Attachment } from 'svelte/attachments';
 
-	let { reset = $bindable(() => {}) }: { reset?: () => void } = $props();
+	let { siteKey, reset = $bindable(() => {}) }: { siteKey: string; reset?: () => void } = $props();
 
 	const SCRIPT_SRC = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
 
@@ -43,16 +42,16 @@
 		});
 	}
 
-	const widget: Attachment<HTMLDivElement> = (element) => {
+	const widget = (key: string): Attachment<HTMLDivElement> => (element) => {
 		let widgetId: string | undefined;
 		let cancelled = false;
 
 		loadTurnstile()
 			.then((turnstile) => {
-				if (cancelled) return;
+				if (cancelled || !key) return;
 
 				widgetId = turnstile.render(element, {
-					sitekey: turnstileSiteKey,
+					sitekey: key,
 					theme: 'dark',
 					language: getLocale()
 				});
@@ -72,7 +71,7 @@
 	};
 </script>
 
-<div class="turnstile" {@attach widget}></div>
+<div class="turnstile" {@attach siteKey ? widget(siteKey) : undefined}></div>
 
 <style>
 	.turnstile {

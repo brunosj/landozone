@@ -5,6 +5,8 @@
 	import * as m from '$lib/paraglide/messages';
 	import Turnstile from './Turnstile.svelte';
 
+	let { turnstileSiteKey = '' }: { turnstileSiteKey?: string } = $props();
+
 	let form = $state<{ email?: string; missing?: boolean } | undefined>(undefined);
 
 	interface SpinParams {
@@ -79,7 +81,9 @@
 					{#if action_result === 'failure'}
 						<p class="error-message">{captchaFailed ? m.form_captcha_error() : m.form_error()}</p>
 					{/if}
-					<Turnstile bind:reset={resetTurnstile} />
+					{#if turnstileSiteKey}
+						<Turnstile siteKey={turnstileSiteKey} bind:reset={resetTurnstile} />
+					{/if}
 					<button type="submit" style="--border-color: #00cfa1; --text-hover-color: #14151d">
 						<span class="button-content"> {m.form_submit()}</span>
 					</button>

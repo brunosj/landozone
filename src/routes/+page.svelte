@@ -42,7 +42,7 @@
 <Projects {projects} />
 <!-- <Team {team} /> -->
 <USP />
-<Contact />
+<Contact turnstileSiteKey={data.turnstileSiteKey} />
 
 <style>
 	.background {

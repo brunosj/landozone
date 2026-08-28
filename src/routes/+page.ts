@@ -1,5 +1,9 @@
 import type { Project, TeamMember } from '$lib/types/types';
+import { dev } from '$app/environment';
+import { PUBLIC_TURNSTILE_SITE_KEY } from '$env/static/public';
 import { getLocale } from '$lib/paraglide/runtime';
+
+const DUMMY_SITE_KEY = '1x00000000000000000000AA';
 
 export async function load({ fetch }) {
 	const locale = getLocale();
@@ -9,5 +13,7 @@ export async function load({ fetch }) {
 	]);
 	const projects: Project[] = await projectsRes.json();
 	const team: TeamMember[] = await teamRes.json();
-	return { projects, team };
+	const turnstileSiteKey =
+		PUBLIC_TURNSTILE_SITE_KEY?.trim() || (dev ? DUMMY_SITE_KEY : '');
+	return { projects, team, turnstileSiteKey };
 }

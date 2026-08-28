@@ -2,6 +2,8 @@
 	import ArrowLink from '$components/UI/ArrowLink.svelte';
 	import Form from './Form.svelte';
 	import * as m from '$lib/paraglide/messages';
+
+	let { turnstileSiteKey = '' }: { turnstileSiteKey?: string } = $props();
 </script>
 
 <section id="contact" class="page-section">
@@ -16,7 +18,7 @@
 					<a id="underline" href="mailto:contact [at] landozone.net">contact [at] landozone.net</a>
 				</p>
 			</div>
-			<Form />
+			<Form {turnstileSiteKey} />
 			<span class="imprint-link">
 				<ArrowLink path="/imprint">{m.imprint_privacy()}</ArrowLink>
 			</span>

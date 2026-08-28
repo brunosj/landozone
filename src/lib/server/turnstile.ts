@@ -1,4 +1,5 @@
 import { dev } from '$app/environment';
+import { TURNSTILE_SECRET_KEY } from '$env/static/private';
 import { env } from '$env/dynamic/private';
 
 const SITEVERIFY_URL = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
@@ -6,7 +7,8 @@ const SITEVERIFY_URL = 'https://challenges.cloudflare.com/turnstile/v0/siteverif
 const DUMMY_SECRET_KEY = '1x0000000000000000000000000000000AA';
 
 function getSecret(): string {
-	const secret = env.TURNSTILE_SECRET_KEY ?? (dev ? DUMMY_SECRET_KEY : '');
+	const secret =
+		env.TURNSTILE_SECRET_KEY?.trim() || TURNSTILE_SECRET_KEY?.trim() || (dev ? DUMMY_SECRET_KEY : '');
 	if (!secret) {
 		throw new Error('Missing TURNSTILE_SECRET_KEY');
 	}
