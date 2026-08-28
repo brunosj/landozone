@@ -3,6 +3,7 @@
 	import { elasticOut, cubicInOut } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
 	import * as m from '$lib/paraglide/messages';
+	import Turnstile from './Turnstile.svelte';
 
 	let form = $state<{ email?: string; missing?: boolean } | undefined>(undefined);
 
@@ -16,14 +17,16 @@
 	let action_result: any = $state();
 	let success = $state(false);
 	let message_type = 'error';
+	let resetTurnstile = $state(() => {});
+	let captchaFailed = $state(false);
 
 	const handle_result = (result: any) => {
-		console.log(result);
-		if (result.data.success === true) {
+		if (result.type === 'success' && result.data?.success === true) {
 			success = true;
-		} else if (result.data.success === false) {
+		} else {
 			action_result = 'failure';
-			message_type = 'error';
+			captchaFailed = result.type === 'failure' && Boolean(result.data?.captcha);
+			resetTurnstile();
 		}
 	};
 
@@ -50,6 +53,7 @@
 				return ({ update, result }) => {
 					handle_result(result);
 					update({ reset: false });
+					resetTurnstile();
 				};
 			}}>
 			<div class="field">
@@ -68,13 +72,14 @@
 				</div>
 			</div>
 			<div>
-				{#if form?.missing}<p class="error-message">{m.form_email_required()}</p>{/if}
-
 				{#if success}
 					<p class="success-message">{m.form_success()}</p>
-				{:else if action_result === 'failure'}
-					<p class="error-message">{m.form_error()}</p>
 				{:else}
+					{#if form?.missing}<p class="error-message">{m.form_email_required()}</p>{/if}
+					{#if action_result === 'failure'}
+						<p class="error-message">{captchaFailed ? m.form_captcha_error() : m.form_error()}</p>
+					{/if}
+					<Turnstile bind:reset={resetTurnstile} />
 					<button type="submit" style="--border-color: #00cfa1; --text-hover-color: #14151d">
 						<span class="button-content"> {m.form_submit()}</span>
 					</button>

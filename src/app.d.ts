@@ -7,6 +7,24 @@ declare global {
 		// interface PageData {}
 		// interface Platform {}
 	}
+
+	interface Window {
+		turnstile?: {
+			render: (
+				container: string | HTMLElement,
+				options: {
+					sitekey: string;
+					theme?: 'light' | 'dark' | 'auto';
+					language?: string;
+					callback?: (token: string) => void;
+					'expired-callback'?: () => void;
+					'error-callback'?: () => void;
+				}
+			) => string;
+			reset: (widgetId?: string) => void;
+			remove: (widgetId: string) => void;
+		};
+	}
 }
 
 declare module '@fontsource-variable/sora';

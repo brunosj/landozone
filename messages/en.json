@@ -50,6 +50,7 @@
 	"form_email_required": "The email field is required",
 	"form_success": "Thanks! Your email has been sent",
 	"form_error": "There was an error. Please send a message per email.",
+	"form_captcha_error": "Verification failed. Please try again.",
 	"form_submit": "Submit",
 	"home": "Home",
 	"blog": "blog",

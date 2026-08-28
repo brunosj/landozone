@@ -50,6 +50,7 @@
 	"form_email_required": "Das E-Mail-Feld ist erforderlich",
 	"form_success": "Danke! Deine Nachricht wurde gesendet",
 	"form_error": "Es gab einen Fehler. Bitte sende eine Nachricht per E-Mail.",
+	"form_captcha_error": "Verifizierung fehlgeschlagen. Bitte versuche es erneut.",
 	"form_submit": "Absenden",
 	"home": "Startseite",
 	"blog": "Blog",
