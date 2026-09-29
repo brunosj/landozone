@@ -9,6 +9,8 @@ const FEATURED_SLUGS = [
 	// 'net-zero-land-rights',
 	'powerkonnekt',
 	'steelwatch-corporate-scorecard',
+	'steelwatch-bf-calculator',
+	'elli-galow',
 	'tegh'
 ] as const;
 

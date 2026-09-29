@@ -22,6 +22,8 @@ import pkImage from '$lib/assets/images/pk-devices.png';
 import flareImage from '$lib/assets/images/flare-devices.png';
 import teghImage from '$lib/assets/images/tegh-devices.png';
 import steelwatchImage from '$lib/assets/images/steelwatch-devices.png';
+import bfcImage from '$lib/assets/images/bfc-devices.png';
+import galowImage from '$lib/assets/images/galow-devices.png';
 type ImageComponent = string;
 
 export function getImageComponent(name: string): ImageComponent {
@@ -49,7 +51,9 @@ export function getImageComponent(name: string): ImageComponent {
 		powerkonnekt: pkImage,
 		flare: flareImage,
 		tegh: teghImage,
-		'steelwatch-corporate-scorecard': steelwatchImage
+		'steelwatch-corporate-scorecard': steelwatchImage,
+		'steelwatch-bf-calculator': bfcImage,
+		'elli-galow': galowImage
 	};
 
 	return imageMap[name] || '';

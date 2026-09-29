@@ -18,3 +18,7 @@ team:
 ---
 
 ![Pinewax Devices](../../../assets/images/pinewax-devices.png)
+
+Nous avons développé le site web de [Pinewax Records](https://pinewaxrecords.com/), un label discographique berlinois géré de façon collective. Il réunit l’ensemble du catalogue, les pages des artistes, les vidéos et la section radio du label, offrant aux fans un seul endroit pour tout découvrir de Pinewax.
+
+Le site repose sur Gatsby et Tailwind CSS, avec des contenus gérés dans Contentful. À son lancement, il comprenait aussi une boutique en ligne propulsée par Shopify pour vendre les sorties du label directement.

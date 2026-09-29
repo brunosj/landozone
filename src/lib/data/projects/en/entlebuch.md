@@ -24,3 +24,7 @@ team:
 ---
 
 ![Entlebuch Devices](../../../assets/images/entlebuch-devices.png)
+
+For [Entlebuch](https://die-beste.art), a Swiss milk chocolate made with rare wild cacao from Bolivia, we built a landing page that tells the story behind every bar: where the cacao comes from, how the chocolate is crafted, and the mission driving the brand.
+
+The site is built with SvelteKit, TypeScript and Tailwind CSS, with content managed in Strapi. Warm colours, carousels, testimonials and a contact form round out a brand experience that feels as handcrafted as the product itself.

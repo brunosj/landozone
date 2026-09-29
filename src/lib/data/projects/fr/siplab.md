@@ -25,3 +25,7 @@ team:
 ---
 
 ![SIPLAB Devices](../../../assets/images/siplab-devices.png)
+
+Nous avons développé le site web du [SIPLAB](https://siplab.ca), un pôle de recherche rattaché à l’Université de Montréal. Le site offre au laboratoire une vitrine claire, présentant ses axes de recherche, ses publications, ses enseignements, son équipe et ses actualités, en français comme en anglais.
+
+Il repose sur Next.js et Tailwind CSS, avec des contenus gérés dans Strapi pour que l’équipe publie elle-même ses publications et actualités. Les lecteurs peuvent aussi basculer entre les modes clair et sombre.

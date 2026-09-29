@@ -5,11 +5,26 @@ import relativeImages from 'mdsvex-relative-images';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
+function rehypeExternalLinks() {
+	const visit = (node) => {
+		if (
+			node.type === 'element' &&
+			node.tagName === 'a' &&
+			/^(https?:)?\/\//.test(String(node.properties?.href ?? ''))
+		) {
+			node.properties.target = '_blank';
+			node.properties.rel = ['noopener', 'noreferrer'];
+		}
+		node.children?.forEach(visit);
+	};
+	return visit;
+}
+
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
 	extensions: ['.md', '.svelte.md', '.svx'],
 	remarkPlugins: [relativeImages],
-	rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings]
+	rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings, rehypeExternalLinks]
 };
 
 /** @type {import('@sveltejs/kit').Config} */

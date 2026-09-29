@@ -17,4 +17,8 @@ team:
   - 'Bruno St-Jacques, developer'
 ---
 
-![Georg Lewawrk Devices](../../../assets/images/glewark-devices.png)
+![Georg Lewark Devices](../../../assets/images/glewark-devices.png)
+
+Für [Georg Lewark](https://georglewark.de/), einen Filmemacher aus Berlin, haben wir ein minimalistisches Portfolio entwickelt. Das Design tritt bewusst zurück und lässt die Arbeiten sprechen: Ein klares Projektraster führt zu einzelnen Filmseiten mit eingebetteten Vimeo- und YouTube-Playern, ergänzt durch eine Über-mich-Seite und ein schlichtes Kontaktformular.
+
+Die Seite ist eine schlanke SvelteKit-App in TypeScript. Die Projekte werden in Markdown gepflegt, sodass ein neuer Film in wenigen Minuten online ist – ganz ohne den Overhead eines CMS.

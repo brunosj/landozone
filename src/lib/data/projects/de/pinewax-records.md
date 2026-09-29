@@ -18,3 +18,7 @@ team:
 ---
 
 ![Pinewax Devices](../../../assets/images/pinewax-devices.png)
+
+Für [Pinewax Records](https://pinewaxrecords.com/), ein kollektiv geführtes Plattenlabel aus Berlin, haben wir die Website entwickelt. Sie vereint den gesamten Katalog der Veröffentlichungen, Künstlerseiten, Videos und die Radio-Sektion des Labels, sodass Fans alles rund um Pinewax an einem Ort entdecken können.
+
+Die Seite basiert auf Gatsby und Tailwind CSS, die Inhalte werden in Contentful gepflegt. Zum Start umfasste sie außerdem einen Online-Shop auf Basis von Shopify, über den die Veröffentlichungen direkt verkauft wurden.

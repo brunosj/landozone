@@ -24,3 +24,7 @@ team:
 ---
 
 ![Entlebuch Devices](../../../assets/images/entlebuch-devices.png)
+
+Für [Entlebuch](https://die-beste.art), eine Schweizer Milchschokolade mit seltenem Wildkakao aus Bolivien, haben wir eine Landingpage entwickelt, die die Geschichte hinter jeder Tafel erzählt: den Ursprung des Kakaos, die Arbeit der Manufaktur und die Mission der Marke.
+
+Die Seite basiert auf SvelteKit, TypeScript und Tailwind CSS, die Inhalte werden in Strapi gepflegt. Warme Farben, Karussells, Kundenstimmen und ein Kontaktformular runden einen Markenauftritt ab, der so handgemacht wirkt wie das Produkt selbst.

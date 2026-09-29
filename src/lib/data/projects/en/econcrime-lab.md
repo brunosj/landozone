@@ -25,3 +25,7 @@ team:
 ---
 
 ![EconCrime Lab Devices](../../../assets/images/eclab-devices.png)
+
+We built the website of the [EconCrime Lab](https://econcrimelab.com/), a research hub at the Université de Montréal focused on uncovering and understanding new profit-driven crimes enabled by information technologies. The site presents the lab's research, publications, courses, data and tools, outreach and news, in both English and French.
+
+It is built with Next.js and Tailwind CSS, with content managed in Strapi and a light and dark mode. The researchers' latest articles are pulled automatically from Google Scholar, so the publication list stays up to date without manual entry.

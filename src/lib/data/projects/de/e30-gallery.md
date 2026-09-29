@@ -18,3 +18,7 @@ team:
 ---
 
 ![E30 Devices](../../../assets/images/e30-devices.png)
+
+Für die [E30 Gallery](https://e30gallery.com/), eine Kunstgalerie in Frankfurt am Main, haben wir die Website entwickelt. Besucher\*innen entdecken aktuelle und vergangene Ausstellungen, die vertretenen Künstler\*innen und ihre Werke sowie die Insights der Galerie – auf Deutsch und Englisch.
+
+Über die öffentliche Seite hinaus bietet die E30 Art Society Mitgliedern ein eigenes Konto und einen exklusiven Mitgliederbereich, während Newsletter-Anmeldung und Kontaktformulare der Galerie helfen, ihre Community auszubauen. Das Frontend ist eine Next.js-App, die Inhalte liegen in einem separaten Payload CMS, und beide werden per GitHub Actions automatisch auf einen eigenen Server ausgerollt.

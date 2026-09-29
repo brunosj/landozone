@@ -24,3 +24,7 @@ team:
 ---
 
 ![Original Food Devices](../../../assets/images/original-food-devices.png)
+
+Für [Original Food](https://originalfood.coffee) haben wir die Website entwickelt. Das Unternehmen hat es sich zur Aufgabe gemacht, Regenwälder zu schützen, Kulturen zu schätzen und echte Perspektiven für die Gemeinschaften zu schaffen, mit denen es zusammenarbeitet – etwa für Kaffeebäuer\*innen in der Region Kaffa in Äthiopien. Die Seite stellt die Produkte, die dahinterstehenden Partnerprojekte und die Presseberichterstattung vor, mit einer illustrierten Karte, die den Weg zurück zum Ursprung nachzeichnet.
+
+Sie basiert auf SvelteKit, TypeScript und Tailwind CSS, die Inhalte werden in Strapi gepflegt. Sanfte Wellenformen, Produkt- und Pressekarussells sowie ein Laufband mit Partnerlogos verleihen ihr eine leichte, organische Anmutung, die zur Marke passt.

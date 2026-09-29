@@ -25,3 +25,7 @@ team:
 ---
 
 ![SIPLAB Devices](../../../assets/images/siplab-devices.png)
+
+We built the website of [SIPLAB](https://siplab.ca), a research hub based at the Université de Montréal. The site gives the lab a clear public face, presenting its research areas, publications, teaching, team and latest news in both French and English.
+
+It is built with Next.js and Tailwind CSS, with content managed in Strapi so the team can publish new papers and news themselves. Readers can also switch between light and dark mode.

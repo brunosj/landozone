@@ -18,3 +18,7 @@ team:
 ---
 
 ![Studio Deremetz Devices](../../../assets/images/deremetz-devices.png)
+
+Nous avons développé le site web du [Studio Deremetz](https://deremetz.de/), un studio berlinois d’architecture et d’architecture intérieure. En plus d’un portfolio de projets, le site présente les collections de mobilier et les objets design du studio, ses designers et ses clients, ainsi qu’une galerie d’images.
+
+Il repose sur Next.js et Tailwind CSS, avec des contenus gérés dans Strapi et disponibles en anglais, en allemand et en français. Une boutique en ligne intégrée permet de commander les pièces directement, avec paiement par Stripe, PayPal ou sur facture.
